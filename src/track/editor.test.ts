@@ -58,6 +58,7 @@ beforeEach(() => {
   changes = [];
   frames = new Map(); nextFrame = 0;
   vi.stubGlobal('window', new EventTarget());
+  vi.stubGlobal('document', Object.assign(new EventTarget(), { visibilityState: 'visible' }));
   vi.stubGlobal('requestAnimationFrame', (callback: FrameRequestCallback) => { frames.set(++nextFrame, callback); return nextFrame; });
   vi.stubGlobal('cancelAnimationFrame', (id: number) => frames.delete(id));
   vi.stubGlobal('ResizeObserver', class { constructor(callback: () => void) { resize = callback; } observe() {} disconnect() {} });
@@ -99,7 +100,7 @@ describe('track editor lifecycle', () => {
     expect(last.type).toBe('draft');
     if (last.type === 'draft') expect(last.points.map(p => p.x)).toEqual([300, 310, 320, 330]);
   });
-  it.each(['pointercancel', 'lostpointercapture', 'disable', 'clear', 'setTrack', 'destroy', 'resize', 'view', 'blur'])('cancels safely on %s, and never commits on the late pointerup', action => {
+  it.each(['pointercancel', 'lostpointercapture', 'disable', 'clear', 'setTrack', 'destroy', 'resize', 'view', 'blur', 'hidden'])('cancels safely on %s, and never commits on the late pointerup', action => {
     editor.setEnabled(true);
     pointer('pointerdown', 980, 400);
     pointer('pointermove', 900, 500);
@@ -110,6 +111,12 @@ describe('track editor lifecycle', () => {
     else if (action === 'resize') { canvas.rect.width = 500; resize(); }
     else if (action === 'view') view = { ...view, offsetX: 10 };
     else if (action === 'blur') window.dispatchEvent(new Event('blur'));
+    else if (action === 'hidden') {
+      Object.assign(document, { visibilityState: 'hidden' });
+      document.dispatchEvent(new Event('visibilitychange'));
+      Object.assign(document, { visibilityState: 'visible' });
+      document.dispatchEvent(new Event('visibilitychange'));
+    }
     else pointer(action, 900, 500);
     pointer('pointerup', 980, 400);
     expect(commits()).toHaveLength(0);

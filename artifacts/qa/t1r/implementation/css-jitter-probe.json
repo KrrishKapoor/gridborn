@@ -1,0 +1,23 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "scale": 0.6575,
+    "trials": 120,
+    "fails": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "scale": 0.275,
+    "trials": 120,
+    "fails": []
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "scale": 0.2325,
+    "trials": 120,
+    "fails": []
+  }
+]
