@@ -1,0 +1,26 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "passed": 43,
+    "failed": []
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "passed": 43,
+    "failed": []
+  },
+  {
+    "viewport": [
+      844,
+      390
+    ],
+    "passed": 43,
+    "failed": []
+  }
+]

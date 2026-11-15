@@ -31,8 +31,15 @@ Use `npm run dev -- --port 5194`, then the public `/` application. Implementatio
 
 ```sh
 node artifacts/qa/t4/implementation/smoke.mjs
+node artifacts/qa/t4/implementation/additional.mjs
+node artifacts/qa/t4/implementation/regression-browser.mjs
 node artifacts/qa/t4/implementation/perf.mjs
+# In another terminal: npm run preview -- --port 4194
+node artifacts/qa/t4/implementation/production.mjs
+node artifacts/qa/t4/implementation/production-perf.mjs
 ```
+
+Run the scripts from the repository root, with each required server already running. `regression-browser.mjs` recreates the original defects from the exact local base commit and compares the corrected runtime. `visibility.mjs` is a separate headed attempt to induce real browser hiding; its retained result is inconclusive, as explained below. The [implementation report](../artifacts/qa/t4/implementation/report.md) records measured outcomes and limitations.
 
 Smoke uses genuine mouse input and CDP touch at 1440×900 / DPR 2, 390×844 / DPR 3, and 844×390 / DPR 3. It covers draw→learn→improve, public controls, actual inspection, presets, invalid preservation, rapid inputs, DPR-only/tiny/rotated sizes, reduced motion and visibility handling. Read `smoke-results.json` and the viewport screenshots. Synthetic visibility coverage is identified separately from a headed OS-window/tab visibility probe.
 
@@ -47,3 +54,5 @@ Vite DEV dynamically imports `runtime/diagnostics.ts` and installs `window.__gri
 - `begin()` / `end()` collect bounded-duration QA samples on demand. Frame rows: `[rAF time, callback ms, received new snapshot, cars drawn (-1 if no draw), actual snapshot tick, presentation tick, checksum of rendered car positions]`. Delivery rows: `[arrival time, tick, steps, compute ms, alive, generation]`. No sample arrays grow unless a caller starts a measurement.
 
 These are implementation checks, not independent Opus acceptance. T1R is concurrent and intentionally excluded; final whole-product QA must run after both branches are merged.
+
+The built-app performance script observes Worker messages, rAF callbacks and actual hero Canvas2D translations externally; it adds no application hook. Its raw frame rows are `[rAF time, combined callback ms, received tick, car translations drawn, rendered-position checksum]`. The production performance results are the primary handoff; development samples remain separate. Real OS hiding could not be induced in the tested Chrome setup (minimize and tab switching kept `document.hidden === false`); see the retained visibility result and report rather than treating that attempt as a pass.

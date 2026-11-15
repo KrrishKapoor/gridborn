@@ -1,0 +1,75 @@
+[
+  {
+    "name": "stopped-selection-honest",
+    "ok": true,
+    "detail": "Crashed · stopped · speed 0 · seven live distances"
+  },
+  {
+    "name": "follow-preference-kept",
+    "ok": true
+  },
+  {
+    "name": "keyboard-cycle-from-inspector",
+    "ok": true
+  },
+  {
+    "name": "label-floor-601",
+    "ok": true,
+    "detail": 11.54296875
+  },
+  {
+    "name": "label-floor-800",
+    "ok": true,
+    "detail": 13.349609375
+  },
+  {
+    "name": "label-floor-1000",
+    "ok": true,
+    "detail": 17.099609375
+  },
+  {
+    "name": "repeat-disposal-bounds-workers",
+    "ok": true,
+    "detail": {
+      "before": {
+        "created": 1,
+        "terminated": 0
+      },
+      "after": {
+        "created": 4,
+        "terminated": 3
+      },
+      "pages": 1
+    }
+  },
+  {
+    "name": "pagehide-teardown",
+    "ok": true,
+    "detail": {
+      "counts": {
+        "created": 4,
+        "terminated": 4
+      },
+      "pages": 0,
+      "hook": false
+    }
+  },
+  {
+    "name": "native-touch-scroll-on-article",
+    "ok": true,
+    "detail": {
+      "before": 1100,
+      "after": 1351
+    }
+  },
+  {
+    "name": "real-partial-attempt-never-becomes-lap",
+    "ok": true,
+    "detail": {
+      "lap": null,
+      "readout": "—",
+      "note": "Recorded best · partial attempt",
+      "noLap": true
+    }
+  }
+]

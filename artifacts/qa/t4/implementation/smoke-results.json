@@ -1,0 +1,803 @@
+{
+  "browser": "157.0.8103.51",
+  "results": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "touch": false,
+      "checks": [
+        {
+          "name": "autoplay512",
+          "ok": true,
+          "detail": 87
+        },
+        {
+          "name": "layout/nooverflow",
+          "ok": true,
+          "detail": {
+            "overflow": false,
+            "canvas": {
+              "x": 64.796875,
+              "y": 263.4375,
+              "width": 1064.40625,
+              "height": 540,
+              "bottom": 803.4375
+            },
+            "feedback": {
+              "x": 64.796875,
+              "y": 841.4375,
+              "width": 1064.40625,
+              "height": 38,
+              "bottom": 879.4375
+            },
+            "overlay": {
+              "x": 64.796875,
+              "y": 263.4375,
+              "width": 1064.40625,
+              "height": 540,
+              "bottom": 803.4375
+            },
+            "touch": "none",
+            "bodyTouch": "auto",
+            "small": []
+          }
+        },
+        {
+          "name": "canvas-visible",
+          "ok": true,
+          "detail": {
+            "x": 64.796875,
+            "y": 263.4375,
+            "width": 1064.40625,
+            "height": 540,
+            "bottom": 803.4375
+          }
+        },
+        {
+          "name": "feedback-nearcanvas",
+          "ok": true,
+          "detail": {
+            "x": 64.796875,
+            "y": 841.4375,
+            "width": 1064.40625,
+            "height": 38,
+            "bottom": 879.4375
+          }
+        },
+        {
+          "name": "touch-targets",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "honest-no-lap",
+          "ok": true
+        },
+        {
+          "name": "pause-no-steps",
+          "ok": true
+        },
+        {
+          "name": "inspection-visible",
+          "ok": true,
+          "detail": {
+            "top": 287.4375,
+            "bottom": 888.46875,
+            "maxRayError": 0.000024343217546629603,
+            "networkError": 2.273602683899867e-8,
+            "colors": 96,
+            "steer": "-0.17",
+            "actualSteer": "-0.17",
+            "selected": {
+              "runId": 1,
+              "generation": 1,
+              "index": 1
+            }
+          }
+        },
+        {
+          "name": "actual-rays-coherent",
+          "ok": true,
+          "detail": 0.000024343217546629603
+        },
+        {
+          "name": "actual-inference",
+          "ok": true,
+          "detail": 2.273602683899867e-8
+        },
+        {
+          "name": "sight-rendered",
+          "ok": true,
+          "detail": 96
+        },
+        {
+          "name": "live-inspector-changes",
+          "ok": true
+        },
+        {
+          "name": "escape-restores-focus",
+          "ok": true
+        },
+        {
+          "name": "keyboard-select",
+          "ok": true
+        },
+        {
+          "name": "close-restores-focus",
+          "ok": true
+        },
+        {
+          "name": "default-improves",
+          "ok": true,
+          "detail": {
+            "first": 9.283548234504227,
+            "last": 8.339064534505209
+          }
+        },
+        {
+          "name": "headless-label",
+          "ok": true
+        },
+        {
+          "name": "native-drawing-commits",
+          "ok": true,
+          "detail": {
+            "run": 2,
+            "id": "drawn-1"
+          }
+        },
+        {
+          "name": "draw-restores-running-intent",
+          "ok": true
+        },
+        {
+          "name": "drawn-improves",
+          "ok": true,
+          "detail": {
+            "first": 8.734021525722017,
+            "last": 7.791695277332723
+          }
+        },
+        {
+          "name": "invalid-preserves-circuit",
+          "ok": true
+        },
+        {
+          "name": "invalid-useful-feedback",
+          "ok": true
+        },
+        {
+          "name": "clear-keeps-learning",
+          "ok": true
+        },
+        {
+          "name": "draw-preserves-pause",
+          "ok": true
+        },
+        {
+          "name": "preset-broad-oval",
+          "ok": true
+        },
+        {
+          "name": "preset-riverbend",
+          "ok": true
+        },
+        {
+          "name": "preset-club-circuit",
+          "ok": true
+        },
+        {
+          "name": "rapid-settles",
+          "ok": true,
+          "detail": {
+            "id": 31,
+            "pop": 512,
+            "history": 31
+          }
+        },
+        {
+          "name": "invalid-reset-keeps-current",
+          "ok": true,
+          "detail": "Population must be 2–1000."
+        },
+        {
+          "name": "invalid-reset-oldrun-continues",
+          "ok": true
+        },
+        {
+          "name": "dpr-only",
+          "ok": true
+        },
+        {
+          "name": "resize-tiny-keeps-run",
+          "ok": true
+        },
+        {
+          "name": "reduced-motion-scroll",
+          "ok": true
+        },
+        {
+          "name": "hidden-preference-retained",
+          "ok": true
+        },
+        {
+          "name": "hidden-no-display-work",
+          "ok": true
+        },
+        {
+          "name": "resume-without-catchup",
+          "ok": true,
+          "detail": 4
+        },
+        {
+          "name": "sensors-label-floor",
+          "ok": true,
+          "detail": 19.95703125
+        },
+        {
+          "name": "network-label-floor",
+          "ok": true,
+          "detail": 19.95703125
+        },
+        {
+          "name": "genetics-label-floor",
+          "ok": true,
+          "detail": 19.95703125
+        },
+        {
+          "name": "racing-line-label-floor",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "name": "line-has-road",
+          "ok": true
+        },
+        {
+          "name": "weight-highlight",
+          "ok": true
+        },
+        {
+          "name": "no-console-errors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "touch": true,
+      "checks": [
+        {
+          "name": "autoplay512",
+          "ok": true,
+          "detail": 85
+        },
+        {
+          "name": "layout/nooverflow",
+          "ok": true,
+          "detail": {
+            "overflow": false,
+            "canvas": {
+              "x": 20,
+              "y": 252.3125,
+              "width": 350,
+              "height": 269.21875,
+              "bottom": 521.53125
+            },
+            "feedback": {
+              "x": 20,
+              "y": 559.53125,
+              "width": 350,
+              "height": 44,
+              "bottom": 603.53125
+            },
+            "overlay": {
+              "x": 20,
+              "y": 252.3125,
+              "width": 350,
+              "height": 269.21875,
+              "bottom": 521.53125
+            },
+            "touch": "none",
+            "bodyTouch": "auto",
+            "small": []
+          }
+        },
+        {
+          "name": "canvas-visible",
+          "ok": true,
+          "detail": {
+            "x": 20,
+            "y": 252.3125,
+            "width": 350,
+            "height": 269.21875,
+            "bottom": 521.53125
+          }
+        },
+        {
+          "name": "feedback-nearcanvas",
+          "ok": true,
+          "detail": {
+            "x": 20,
+            "y": 559.53125,
+            "width": 350,
+            "height": 44,
+            "bottom": 603.53125
+          }
+        },
+        {
+          "name": "touch-targets",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "honest-no-lap",
+          "ok": true
+        },
+        {
+          "name": "pause-no-steps",
+          "ok": true
+        },
+        {
+          "name": "inspection-visible",
+          "ok": true,
+          "detail": {
+            "top": 366.03125,
+            "bottom": 831.6875,
+            "maxRayError": 0.00003040038461676886,
+            "networkError": 2.7840090899289294e-8,
+            "colors": 53,
+            "steer": "-0.14",
+            "actualSteer": "-0.14",
+            "selected": {
+              "runId": 1,
+              "generation": 1,
+              "index": 1
+            }
+          }
+        },
+        {
+          "name": "actual-rays-coherent",
+          "ok": true,
+          "detail": 0.00003040038461676886
+        },
+        {
+          "name": "actual-inference",
+          "ok": true,
+          "detail": 2.7840090899289294e-8
+        },
+        {
+          "name": "sight-rendered",
+          "ok": true,
+          "detail": 53
+        },
+        {
+          "name": "live-inspector-changes",
+          "ok": true
+        },
+        {
+          "name": "escape-restores-focus",
+          "ok": true
+        },
+        {
+          "name": "keyboard-select",
+          "ok": true
+        },
+        {
+          "name": "close-restores-focus",
+          "ok": true
+        },
+        {
+          "name": "default-improves",
+          "ok": true,
+          "detail": {
+            "first": 9.283548234504227,
+            "last": 8.339064534505209
+          }
+        },
+        {
+          "name": "headless-label",
+          "ok": true
+        },
+        {
+          "name": "native-drawing-commits",
+          "ok": true,
+          "detail": {
+            "run": 2,
+            "id": "drawn-1"
+          }
+        },
+        {
+          "name": "draw-restores-running-intent",
+          "ok": true
+        },
+        {
+          "name": "drawn-improves",
+          "ok": true,
+          "detail": {
+            "first": 8.734021780042928,
+            "last": 7.791695785966786
+          }
+        },
+        {
+          "name": "invalid-preserves-circuit",
+          "ok": true
+        },
+        {
+          "name": "invalid-useful-feedback",
+          "ok": true
+        },
+        {
+          "name": "clear-keeps-learning",
+          "ok": true
+        },
+        {
+          "name": "draw-preserves-pause",
+          "ok": true
+        },
+        {
+          "name": "preset-broad-oval",
+          "ok": true
+        },
+        {
+          "name": "preset-riverbend",
+          "ok": true
+        },
+        {
+          "name": "preset-club-circuit",
+          "ok": true
+        },
+        {
+          "name": "rapid-settles",
+          "ok": true,
+          "detail": {
+            "id": 31,
+            "pop": 512,
+            "history": 31
+          }
+        },
+        {
+          "name": "invalid-reset-keeps-current",
+          "ok": true,
+          "detail": "Population must be 2–1000."
+        },
+        {
+          "name": "invalid-reset-oldrun-continues",
+          "ok": true
+        },
+        {
+          "name": "dpr-only",
+          "ok": true
+        },
+        {
+          "name": "resize-tiny-keeps-run",
+          "ok": true
+        },
+        {
+          "name": "reduced-motion-scroll",
+          "ok": true
+        },
+        {
+          "name": "hidden-preference-retained",
+          "ok": true
+        },
+        {
+          "name": "hidden-no-display-work",
+          "ok": true
+        },
+        {
+          "name": "resume-without-catchup",
+          "ok": true,
+          "detail": 5
+        },
+        {
+          "name": "sensors-label-floor",
+          "ok": true,
+          "detail": 12.03125
+        },
+        {
+          "name": "network-label-floor",
+          "ok": true,
+          "detail": 12.03125
+        },
+        {
+          "name": "genetics-label-floor",
+          "ok": true,
+          "detail": 12.03125
+        },
+        {
+          "name": "racing-line-label-floor",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "name": "line-has-road",
+          "ok": true
+        },
+        {
+          "name": "weight-highlight",
+          "ok": true
+        },
+        {
+          "name": "no-console-errors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "touch": true,
+      "checks": [
+        {
+          "name": "autoplay512",
+          "ok": true,
+          "detail": 85
+        },
+        {
+          "name": "layout/nooverflow",
+          "ok": true,
+          "detail": {
+            "overflow": false,
+            "canvas": {
+              "x": 24,
+              "y": 136.4375,
+              "width": 476,
+              "height": 185,
+              "bottom": 321.4375
+            },
+            "feedback": {
+              "x": 24,
+              "y": 351.4375,
+              "width": 476,
+              "height": 32,
+              "bottom": 383.4375
+            },
+            "overlay": {
+              "x": 24,
+              "y": 136.4375,
+              "width": 476,
+              "height": 185,
+              "bottom": 321.4375
+            },
+            "touch": "none",
+            "bodyTouch": "auto",
+            "small": []
+          }
+        },
+        {
+          "name": "canvas-visible",
+          "ok": true,
+          "detail": {
+            "x": 24,
+            "y": 136.4375,
+            "width": 476,
+            "height": 185,
+            "bottom": 321.4375
+          }
+        },
+        {
+          "name": "feedback-nearcanvas",
+          "ok": true,
+          "detail": {
+            "x": 24,
+            "y": 351.4375,
+            "width": 476,
+            "height": 32,
+            "bottom": 383.4375
+          }
+        },
+        {
+          "name": "touch-targets",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "honest-no-lap",
+          "ok": true
+        },
+        {
+          "name": "pause-no-steps",
+          "ok": true
+        },
+        {
+          "name": "inspection-visible",
+          "ok": true,
+          "detail": {
+            "top": 12.4375,
+            "bottom": 447.34375,
+            "maxRayError": 0.000020478617784647213,
+            "networkError": 2.8779252092547836e-8,
+            "colors": 61,
+            "steer": "-0.16",
+            "actualSteer": "-0.16",
+            "selected": {
+              "runId": 1,
+              "generation": 1,
+              "index": 1
+            }
+          }
+        },
+        {
+          "name": "actual-rays-coherent",
+          "ok": true,
+          "detail": 0.000020478617784647213
+        },
+        {
+          "name": "actual-inference",
+          "ok": true,
+          "detail": 2.8779252092547836e-8
+        },
+        {
+          "name": "sight-rendered",
+          "ok": true,
+          "detail": 61
+        },
+        {
+          "name": "live-inspector-changes",
+          "ok": true
+        },
+        {
+          "name": "escape-restores-focus",
+          "ok": true
+        },
+        {
+          "name": "keyboard-select",
+          "ok": true
+        },
+        {
+          "name": "close-restores-focus",
+          "ok": true
+        },
+        {
+          "name": "default-improves",
+          "ok": true,
+          "detail": {
+            "first": 9.283548234504227,
+            "last": 8.339064534505209
+          }
+        },
+        {
+          "name": "headless-label",
+          "ok": true
+        },
+        {
+          "name": "native-drawing-commits",
+          "ok": true,
+          "detail": {
+            "run": 2,
+            "id": "drawn-1"
+          }
+        },
+        {
+          "name": "draw-restores-running-intent",
+          "ok": true
+        },
+        {
+          "name": "drawn-improves",
+          "ok": true,
+          "detail": {
+            "first": 8.734022034363843,
+            "last": 7.7916945143816285
+          }
+        },
+        {
+          "name": "invalid-preserves-circuit",
+          "ok": true
+        },
+        {
+          "name": "invalid-useful-feedback",
+          "ok": true
+        },
+        {
+          "name": "clear-keeps-learning",
+          "ok": true
+        },
+        {
+          "name": "draw-preserves-pause",
+          "ok": true
+        },
+        {
+          "name": "preset-broad-oval",
+          "ok": true
+        },
+        {
+          "name": "preset-riverbend",
+          "ok": true
+        },
+        {
+          "name": "preset-club-circuit",
+          "ok": true
+        },
+        {
+          "name": "rapid-settles",
+          "ok": true,
+          "detail": {
+            "id": 31,
+            "pop": 512,
+            "history": 31
+          }
+        },
+        {
+          "name": "invalid-reset-keeps-current",
+          "ok": true,
+          "detail": "Population must be 2–1000."
+        },
+        {
+          "name": "invalid-reset-oldrun-continues",
+          "ok": true
+        },
+        {
+          "name": "dpr-only",
+          "ok": true
+        },
+        {
+          "name": "resize-tiny-keeps-run",
+          "ok": true
+        },
+        {
+          "name": "reduced-motion-scroll",
+          "ok": true
+        },
+        {
+          "name": "hidden-preference-retained",
+          "ok": true
+        },
+        {
+          "name": "hidden-no-display-work",
+          "ok": true
+        },
+        {
+          "name": "resume-without-catchup",
+          "ok": true,
+          "detail": 5
+        },
+        {
+          "name": "sensors-label-floor",
+          "ok": true,
+          "detail": 14.3251953125
+        },
+        {
+          "name": "network-label-floor",
+          "ok": true,
+          "detail": 12.89267578125
+        },
+        {
+          "name": "genetics-label-floor",
+          "ok": true,
+          "detail": 14.3251953125
+        },
+        {
+          "name": "racing-line-label-floor",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "name": "line-has-road",
+          "ok": true
+        },
+        {
+          "name": "weight-highlight",
+          "ok": true
+        },
+        {
+          "name": "no-console-errors",
+          "ok": true,
+          "detail": []
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

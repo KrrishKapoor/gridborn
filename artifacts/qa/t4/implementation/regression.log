@@ -1,0 +1,53 @@
+{
+  "controlled": {
+    "baseline": {
+      "rates": [
+        {
+          "rate": 1,
+          "snapshotsPerSecond": 30.3,
+          "ticks": 600,
+          "stepsPerSnapshot": 1.9801980198019802
+        },
+        {
+          "rate": 4,
+          "snapshotsPerSecond": 48,
+          "ticks": 2400,
+          "stepsPerSnapshot": 5
+        }
+      ],
+      "errorCount": 8,
+      "invalidResetAcknowledged": false,
+      "acceptedRun": 10,
+      "oldRunTick": 6,
+      "fakeInnerAccepted": true
+    },
+    "current": {
+      "rates": [
+        {
+          "rate": 1,
+          "snapshotsPerSecond": 60,
+          "ticks": 600,
+          "stepsPerSnapshot": 1
+        },
+        {
+          "rate": 4,
+          "snapshotsPerSecond": 60,
+          "ticks": 2400,
+          "stepsPerSnapshot": 4
+        }
+      ],
+      "errorCount": 9,
+      "invalidResetAcknowledged": true,
+      "acceptedRun": 10,
+      "oldRunTick": 6,
+      "fakeInnerAccepted": false,
+      "fakeInnerError": "Both road boundaries must follow the centerline at the declared width."
+    }
+  },
+  "realWorker": {
+    "resetError": true,
+    "run10Tick": 8,
+    "fixtureFirst": 9.495347595214843,
+    "fixtureLast": 8.551251983642578
+  }
+}
