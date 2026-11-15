@@ -1,0 +1,30 @@
+{
+  "unitTests": 74,
+  "unitTestFiles": 5,
+  "build": "passed",
+  "browserSuites": [
+    {
+      "file": "browser-results.json",
+      "completed": "2026-11-15T11:47:11.437Z",
+      "checks": 104,
+      "passed": 104,
+      "failed": 0
+    },
+    {
+      "file": "t1r-browser-results.json",
+      "completed": "2026-11-15T11:47:52.507Z",
+      "checks": 78,
+      "passed": 78,
+      "failed": 0
+    }
+  ],
+  "cssJitterGeometryTrials": 360,
+  "presetArraysUnchanged": true,
+  "independentQA": false,
+  "teardown": {
+    "previewTab": "closed",
+    "playwrightBrowsers": "closed",
+    "devServerPort": 5293,
+    "devServer": "stopped"
+  }
+}

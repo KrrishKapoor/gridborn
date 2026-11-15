@@ -1,5 +1,6 @@
 import { WORLD_HEIGHT, WORLD_WIDTH } from '../shared/geometry';
 import type { Point, TrackBuildOptions, TrackIssueCode, TrackValidation } from '../shared/geometry';
+import { findClosingTail, simplifyJitter } from './cleanup';
 
 const EPSILON = 1e-7;
 const distance = (a: Point, b: Point): number => Math.hypot(b.x - a.x, b.y - a.y);
@@ -18,9 +19,17 @@ export function segmentsIntersect(a: Point, b: Point, c: Point, d: Point): boole
     && ((cdA >= -EPSILON && cdB <= EPSILON) || (cdB >= -EPSILON && cdA <= EPSILON));
 }
 
-export function loopIntersects(points: readonly Point[]): boolean {
+// A nonzero localTravel is only for the raw jitter gate. Even then, every
+// crossing spanning more stroke travel is rejected before any simplification.
+// Final centerline and wall checks always use zero (no ignored intersections).
+export function loopIntersects(points: readonly Point[], localTravel = 0, closed = true): boolean {
+  const edgeCount = closed ? points.length : Math.max(0, points.length - 1);
+  const lengths = [0];
+  if (localTravel > 0) for (let i = 0; i < edgeCount; i++) {
+    lengths.push(lengths[i]! + distance(points[i]!, points[(i + 1) % points.length]!));
+  }
   // Sort edge bounds to avoid a quadratic scan for densely sampled freehand loops.
-  const edges = points.map((a, i) => {
+  const edges = points.slice(0, edgeCount).map((a, i) => {
     const b = points[(i + 1) % points.length]!;
     return { a, b, i, minX: Math.min(a.x, b.x), maxX: Math.max(a.x, b.x) };
   }).sort((a, b) => a.minX - b.minX || a.i - b.i);
@@ -30,8 +39,29 @@ export function loopIntersects(points: readonly Point[]): boolean {
       const b = edges[j]!;
       if (b.minX > a.maxX + EPSILON) break;
       const gap = Math.abs(a.i - b.i);
-      if (gap === 1 || gap === points.length - 1) continue;
-      if (segmentsIntersect(a.a, a.b, b.a, b.b)) return true;
+      if (gap === 1 || (closed && gap === points.length - 1)) continue;
+      if (segmentsIntersect(a.a, a.b, b.a, b.b)) {
+        if (localTravel > 0) {
+          const first = Math.min(a.i, b.i), last = Math.max(a.i, b.i);
+          const ax = a.b.x - a.a.x, ay = a.b.y - a.a.y;
+          const bx = b.b.x - b.a.x, by = b.b.y - b.a.y;
+          const denominator = ax * by - ay * bx;
+          if (Math.abs(denominator) > EPSILON) {
+            const dx = b.a.x - a.a.x, dy = b.a.y - a.a.y;
+            const ta = Math.max(0, Math.min(1, (dx * by - dy * bx) / denominator));
+            const tb = Math.max(0, Math.min(1, (dx * ay - dy * ax) / denominator));
+            const gap = Math.abs(lengths[a.i]! + ta * distance(a.a, a.b) - lengths[b.i]! - tb * distance(b.a, b.b));
+            if ((closed ? Math.min(gap, lengths[edgeCount]! - gap) : gap) <= localTravel) continue;
+            return true;
+          }
+          // Collinear overlap has multiple contacts: bound the whole arc,
+          // including both edges, rather than choosing one convenient contact.
+          const forward = lengths[last + 1]! - lengths[first]!;
+          const wrapped = closed ? lengths[edgeCount]! - lengths[last]! + lengths[first + 1]! : Infinity;
+          if (Math.min(forward, wrapped) <= localTravel) continue;
+        }
+        return true;
+      }
     }
   }
   return false;
@@ -104,18 +134,30 @@ export function buildTrack(points: readonly Point[], options: TrackBuildOptions)
   if (points.some(p => p.x < 0 || p.x > WORLD_WIDTH || p.y < 0 || p.y > WORLD_HEIGHT)) {
     return invalid('out-of-bounds', 'Keep the whole loop inside the drawing area, with room for the road.');
   }
-  const cleaned: Point[] = [];
+  let cleaned: Point[] = [];
   for (const p of points) {
     if (!cleaned.length || distance(cleaned[cleaned.length - 1]!, p) >= 1) cleaned.push({ x: p.x, y: p.y });
   }
-  // A small closing tail is ordinary hand jitter, not another turn in the road.
+  // Bound the original travel before cleanup can shorten pathological strokes.
+  if (cleaned.length >= 3 && perimeter(cleaned) > 20000) return invalid('invalid-input', 'Use fewer turns; draw one simple loop.');
+  const localTravel = Math.min(32, options.width * 0.4);
+  const closure = findClosingTail(cleaned, options.width);
+  // A forward tail may retrace the opening, but must not contain its own new
+  // nonlocal crossing/lobe. Validate it as an open path (no invented last→first).
+  if (closure && !loopIntersects(closure.tail, localTravel, false)) cleaned = closure.loop;
+  // Remove repeated/nearby closing samples, including the selected closure.
   while (cleaned.length > 3 && distance(cleaned[0]!, cleaned[cleaned.length - 1]!) < 12) cleaned.pop();
   const rawLength = cleaned.length >= 3 ? perimeter(cleaned) : 0;
   if (rawLength < Math.max(240, options.width * 6)) {
     return invalid('too-short', 'Draw a larger loop with room for a full-width road.');
   }
-  if (rawLength > 20000) return invalid('invalid-input', 'Use fewer turns; draw one simple loop.');
-  if (loopIntersects(cleaned)) return invalid('self-intersection', 'The loop crosses itself. Draw a loop without crossings.');
+  if (loopIntersects(cleaned)) {
+    if (loopIntersects(cleaned, localTravel)) {
+      return invalid('self-intersection', 'The loop crosses itself. Draw a loop without crossings.');
+    }
+    cleaned = simplifyJitter(cleaned, options.width);
+    if (loopIntersects(cleaned)) return invalid('self-intersection', 'The loop crosses itself. Draw a loop without crossings.');
+  }
 
   const center = smooth(cleaned, options.width);
   const n = center.length, half = options.width / 2;

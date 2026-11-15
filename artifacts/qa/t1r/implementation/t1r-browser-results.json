@@ -1,0 +1,1308 @@
+{
+  "url": "http://127.0.0.1:5293/qa/t1.html",
+  "when": "2026-11-15T11:47:52.507Z",
+  "results": [
+    {
+      "viewport": "1440x900",
+      "name": "all harness controls meet 44px targets",
+      "pass": true,
+      "observed": [
+        {
+          "id": "preset",
+          "width": 121,
+          "height": 44
+        },
+        {
+          "id": "drawing",
+          "width": 94.203125,
+          "height": 44
+        },
+        {
+          "id": "clear",
+          "width": 109.390625,
+          "height": 44
+        },
+        {
+          "id": "reset",
+          "width": 101.40625,
+          "height": 44
+        },
+        {
+          "id": "lifecycle",
+          "width": 108.25,
+          "height": 44
+        }
+      ],
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: 80-unit overshoot offset 0.98 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: 120-unit overshoot offset 0.98 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: 160-unit overshoot offset 1.02 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: 80-unit overshoot offset 0.98 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: 120-unit overshoot offset 0.98 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: 160-unit overshoot offset 1.02 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: ±1px jitter/1.5px spacing seed 1000 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 7,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 1480
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1031 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 8,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2324
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1062 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 9,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3168
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1093 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 10,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 4012
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1124 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 11,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 4856
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1155 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 12,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 5700
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: ±1px jitter/1.5px spacing seed 1000 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 13,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 6544
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1031 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 14,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 7388
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1062 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 15,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 8232
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1093 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 16,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 9076
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1124 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 17,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 9920
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1155 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 18,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 10764
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: combined 120-unit overshoot and ±1px jitter direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 183.7,
+          "minY": 126.7,
+          "maxX": 1017.1,
+          "maxY": 673.4
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: combined 120-unit overshoot and ±1px jitter direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 183.5,
+          "minY": 126.5,
+          "maxX": 1015.8,
+          "maxY": 673.3
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "true crossing direction 1 rejected; current road retained and inline error visible",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "rect": {
+          "top": 740.296875,
+          "bottom": 782.296875,
+          "height": 42,
+          "visible": true
+        },
+        "retained": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "true crossing direction -1 rejected; current road retained and inline error visible",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "rect": {
+          "top": 740.296875,
+          "bottom": 782.296875,
+          "height": 42,
+          "visible": true
+        },
+        "retained": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "visibilitychange hidden without blur cancels active gesture; return + late lift cannot commit",
+      "pass": true,
+      "observed": {
+        "before": {
+          "commit": 20,
+          "invalid": 2,
+          "clear": 1,
+          "draft": 12716
+        },
+        "after": {
+          "commit": 20,
+          "invalid": 2,
+          "clear": 2,
+          "draft": 12761
+        },
+        "ptr": [
+          "pointerdown:touch:19:true",
+          "pointerup:touch:19:true",
+          "lostpointercapture:touch:19:true",
+          "pointerdown:touch:20:true",
+          "lostpointercapture:touch:20:true",
+          "pointerup:touch:20:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "new real touch gesture succeeds after visibility cancellation",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 21,
+          "invalid": 2,
+          "clear": 2,
+          "draft": 12852
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "no console or page errors",
+      "pass": true,
+      "observed": {
+        "errors": []
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "all harness controls meet 44px targets",
+      "pass": true,
+      "observed": [
+        {
+          "id": "preset",
+          "width": 121,
+          "height": 44
+        },
+        {
+          "id": "drawing",
+          "width": 94.203125,
+          "height": 44
+        },
+        {
+          "id": "clear",
+          "width": 109.390625,
+          "height": 44
+        },
+        {
+          "id": "reset",
+          "width": 101.40625,
+          "height": 44
+        },
+        {
+          "id": "lifecycle",
+          "width": 108.25,
+          "height": 44
+        }
+      ],
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: 80-unit overshoot offset 0.98 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: 120-unit overshoot offset 0.98 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: 160-unit overshoot offset 1.02 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: 80-unit overshoot offset 0.98 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: 120-unit overshoot offset 0.98 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: 160-unit overshoot offset 1.02 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: ±1px jitter/1.5px spacing seed 1000 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 7,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 990
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1031 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 8,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 1344
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1062 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 9,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 1698
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1093 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 10,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2052
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1124 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 11,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2406
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1155 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 12,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2760
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: ±1px jitter/1.5px spacing seed 1000 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 13,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3114
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1031 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 14,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3468
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1062 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 15,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3822
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1093 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 16,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 4176
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1124 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 17,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 4530
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1155 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 18,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 4884
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: combined 120-unit overshoot and ±1px jitter direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186,
+          "minY": 127.5,
+          "maxX": 1014.5,
+          "maxY": 673.6
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: combined 120-unit overshoot and ±1px jitter direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 183.4,
+          "minY": 126.9,
+          "maxX": 1018.4,
+          "maxY": 672.9
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "true crossing direction 1 rejected; current road retained and inline error visible",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "rect": {
+          "top": 584.5,
+          "bottom": 626.5,
+          "height": 42,
+          "visible": true
+        },
+        "retained": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "true crossing direction -1 rejected; current road retained and inline error visible",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "rect": {
+          "top": 584.5,
+          "bottom": 626.5,
+          "height": 42,
+          "visible": true
+        },
+        "retained": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "visibilitychange hidden without blur cancels active gesture; return + late lift cannot commit",
+      "pass": true,
+      "observed": {
+        "before": {
+          "commit": 20,
+          "invalid": 2,
+          "clear": 1,
+          "draft": 5816
+        },
+        "after": {
+          "commit": 20,
+          "invalid": 2,
+          "clear": 2,
+          "draft": 5861
+        },
+        "ptr": [
+          "pointerdown:touch:19:true",
+          "pointerup:touch:19:true",
+          "lostpointercapture:touch:19:true",
+          "pointerdown:touch:20:true",
+          "lostpointercapture:touch:20:true",
+          "pointerup:touch:20:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "new real touch gesture succeeds after visibility cancellation",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 21,
+          "invalid": 2,
+          "clear": 2,
+          "draft": 5952
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "no console or page errors",
+      "pass": true,
+      "observed": {
+        "errors": []
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "all harness controls meet 44px targets",
+      "pass": true,
+      "observed": [
+        {
+          "id": "preset",
+          "width": 117,
+          "height": 44
+        },
+        {
+          "id": "drawing",
+          "width": 90.203125,
+          "height": 44
+        },
+        {
+          "id": "clear",
+          "width": 105.390625,
+          "height": 44
+        },
+        {
+          "id": "reset",
+          "width": 97.40625,
+          "height": 44
+        },
+        {
+          "id": "lifecycle",
+          "width": 104.25,
+          "height": 44
+        }
+      ],
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: 80-unit overshoot offset 0.98 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: 120-unit overshoot offset 0.98 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: 160-unit overshoot offset 1.02 direction 1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: 80-unit overshoot offset 0.98 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: 120-unit overshoot offset 0.98 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: 160-unit overshoot offset 1.02 direction -1 commits",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 186.6,
+          "minY": 127.2,
+          "maxX": 1013.4,
+          "maxY": 672.8
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: ±1px jitter/1.5px spacing seed 1000 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 7,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 935
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1031 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 8,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 1234
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1062 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 9,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 1533
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1093 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 10,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 1832
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1124 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 11,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2131
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1155 direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 12,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2430
+        },
+        "clockwise": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: ±1px jitter/1.5px spacing seed 1000 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 13,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 2729
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1031 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 14,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3028
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1062 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 15,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3327
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1093 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 16,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3626
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1124 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 17,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 3925
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: ±1px jitter/1.5px spacing seed 1155 direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "counts": {
+          "commit": 18,
+          "invalid": 0,
+          "clear": 0,
+          "draft": 4224
+        },
+        "clockwise": false
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: combined 120-unit overshoot and ±1px jitter direction 1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 181.9,
+          "minY": 127.1,
+          "maxX": 1017,
+          "maxY": 673.7
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: combined 120-unit overshoot and ±1px jitter direction -1",
+      "pass": true,
+      "observed": {
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "bounds": {
+          "minX": 182.6,
+          "minY": 127.2,
+          "maxX": 1019.2,
+          "maxY": 673.6
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "true crossing direction 1 rejected; current road retained and inline error visible",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "rect": {
+          "top": 299.6875,
+          "bottom": 335.6875,
+          "height": 36,
+          "visible": true
+        },
+        "retained": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "true crossing direction -1 rejected; current road retained and inline error visible",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "rect": {
+          "top": 299.6875,
+          "bottom": 335.6875,
+          "height": 36,
+          "visible": true
+        },
+        "retained": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "visibilitychange hidden without blur cancels active gesture; return + late lift cannot commit",
+      "pass": true,
+      "observed": {
+        "before": {
+          "commit": 20,
+          "invalid": 2,
+          "clear": 1,
+          "draft": 5046
+        },
+        "after": {
+          "commit": 20,
+          "invalid": 2,
+          "clear": 2,
+          "draft": 5091
+        },
+        "ptr": [
+          "pointerdown:touch:19:true",
+          "pointerup:touch:19:true",
+          "lostpointercapture:touch:19:true",
+          "pointerdown:touch:20:true",
+          "lostpointercapture:touch:20:true",
+          "pointerup:touch:20:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "new real touch gesture succeeds after visibility cancellation",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 21,
+          "invalid": 2,
+          "clear": 2,
+          "draft": 5182
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "no console or page errors",
+      "pass": true,
+      "observed": {
+        "errors": []
+      },
+      "note": ""
+    }
+  ]
+}

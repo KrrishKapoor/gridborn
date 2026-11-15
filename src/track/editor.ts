@@ -169,6 +169,9 @@ export function createTrackEditor({ canvas, initialTrack, getView, onChange }: T
   window.addEventListener('resize', checkSurface, listenerOptions);
   window.addEventListener('scroll', checkSurface, { ...listenerOptions, capture: true });
   window.addEventListener('blur', () => { if (pointer !== null) cancel(true); }, listenerOptions);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden' && pointer !== null) cancel(true);
+  }, listenerOptions);
   const resizeObserver = new ResizeObserver(checkSurface);
   resizeObserver.observe(canvas);
   // Backing-store changes can clear a draft even when its CSS size is unchanged.

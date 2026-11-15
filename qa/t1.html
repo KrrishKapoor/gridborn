@@ -15,7 +15,7 @@
       h1 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -.045em; font-weight: 550; line-height: 1.1; margin: 28px 0 10px; }
       .intro { color: #62675c; font-size: 15px; line-height: 1.5; margin: 0 0 22px; }
       .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
-      button, select { font: inherit; font-size: 13px; min-height: 40px; padding: 8px 12px; border: 1px solid #c9cdc2; border-radius: 5px; background: transparent; color: inherit; }
+      button, select { font: inherit; font-size: 13px; min-height: 44px; min-width: 44px; padding: 8px 12px; border: 1px solid #c9cdc2; border-radius: 5px; background: transparent; color: inherit; }
       button { cursor: pointer; }
       button[aria-pressed="true"] { background: #253e2c; border-color: #253e2c; color: #fff; }
       button:disabled { opacity: .45; cursor: default; }
@@ -46,8 +46,9 @@
         h1 { font-size: 27px; margin: 12px 0; }
         .intro { display: none; }
         .controls { margin-bottom: 8px; }
-        button, select { min-height: 34px; padding: 5px 10px; }
-        .stage { height: 240px; aspect-ratio: auto; }
+        button, select { padding: 5px 10px; }
+        .stage { height: 210px; aspect-ratio: auto; }
+        #feedback { position: sticky; bottom: 0; z-index: 1; background: #faf9f6; margin: 0; padding: 6px 0; min-height: 36px; font-size: 13px; }
       }
     </style>
   </head>
@@ -67,10 +68,10 @@
         <canvas id="road" role="img" aria-label="Current circuit and its start line"></canvas>
         <canvas id="editor" tabindex="0" aria-label="Draw a circuit with mouse or touch" aria-describedby="feedback">Use the circuit preset control as an alternative to drawing.</canvas>
       </div>
-      <div class="readout"><span id="circuit-name"></span><span id="metrics"></span></div>
       <p id="feedback" role="status" aria-atomic="true">Drawing is on. Start anywhere inside the canvas. Escape cancels a draft.</p>
+      <div class="readout"><span id="circuit-name"></span><span id="metrics"></span></div>
       <footer><p>Track geometry only. No cars or simulation.<br>Clear drawing keeps your current circuit.</p><button id="lifecycle" type="button">Detach editor</button></footer>
     </main>
-    <script type="module" src="./t1.ts"></script>
+    <script type="module" src="/qa/t1.ts"></script>
   </body>
 </html>
