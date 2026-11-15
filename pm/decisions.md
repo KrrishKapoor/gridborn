@@ -2,6 +2,12 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T3 presentation handoff (Codex PM; implementation by T3 Astra worker)
+
+- Teaching diagrams redraw on input or supplied live data, rather than idle timers. This meets interactive/live teaching goals while reducing offscreen work and respecting reduced motion. Selected-car arrays are copied before recycling; illustrative modes are labeled. Independent QA is checking behavior and data ownership.
+- The preset control is an action picker because the shared PageState has no accepted preset id; it must not falsely label an unacknowledged reset as current. Final integration can show current circuit context separately if useful.
+- PM inspected desktop/portrait/landscape hero screenshots. The landscape hero now appears in the first screen, addressing the disposable scaffold's layout direction. This is provisional visual assessment, not final integrated QA.
+
 ## 2026-11-15 — T1 handoff defaults (Codex PM; implementation by T1 Astra worker)
 
 - Accepted for review: the editor inherits current track width, closes loose endpoints, resamples near 16-world-unit edges, and smooths based on road width. Raw crossings and narrow wall overlaps are rejected to preserve unambiguous drivable circuits.

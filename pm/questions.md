@@ -6,6 +6,11 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T3 handoff (Codex PM)
+
+- “Live” teaching demos respond to input and actual supplied simulation data; they need no decorative continuous motion. Illustrative genetics and corner exploration remain explicitly labeled.
+- The preset menu emits a load action and returns to its prompt rather than implying a requested track has already been accepted.
+
 ## Resolved — 2026-11-15 T1 handoff (Codex PM)
 
 - Drawing width inherits the selected circuit's width (presets use 92 world units).
