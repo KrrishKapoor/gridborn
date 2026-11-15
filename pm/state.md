@@ -14,9 +14,9 @@ Worker model: `codex / gpt-6-astra / reasoningEffort=xhigh`. QA model: `claudeAg
 | --- | --- | --- | --- | --- |
 | P0 | Plan and resolve initial choices | None | State, dated decisions, and question log committed and pushed before application code; root verified clean main | Complete: `1a64443` pushed |
 | T0 | Shared scaffold and contracts | P0 | Vite + TS + Vitest install/test/build work; light design tokens and responsive semantic shell render; stable typed track/simulation/inspection contracts and ownership map documented; independent three-viewport smoke QA passes | Accepted: Opus round 1 PASS; merged |
-| T1 | Track geometry and pointer editor | T0 accepted | Deterministic presets and freehand closed-loop smoothing produce valid tracks with width/start line; mouse/touch drawing, clear/reset, invalid tiny/self-intersecting input, and resize behave predictably; geometry tests/build and fresh task browser QA pass | Ready; T0 accepted |
-| T2 | Deterministic neuroevolution engine | T0 accepted | Typed-array physics, ray casting, NN forward pass, seeded RNG, selection/crossover/mutation, progress/lap fitness, stopped/fading crashes, generation statistics, and bounded worker stepping are real; unit tests/build pass; a browser harness demonstrates repeatable evolution and measured performance; fresh task QA passes | Ready; T0 accepted |
-| T3 | Editorial page and four teaching demos | T0 accepted | Minimal light page has polished typography, whitespace, hero/control/inspection slots, and distinct live sensor/network/genetics/racing-line demos with one or two explanatory sentences each; responsive and accessible controls; fresh task QA passes | Ready; T0 accepted |
+| T1 | Track geometry and pointer editor | T0 accepted | Deterministic presets and freehand closed-loop smoothing produce valid tracks with width/start line; mouse/touch drawing, clear/reset, invalid tiny/self-intersecting input, and resize behave predictably; geometry tests/build and fresh task browser QA pass | Worker running; QA round 0/3 |
+| T2 | Deterministic neuroevolution engine | T0 accepted | Typed-array physics, ray casting, NN forward pass, seeded RNG, selection/crossover/mutation, progress/lap fitness, stopped/fading crashes, generation statistics, and bounded worker stepping are real; unit tests/build pass; a browser harness demonstrates repeatable evolution and measured performance; fresh task QA passes | Worker running; QA round 0/3 |
+| T3 | Editorial page and four teaching demos | T0 accepted | Minimal light page has polished typography, whitespace, hero/control/inspection slots, and distinct live sensor/network/genetics/racing-line demos with one or two explanatory sentences each; responsive and accessible controls; fresh task QA passes | Worker running; QA round 0/3 |
 | T4 | Connect hero, editor, engine, controls, and inspection | T1, T2, T3 accepted | Live hundreds-car hero starts automatically, best trajectory glows, editor replaces track, generation/best-lap/sparkline are real, play/pause/1x/4x/headless work, car click/tap reveals live rays and NN weights/activations, 1,000-car mode is measured, hidden/resume/resize are safe; tests/build and fresh task QA pass | Blocked on T1-T3 |
 | T5 | Release evidence and run instructions | T4 accepted | README documents install/dev/test/build (`dist/`) and honest limitations; final fresh Opus QA covers complete behavior at all three viewports, fixes are re-reviewed, screenshot/report evidence preserved under `artifacts/qa/`; branch pushed and root clean main verified | Blocked on T4 |
 
@@ -60,4 +60,24 @@ Read this file, `pm/decisions.md`, `pm/questions.md`, and `pm/brief.md`. Inspect
 - Merged `t3/scaffold-simulation-contracts` after its no-high-severity pass. Preserved the independent report, scripts, results, and screenshots under `artifacts/qa/t0/round-1/` on feat/v1.
 - PM clarified contracts for overlay input ownership (M1), DPR/tiny-canvas handling (L2/L6), and rejected-reset recovery (L5) before downstream workers start. No application code changed by PM.
 - Disposable scaffold low findings L1/L3/L6/L7 are explicitly assigned to the production T3/T4 replacements and their fresh QA. Persistent mono font L4 is assigned to T3. These are not silently marked fixed; final review must verify all applicable cases.
-- T1/T2/T3 now ready from the accepted scaffold and clarified contract. Final product QA remains pending.
+- T1/T2/T3 started concurrently from accepted scaffold and clarified contract commit `520db628c744ed101640a3525d6e1229ac60169c`. Final product QA remains pending.
+
+### Active feature delegates
+
+- [Gridborn T1 — track geometry and touch editor](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A9c1cb4b8-39cc-443d-80e7-4a27a8bfd522)
+  - Task: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A9c1cb4b8-39cc-443d-80e7-4a27a8bfd522`.
+  - Thread: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A9c1cb4b8-39cc-443d-80e7-4a27a8bfd522`.
+  - State: implementation running; QA round 0/3; isolated worktree created from `520db62`. Branch/path to verify from completion.
+
+- [Gridborn T2 — deterministic neuroevolution engine](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A4b4bf251-f464-4c4f-92c5-d05a8e6888e6)
+  - Task: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A4b4bf251-f464-4c4f-92c5-d05a8e6888e6`.
+  - Thread: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A4b4bf251-f464-4c4f-92c5-d05a8e6888e6`.
+  - State: implementation running; QA round 0/3; isolated worktree created from `520db62`. Branch/path to verify from completion.
+
+- [Gridborn T3 — editorial page and interactive teaching demos](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Ac6db2d73-bda9-416f-bac0-47d44d971512)
+  - Task: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Ac6db2d73-bda9-416f-bac0-47d44d971512`.
+  - Thread: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Ac6db2d73-bda9-416f-bac0-47d44d971512`.
+  - State: implementation running; QA round 0/3; isolated worktree created from `520db62`. Branch/path to verify from completion.
+
+- All three use codex / gpt-6-astra / reasoningEffort=xhigh. Each owns separate feature paths plus its own qa/tN harness. No active QA reviewer or shared-source editor is running.
+- On each completion: read its thread result, inspect branch/commit and handoff, then launch a new fresh Opus high task reviewer against that committed worker checkout before merge. Keep the other independent workers running.
