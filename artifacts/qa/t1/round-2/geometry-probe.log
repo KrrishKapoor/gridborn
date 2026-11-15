@@ -1,0 +1,116 @@
+{
+ "failures": 0,
+ "overshoot": [
+  210,
+  210,
+  36
+ ],
+ "extra200": [
+  "oval-top/cw/-15:self-intersection",
+  "oval-top/cw/-8:self-intersection",
+  "oval-top/cw/0:self-intersection",
+  "oval-top/cw/8:self-intersection",
+  "oval-top/cw/15:self-intersection",
+  "oval-top/ccw/-15:self-intersection",
+  "oval-top/ccw/-8:self-intersection",
+  "oval-top/ccw/0:self-intersection",
+  "oval-top/ccw/8:self-intersection",
+  "oval-top/ccw/15:self-intersection",
+  "oval-right/cw/-15:ok",
+  "oval-right/cw/-8:ok",
+  "oval-right/cw/0:ok",
+  "oval-right/cw/8:ok",
+  "oval-right/cw/15:ok",
+  "oval-right/ccw/-15:ok",
+  "oval-right/ccw/-8:ok",
+  "oval-right/ccw/0:ok",
+  "oval-right/ccw/8:ok",
+  "oval-right/ccw/15:ok",
+  "oval-135/cw/-15:ok",
+  "oval-135/cw/-8:ok",
+  "oval-135/cw/0:ok",
+  "oval-135/cw/8:ok",
+  "oval-135/cw/15:ok",
+  "oval-135/ccw/-15:self-intersection",
+  "oval-135/ccw/-8:self-intersection",
+  "oval-135/ccw/0:self-intersection",
+  "oval-135/ccw/8:self-intersection",
+  "oval-135/ccw/15:self-intersection",
+  "small-left/cw/-15:ok",
+  "small-left/cw/-8:ok",
+  "small-left/cw/0:ok",
+  "small-left/cw/8:ok",
+  "small-left/cw/15:ok",
+  "small-left/ccw/-15:ok",
+  "small-left/ccw/-8:ok",
+  "small-left/ccw/0:ok",
+  "small-left/ccw/8:ok",
+  "small-left/ccw/15:ok",
+  "small-low-right/cw/-15:self-intersection",
+  "small-low-right/cw/-8:self-intersection",
+  "small-low-right/cw/0:self-intersection",
+  "small-low-right/cw/8:self-intersection",
+  "small-low-right/cw/15:self-intersection",
+  "small-low-right/ccw/-15:ok",
+  "small-low-right/ccw/-8:ok",
+  "small-low-right/ccw/0:ok",
+  "small-low-right/ccw/8:ok",
+  "small-low-right/ccw/15:ok"
+ ],
+ "white3": [
+  20,
+  6
+ ],
+ "fuzz": {
+  "accepted": 242,
+  "rejected": 158,
+  "codes": {
+   "self-intersection": 152,
+   "out-of-bounds": 6
+  },
+  "acceptedWithAnyIssue": 0,
+  "examples": []
+ },
+ "timing": {
+  "ordinaryOval": {
+   "ms": 0.46,
+   "ok": true,
+   "code": null
+  },
+  "phoneJitterOvershoot": {
+   "ms": 0.27,
+   "ok": true,
+   "code": null
+  },
+  "dense19999": {
+   "ms": 0.44,
+   "ok": false,
+   "code": "out-of-bounds"
+  },
+  "dense19999-baseline": {
+   "ms": 0.98,
+   "ok": false,
+   "code": "out-of-bounds"
+  },
+  "verticalColumn": {
+   "ms": 0.83,
+   "ok": false,
+   "code": "invalid-input"
+  },
+  "verticalColumn-baseline": {
+   "ms": 1.53,
+   "ok": false,
+   "code": "invalid-input"
+  },
+  "tallThinLoop": {
+   "ms": 0.13,
+   "ok": false,
+   "code": "too-tight"
+  },
+  "tallThinLoop-baseline": {
+   "ms": 0.11,
+   "ok": false,
+   "code": "too-tight"
+  }
+ }
+}

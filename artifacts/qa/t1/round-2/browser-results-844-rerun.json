@@ -1,0 +1,1846 @@
+{
+ "url": "http://127.0.0.1:5293/qa/t1.html",
+ "started": "2026-11-15T12:34:49.271Z",
+ "viewports": {
+  "844x390": {
+   "checks": [
+    {
+     "name": "initial broad-oval",
+     "ok": true,
+     "detail": "broad-oval 1965.4808349609375"
+    },
+    {
+     "name": "no horizontal overflow",
+     "ok": true,
+     "detail": 0
+    },
+    {
+     "name": "controls >= 44x44",
+     "ok": true,
+     "detail": [
+      {
+       "id": "preset",
+       "w": 117,
+       "h": 44
+      },
+      {
+       "id": "drawing",
+       "w": 90.203125,
+       "h": 44
+      },
+      {
+       "id": "clear",
+       "w": 105.390625,
+       "h": 44
+      },
+      {
+       "id": "reset",
+       "w": 97.40625,
+       "h": 44
+      },
+      {
+       "id": "lifecycle",
+       "w": 104.25,
+       "h": 44
+      }
+     ]
+    },
+    {
+     "name": "overlay rect == road rect",
+     "ok": true,
+     "detail": [
+      {
+       "x": 24,
+       "y": 130.6875,
+       "width": 796,
+       "height": 210,
+       "top": 130.6875,
+       "right": 820,
+       "bottom": 340.6875,
+       "left": 24
+      },
+      {
+       "left": 24,
+       "top": 130.6875,
+       "width": 796,
+       "height": 210
+      }
+     ]
+    },
+    {
+     "name": "backing store = css*min(dpr,2)",
+     "ok": true,
+     "detail": [
+      1592,
+      1592
+     ]
+    },
+    {
+     "name": "overshoot 80/120/160 all commit (18 strokes)",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "overshoot tracks pass independent topology/clearance/direction",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "overshoot direction follows stroke",
+     "ok": true,
+     "detail": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+     ]
+    },
+    {
+     "name": "overshoot position preserved (bbox centre within 15 of 600,400)",
+     "ok": true,
+     "detail": [
+      [
+       599.9998779296875,
+       399.96445083618164
+      ],
+      [
+       599.9998779296875,
+       399.96445083618164
+      ],
+      [
+       599.9998779296875,
+       399.96445083618164
+      ],
+      [
+       599.9998779296875,
+       399.96445083618164
+      ],
+      [
+       599.9998779296875,
+       399.96445083618164
+      ],
+      [
+       599.9998779296875,
+       399.96445083618164
+      ],
+      [
+       599.9999008178711,
+       399.96448135375977
+      ],
+      [
+       599.9999008178711,
+       399.96448135375977
+      ],
+      [
+       599.9999008178711,
+       399.96448135375977
+      ],
+      [
+       599.9775619506836,
+       400.018856048584
+      ],
+      [
+       599.9775619506836,
+       400.018856048584
+      ],
+      [
+       599.9775619506836,
+       400.018856048584
+      ],
+      [
+       599.9775695800781,
+       400.018856048584
+      ],
+      [
+       599.9775695800781,
+       400.018856048584
+      ],
+      [
+       599.9775695800781,
+       400.018856048584
+      ],
+      [
+       599.9775695800781,
+       400.01884841918945
+      ],
+      [
+       599.9775695800781,
+       400.01884841918945
+      ],
+      [
+       599.9775695800781,
+       400.01884841918945
+      ]
+     ]
+    },
+    {
+     "name": "jitter commits pass independent topology/clearance",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "jitter ±1px@1.5px float coords all commit",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "jitter ±1px@1.5px integer coords all commit",
+     "ok": false,
+     "detail": [
+      [
+       "oval-cw",
+       1
+      ],
+      [
+       "left-cw-overshoot120+jitter",
+       3
+      ]
+     ]
+    },
+    {
+     "name": "reference drawn track commits",
+     "ok": true,
+     "detail": "Circuit ready. Draw another loop to replace it."
+    },
+    {
+     "name": "reject figureEight",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after figureEight",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "rejection feedback visible in viewport with stage",
+     "ok": true,
+     "detail": {
+      "top": 299.6875,
+      "bottom": 335.6875
+     }
+    },
+    {
+     "name": "rejection feedback red",
+     "ok": true,
+     "detail": "rgb(163, 52, 40)"
+    },
+    {
+     "name": "invalid draft remains visible in red",
+     "ok": true,
+     "detail": 5022
+    },
+    {
+     "name": "reject figureEightJitter",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after figureEightJitter",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject shallowPinchCrossing",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after shallowPinchCrossing",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject twoLaps",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after twoLaps",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject lapAndHalfOffset",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after lapAndHalfOffset",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject longRetrace360",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after longRetrace360",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject tailReversal",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after tailReversal",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject tailDeparture",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after tailDeparture",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject tailLobeR9",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after tailLobeR9",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject tiny",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "Draw a larger loop with room for a full-width road. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after tiny",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "reject offCanvas",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "Keep the whole loop inside the drawing area, with room for the road. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    {
+     "name": "last valid kept after offCanvas",
+     "ok": true,
+     "detail": [
+      "drawn-67",
+      1925.714111328125,
+      "drawn-67",
+      1925.714111328125
+     ]
+    },
+    {
+     "name": "early-close brush + departure not truncated into a loop",
+     "ok": true,
+     "detail": {
+      "committed": 0,
+      "invalid": 1,
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+     }
+    },
+    {
+     "name": "Clear drawing mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 0,
+       "draft": 19508
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 1,
+       "draft": 19569
+      },
+      "feedback": "Drawing cleared. Current circuit kept."
+     }
+    },
+    {
+     "name": "Reset circuit mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 1,
+       "draft": 19569
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 1,
+       "draft": 19630
+      },
+      "feedback": "Preset ready. Draw a loop to make it your own."
+     }
+    },
+    {
+     "name": "reset restores broad-oval",
+     "ok": true,
+     "detail": [
+      "broad-oval",
+      "broad-oval"
+     ]
+    },
+    {
+     "name": "Preset change mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 1,
+       "draft": 19630
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 1,
+       "draft": 19691
+      },
+      "feedback": "Preset ready. Draw a loop to make it your own."
+     }
+    },
+    {
+     "name": "preset change applied",
+     "ok": true,
+     "detail": "riverbend"
+    },
+    {
+     "name": "Rapid mode toggles (5) mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 1,
+       "draft": 19691
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 2,
+       "draft": 19752
+      },
+      "feedback": "Drawing is off. Your circuit is kept."
+     }
+    },
+    {
+     "name": "aria-pressed matches overlay after odd toggles",
+     "ok": true,
+     "detail": [
+      "false",
+      "none"
+     ]
+    },
+    {
+     "name": "Rapid reset/clear/preset mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 2,
+       "draft": 19752
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 3,
+       "draft": 19813
+      },
+      "feedback": "Preset ready. Draw a loop to make it your own."
+     }
+    },
+    {
+     "name": "ends on broad-oval after rapid actions",
+     "ok": true,
+     "detail": "broad-oval"
+    },
+    {
+     "name": "Escape key mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 3,
+       "draft": 19813
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 4,
+       "draft": 19875
+      },
+      "feedback": "Drawing cleared. Current circuit kept."
+     }
+    },
+    {
+     "name": "preset broad-oval independently valid",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "preset riverbend independently valid",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "preset club-circuit independently valid",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "visibilitychange hidden (no blur) mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 4,
+       "draft": 19875
+      },
+      "after": {
+       "commit": 65,
+       "invalid": 14,
+       "clear": 5,
+       "draft": 19936
+      },
+      "feedback": "Drawing cleared. Current circuit kept."
+     }
+    },
+    {
+     "name": "no blur fired during visibility test",
+     "ok": true,
+     "detail": [
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fresh gesture after visibility cancel commits",
+     "ok": true,
+     "detail": "Circuit ready. Draw another loop to replace it."
+    },
+    {
+     "name": "second finger ignored; primary shape commits",
+     "ok": true,
+     "detail": "Circuit ready. Draw another loop to replace it."
+    },
+    {
+     "name": "touchCancel: no commit",
+     "ok": true,
+     "detail": "Drawing cleared. Current circuit kept."
+    },
+    {
+     "name": "touch stroke does not scroll page",
+     "ok": true,
+     "detail": 41
+    },
+    {
+     "name": "CSS viewport resize mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 68,
+       "invalid": 14,
+       "clear": 6,
+       "draft": 20434
+      },
+      "after": {
+       "commit": 68,
+       "invalid": 14,
+       "clear": 7,
+       "draft": 20495
+      },
+      "feedback": "Drawing cleared. Current circuit kept."
+     }
+    },
+    {
+     "name": "rotated viewport stroke commits at correct world position",
+     "ok": true,
+     "detail": "Circuit ready. Draw another loop to replace it."
+    },
+    {
+     "name": "rotated viewport no horizontal overflow",
+     "ok": true,
+     "detail": 0
+    },
+    {
+     "name": "DPR-only change mid-stroke keeps gesture and commits",
+     "ok": true,
+     "detail": "Circuit ready. Draw another loop to replace it."
+    },
+    {
+     "name": "backing store rebuilt for new DPR",
+     "ok": true,
+     "detail": [
+      796,
+      796
+     ]
+    },
+    {
+     "name": "Detach editor mid-stroke: no commit on late release",
+     "ok": true,
+     "detail": {
+      "before": {
+       "commit": 70,
+       "invalid": 14,
+       "clear": 7,
+       "draft": 20808
+      },
+      "after": {
+       "commit": 70,
+       "invalid": 14,
+       "clear": 7,
+       "draft": 20869
+      },
+      "feedback": "Editor detached. Input listeners and pending work removed."
+     }
+    },
+    {
+     "name": "detached: overlay cleared, pointer-events none, controls disabled",
+     "ok": true,
+     "detail": {
+      "px": 0,
+      "pe": "none",
+      "disabled": true
+     }
+    },
+    {
+     "name": "detached: drags emit nothing",
+     "ok": true,
+     "detail": {
+      "commit": 70,
+      "invalid": 14,
+      "clear": 7,
+      "draft": 20869
+     }
+    },
+    {
+     "name": "after 7 rapid detach/attach, one stroke = exactly one commit",
+     "ok": false,
+     "detail": [
+      "Detach editor",
+      {
+       "commit": 70,
+       "invalid": 14,
+       "clear": 8,
+       "draft": 20870
+      },
+      "surface events during stroke:",
+      [
+       [
+        "scroll",
+        78
+       ],
+       [
+        "scroll",
+        77
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "no page errors",
+     "ok": true,
+     "detail": []
+    },
+    {
+     "name": "no console errors/warnings (excluding my getImageData perf hint)",
+     "ok": true,
+     "detail": []
+    }
+   ],
+   "drawings": {
+    "overshoot": [
+     {
+      "dir": "cw",
+      "extra": 80,
+      "offset": -10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.975341796875,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9998779296875,
+       399.96445083618164
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 80,
+      "offset": 0,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.975341796875,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9998779296875,
+       399.96445083618164
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 80,
+      "offset": 10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.975341796875,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9998779296875,
+       399.96445083618164
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 120,
+      "offset": -10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.975341796875,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9998779296875,
+       399.96445083618164
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 120,
+      "offset": 0,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.975341796875,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9998779296875,
+       399.96445083618164
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 120,
+      "offset": 10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.975341796875,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9998779296875,
+       399.96445083618164
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 160,
+      "offset": -10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.9752197265625,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9999008178711,
+       399.96448135375977
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 160,
+      "offset": 0,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.9752197265625,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9999008178711,
+       399.96448135375977
+      ]
+     },
+     {
+      "dir": "cw",
+      "extra": 160,
+      "offset": 10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.36,
+      "spawnErr": 3.05,
+      "length": 2023.9752197265625,
+      "orientation": 1,
+      "boundsCenter": [
+       599.9999008178711,
+       399.96448135375977
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 80,
+      "offset": -10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.975341796875,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775619506836,
+       400.018856048584
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 80,
+      "offset": 0,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.975341796875,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775619506836,
+       400.018856048584
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 80,
+      "offset": 10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.975341796875,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775619506836,
+       400.018856048584
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 120,
+      "offset": -10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.9752197265625,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775695800781,
+       400.018856048584
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 120,
+      "offset": 0,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.9752197265625,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775695800781,
+       400.018856048584
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 120,
+      "offset": 10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.9752197265625,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775695800781,
+       400.018856048584
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 160,
+      "offset": -10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.9752197265625,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775695800781,
+       400.01884841918945
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 160,
+      "offset": 0,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.9752197265625,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775695800781,
+       400.01884841918945
+      ]
+     },
+     {
+      "dir": "ccw",
+      "extra": 160,
+      "offset": 10,
+      "committed": 1,
+      "invalid": 0,
+      "feedback": "Circuit ready. Draw another loop to replace it.",
+      "valid": true,
+      "issues": [],
+      "c2s": 11.39,
+      "spawnErr": 6.84,
+      "length": 2023.9752197265625,
+      "orientation": -1,
+      "boundsCenter": [
+       599.9775695800781,
+       400.01884841918945
+      ]
+     }
+    ],
+    "jitter": [
+     {
+      "shape": "oval-cw",
+      "round": false,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": false,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": false,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": false,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": false,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": false,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": true,
+      "seed": 1,
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+     },
+     {
+      "shape": "oval-cw",
+      "round": true,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": true,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": true,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": true,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-cw",
+      "round": true,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": false,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": false,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": false,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": false,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": false,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": false,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": true,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": true,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": true,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": true,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": true,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "oval-ccw",
+      "round": true,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": false,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": false,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": false,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": false,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": false,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": false,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": true,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": true,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": true,
+      "seed": 3,
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": true,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": true,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "left-cw-overshoot120+jitter",
+      "round": true,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": false,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": false,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": false,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": false,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": false,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": false,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": true,
+      "seed": 1,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": true,
+      "seed": 2,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": true,
+      "seed": 3,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": true,
+      "seed": 4,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": true,
+      "seed": 5,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     },
+     {
+      "shape": "right-ccw-overshoot140+jitter",
+      "round": true,
+      "seed": 6,
+      "committed": 1,
+      "invalid": 0,
+      "kind": "commit",
+      "valid": true,
+      "issues": []
+     }
+    ],
+    "rejections": {
+     "figureEight": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "figureEightJitter": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "shallowPinchCrossing": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "twoLaps": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "lapAndHalfOffset": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "longRetrace360": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "tailReversal": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "tailDeparture": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "tailLobeR9": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "tiny": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "Draw a larger loop with room for a full-width road. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     },
+     "offCanvas": {
+      "committed": 0,
+      "invalid": 1,
+      "kind": "invalid",
+      "feedback": "Keep the whole loop inside the drawing area, with room for the road. Current circuit kept.",
+      "keptId": "drawn-67",
+      "keptLength": 1925.714111328125
+     }
+    },
+    "earlyClose": {
+     "committed": 0,
+     "invalid": 1,
+     "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+    }
+   },
+   "layout": {
+    "overflowX": 0,
+    "targets": [
+     {
+      "id": "preset",
+      "w": 117,
+      "h": 44
+     },
+     {
+      "id": "drawing",
+      "w": 90.203125,
+      "h": 44
+     },
+     {
+      "id": "clear",
+      "w": 105.390625,
+      "h": 44
+     },
+     {
+      "id": "reset",
+      "w": 97.40625,
+      "h": 44
+     },
+     {
+      "id": "lifecycle",
+      "w": 104.25,
+      "h": 44
+     }
+    ],
+    "road": {
+     "x": 24,
+     "y": 130.6875,
+     "width": 796,
+     "height": 210,
+     "top": 130.6875,
+     "right": 820,
+     "bottom": 340.6875,
+     "left": 24
+    },
+    "backing": [
+     1592,
+     1592
+    ],
+    "view": {
+     "scale": 0.2325,
+     "offsetX": 258.5,
+     "offsetY": 12
+    },
+    "worldPerCssPx": 4.301075268817204
+   },
+   "jitterSummary": {
+    "oval-cw/float": [
+     6,
+     6
+    ],
+    "oval-cw/int": [
+     5,
+     6
+    ],
+    "oval-ccw/float": [
+     6,
+     6
+    ],
+    "oval-ccw/int": [
+     6,
+     6
+    ],
+    "left-cw-overshoot120+jitter/float": [
+     6,
+     6
+    ],
+    "left-cw-overshoot120+jitter/int": [
+     5,
+     6
+    ],
+    "right-ccw-overshoot140+jitter/float": [
+     6,
+     6
+    ],
+    "right-ccw-overshoot140+jitter/int": [
+     6,
+     6
+    ]
+   },
+   "finalOvershootJitter": {
+    "feedback": "Circuit ready. Draw another loop to replace it.",
+    "id": "drawn-1"
+   },
+   "console": [
+    "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+   ],
+   "pageErrors": []
+  }
+ },
+ "browserVersion": "157.0.8103.51",
+ "total": 69,
+ "passed": 67,
+ "failures": [
+  {
+   "vp": "844x390",
+   "name": "jitter ±1px@1.5px integer coords all commit",
+   "detail": [
+    [
+     "oval-cw",
+     1
+    ],
+    [
+     "left-cw-overshoot120+jitter",
+     3
+    ]
+   ]
+  },
+  {
+   "vp": "844x390",
+   "name": "after 7 rapid detach/attach, one stroke = exactly one commit",
+   "detail": [
+    "Detach editor",
+    {
+     "commit": 70,
+     "invalid": 14,
+     "clear": 8,
+     "draft": 20870
+    },
+    "surface events during stroke:",
+    [
+     [
+      "scroll",
+      78
+     ],
+     [
+      "scroll",
+      77
+     ]
+    ]
+   ]
+  }
+ ],
+ "finished": "2026-11-15T12:41:18.050Z"
+}

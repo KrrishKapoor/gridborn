@@ -1,0 +1,7 @@
+checks 202/205
+1440x900 jitter {"oval-cw/float":[6,6],"oval-cw/int":[6,6],"oval-ccw/float":[6,6],"oval-ccw/int":[6,6],"left-cw-overshoot120+jitter/float":[6,6],"left-cw-overshoot120+jitter/int":[6,6],"right-ccw-overshoot140+jitter/float":[6,6],"right-ccw-overshoot140+jitter/int":[6,6]} worldPerPx 1.521
+390x844 jitter {"oval-cw/float":[6,6],"oval-cw/int":[5,6],"oval-ccw/float":[6,6],"oval-ccw/int":[6,6],"left-cw-overshoot120+jitter/float":[6,6],"left-cw-overshoot120+jitter/int":[6,6],"right-ccw-overshoot140+jitter/float":[6,6],"right-ccw-overshoot140+jitter/int":[6,6]} worldPerPx 3.636
+844x390 jitter {"oval-cw/float":[6,6],"oval-cw/int":[5,6],"oval-ccw/float":[6,6],"oval-ccw/int":[6,6],"left-cw-overshoot120+jitter/float":[6,6],"left-cw-overshoot120+jitter/int":[5,6],"right-ccw-overshoot140+jitter/float":[6,6],"right-ccw-overshoot140+jitter/int":[6,6]} worldPerPx 4.301
+FAIL 390x844 jitter ±1px@1.5px integer coords all commit [["oval-cw",5]]
+FAIL 844x390 jitter ±1px@1.5px integer coords all commit [["oval-cw",1],["left-cw-overshoot120+jitter",3]]
+FAIL 844x390 after 7 rapid detach/attach, one stroke = exactly one commit ["Detach editor",{"commit":70,"invalid":14,"clear":8,"draft":20870}]

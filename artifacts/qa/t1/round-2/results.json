@@ -1,0 +1,864 @@
+{
+ "reviewer": "fresh independent QA, claude-opus-5-5, effort high (T1 round 2 of 3); did not implement T1/T1R and is not the round-1 reviewer",
+ "subject": {
+  "worktree": "/Users/krrishai/.t3/worktrees/gridborn/t3-aaf85e2f-de6ced935d21bc76",
+  "branch": "t3/track-loop-jitter-cleanup",
+  "head": "a4d57b38390e7b7bf2f86a07a084d889d44ae40a",
+  "trackedCleanBeforeAndAfter": true,
+  "baselineForComparison": "0d3dcc5 (src/track identical to round-1 reviewed 9ce4869)"
+ },
+ "verdict": "PASS",
+ "highFindings": 0,
+ "roundOneFindings": {
+  "M1": "RESOLVED",
+  "L1": "SUBSTANTIALLY RESOLVED (residual low-rate rejection with integer coords at phone scales; see N1)",
+  "L2": "UNCHANGED, honestly documented known limitation",
+  "L3": "RESOLVED",
+  "L4": "RESOLVED",
+  "visibilityInfo": "RESOLVED (simulated)"
+ },
+ "commands": {
+  "npmCi": "pass (0 vulnerabilities)",
+  "npmTest": "74/74 passed, 5 files",
+  "npmBuild": "pass (tsc + vite build)",
+  "node": "v26.13.1",
+  "npm": "11.20.0"
+ },
+ "geometry": {
+  "contractFailures": 0,
+  "presets": [
+   {
+    "id": "broad-oval",
+    "byteIdenticalToBaseline": true,
+    "valid": true,
+    "length": 1965.4808349609375
+   },
+   {
+    "id": "riverbend",
+    "byteIdenticalToBaseline": true,
+    "valid": true,
+    "length": 1976.6702880859375
+   },
+   {
+    "id": "club-circuit",
+    "byteIdenticalToBaseline": true,
+    "valid": true,
+    "length": 2223.294921875
+   }
+  ],
+  "overshoot": {
+   "acceptedValid_80to160": "210/210",
+   "baselineAccepted": "36/210",
+   "note": "5 positions × 2 windings × 0/40/80/120/160 × offsets −15/−8/0/+8/+15 along true normal; all pass independent topology/clearance/direction/position; Hausdorff to exact loop ≤ 12"
+  },
+  "coincidentRetrace": [
+   "cw 80: ok",
+   "cw 120: ok",
+   "cw 160: ok",
+   "cw 200: ok",
+   "cw 300: self-intersection",
+   "ccw 80: ok",
+   "ccw 120: ok",
+   "ccw 160: ok",
+   "ccw 200: ok",
+   "ccw 300: self-intersection"
+  ],
+  "jitter_1px_at_1p5px": {
+   "ovalCw": [
+    {
+     "vp": "desktop1440",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 36
+    },
+    {
+     "vp": "desktop1440",
+     "quantize": true,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 7
+    },
+    {
+     "vp": "portrait390",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 21
+    },
+    {
+     "vp": "portrait390",
+     "quantize": true,
+     "accepted": 39,
+     "of": 40,
+     "baseline": 13
+    },
+    {
+     "vp": "landscape844",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 25
+    },
+    {
+     "vp": "landscape844",
+     "quantize": true,
+     "accepted": 35,
+     "of": 40,
+     "baseline": 15
+    }
+   ],
+   "ovalCcw": [
+    {
+     "vp": "desktop1440",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 37
+    },
+    {
+     "vp": "desktop1440",
+     "quantize": true,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 3
+    },
+    {
+     "vp": "portrait390",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 29
+    },
+    {
+     "vp": "portrait390",
+     "quantize": true,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 11
+    },
+    {
+     "vp": "landscape844",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 28
+    },
+    {
+     "vp": "landscape844",
+     "quantize": true,
+     "accepted": 33,
+     "of": 40,
+     "baseline": 17
+    }
+   ],
+   "smallOvalOvershootCw": [
+    {
+     "vp": "desktop1440",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "desktop1440",
+     "quantize": true,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "portrait390",
+     "quantize": false,
+     "accepted": 38,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "portrait390",
+     "quantize": true,
+     "accepted": 38,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "landscape844",
+     "quantize": false,
+     "accepted": 39,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "landscape844",
+     "quantize": true,
+     "accepted": 37,
+     "of": 40,
+     "baseline": 0
+    }
+   ],
+   "smallOvalOvershootCcw": [
+    {
+     "vp": "desktop1440",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "desktop1440",
+     "quantize": true,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "portrait390",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "portrait390",
+     "quantize": true,
+     "accepted": 39,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "landscape844",
+     "quantize": false,
+     "accepted": 39,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "landscape844",
+     "quantize": true,
+     "accepted": 37,
+     "of": 40,
+     "baseline": 0
+    }
+   ],
+   "kidneyCw": [
+    {
+     "vp": "desktop1440",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "desktop1440",
+     "quantize": true,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "portrait390",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "portrait390",
+     "quantize": true,
+     "accepted": 39,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "landscape844",
+     "quantize": false,
+     "accepted": 40,
+     "of": 40,
+     "baseline": 0
+    },
+    {
+     "vp": "landscape844",
+     "quantize": true,
+     "accepted": 37,
+     "of": 40,
+     "baseline": 0
+    }
+   ]
+  },
+  "white3_20seeds": {
+   "subject": 20,
+   "baseline": 6
+  },
+  "heavyNoise": [
+   {
+    "ampWorld": 4,
+    "spacing": 4,
+    "accepted": 20,
+    "of": 20,
+    "invalidGeom": 0
+   },
+   {
+    "ampWorld": 5,
+    "spacing": 4,
+    "accepted": 9,
+    "of": 20,
+    "invalidGeom": 0
+   },
+   {
+    "ampWorld": 6,
+    "spacing": 4,
+    "accepted": 0,
+    "of": 20,
+    "invalidGeom": 0
+   },
+   {
+    "ampWorld": 8,
+    "spacing": 4,
+    "accepted": 0,
+    "of": 20,
+    "invalidGeom": 0
+   }
+  ],
+  "mustReject": {
+   "figureEight": "self-intersection",
+   "figureEightSmall": "self-intersection",
+   "figureEightLeft": "self-intersection",
+   "figureEightNoisy": "self-intersection",
+   "shallowPinchCross2pct": "self-intersection",
+   "shallowPinchCross8pct": "self-intersection",
+   "pinchTouch": "too-tight",
+   "twoLaps": "self-intersection",
+   "twoLapsOffset10": "self-intersection",
+   "lapAndHalf": "self-intersection",
+   "overshoot400Offset8": "self-intersection",
+   "exactRetrace300": "self-intersection",
+   "tailLobeR8": "self-intersection",
+   "tailReversal": "self-intersection",
+   "tailDepartOutward": "self-intersection",
+   "tailDepartInward": "self-intersection",
+   "tiny": "too-short",
+   "dot": "too-short",
+   "line": "self-intersection",
+   "nan": "invalid-input",
+   "inf": "invalid-input",
+   "nullPoint": "invalid-input",
+   "notArray": "invalid-input",
+   "outsideLeft": "out-of-bounds",
+   "outsideByOne": "out-of-bounds",
+   "roadOutside": "out-of-bounds",
+   "tooManyPoints": "invalid-input",
+   "longPerimeter": "invalid-input",
+   "width0": "invalid-input",
+   "widthNeg": "invalid-input",
+   "widthNaN": "invalid-input",
+   "widthHuge": "invalid-input",
+   "idEmpty": "invalid-input",
+   "noOpts": "invalid-input"
+  },
+  "pigtails": [
+   {
+    "radius": 2,
+    "where": "tail",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 2,
+    "where": "body",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 3,
+    "where": "tail",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 3,
+    "where": "body",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 4,
+    "where": "tail",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 4,
+    "where": "body",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 5,
+    "where": "tail",
+    "ok": true,
+    "code": null,
+    "valid": true
+   },
+   {
+    "radius": 5,
+    "where": "body",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "radius": 6,
+    "where": "tail",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "radius": 6,
+    "where": "body",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "radius": 8,
+    "where": "tail",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "radius": 8,
+    "where": "body",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "radius": 12,
+    "where": "tail",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "radius": 12,
+    "where": "body",
+    "ok": false,
+    "code": "self-intersection"
+   }
+  ],
+  "earlyClose": [
+   {
+    "brushAt": 0.8,
+    "gapPx": 2,
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "brushAt": 0.8,
+    "gapPx": 10,
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "brushAt": 0.9,
+    "gapPx": 2,
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "brushAt": 0.9,
+    "gapPx": 10,
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "brushAt": 0.95,
+    "gapPx": 2,
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "brushAt": 0.95,
+    "gapPx": 10,
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "case": "early-hook-then-continue",
+    "ok": false,
+    "code": "self-intersection"
+   },
+   {
+    "case": "incomplete-70pct",
+    "ok": true,
+    "code": null,
+    "c2s": 25.46
+   }
+  ],
+  "triangles": [
+   {
+    "scale": 1,
+    "cornerRadius": 0,
+    "result": "too-tight",
+    "baselineOk": false
+   },
+   {
+    "scale": 1,
+    "cornerRadius": 40,
+    "result": "too-tight",
+    "baselineOk": false
+   },
+   {
+    "scale": 1,
+    "cornerRadius": 80,
+    "result": "ok",
+    "baselineOk": true
+   },
+   {
+    "scale": 0.8,
+    "cornerRadius": 0,
+    "result": "too-tight",
+    "baselineOk": false
+   },
+   {
+    "scale": 0.8,
+    "cornerRadius": 40,
+    "result": "too-tight",
+    "baselineOk": false
+   },
+   {
+    "scale": 0.8,
+    "cornerRadius": 80,
+    "result": "ok",
+    "baselineOk": true
+   },
+   {
+    "scale": 0.6,
+    "cornerRadius": 0,
+    "result": "too-tight",
+    "baselineOk": false
+   },
+   {
+    "scale": 0.6,
+    "cornerRadius": 40,
+    "result": "too-tight",
+    "baselineOk": false
+   },
+   {
+    "scale": 0.6,
+    "cornerRadius": 80,
+    "result": "ok",
+    "baselineOk": true
+   }
+  ],
+  "fuzz": {
+   "accepted": 242,
+   "rejected": 158,
+   "codes": {
+    "self-intersection": 152,
+    "out-of-bounds": 6
+   },
+   "acceptedWithAnyIssue": 0,
+   "examples": []
+  },
+  "misc": {
+   "inputUnchanged": true,
+   "deterministic": true,
+   "structuredCloneOk": true,
+   "timing": {
+    "ordinaryOval": {
+     "ms": 0.46,
+     "ok": true,
+     "code": null
+    },
+    "phoneJitterOvershoot": {
+     "ms": 0.27,
+     "ok": true,
+     "code": null
+    },
+    "dense19999": {
+     "ms": 0.44,
+     "ok": false,
+     "code": "out-of-bounds"
+    },
+    "dense19999-baseline": {
+     "ms": 0.98,
+     "ok": false,
+     "code": "out-of-bounds"
+    },
+    "verticalColumn": {
+     "ms": 0.83,
+     "ok": false,
+     "code": "invalid-input"
+    },
+    "verticalColumn-baseline": {
+     "ms": 1.53,
+     "ok": false,
+     "code": "invalid-input"
+    },
+    "tallThinLoop": {
+     "ms": 0.13,
+     "ok": false,
+     "code": "too-tight"
+    },
+    "tallThinLoop-baseline": {
+     "ms": 0.11,
+     "ok": false,
+     "code": "too-tight"
+    }
+   }
+  }
+ },
+ "browser": {
+  "method": "isolated Playwright-core 1.65.1 driving system Chrome 157.0.8103.51 headless; desktop real page.mouse, phones CDP Input.dispatchTouchEvent (emulated touch, not physical iOS/Android). Preview tools: preview_status ok, preview_open ok, preview_snapshot failed twice (\"Preview automation snapshot timed out after 15000ms.\"), tab closed, fallback per policy.",
+  "checks": "202/205",
+  "landscapeRerun": "67/69",
+  "perViewport": {
+   "1440x900": {
+    "checks": "67/67",
+    "worldPerCssPx": 1.5209125475285172,
+    "overshootCommittedValid": "18/18",
+    "jitter": {
+     "oval-cw/float": [
+      6,
+      6
+     ],
+     "oval-cw/int": [
+      6,
+      6
+     ],
+     "oval-ccw/float": [
+      6,
+      6
+     ],
+     "oval-ccw/int": [
+      6,
+      6
+     ],
+     "left-cw-overshoot120+jitter/float": [
+      6,
+      6
+     ],
+     "left-cw-overshoot120+jitter/int": [
+      6,
+      6
+     ],
+     "right-ccw-overshoot140+jitter/float": [
+      6,
+      6
+     ],
+     "right-ccw-overshoot140+jitter/int": [
+      6,
+      6
+     ]
+    },
+    "rejections": {
+     "figureEight": "invalid",
+     "figureEightJitter": "invalid",
+     "shallowPinchCrossing": "invalid",
+     "twoLaps": "invalid",
+     "lapAndHalfOffset": "invalid",
+     "longRetrace360": "invalid",
+     "tailReversal": "invalid",
+     "tailDeparture": "invalid",
+     "tailLobeR9": "invalid",
+     "tiny": "invalid",
+     "offCanvas": "invalid"
+    },
+    "failures": []
+   },
+   "390x844": {
+    "checks": "68/69",
+    "worldPerCssPx": 3.6363636363636362,
+    "overshootCommittedValid": "18/18",
+    "jitter": {
+     "oval-cw/float": [
+      6,
+      6
+     ],
+     "oval-cw/int": [
+      5,
+      6
+     ],
+     "oval-ccw/float": [
+      6,
+      6
+     ],
+     "oval-ccw/int": [
+      6,
+      6
+     ],
+     "left-cw-overshoot120+jitter/float": [
+      6,
+      6
+     ],
+     "left-cw-overshoot120+jitter/int": [
+      6,
+      6
+     ],
+     "right-ccw-overshoot140+jitter/float": [
+      6,
+      6
+     ],
+     "right-ccw-overshoot140+jitter/int": [
+      6,
+      6
+     ]
+    },
+    "rejections": {
+     "figureEight": "invalid",
+     "figureEightJitter": "invalid",
+     "shallowPinchCrossing": "invalid",
+     "twoLaps": "invalid",
+     "lapAndHalfOffset": "invalid",
+     "longRetrace360": "invalid",
+     "tailReversal": "invalid",
+     "tailDeparture": "invalid",
+     "tailLobeR9": "invalid",
+     "tiny": "invalid",
+     "offCanvas": "invalid"
+    },
+    "failures": [
+     {
+      "name": "jitter ±1px@1.5px integer coords all commit",
+      "ok": false,
+      "detail": [
+       [
+        "oval-cw",
+        5
+       ]
+      ]
+     }
+    ]
+   },
+   "844x390": {
+    "checks": "67/69",
+    "worldPerCssPx": 4.301075268817204,
+    "overshootCommittedValid": "18/18",
+    "jitter": {
+     "oval-cw/float": [
+      6,
+      6
+     ],
+     "oval-cw/int": [
+      5,
+      6
+     ],
+     "oval-ccw/float": [
+      6,
+      6
+     ],
+     "oval-ccw/int": [
+      6,
+      6
+     ],
+     "left-cw-overshoot120+jitter/float": [
+      6,
+      6
+     ],
+     "left-cw-overshoot120+jitter/int": [
+      5,
+      6
+     ],
+     "right-ccw-overshoot140+jitter/float": [
+      6,
+      6
+     ],
+     "right-ccw-overshoot140+jitter/int": [
+      6,
+      6
+     ]
+    },
+    "rejections": {
+     "figureEight": "invalid",
+     "figureEightJitter": "invalid",
+     "shallowPinchCrossing": "invalid",
+     "twoLaps": "invalid",
+     "lapAndHalfOffset": "invalid",
+     "longRetrace360": "invalid",
+     "tailReversal": "invalid",
+     "tailDeparture": "invalid",
+     "tailLobeR9": "invalid",
+     "tiny": "invalid",
+     "offCanvas": "invalid"
+    },
+    "failures": [
+     {
+      "name": "jitter ±1px@1.5px integer coords all commit",
+      "ok": false,
+      "detail": [
+       [
+        "oval-cw",
+        1
+       ],
+       [
+        "left-cw-overshoot120+jitter",
+        3
+       ]
+      ]
+     },
+     {
+      "name": "after 7 rapid detach/attach, one stroke = exactly one commit",
+      "ok": false,
+      "detail": [
+       "Detach editor",
+       {
+        "commit": 70,
+        "invalid": 14,
+        "clear": 8,
+        "draft": 20870
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "failedChecksExplained": [
+   "jitter ±1px@1.5px integer coords: 390x844 1/24 rejected, 844x390 2/24 rejected (float coords 24/24 everywhere) -> finding N1",
+   "844x390 detach/attach stroke: cancelled by scroll events (scrollY 78->77) during the stroke, both runs; isolated repro (detach-repro*.json) and a 44-stroke scroll-offset sweep (scroll-sweep.json) never reproduce; attributed to residual touch momentum from the immediately preceding detached-overlay drag in my own sequence. Editor behaviour matches contract (scroll cancels a gesture). Not counted as a defect; see I2."
+  ]
+ },
+ "findings": [
+  {
+   "id": "N1",
+   "severity": "low",
+   "title": "Residual jitter rejections at coarse phone scale with integer CSS coordinates",
+   "status": "new residual of L1"
+  },
+  {
+   "id": "L2",
+   "severity": "low",
+   "title": "Sharp triangles (and 40-unit rounded corners) still rejected as too-tight",
+   "status": "unchanged known limitation, documented"
+  },
+  {
+   "id": "N2",
+   "severity": "low",
+   "title": "Overshoot beyond ~200 world units still rejected as \"crosses itself\"",
+   "status": "documented bound"
+  },
+  {
+   "id": "I1",
+   "severity": "info",
+   "title": "Tiny pigtails (radius ≤5 world units) are absorbed; ≥6 rejected"
+  },
+  {
+   "id": "I2",
+   "severity": "info",
+   "title": "A scroll still in motion when a stroke starts cancels it (contract behaviour; relevant to T4 page layout)"
+  },
+  {
+   "id": "I3",
+   "severity": "info",
+   "title": "startLine spans miter points, up to ~1–2% longer than width (pre-existing, preset club-circuit 92.098)"
+  },
+  {
+   "id": "I4",
+   "severity": "info",
+   "title": "New cleanup.test contract() uses the implementation’s own loopIntersects/segmentsIntersect as oracle"
+  }
+ ],
+ "teardown": "dev server on 5293 stopped (port free); all Playwright contexts/browsers closed (one orphaned headless Chrome from my scroll-sweep killed); my preview tab closed; tracked tree clean at a4d57b3; runner/ (ignored, playwright-core) may be deleted"
+}

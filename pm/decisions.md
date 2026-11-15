@@ -2,6 +2,12 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T1 round 2 acceptance and retained limits (Codex PM)
+
+- Accepted the fresh round-2 PASS with no high or medium findings. Overshoot is independently fixed; common fractional-coordinate jitter succeeds, with a small residual for integer-quantized input at coarse phone scales. Final integrated QA will exercise the corrected editor with the runtime.
+- Retain conservative road validation rather than increase cleanup tolerance globally: occasional noisy-stroke rejection, sharp triangles, and tails around 200+ world units are disclosed low-severity limits. The prior valid circuit is retained and feedback remains actionable. Round 3 is not needed under the requested no-high threshold.
+- Preserve the raw 202/205 browser result and its explanation. Two assertions reflect residual jitter; the detach/attach assertion was independently traced to momentum scrolling from the review harness and 44 isolated repeats found no defect.
+
 ## 2026-11-15 — T4 implementation handoff (Codex PM; implementation by T4 Astra worker)
 
 - Keep the default population at 512 across viewports; integration evidence did not require a mobile reduction. Population 1,000 remains exposed.

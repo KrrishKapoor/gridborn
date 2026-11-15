@@ -6,6 +6,10 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T1 round 2 acceptance (Codex PM)
+
+- No further geometry relaxation: accept the no-high/no-medium review and disclose the small quantized-jitter/sharp-corner/long-tail limits. Final combined QA still must test drawing into the actual running engine.
+
 ## Resolved — 2026-11-15 T4 handoff (Codex PM)
 
 - Use 512 default cars at all requested sizes, with 1,000 selectable; measurement did not justify reducing phone population yet.

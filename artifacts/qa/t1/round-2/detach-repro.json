@@ -1,0 +1,89 @@
+{
+ "no-scroll": {
+  "stageTop": 47.6875,
+  "stageBottom": 257.6875,
+  "firstY": 96.8875,
+  "maxY": 208.48119894969608,
+  "minY": 96.8875,
+  "scrollBefore": 83,
+  "scrolls": [
+   83,
+   83,
+   83
+  ],
+  "before": {
+   "commit": 0,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 0
+  },
+  "after": {
+   "counts": {
+    "commit": 1,
+    "invalid": 0,
+    "clear": 0,
+    "draft": 153
+   },
+   "feedback": "Circuit ready. Draw another loop to replace it.",
+   "scrollY": 83
+  }
+ },
+ "scrollIntoView": {
+  "stageTop": 89.6875,
+  "stageBottom": 299.6875,
+  "firstY": 138.8875,
+  "maxY": 250.48119894969608,
+  "minY": 138.8875,
+  "scrollBefore": 41,
+  "scrolls": [
+   41,
+   41,
+   41
+  ],
+  "before": {
+   "commit": 0,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 0
+  },
+  "after": {
+   "counts": {
+    "commit": 1,
+    "invalid": 0,
+    "clear": 0,
+    "draft": 153
+   },
+   "feedback": "Circuit ready. Draw another loop to replace it.",
+   "scrollY": 41
+  }
+ },
+ "no-detach-no-scroll-at-bottom": {
+  "stageTop": 47.6875,
+  "stageBottom": 257.6875,
+  "firstY": 96.8875,
+  "maxY": 208.48119894969608,
+  "minY": 96.8875,
+  "scrollBefore": 83,
+  "scrolls": [
+   83,
+   83,
+   83
+  ],
+  "before": {
+   "commit": 0,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 0
+  },
+  "after": {
+   "counts": {
+    "commit": 1,
+    "invalid": 0,
+    "clear": 0,
+    "draft": 153
+   },
+   "feedback": "Circuit ready. Draw another loop to replace it.",
+   "scrollY": 83
+  }
+ }
+}

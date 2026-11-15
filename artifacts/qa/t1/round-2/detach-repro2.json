@@ -1,0 +1,72 @@
+{
+ "settle150ms": {
+  "before": {
+   "commit": 0,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 0
+  },
+  "after": {
+   "commit": 1,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 153
+  },
+  "surfaceEventsDuringStroke": [],
+  "rectBefore": {
+   "x": 24,
+   "y": 130.6875,
+   "width": 796,
+   "height": 210,
+   "top": 130.6875,
+   "right": 820,
+   "bottom": 340.6875,
+   "left": 24
+  },
+  "rectAfter": {
+   "x": 24,
+   "y": 130.6875,
+   "width": 796,
+   "height": 210,
+   "top": 130.6875,
+   "right": 820,
+   "bottom": 340.6875,
+   "left": 24
+  }
+ },
+ "settle1500ms": {
+  "before": {
+   "commit": 0,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 0
+  },
+  "after": {
+   "commit": 1,
+   "invalid": 0,
+   "clear": 0,
+   "draft": 153
+  },
+  "surfaceEventsDuringStroke": [],
+  "rectBefore": {
+   "x": 24,
+   "y": 130.6875,
+   "width": 796,
+   "height": 210,
+   "top": 130.6875,
+   "right": 820,
+   "bottom": 340.6875,
+   "left": 24
+  },
+  "rectAfter": {
+   "x": 24,
+   "y": 130.6875,
+   "width": 796,
+   "height": 210,
+   "top": 130.6875,
+   "right": 820,
+   "bottom": 340.6875,
+   "left": 24
+  }
+ }
+}

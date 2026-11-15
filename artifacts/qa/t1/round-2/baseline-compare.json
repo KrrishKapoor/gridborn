@@ -1,0 +1,37 @@
+{
+ "partial-0.6": {
+  "subject": "too-tight",
+  "baseline": "too-tight",
+  "sameBytes": null
+ },
+ "partial-0.7": {
+  "subject": true,
+  "baseline": true,
+  "sameBytes": true
+ },
+ "partial-0.8": {
+  "subject": true,
+  "baseline": true,
+  "sameBytes": true
+ },
+ "partial-0.9": {
+  "subject": true,
+  "baseline": true,
+  "sameBytes": true
+ },
+ "cleanOval": {
+  "subject": true,
+  "baseline": true,
+  "sameBytes": true
+ },
+ "cleanSmall": {
+  "subject": true,
+  "baseline": true,
+  "sameBytes": true
+ },
+ "sparse7": {
+  "subject": true,
+  "baseline": true,
+  "sameBytes": true
+ }
+}

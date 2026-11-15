@@ -1,0 +1,30 @@
+{
+ "smallOvCcw desktop sp1 a1 q": {
+  "gate:nonlocal>32": 35,
+  "ok": 5,
+  "closure=false,tailOk=null": 14
+ },
+ "smallOvCcw portrait sp1 a1 float": {
+  "gate:nonlocal>32": 22,
+  "closure=false,tailOk=null": 16,
+  "ok": 18
+ },
+ "smallOvCcw portrait sp1.5 a1.5 float": {
+  "ok": 10,
+  "gate:nonlocal>32": 23,
+  "closure=false,tailOk=null": 17,
+  "post-DP:interior": 7
+ },
+ "ovalCw landscape sp1 a1 q": {
+  "gate:nonlocal>32": 9,
+  "closure=false,tailOk=null": 40,
+  "ok": 5,
+  "post-DP:interior": 26
+ },
+ "ovalCw portrait sp1.5 a1.5 q": {
+  "post-DP:interior": 22,
+  "closure=false,tailOk=null": 40,
+  "ok": 9,
+  "gate:nonlocal>32": 9
+ }
+}
