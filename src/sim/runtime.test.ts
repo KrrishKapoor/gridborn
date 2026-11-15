@@ -139,3 +139,17 @@ describe('production cadence and reset acknowledgements', () => {
     h.reset(12); expect(h.runtime.engine!.runId).toBe(12);
   });
 });
+
+describe('normal delivery phase', () => {
+  it('keeps 4x delivery at 60 Hz when pumps cross a four-step boundary by one step', () => {
+    const h = new Host(); h.reset(); h.command({ type: 'set-rate', runId: 1, rate: 4 }); h.command({ type: 'set-running', runId: 1, running: true });
+    for (const s of h.snapshots()) h.recycle(s); h.events = [];
+    let deliveries = 0;
+    for (let i = 0; i < 2000; i++) {
+      h.pump(5);
+      for (const s of h.snapshots()) { deliveries++; h.recycle(s); }
+      h.events = [];
+    }
+    expect(h.runtime.engine!.tick).toBe(2400); expect(deliveries).toBe(600);
+  });
+});

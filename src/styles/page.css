@@ -239,3 +239,53 @@ body { margin: 0; background: var(--color-paper); color: var(--color-ink); }
   .fitness svg { height: 28px; }
   .fitness > div { flex-shrink: 0; }
 }
+/* Production integration: readable labels, immediate inspection and local feedback. */
+.gridborn .eyebrow, .gridborn .lesson-index, .gridborn .lesson-aside,
+.gridborn .diagram-caption, .gridborn .follow-control, .gridborn .control-note,
+.gridborn .track-hint, .gridborn .track-hint > :last-child, .gridborn .track-feedback,
+.gridborn .fitness small, .gridborn .telemetry > div > span, .gridborn .fitness > div > span,
+.gridborn .telemetry strong small, .gridborn .sensor-readings small,
+.gridborn .article-divider, .gridborn .text-button { font-size: 11px; }
+.track-feedback { line-height: 1.5; padding: 4px 0 10px; }
+.track-hint { flex-wrap: wrap; gap: 6px; }
+.track-hint [data-stage-hint] { flex: 1; }
+.hero-canvas:focus:not(:focus-visible) { outline: none; }
+.actual-inspector { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.5fr); gap: 32px; align-items: center; margin-top: 20px; }
+.inspection-sight canvas { display: block; width: 100%; height: 225px; background: #f0f2ea; }
+.inspection-brain svg { display: block; width: 100%; height: auto; }
+.inspection-panel { scroll-margin: 12px; }
+.teaching-diagram, .inspection-brain { container-type: inline-size; }
+/* SVG viewBox units compensate for its CSS width, including mid-width layouts. */
+.svg-note, .svg-heading { font-size: 16px; }
+@container (max-width: 640px) {
+  .svg-note, .svg-heading { font-size: 20px; }
+}
+@container (max-width: 360px) {
+  .svg-note, .svg-heading { font-size: 24px; }
+}
+@media (max-width: 600px) {
+  .telemetry strong { font-size: 17px; }
+  .telemetry strong small { display: block; margin: 0; line-height: 1; }
+  .actual-inspector { grid-template-columns: 1fr; gap: 12px; }
+  .inspection-sight { display: flex; align-items: center; gap: 12px; }
+  .inspection-sight canvas { width: 42%; height: 110px; flex-shrink: 0; }
+  .inspection-heading { align-items: start; gap: 8px; }
+  .inspection-heading button { font-size: 11px; padding: 8px 4px; }
+  .inspection-heading h2 { font-size: 14px; }
+}
+@media (min-width: 601px) and (max-height: 600px) {
+  .track-stage { height: clamp(140px, calc(100svh - 205px), 230px); }
+  .track-hint { min-height: 30px; }
+  .track-feedback { padding: 0 0 4px; min-height: 32px; }
+  .fitness { bottom: 8px; }
+  .actual-inspector { grid-template-columns: 180px minmax(0, 1fr); gap: 20px; }
+  .inspection-sight canvas { height: 180px; }
+  .inspection-panel { padding: 12px 0; }
+}
+.track-hint [data-run-label] { flex-shrink: 0; }
+@media (min-width: 601px) and (max-height: 600px) {
+  .field-label, .edition, .hero-deck, .drawing-controls button { font-size: 11px; }
+}
+@container (max-width: 640px) { .svg-value { font-size: 24px; } }
+@container (max-width: 360px) { .svg-value { font-size: 26px; } }
+.gridborn .sensor-readings span, .gridborn .recorded-history p { font-size: 11px; }
