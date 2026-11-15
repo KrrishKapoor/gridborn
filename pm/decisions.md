@@ -2,6 +2,13 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T2 acceptance and integration scheduling (Codex PM)
+
+- Accepted T2's scoped independent PASS (no high findings). Neural driving, lap validity, determinism, and real improvement are independently confirmed. Performance evidence is explicitly split: renderer rAF held 60 Hz, but state updates at 1× were only about 33 Hz and visibly uneven. Do not claim a smooth 60 fps product until T4 resolves and remeasures this.
+- Assign the localized worker delivery/reset-error fixes and the malformed-inner-wall validation gap to the integration worker, alongside renderer timing and transactional reset UI. These are part of the integration's correctness boundary; fresh T4 QA must recheck the original reproduction scripts and actual scene smoothness.
+- Start T4 concurrently with T1R: all base feature branches meet their no-high gates, contracts are unchanged, and file ownership is disjoint. This supersedes the earlier conservative T4-waits-T1R sequencing. Final whole-product QA still waits for both accepted results.
+- Fast-mode throughput varies with active population and browser scheduling; independent QA measured lower rates than the implementation run. Preserve raw results rather than quote the best sample as a guarantee. Optimizing idle yields is lower priority than smooth 1×/4× presentation and responsive commands.
+
 ## 2026-11-15 — T1 QA acceptance and closure correction (Codex PM)
 
 - T1's independent round 1 meets the no-high-severity gate and its implementation is merged. Its one medium issue (common overshot closure rejected) and low jitter issue affect a primary interaction, so a focused substantive geometry follow-up T1R is required before T4 integration. This is more than a cosmetic one-line review fix: normalization must preserve true self-intersection rejection and geometry invariants, with new deterministic and real-input regressions.

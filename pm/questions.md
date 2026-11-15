@@ -6,6 +6,12 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T2 QA (Codex PM)
+
+- 60 renderer callbacks per second do not prove smooth motion; T4 must resolve snapshot cadence and independently measure displayed state changes/interpolation.
+- Reset errors are acknowledgements, so they must bypass the general malformed-command error budget.
+- T4 and T1R can run together because they share stable contracts and edit disjoint files; final QA waits for both accepted merges.
+
 ## Resolved — 2026-11-15 T1 QA (Codex PM)
 
 - Overshooting a loop's start is ordinary drawing behavior: correct it conservatively before integration rather than asking visitors to stop precisely.

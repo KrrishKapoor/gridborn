@@ -1,0 +1,96 @@
+{
+ "pop512_gen31_firstSeconds": [
+  {
+   "sec": 1,
+   "aliveStart": 512,
+   "msPerStep": 0.2589
+  },
+  {
+   "sec": 2,
+   "aliveStart": 512,
+   "msPerStep": 0.3137
+  },
+  {
+   "sec": 3,
+   "aliveStart": 403,
+   "msPerStep": 0.2864
+  },
+  {
+   "sec": 4,
+   "aliveStart": 351,
+   "msPerStep": 0.2734
+  },
+  {
+   "sec": 5,
+   "aliveStart": 337,
+   "msPerStep": 0.227
+  },
+  {
+   "sec": 6,
+   "aliveStart": 337,
+   "msPerStep": 0.2366
+  },
+  {
+   "sec": 7,
+   "aliveStart": 332,
+   "msPerStep": 0.2812
+  },
+  {
+   "sec": 8,
+   "aliveStart": 324,
+   "msPerStep": 0.2433
+  }
+ ],
+ "pop512_heapBytes600StepsNoBoundary": {
+  "bytes": 481640,
+  "sameGeneration": false,
+  "fromTick": 481
+ },
+ "pop1000_gen31_firstSeconds": [
+  {
+   "sec": 1,
+   "aliveStart": 1000,
+   "msPerStep": 0.4994
+  },
+  {
+   "sec": 2,
+   "aliveStart": 1000,
+   "msPerStep": 0.6476
+  },
+  {
+   "sec": 3,
+   "aliveStart": 778,
+   "msPerStep": 0.7192
+  },
+  {
+   "sec": 4,
+   "aliveStart": 672,
+   "msPerStep": 0.5411
+  },
+  {
+   "sec": 5,
+   "aliveStart": 654,
+   "msPerStep": 0.4533
+  },
+  {
+   "sec": 6,
+   "aliveStart": 653,
+   "msPerStep": 0.4578
+  },
+  {
+   "sec": 7,
+   "aliveStart": 650,
+   "msPerStep": 0.5588
+  },
+  {
+   "sec": 8,
+   "aliveStart": 640,
+   "msPerStep": 0.4963
+  }
+ ],
+ "pop1000_heapBytes600StepsNoBoundary": {
+  "bytes": 1267656,
+  "sameGeneration": false,
+  "fromTick": 481
+ }
+}

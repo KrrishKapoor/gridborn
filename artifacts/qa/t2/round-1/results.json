@@ -1,0 +1,1373 @@
+{
+ "subject": {
+  "path": "/Users/krrishai/.t3/worktrees/gridborn/t3-6d03a193-9765defd83188cc6",
+  "branch": "t3/evolution-simulation-worker",
+  "sha": "02ddfb14977c87f51bd96f9e5fa81dd7b3eb1bf6"
+ },
+ "verdict": "PASS (no high findings; 2 medium, 4 low)",
+ "environment": {
+  "cpu": "Apple M5",
+  "os": "macOS 27.2",
+  "node": "v26.13.1",
+  "browser": {
+   "version": "158.0.8127.18",
+   "executable": "/Users/krrishai/Library/Caches/ms-playwright/chromium-1254/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+   "headless": true
+  },
+  "playwright": "1.65.1 (own install in round-1/tools)",
+  "note": "Preview tool snapshot timed out twice; switched to isolated Playwright per policy"
+ },
+ "commands": {
+  "npmTest": "66 passed / 6 files",
+  "npmBuild": "typecheck + vite build OK (dist = T0 scaffold only)",
+  "harnessBundle": "OK via scripts/vite.harness.config.mjs -> harness-dist (worker emitted); bundled harness evolves 5 gens identical to Node",
+  "trackedTreeClean": true
+ },
+ "claimCheck": {
+  "gen1Best": 9.495347595214843,
+  "gen1Claim": 9.495347595214843,
+  "gen30Record": 8.551251983642578,
+  "gen30Claim": 8.551251983642578,
+  "gen30Finishers": 339,
+  "gen30FinishersClaim": 339,
+  "match": true
+ },
+ "evolutionBrowser": {
+  "pop512_seed1_a": {
+   "gen1": {
+    "laps": 15,
+    "best": 9.495347595214843
+   },
+   "gen30": {
+    "laps": 339,
+    "best": 8.551251983642578
+   },
+   "firstRecordLap": 9.495347595214843,
+   "finalRecordLap": 8.551251983642578,
+   "improvementPct": 9.942717758410868,
+   "records": 18,
+   "allRecordLapsValid": true,
+   "matchesNodeEngine": true,
+   "wallSeconds": 9.103
+  },
+  "pop512_seed1_b": {
+   "gen1": {
+    "laps": 15,
+    "best": 9.495347595214843
+   },
+   "gen30": {
+    "laps": 339,
+    "best": 8.551251983642578
+   },
+   "firstRecordLap": 9.495347595214843,
+   "finalRecordLap": 8.551251983642578,
+   "improvementPct": 9.942717758410868,
+   "records": 18,
+   "allRecordLapsValid": true,
+   "matchesNodeEngine": true,
+   "wallSeconds": 9.115
+  },
+  "pop512_seed0_a": {
+   "gen1": {
+    "laps": 17,
+    "best": 9.100311619198797
+   },
+   "gen30": {
+    "laps": 323,
+    "best": 8.538699595133464
+   },
+   "firstRecordLap": 9.100311619198797,
+   "finalRecordLap": 8.538699595133464,
+   "improvementPct": 6.171349373141332,
+   "records": 15,
+   "allRecordLapsValid": true,
+   "matchesNodeEngine": true,
+   "wallSeconds": 8.757
+  },
+  "pop1000_seed1_a": {
+   "gen1": {
+    "laps": 26,
+    "best": 9.124802901292966
+   },
+   "gen30": {
+    "laps": 626,
+    "best": 8.54811757405599
+   },
+   "firstRecordLap": 9.124802901292966,
+   "finalRecordLap": 8.54811757405599,
+   "improvementPct": 6.319975713176895,
+   "records": 15,
+   "allRecordLapsValid": true,
+   "matchesNodeEngine": true,
+   "wallSeconds": 14.532
+  }
+ },
+ "replayIdentity": {
+  "sameRecordCount": true,
+  "identicalSamples": true,
+  "identicalHistory": true
+ },
+ "eventOrder": {
+  "violations": 0,
+  "dupes": 0,
+  "runs": 5,
+  "orderLen": 597
+ },
+ "recordLapsWith10HzChordWallCrossings": 0,
+ "nodeEvolution": {
+  "pop512_seed1_gen30": {
+   "firstLapGen": 1,
+   "firstRecordLap": 9.495347595214843,
+   "finalRecordLap": 8.551251983642578,
+   "improvementPct": 9.942717758410868,
+   "allLapsValid": true,
+   "monotoneRecords": true,
+   "stepsPerSec": 6980.034022986181
+  },
+  "pop1000_seed1_gen30": {
+   "firstLapGen": 1,
+   "firstRecordLap": 9.124802901292966,
+   "finalRecordLap": 8.54811757405599,
+   "improvementPct": 6.319975713176895,
+   "allLapsValid": true,
+   "monotoneRecords": true,
+   "stepsPerSec": 4167.117825102477
+  },
+  "pop512_seed0_gen30": {
+   "firstLapGen": 1,
+   "firstRecordLap": 9.100311619198797,
+   "finalRecordLap": 8.538699595133464,
+   "improvementPct": 6.171349373141332,
+   "allLapsValid": true,
+   "monotoneRecords": true,
+   "stepsPerSec": 6999.203337409207
+  },
+  "pop512_seed7_gen30": {
+   "firstLapGen": 1,
+   "firstRecordLap": 9.288875235958256,
+   "finalRecordLap": 8.52693837483724,
+   "improvementPct": 8.202681613931851,
+   "allLapsValid": true,
+   "monotoneRecords": true,
+   "stepsPerSec": 6667.312955611075
+  },
+  "pop512_seed1_gen60": {
+   "firstLapGen": 1,
+   "firstRecordLap": 9.495347595214843,
+   "finalRecordLap": 8.517585754394531,
+   "improvementPct": 10.297272754006947,
+   "allLapsValid": true,
+   "monotoneRecords": true,
+   "stepsPerSec": 5445.467344719699
+  }
+ },
+ "centerlineIndependence": {
+  "altValid": true,
+  "altError": null,
+  "identicalMotionTicks": 569,
+  "firstFinishTick": 570,
+  "pass": true
+ },
+ "scriptedGates": {
+  "jitter": {
+   "lap": -1,
+   "dist": 3.9992919026985874,
+   "gates": 0
+  },
+  "reverseLapThenForwardCross": {
+   "lap": -1,
+   "dist": -2009.040707146233,
+   "gates": 0
+  },
+  "forward96ThenWiggleAtLine": {
+   "lap": -1,
+   "dist": 1915.9231334719266,
+   "gates": 7
+  },
+  "forwardLapValid": {
+   "lap": 599.0450710571753,
+   "dist": 2015.0397949218748,
+   "gates": 7
+  },
+  "forwardLapOutsideLineExtension": {
+   "lap": -1,
+   "dist": 1944.2113379707826,
+   "gates": 7
+  },
+  "halfForwardHalfBack": {
+   "lap": -1,
+   "dist": -1.9997955813971657,
+   "gates": 3
+  },
+  "teleportAround": {
+   "lap": -1,
+   "dist": 2019.0390868245736,
+   "gates": 5
+  },
+  "pass": true
+ },
+ "constantControl": {
+  "straightCrash": {
+   "crashTick": 123,
+   "pose": [
+    834.3639526367188,
+    170,
+    0,
+    0
+   ],
+   "inactiveSeconds": 7.95004940032959,
+   "status": 1,
+   "wallClearance": 5.402522623274972,
+   "retainsPoseOutsideWall": true
+  },
+  "parked": {
+   "moved": 0,
+   "status": 0,
+   "progress": 0,
+   "lap": 0
+  }
+ },
+ "malformedMissingInnerWall": {
+  "accepted": true,
+  "error": null,
+  "infield": {
+   "lapSeconds": 13.16075210571289,
+   "finishTick": 790,
+   "crashTick": null,
+   "netProgress": 2687.3142835008166,
+   "evolvedRecord": 8.81961682314327,
+   "evolvedRecordValidOnRealOval": [
+    "sample outside drivable band: 46.945 > 41.001",
+    "2 10Hz chords cross a wall (display approximation)"
+   ]
+  }
+ },
+ "mirroredOval": {
+  "valid": true,
+  "err": null,
+  "gen1Laps": 17,
+  "gen15Laps": 326,
+  "record": 8.69477175046413
+ },
+ "runtimeHost": {
+  "invalidResetAfterErrorCap": {
+   "errorsBefore": 8,
+   "repliesToInvalidReset": [],
+   "silent": true,
+   "validResetAfter": [
+    "ready",
+    "snapshot"
+   ]
+  },
+  "staleResets": {
+   "replies": [],
+   "engineRun": 5
+  },
+  "invalidInputs": {
+   "nullTrack": "error: Track is required.",
+   "nanCenter": "error: Centerline must contain 3–2048 finite vertices.",
+   "plainArrays": "error: Centerline must contain 3–2048 finite vertices.",
+   "figure8": "error: Cumulative lengths must match actual edge lengths.",
+   "outOfWorld": "error: Road bounds must fit the logical world.",
+   "openWalls": "error: Walls must form closed unbranched boundaries.",
+   "reversedForward": "error: Start forward disagrees with centerline order.",
+   "seedNeg": "error: Seed must be uint32.",
+   "seedHuge": "error: Seed must be uint32.",
+   "pop1": "error: Population must be 2–1000.",
+   "pop1001": "error: Population must be 2–1000.",
+   "eliteEqPop": "error: Elite count must be 1..population−1.",
+   "mutNaN": "error: Mutation rate must be 0–1.",
+   "genInf": "error: Generation deadline must fit a positive signed 32-bit tick count.",
+   "gen0": "error: Generation deadline must fit a positive signed 32-bit tick count.",
+   "raySmall": "error: Ray length must be positive and safely representable in Float32 sensor storage.",
+   "speedNeg": "error: Maximum speed must be finite and positive.",
+   "settingsNull": "error: Settings are required."
+  },
+  "invalidInputsRunKept": 26,
+  "transactionalInvalid": {
+   "runId": 1,
+   "tickSame": true,
+   "brainsSame": true,
+   "rngSame": true,
+   "stillRunning": true,
+   "continuesStepping": true
+  },
+  "pause": {
+   "ticksWhilePaused": 0,
+   "queued": 0,
+   "stepsFirstTwoPumpsAfterResume": 1
+  },
+  "suspension_rate1": {
+   "stepsInFirstPumpAfter30sStall": 15,
+   "followUpZeroElapsedSteps": 0,
+   "simSecondsGained": 0.25
+  },
+  "suspension_rate4": {
+   "stepsInFirstPumpAfter30sStall": 15,
+   "followUpZeroElapsedSteps": 0,
+   "simSecondsGained": 0.25
+  },
+  "pool": {
+   "deliveredWithoutRecycle": 3,
+   "ticksAdvanced": 6400,
+   "snapshotsAfter6ForeignRecycles": 3,
+   "poolLen": 2,
+   "outstanding": 1,
+   "note": "foreign full-size buffers are accepted up to outstanding credit (documented limit)"
+  },
+  "badRecycles": [
+   "Recycled storage has invalid sizes or ownership."
+  ],
+  "selection": [
+   {
+    "runId": 1,
+    "generation": 1,
+    "index": 3
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "selectionClearedOnGen2": true,
+  "scheduleIndependence": [
+   {
+    "tick": 4000,
+    "identicalToDirectEngine": true
+   },
+   {
+    "tick": 4000,
+    "identicalToDirectEngine": true
+   },
+   {
+    "tick": 4001,
+    "identicalToDirectEngine": true
+   }
+  ]
+ },
+ "viewports": {
+  "desktop-1440x900": {
+   "horizontalOverflow": false,
+   "layout": {
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "canvas": {
+     "x": 124,
+     "y": 426.5,
+     "w": 811.265625,
+     "h": 540.84375,
+     "backing": [
+      1623,
+      1082
+     ]
+    },
+    "canvasFullyInFirstScreen": false,
+    "smallTargets": [],
+    "touchAction": "none",
+    "userSelect": "none"
+   },
+   "rates": [
+    {
+     "rate": 1,
+     "stepsPerWallSecond": 59.92010652463382,
+     "reported": 1,
+     "generationChanged": false
+    },
+    {
+     "rate": 4,
+     "stepsPerWallSecond": 240.4262404262404,
+     "reported": 4,
+     "generationChanged": true
+    },
+    {
+     "rate": "fast",
+     "stepsPerWallSecond": 3295.0574138791812,
+     "reported": "fast",
+     "generationChanged": true
+    }
+   ],
+   "pause": {
+    "running": false,
+    "ticksDuringPause": 0,
+    "buttonText": "Play"
+   },
+   "selection": {
+    "target": {
+     "index": 80,
+     "x": 474.74112042427055,
+     "y": 449.6916967976093,
+     "gen": 9
+    },
+    "selected": {
+     "runId": 1,
+     "generation": 9,
+     "index": 80
+    },
+    "matched": true
+   },
+   "pointer": "mouse",
+   "inspectionIssues": [],
+   "inspectionDom": {
+    "selectedText": "Car 80 · generation 9 · speed 105.4 · active",
+    "sensorRows": 7,
+    "activationRows": 10,
+    "weightLines": 10
+   },
+   "snapshotMatchesNodeReplay": {
+    "tick": 9543,
+    "generation": 9,
+    "sameGeneration": true,
+    "sameCars": true,
+    "sameSelection": true
+   },
+   "selectionAfterBoundary": {
+    "firstSnapshotOfNextGenSelected": null,
+    "domText": "Select a car to inspect its actual inputs and activations."
+   },
+   "runningSelection": {
+    "selected": {
+     "runId": 1,
+     "generation": 11,
+     "index": 0
+    },
+    "issues": []
+   },
+   "invalidReset": {
+    "runIdBefore": 1,
+    "runIdAfter": 1,
+    "running": true,
+    "tickAdvanced": true,
+    "errorText": "Run 2 rejected: Population must be 2–1000. Accepted run 1 continues.",
+    "pendingCleared": true
+   },
+   "staleReset": {
+    "newReadies": 0,
+    "newErrors": 0,
+    "runId": 1,
+    "running": true
+   },
+   "rapid": {
+    "runId": 7,
+    "pending": 0,
+    "running": true,
+    "rate": "fast",
+    "population": 512,
+    "errors": [
+     "Population must be 2–1000."
+    ]
+   },
+   "resize": {
+    "sameRun": true,
+    "tickContinued": true,
+    "backing": [
+     1623,
+     1082
+    ]
+   },
+   "nonFinite": 0,
+   "consoleErrors": [],
+   "pageErrors": []
+  },
+  "portrait-390x844": {
+   "horizontalOverflow": false,
+   "layout": {
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "canvas": {
+     "x": 16,
+     "y": 611.5,
+     "w": 358,
+     "h": 238.65625,
+     "backing": [
+      716,
+      477
+     ]
+    },
+    "canvasFullyInFirstScreen": false,
+    "smallTargets": [],
+    "touchAction": "none",
+    "userSelect": "none"
+   },
+   "rates": [
+    {
+     "rate": 1,
+     "stepsPerWallSecond": 59.96002664890074,
+     "reported": 1,
+     "generationChanged": false
+    },
+    {
+     "rate": 4,
+     "stepsPerWallSecond": 240.25324891702766,
+     "reported": 4,
+     "generationChanged": true
+    },
+    {
+     "rate": "fast",
+     "stepsPerWallSecond": 3355.1448551448557,
+     "reported": "fast",
+     "generationChanged": true
+    }
+   ],
+   "pause": {
+    "running": false,
+    "ticksDuringPause": 0,
+    "buttonText": "Play"
+   },
+   "selection": {
+    "target": {
+     "index": 2,
+     "x": 302.4419329833985,
+     "y": 421.83477850341797,
+     "gen": 10
+    },
+    "selected": {
+     "runId": 1,
+     "generation": 10,
+     "index": 2
+    },
+    "matched": true
+   },
+   "pointer": "touch",
+   "inspectionIssues": [],
+   "inspectionDom": {
+    "selectedText": "Car 2 · generation 10 · speed 240.0 · active",
+    "sensorRows": 7,
+    "activationRows": 10,
+    "weightLines": 10
+   },
+   "snapshotMatchesNodeReplay": {
+    "tick": 9799,
+    "generation": 10,
+    "sameGeneration": true,
+    "sameCars": true,
+    "sameSelection": true
+   },
+   "selectionAfterBoundary": {
+    "firstSnapshotOfNextGenSelected": null,
+    "domText": "Select a car to inspect its actual inputs and activations."
+   },
+   "runningSelection": {
+    "selected": {
+     "runId": 1,
+     "generation": 11,
+     "index": 0
+    },
+    "issues": []
+   },
+   "invalidReset": {
+    "runIdBefore": 1,
+    "runIdAfter": 1,
+    "running": true,
+    "tickAdvanced": true,
+    "errorText": "Run 2 rejected: Population must be 2–1000. Accepted run 1 continues.",
+    "pendingCleared": true
+   },
+   "staleReset": {
+    "newReadies": 0,
+    "newErrors": 0,
+    "runId": 1,
+    "running": true
+   },
+   "rapid": {
+    "runId": 7,
+    "pending": 0,
+    "running": true,
+    "rate": "fast",
+    "population": 512,
+    "errors": [
+     "Population must be 2–1000."
+    ]
+   },
+   "resize": {
+    "sameRun": true,
+    "tickContinued": true,
+    "backing": [
+     716,
+     477
+    ]
+   },
+   "nonFinite": 0,
+   "consoleErrors": [],
+   "pageErrors": []
+  },
+  "landscape-844x390": {
+   "horizontalOverflow": false,
+   "layout": {
+    "scrollWidth": 844,
+    "innerWidth": 844,
+    "innerHeight": 390,
+    "canvas": {
+     "x": 24,
+     "y": 518.5,
+     "w": 535.265625,
+     "h": 356.84375,
+     "backing": [
+      1071,
+      714
+     ]
+    },
+    "canvasFullyInFirstScreen": false,
+    "smallTargets": [],
+    "touchAction": "none",
+    "userSelect": "none"
+   },
+   "rates": [
+    {
+     "rate": 1,
+     "stepsPerWallSecond": 59.96002664890074,
+     "reported": 1,
+     "generationChanged": false
+    },
+    {
+     "rate": 4,
+     "stepsPerWallSecond": 240.17321785476352,
+     "reported": 4,
+     "generationChanged": true
+    },
+    {
+     "rate": "fast",
+     "stepsPerWallSecond": 3564.37125748503,
+     "reported": "fast",
+     "generationChanged": true
+    }
+   ],
+   "pause": {
+    "running": false,
+    "ticksDuringPause": 0,
+    "buttonText": "Play"
+   },
+   "selection": {
+    "target": {
+     "index": 245,
+     "x": 432.4355653381347,
+     "y": 194.73755922222134,
+     "gen": 10
+    },
+    "selected": {
+     "runId": 1,
+     "generation": 10,
+     "index": 245
+    },
+    "matched": true
+   },
+   "pointer": "touch",
+   "inspectionIssues": [],
+   "inspectionDom": {
+    "selectedText": "Car 245 · generation 10 · speed 240.0 · active",
+    "sensorRows": 7,
+    "activationRows": 10,
+    "weightLines": 10
+   },
+   "snapshotMatchesNodeReplay": {
+    "tick": 9812,
+    "generation": 10,
+    "sameGeneration": true,
+    "sameCars": true,
+    "sameSelection": true
+   },
+   "selectionAfterBoundary": {
+    "firstSnapshotOfNextGenSelected": null,
+    "domText": "Select a car to inspect its actual inputs and activations."
+   },
+   "runningSelection": {
+    "selected": null
+   },
+   "invalidReset": {
+    "runIdBefore": 1,
+    "runIdAfter": 1,
+    "running": true,
+    "tickAdvanced": true,
+    "errorText": "Run 2 rejected: Population must be 2–1000. Accepted run 1 continues.",
+    "pendingCleared": true
+   },
+   "staleReset": {
+    "newReadies": 0,
+    "newErrors": 0,
+    "runId": 1,
+    "running": true
+   },
+   "rapid": {
+    "runId": 7,
+    "pending": 0,
+    "running": true,
+    "rate": "fast",
+    "population": 512,
+    "errors": [
+     "Population must be 2–1000."
+    ]
+   },
+   "resize": {
+    "sameRun": true,
+    "tickContinued": true,
+    "backing": [
+     1071,
+     714
+    ]
+   },
+   "nonFinite": 0,
+   "consoleErrors": [],
+   "pageErrors": []
+  }
+ },
+ "lifecycleRealWorker": {
+  "initial": [
+   {
+    "type": "ready",
+    "runId": 1
+   },
+   {
+    "type": "snapshot",
+    "runId": 1,
+    "tick": 0,
+    "gen": 1,
+    "running": false,
+    "rate": 1,
+    "sel": null
+   }
+  ],
+  "backpressure": {
+   "snapshotsWithoutRecycle": 2,
+   "heldCount": 3,
+   "whilePausedNoSlot": 0,
+   "detachedAfterRecycle": true,
+   "recoveredSnapshot": [
+    {
+     "tick": 8287,
+     "running": false,
+     "steps": 8287,
+     "ms": 894.7999997138977
+    }
+   ],
+   "pausedTickStable": true,
+   "pausedTick": 8287
+  },
+  "pauseResume": {
+   "ticksDuringPause3s": 0,
+   "ticksIn250msAfterResume": 15,
+   "stepsPerSecond1x": 59.76006778563333,
+   "snapshotsPerSecond": 37.4615350298,
+   "intervalMedian": 29,
+   "intervalP90": 34.5,
+   "intervalMax": 37.200000047683716,
+   "share30plus": 0.6265060240963856
+  },
+  "freeze_rate1": {
+   "frozeOk": true,
+   "ticksSinceBefore": 197,
+   "wallSeconds": 3.3076000000238417,
+   "firstAfterGap": [
+    {
+     "tick": 8453,
+     "steps": 1,
+     "dt": 20
+    },
+    {
+     "tick": 8455,
+     "steps": 2,
+     "dt": 50
+    },
+    {
+     "tick": 8456,
+     "steps": 1,
+     "dt": 69
+    },
+    {
+     "tick": 8457,
+     "steps": 1,
+     "dt": 87
+    }
+   ],
+   "expectedIfNoFreeze": 198.4560000014305
+  },
+  "freeze_rate4": {
+   "frozeOk": true,
+   "ticksSinceBefore": 794,
+   "wallSeconds": 3.3056999999284744,
+   "firstAfterGap": [
+    {
+     "tick": 8774,
+     "steps": 5,
+     "dt": 16
+    },
+    {
+     "tick": 8780,
+     "steps": 6,
+     "dt": 41
+    },
+    {
+     "tick": 8785,
+     "steps": 5,
+     "dt": 62
+    },
+    {
+     "tick": 8790,
+     "steps": 5,
+     "dt": 83
+    }
+   ],
+   "expectedIfNoFreeze": 793.3679999828339
+  },
+  "resetSemantics": {
+   "afterReset": [
+    "ready:2",
+    "snapshot:2:t0:false"
+   ],
+   "run2TickAfterObsoleteCommands": 0,
+   "obsoleteEvents": 0,
+   "staleReplies": [],
+   "invalid": [
+    "error:3:Population must be 2–1000."
+   ],
+   "run2Continues": {
+    "runId": 2,
+    "tick": 46,
+    "running": true
+   }
+  },
+  "errorCap": {
+   "errorsEmitted": 8,
+   "repliesToInvalidReset11": [],
+   "nextValidReset12": [
+    "ready",
+    "snapshot"
+   ]
+  },
+  "invalidGeometry": {
+   "emptyObject": "error: Track id is required.",
+   "missingWalls": "error: Walls must contain 6–4096 finite segments.",
+   "plainArrayWalls": "error: Walls must contain 6–4096 finite segments.",
+   "float64Centerline": "error: Centerline must contain 3–2048 finite vertices.",
+   "nanLength": "error: Road length/width is invalid.",
+   "hugeCoords": "error: Cumulative lengths must match actual edge lengths.",
+   "twoVertex": "error: Centerline must contain 3–2048 finite vertices.",
+   "startLineAlong": "error: Start line must cross spawn perpendicular to forward.",
+   "spawnOffCenter": "error: Spawn must be centerline vertex zero.",
+   "widthZero": "error: Road length/width is invalid.",
+   "nonCloneable": "main threw DataCloneError",
+   "garbageReplies": [
+    "Road length/width is invalid.",
+    "Malformed command.",
+    "Unknown command."
+   ],
+   "lastRun": 27
+  },
+  "crashFinish": {
+   "snapshotsAnalysed": 352,
+   "gensSeen": [
+    1,
+    6
+   ],
+   "crashedChecked": 133741,
+   "finishedChecked": 3754,
+   "fadeMax": 10.03335189819336,
+   "issues": [],
+   "issueCount": 0,
+   "nonFinite": 0,
+   "lastAliveCount": 20
+  },
+  "events": {
+   "total": 879,
+   "errors": [
+    "3:Population must be 2–1000.",
+    "10:Running must be boolean.",
+    "10:Rate must be 1, 4, or fast.",
+    "10:Running must be boolean.",
+    "10:Rate must be 1, 4, or fast.",
+    "10:Running must be boolean.",
+    "10:Rate must be 1, 4, or fast.",
+    "10:Running must be boolean.",
+    "10:Rate must be 1, 4, or fast.",
+    "21:Track id is required.",
+    "22:Walls must contain 6–4096 finite segments.",
+    "23:Walls must contain 6–4096 finite segments.",
+    "24:Centerline must contain 3–2048 finite vertices.",
+    "25:Road length/width is invalid.",
+    "26:Cumulative lengths must match actual edge lengths.",
+    "28:Centerline must contain 3–2048 finite vertices.",
+    "29:Start line must cross spawn perpendicular to forward.",
+    "30:Spawn must be centerline vertex zero.",
+    "31:Road length/width is invalid.",
+    "27:Malformed command.",
+    "27:Unknown command."
+   ]
+  },
+  "pageErrors": [],
+  "consoleErrors": []
+ },
+ "perf": {
+  "conditions": {
+   "viewport": "1440x900",
+   "dpr": 2,
+   "browser": "158.0.8127.18",
+   "headless": true,
+   "cpu": "Apple M5",
+   "os": "macOS 27.2",
+   "warmupMs": 2000,
+   "sampleMs": 6000,
+   "renderMode": "harness Canvas2D: track bitmap + best path + every active/fading car triangle; fast mode does not draw cars"
+  },
+  "samples": [
+   {
+    "frames": 360,
+    "fps": 60.003342804613084,
+    "frameIntervalP50": 16.699999999999818,
+    "frameIntervalP95": 16.700000000000728,
+    "frameIntervalP99": 16.800000000000182,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.2725000023841858,
+    "frameCallbackP95Ms": 0.6999999284744263,
+    "framesWithNewSnapshotShare": 0.5654596100278552,
+    "snapshotsPerSecond": 34.15641974101581,
+    "stepsPerWallSecond": 60.315238762184016,
+    "workerMsPerStep": 0.15994474439989795,
+    "workerBusyShare": 0.009647105447236341,
+    "aliveMean": 33.707317073170735,
+    "drawableMean": 171.5219512195122,
+    "crashedMean": 478.2926829268293,
+    "finishedMean": 0,
+    "generationFrom": 1,
+    "generationTo": 1,
+    "pauseRoundTripMs": 2.100000023841858,
+    "population": 512,
+    "rate": 1,
+    "label": "512-1x-gen1"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00334280461309,
+    "frameIntervalP50": 16.69999999999891,
+    "frameIntervalP95": 16.799999999999272,
+    "frameIntervalP99": 16.80000000000109,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.1777777824136946,
+    "frameCallbackP95Ms": 0.3999999761581421,
+    "framesWithNewSnapshotShare": 0.8690807799442897,
+    "snapshotsPerSecond": 52.31502307504918,
+    "stepsPerWallSecond": 240.08263774250278,
+    "workerMsPerStep": 0.1514920170815102,
+    "workerBusyShare": 0.03637060305786125,
+    "aliveMean": 71.42038216560509,
+    "drawableMean": 123.71337579617834,
+    "crashedMean": 428.54458598726114,
+    "finishedMean": 12.035031847133759,
+    "generationFrom": 2,
+    "generationTo": 3,
+    "pauseRoundTripMs": 1.600000023841858,
+    "population": 512,
+    "rate": 4,
+    "label": "512-4x-early"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00233992411962,
+    "frameIntervalP50": 16.700000000000728,
+    "frameIntervalP95": 16.700000000000728,
+    "frameIntervalP99": 16.799999999999272,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.043333334061834546,
+    "frameCallbackP95Ms": 0.20000004768371582,
+    "framesWithNewSnapshotShare": 0.1532033426183844,
+    "snapshotsPerSecond": 9.164528276771836,
+    "stepsPerWallSecond": 2531.9092211917828,
+    "workerMsPerStep": 0.19748601512557465,
+    "workerBusyShare": 0.5000166627528624,
+    "aliveMean": 322.09090909090907,
+    "drawableMean": 388.3454545454546,
+    "crashedMean": 145.70909090909092,
+    "finishedMean": 44.2,
+    "generationFrom": 9,
+    "generationTo": 29,
+    "pauseRoundTripMs": 1.600000023841858,
+    "population": 512,
+    "rate": "fast",
+    "label": "512-fast"
+   },
+   {
+    "frames": 360,
+    "fps": 60.001337077149344,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.799999999995634,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.31083333128028445,
+    "frameCallbackP95Ms": 0.6999999284744263,
+    "framesWithNewSnapshotShare": 0.5348189415041783,
+    "snapshotsPerSecond": 32.161306448925174,
+    "stepsPerWallSecond": 60.15664055990668,
+    "workerMsPerStep": 0.7210526324375184,
+    "workerBusyShare": 0.043376104034318304,
+    "aliveMean": 309.7461139896373,
+    "drawableMean": 338.7616580310881,
+    "crashedMean": 188.7461139896373,
+    "finishedMean": 13.507772020725389,
+    "generationFrom": 15,
+    "generationTo": 15,
+    "pauseRoundTripMs": 1.600000023841858,
+    "population": 512,
+    "rate": 1,
+    "label": "512-1x-evolved-gen15"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00233992411962,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.799999999995634,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.2513888902134366,
+    "frameCallbackP95Ms": 0.6999999284744263,
+    "framesWithNewSnapshotShare": 0.8384401114206128,
+    "snapshotsPerSecond": 50.48064908491863,
+    "stepsPerWallSecond": 240.24124085957976,
+    "workerMsPerStep": 0.3497919552699868,
+    "workerBusyShare": 0.08403445337676026,
+    "aliveMean": 180.43564356435644,
+    "drawableMean": 223.1914191419142,
+    "crashedMean": 164.6171617161716,
+    "finishedMean": 166.94719471947195,
+    "generationFrom": 16,
+    "generationTo": 17,
+    "pauseRoundTripMs": 1.399999976158142,
+    "population": 512,
+    "rate": 4,
+    "label": "512-4x-evolved"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00334280461308,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.799999999995634,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.2536111073361503,
+    "frameCallbackP95Ms": 0.5,
+    "framesWithNewSnapshotShare": 0.5403899721448467,
+    "snapshotsPerSecond": 32.31986672219908,
+    "stepsPerWallSecond": 59.975010412328196,
+    "workerMsPerStep": 0.18416666388511657,
+    "workerBusyShare": 0.011045397584113614,
+    "aliveMean": 64.6340206185567,
+    "drawableMean": 332.0360824742268,
+    "crashedMean": 935.3659793814433,
+    "finishedMean": 0,
+    "generationFrom": 1,
+    "generationTo": 1,
+    "pauseRoundTripMs": 2.4000000953674316,
+    "population": 1000,
+    "rate": 1,
+    "label": "1000-1x-gen1"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00233992411962,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.799999999995634,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.16166666282547845,
+    "frameCallbackP95Ms": 0.5,
+    "framesWithNewSnapshotShare": 0.8690807799442897,
+    "snapshotsPerSecond": 52.659645381034366,
+    "stepsPerWallSecond": 240.13464871541302,
+    "workerMsPerStep": 0.07460097105117576,
+    "workerBusyShare": 0.017914277977202787,
+    "aliveMean": 27.54746835443038,
+    "drawableMean": 44.34493670886076,
+    "crashedMean": 933.876582278481,
+    "finishedMean": 38.575949367088604,
+    "generationFrom": 2,
+    "generationTo": 3,
+    "pauseRoundTripMs": 1.899999976158142,
+    "population": 1000,
+    "rate": 4,
+    "label": "1000-4x-early"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00233992411962,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.80000000000291,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.03916666805744171,
+    "frameCallbackP95Ms": 0.19999992847442627,
+    "framesWithNewSnapshotShare": 0.15598885793871867,
+    "snapshotsPerSecond": 9.32944606413994,
+    "stepsPerWallSecond": 2072.8029987505206,
+    "workerMsPerStep": 0.24266998874395726,
+    "workerBusyShare": 0.5030070803752297,
+    "aliveMean": 537.6428571428571,
+    "drawableMean": 659.1607142857143,
+    "crashedMean": 388.35714285714283,
+    "finishedMean": 74,
+    "generationFrom": 8,
+    "generationTo": 20,
+    "pauseRoundTripMs": 5,
+    "population": 1000,
+    "rate": "fast",
+    "label": "1000-fast"
+   },
+   {
+    "frames": 360,
+    "fps": 60.002339924119546,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.70000000001164,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.6991666667991214,
+    "frameCallbackP95Ms": 1.399999976158142,
+    "framesWithNewSnapshotShare": 0.5571030640668524,
+    "snapshotsPerSecond": 33.496092122319524,
+    "stepsPerWallSecond": 60.159648040583825,
+    "workerMsPerStep": 1.4180055443930164,
+    "workerBusyShare": 0.08530671447028033,
+    "aliveMean": 565.5223880597015,
+    "drawableMean": 617.4129353233831,
+    "crashedMean": 421.80099502487565,
+    "finishedMean": 12.676616915422885,
+    "generationFrom": 15,
+    "generationTo": 15,
+    "pauseRoundTripMs": 2.100000023841858,
+    "population": 1000,
+    "rate": 1,
+    "label": "1000-1x-evolved-gen15"
+   },
+   {
+    "frames": 360,
+    "fps": 60.00233992411969,
+    "frameIntervalP50": 16.69999999999709,
+    "frameIntervalP95": 16.80000000000291,
+    "frameIntervalP99": 16.80000000000291,
+    "framesOver25ms": 0,
+    "frameCallbackMeanMs": 0.5219444453716278,
+    "frameCallbackP95Ms": 1.2999999523162842,
+    "framesWithNewSnapshotShare": 0.8217270194986073,
+    "snapshotsPerSecond": 49.32675643188772,
+    "stepsPerWallSecond": 239.80135981583257,
+    "workerMsPerStep": 0.9733842947650403,
+    "workerBusyShare": 0.23341887750803186,
+    "aliveMean": 445.2162162162162,
+    "drawableMean": 590.0472972972973,
+    "crashedMean": 368.80743243243245,
+    "finishedMean": 185.97635135135135,
+    "generationFrom": 16,
+    "generationTo": 17,
+    "pauseRoundTripMs": 2.200000047683716,
+    "population": 1000,
+    "rate": 4,
+    "label": "1000-4x-evolved"
+   }
+  ],
+  "harnessRenderBenchmark": [
+   {
+    "kind": "render",
+    "population": 512,
+    "rate": 1,
+    "viewport": [
+     1440,
+     900
+    ],
+    "dpr": 2,
+    "wallMs": 4001.600000023842,
+    "frames": 240,
+    "presentationFps": 60.001500037501025,
+    "frameP95Ms": 16.70000000001164,
+    "renderMeanMs": 0.5266666620969772,
+    "renderP95Ms": 0.6000000238418579,
+    "drawnCarsMean": 512,
+    "workerSteps": 0,
+    "workerComputeMs": 0,
+    "workerMsPerStep": 0,
+    "workerStepsPerWallSecond": 0,
+    "sampledAliveMean": 0,
+    "generation": 1,
+    "bestLapSeconds": null
+   },
+   {
+    "kind": "render",
+    "population": 1000,
+    "rate": 1,
+    "viewport": [
+     1440,
+     900
+    ],
+    "dpr": 2,
+    "wallMs": 4004,
+    "frames": 241,
+    "presentationFps": 60.002489729864315,
+    "frameP95Ms": 16.70000000001164,
+    "renderMeanMs": 0.9842323683109521,
+    "renderP95Ms": 1.100000023841858,
+    "drawnCarsMean": 1000,
+    "workerSteps": 0,
+    "workerComputeMs": 0,
+    "workerMsPerStep": 0,
+    "workerStepsPerWallSecond": 0,
+    "sampledAliveMean": 0,
+    "generation": 1,
+    "bestLapSeconds": null
+   }
+  ],
+  "nodeWorstCase": {
+   "pop512_allActiveFirstSeconds": {
+    "msPerStep": 0.20527049166666983,
+    "alive": 84,
+    "stepsPerSecOneCore": 4871.620815445106,
+    "rate4CoreShare": 0.04926491800000076
+   },
+   "pop1000_allActiveFirstSeconds": {
+    "msPerStep": 0.40170625000000654,
+    "alive": 164,
+    "stepsPerSecOneCore": 2489.381233177188,
+    "rate4CoreShare": 0.09640950000000158
+   },
+   "heapGrowthBytesOver1500StepsNoBoundary": {
+    "preGc": 4783304,
+    "postGc": 192,
+    "generation": 2
+   }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+ },
+ "cadence": {
+  "hidden": {
+   "method": "CDP Emulation.setFocusEmulationEnabled false + Page.setWebLifecycleState frozen not used; visibility unchanged in headless",
+   "before": {
+    "vis": "visible",
+    "frames": 126,
+    "snaps": 34,
+    "tick": 61,
+    "t": 1074.5999999046326
+   },
+   "hiddenAfter3s": {
+    "vis": "visible",
+    "frames": 301,
+    "snaps": 131,
+    "tick": 244,
+    "t": 4114.699999928474
+   },
+   "visibleAgain": {
+    "vis": "visible",
+    "frames": 392,
+    "snaps": 181,
+    "tick": 335,
+    "t": 5629
+   },
+   "framesWhileHidden": 175,
+   "snapshotsWhileHidden": 97,
+   "ticksWhileHidden": 183,
+   "framesAfterReturn": 91,
+   "errors": []
+  },
+  "host_noJitter_rate1": {
+   "snapshotsPerSecond": 30.1,
+   "stepsPerSecond": 60,
+   "multiStepDeliveries": 0.9966777408637874
+  },
+  "host_noJitter_rate4": {
+   "snapshotsPerSecond": 48,
+   "stepsPerSecond": 240,
+   "multiStepDeliveries": 0.9979166666666667
+  },
+  "host_jitter0to1.5ms_rate1": {
+   "snapshotsPerSecond": 37.5,
+   "stepsPerSecond": 60,
+   "multiStepDeliveries": 0.5973333333333334
+  },
+  "host_jitter0to1.5ms_rate4": {
+   "snapshotsPerSecond": 52.3,
+   "stepsPerSecond": 240,
+   "multiStepDeliveries": 0.5869980879541109
+  },
+  "host_jitter0to4ms_rate1": {
+   "snapshotsPerSecond": 37.8,
+   "stepsPerSecond": 60,
+   "multiStepDeliveries": 0.58994708994709
+  },
+  "host_jitter0to4ms_rate4": {
+   "snapshotsPerSecond": 52.4,
+   "stepsPerSecond": 240,
+   "multiStepDeliveries": 0.5782442748091603
+  }
+ },
+ "bundled": {
+  "evolve5": {
+   "gens": [
+    [
+     1,
+     15,
+     9.495347595214843
+    ],
+    [
+     2,
+     33,
+     9.352527280685681
+    ],
+    [
+     3,
+     50,
+     9.100212900495151
+    ],
+    [
+     4,
+     58,
+     9.100212900495151
+    ],
+    [
+     5,
+     89,
+     8.898640245672466
+    ]
+   ],
+   "tick": 5111
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "matchesNode": true
+ },
+ "findings": [
+  {
+   "id": "M1",
+   "severity": "medium",
+   "title": "1x/4x snapshot delivery runs at ~30-38 Hz / ~48-52 Hz instead of display rate (off-by-epsilon delivery gate)",
+   "file": "src/sim/runtime.ts:102-104"
+  },
+  {
+   "id": "M2",
+   "severity": "medium",
+   "title": "Per-run 8-error budget suppresses the error reply to a later invalid reset; pending reset never resolves",
+   "file": "src/sim/runtime.ts:61-63,79-84"
+  },
+  {
+   "id": "L1",
+   "severity": "low",
+   "title": "Track validation accepts walls inconsistent with centerline/width (missing inner wall) allowing infield laps",
+   "file": "src/sim/validation.ts:34-101"
+  },
+  {
+   "id": "L2",
+   "severity": "low",
+   "title": "Fast mode keeps the worker only ~50% busy (32-step cap + clamped setTimeout yield)",
+   "file": "src/sim/runtime.ts:93-105"
+  },
+  {
+   "id": "L3",
+   "severity": "low",
+   "title": "Stale/duplicate reset ids get no reply (contract-consistent; integration hazard)",
+   "file": "src/sim/runtime.ts:69-70"
+  },
+  {
+   "id": "L4",
+   "severity": "low",
+   "title": "Harness canvas starts below the first screen at all three viewports",
+   "file": "qa/t2.html"
+  }
+ ]
+}

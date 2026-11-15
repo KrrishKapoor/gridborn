@@ -1,0 +1,61 @@
+{
+ "hidden": {
+  "method": "CDP Emulation.setFocusEmulationEnabled false + Page.setWebLifecycleState frozen not used; visibility unchanged in headless",
+  "before": {
+   "vis": "visible",
+   "frames": 126,
+   "snaps": 34,
+   "tick": 61,
+   "t": 1074.5999999046326
+  },
+  "hiddenAfter3s": {
+   "vis": "visible",
+   "frames": 301,
+   "snaps": 131,
+   "tick": 244,
+   "t": 4114.699999928474
+  },
+  "visibleAgain": {
+   "vis": "visible",
+   "frames": 392,
+   "snaps": 181,
+   "tick": 335,
+   "t": 5629
+  },
+  "framesWhileHidden": 175,
+  "snapshotsWhileHidden": 97,
+  "ticksWhileHidden": 183,
+  "framesAfterReturn": 91,
+  "errors": []
+ },
+ "host_noJitter_rate1": {
+  "snapshotsPerSecond": 30.1,
+  "stepsPerSecond": 60,
+  "multiStepDeliveries": 0.9966777408637874
+ },
+ "host_noJitter_rate4": {
+  "snapshotsPerSecond": 48,
+  "stepsPerSecond": 240,
+  "multiStepDeliveries": 0.9979166666666667
+ },
+ "host_jitter0to1.5ms_rate1": {
+  "snapshotsPerSecond": 37.5,
+  "stepsPerSecond": 60,
+  "multiStepDeliveries": 0.5973333333333334
+ },
+ "host_jitter0to1.5ms_rate4": {
+  "snapshotsPerSecond": 52.3,
+  "stepsPerSecond": 240,
+  "multiStepDeliveries": 0.5869980879541109
+ },
+ "host_jitter0to4ms_rate1": {
+  "snapshotsPerSecond": 37.8,
+  "stepsPerSecond": 60,
+  "multiStepDeliveries": 0.58994708994709
+ },
+ "host_jitter0to4ms_rate4": {
+  "snapshotsPerSecond": 52.4,
+  "stepsPerSecond": 240,
+  "multiStepDeliveries": 0.5782442748091603
+ }
+}

@@ -1,0 +1,6 @@
+11:29:27 browser 158.0.8127.18
+11:29:27 suite viewports
+11:29:57 desktop-1440x900 {"overflow":false,"sel":true,"insp":[],"replay":{"tick":9543,"generation":9,"sameGeneration":true,"sameCars":true,"sameSelection":true},"err":0}
+11:30:25 portrait-390x844 {"overflow":false,"sel":true,"insp":[],"replay":{"tick":9799,"generation":10,"sameGeneration":true,"sameCars":true,"sameSelection":true},"err":0}
+11:30:54 landscape-844x390 {"overflow":false,"sel":true,"insp":[],"replay":{"tick":9812,"generation":10,"sameGeneration":true,"sameCars":true,"sameSelection":true},"err":0}
+11:30:54 done

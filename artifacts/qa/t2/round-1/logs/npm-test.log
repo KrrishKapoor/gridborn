@@ -1,0 +1,13 @@
+
+> gridborn@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/krrishai/.t3/worktrees/gridborn/t3-6d03a193-9765defd83188cc6
+
+
+ Test Files  6 passed (6)
+      Tests  66 passed (66)
+   Start at  06:17:56
+   Duration  5.48s (tests 99%, import 1%, transform 1%)
+

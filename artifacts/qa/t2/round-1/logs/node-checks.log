@@ -1,0 +1,157 @@
+pop512_seed1_gen30 ticks 25543 gen1 laps 15 best 9.495347595214843 → record 8.551251983642578 valid true steps/s 6980
+pop1000_seed1_gen30 ticks 28407 gen1 laps 26 best 9.124802901292966 → record 8.54811757405599 valid true steps/s 4167
+pop512_seed0_gen30 ticks 24553 gen1 laps 17 best 9.100311619198797 → record 8.538699595133464 valid true steps/s 6999
+pop512_seed7_gen30 ticks 24868 gen1 laps 13 best 9.288875235958256 → record 8.52693837483724 valid true steps/s 6667
+pop512_seed1_gen60 ticks 41764 gen1 laps 15 best 9.495347595214843 → record 8.517585754394531 valid true steps/s 5445
+claimCheck {
+  gen1Best: 9.495347595214843,
+  gen1Claim: 9.495347595214843,
+  gen30Record: 8.551251983642578,
+  gen30Claim: 8.551251983642578,
+  gen30Finishers: 339,
+  gen30FinishersClaim: 339,
+  match: true
+}
+centerlineIndependence {
+  altValid: true,
+  altError: null,
+  identicalMotionTicks: 569,
+  firstFinishTick: 570,
+  pass: true
+}
+constantControl {
+  straightCrash: {
+    crashTick: 123,
+    pose: [ 834.3639526367188, 170, 0, 0 ],
+    inactiveSeconds: 7.95004940032959,
+    status: 1,
+    wallClearance: 5.402522623274972,
+    retainsPoseOutsideWall: true
+  },
+  parked: { moved: 0, status: 0, progress: 0, lap: 0 }
+}
+scriptedGates {"jitter":{"lap":-1,"dist":3.9992919026985874,"gates":0},"reverseLapThenForwardCross":{"lap":-1,"dist":-2009.040707146233,"gates":0},"forward96ThenWiggleAtLine":{"lap":-1,"dist":1915.9231334719266,"gates":7},"forwardLapValid":{"lap":599.0450710571753,"dist":2015.0397949218748,"gates":7},"forwardLapOutsideLineExtension":{"lap":-1,"dist":1944.2113379707826,"gates":7},"halfForwardHalfBack":{"lap":-1,"dist":-1.9997955813971657,"gates":3},"teleportAround":{"lap":-1,"dist":2019.0390868245736,"gates":5},"pass":true}
+malformedMissingInnerWall {"accepted":true,"error":null,"infield":{"lapSeconds":13.16075210571289,"finishTick":790,"crashTick":null,"netProgress":2687.3142835008166,"evolvedRecord":8.81961682314327,"evolvedRecordValidOnRealOval":["sample outside drivable band: 46.945 > 41.001","2 10Hz chords cross a wall (display approximation)"]}}
+mirroredOval {
+  valid: true,
+  err: null,
+  gen1Laps: 17,
+  gen15Laps: 326,
+  record: 8.69477175046413
+}
+runtime {
+ "invalidResetAfterErrorCap": {
+  "errorsBefore": 8,
+  "repliesToInvalidReset": [],
+  "silent": true,
+  "validResetAfter": [
+   "ready",
+   "snapshot"
+  ]
+ },
+ "staleResets": {
+  "replies": [],
+  "engineRun": 5
+ },
+ "invalidInputs": {
+  "nullTrack": "error: Track is required.",
+  "nanCenter": "error: Centerline must contain 3–2048 finite vertices.",
+  "plainArrays": "error: Centerline must contain 3–2048 finite vertices.",
+  "figure8": "error: Cumulative lengths must match actual edge lengths.",
+  "outOfWorld": "error: Road bounds must fit the logical world.",
+  "openWalls": "error: Walls must form closed unbranched boundaries.",
+  "reversedForward": "error: Start forward disagrees with centerline order.",
+  "seedNeg": "error: Seed must be uint32.",
+  "seedHuge": "error: Seed must be uint32.",
+  "pop1": "error: Population must be 2–1000.",
+  "pop1001": "error: Population must be 2–1000.",
+  "eliteEqPop": "error: Elite count must be 1..population−1.",
+  "mutNaN": "error: Mutation rate must be 0–1.",
+  "genInf": "error: Generation deadline must fit a positive signed 32-bit tick count.",
+  "gen0": "error: Generation deadline must fit a positive signed 32-bit tick count.",
+  "raySmall": "error: Ray length must be positive and safely representable in Float32 sensor storage.",
+  "speedNeg": "error: Maximum speed must be finite and positive.",
+  "settingsNull": "error: Settings are required."
+ },
+ "invalidInputsRunKept": 26,
+ "transactionalInvalid": {
+  "runId": 1,
+  "tickSame": true,
+  "brainsSame": true,
+  "rngSame": true,
+  "stillRunning": true,
+  "continuesStepping": true
+ },
+ "pause": {
+  "ticksWhilePaused": 0,
+  "queued": 0,
+  "stepsFirstTwoPumpsAfterResume": 1
+ },
+ "suspension_rate1": {
+  "stepsInFirstPumpAfter30sStall": 15,
+  "followUpZeroElapsedSteps": 0,
+  "simSecondsGained": 0.25
+ },
+ "suspension_rate4": {
+  "stepsInFirstPumpAfter30sStall": 15,
+  "followUpZeroElapsedSteps": 0,
+  "simSecondsGained": 0.25
+ },
+ "pool": {
+  "deliveredWithoutRecycle": 3,
+  "ticksAdvanced": 6400,
+  "snapshotsAfter6ForeignRecycles": 3,
+  "poolLen": 2,
+  "outstanding": 1,
+  "note": "foreign full-size buffers are accepted up to outstanding credit (documented limit)"
+ },
+ "badRecycles": [
+  "Recycled storage has invalid sizes or ownership."
+ ],
+ "selection": [
+  {
+   "runId": 1,
+   "generation": 1,
+   "index": 3
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "selectionClearedOnGen2": true,
+ "scheduleIndependence": [
+  {
+   "tick": 4000,
+   "identicalToDirectEngine": true
+  },
+  {
+   "tick": 4000,
+   "identicalToDirectEngine": true
+  },
+  {
+   "tick": 4001,
+   "identicalToDirectEngine": true
+  }
+ ]
+}
+nodeWorstCase {
+  pop512_allActiveFirstSeconds: {
+    msPerStep: 0.20527049166666983,
+    alive: 84,
+    stepsPerSecOneCore: 4871.620815445106,
+    rate4CoreShare: 0.04926491800000076
+  },
+  pop1000_allActiveFirstSeconds: {
+    msPerStep: 0.40170625000000654,
+    alive: 164,
+    stepsPerSecOneCore: 2489.381233177188,
+    rate4CoreShare: 0.09640950000000158
+  },
+  heapGrowthBytesOver1500StepsNoBoundary: { preGc: 4783304, postGc: 192, generation: 2 }
+}
+wrote node-results.json
