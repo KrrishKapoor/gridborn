@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23253e2c'/%3E%3Cellipse cx='16' cy='16' rx='10' ry='7' fill='none' stroke='%23faf9f6' stroke-width='3'/%3E%3C/svg%3E" />
+    <title>Gridborn — Track workshop · T1</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #faf9f6; color: #252822; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      main { max-width: 1080px; margin: auto; padding: 28px 32px 24px; }
+      header { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; }
+      header span:last-child { color: #6a6c64; }
+      h1 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -.045em; font-weight: 550; line-height: 1.1; margin: 28px 0 10px; }
+      .intro { color: #62675c; font-size: 15px; line-height: 1.5; margin: 0 0 22px; }
+      .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+      button, select { font: inherit; font-size: 13px; min-height: 40px; padding: 8px 12px; border: 1px solid #c9cdc2; border-radius: 5px; background: transparent; color: inherit; }
+      button { cursor: pointer; }
+      button[aria-pressed="true"] { background: #253e2c; border-color: #253e2c; color: #fff; }
+      button:disabled { opacity: .45; cursor: default; }
+      :focus-visible { outline: 2px solid #26764b; outline-offset: 3px; }
+      .preset-label { font-size: 12px; color: #62675c; margin-right: 2px; }
+      .stage { position: relative; width: 100%; aspect-ratio: 3 / 2; max-height: 550px; background: #f1f2eb; border-radius: 3px; overflow: hidden; }
+      canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+      #editor { pointer-events: none; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+      .readout { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; padding: 12px 0; border-bottom: 1px solid #d9dcd1; font-size: 12px; font-variant-numeric: tabular-nums; }
+      #metrics { color: #62675c; }
+      #feedback { font-size: 14px; line-height: 1.5; min-height: 42px; margin: 10px 0; }
+      #feedback[data-kind="invalid"] { color: #a33428; }
+      footer { display: flex; justify-content: space-between; align-items: center; gap: 18px; font-size: 12px; line-height: 1.5; color: #62675c; }
+      footer p { margin: 0; }
+      footer button { flex-shrink: 0; }
+      @media (max-width: 600px) {
+        main { padding: 22px 18px; }
+        h1 { margin-top: 26px; }
+        .intro { max-width: 32ch; }
+        .controls { gap: 8px; }
+        .preset-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+        .stage { min-height: 270px; }
+        footer { align-items: flex-start; }
+      }
+      @media (min-width: 601px) and (max-height: 500px) {
+        main { padding: 12px 24px; }
+        header { font-size: 11px; }
+        h1 { font-size: 27px; margin: 12px 0; }
+        .intro { display: none; }
+        .controls { margin-bottom: 8px; }
+        button, select { min-height: 34px; padding: 5px 10px; }
+        .stage { height: 240px; aspect-ratio: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><span>Gridborn</span><span>T1 · Geometry harness</span></header>
+      <h1>A road from a line.</h1>
+      <p class="intro">Draw a generous loop. Lift to close and smooth it. Leave room for the road around every turn.</p>
+      <div class="controls" aria-label="Track controls">
+        <label class="preset-label" for="preset">Circuit</label>
+        <select id="preset" aria-label="Circuit preset"></select>
+        <button id="drawing" type="button" aria-pressed="true">Drawing on</button>
+        <button id="clear" type="button">Clear drawing</button>
+        <button id="reset" type="button">Reset circuit</button>
+      </div>
+      <div class="stage">
+        <canvas id="road" role="img" aria-label="Current circuit and its start line"></canvas>
+        <canvas id="editor" tabindex="0" aria-label="Draw a circuit with mouse or touch" aria-describedby="feedback">Use the circuit preset control as an alternative to drawing.</canvas>
+      </div>
+      <div class="readout"><span id="circuit-name"></span><span id="metrics"></span></div>
+      <p id="feedback" role="status" aria-atomic="true">Drawing is on. Start anywhere inside the canvas. Escape cancels a draft.</p>
+      <footer><p>Track geometry only. No cars or simulation.<br>Clear drawing keeps your current circuit.</p><button id="lifecycle" type="button">Detach editor</button></footer>
+    </main>
+    <script type="module" src="./t1.ts"></script>
+  </body>
+</html>
