@@ -1,0 +1,32 @@
+[
+  {
+    viewport: [ 1440, 900 ],
+    noHook: true,
+    workers: [ 'http://127.0.0.1:4194/assets/worker-D_lbJ8Lc.js' ],
+    inspector: '+0.06',
+    drawnLap: '8.14 s',
+    layout: { overflow: false, feedbackBottom: 879.4375 },
+    errors: [],
+    passed: true
+  },
+  {
+    viewport: [ 390, 844 ],
+    noHook: true,
+    workers: [ 'http://127.0.0.1:4194/assets/worker-D_lbJ8Lc.js' ],
+    inspector: '+0.06',
+    drawnLap: '8.14 s',
+    layout: { overflow: false, feedbackBottom: 603.53125 },
+    errors: [],
+    passed: true
+  },
+  {
+    viewport: [ 844, 390 ],
+    noHook: true,
+    workers: [ 'http://127.0.0.1:4194/assets/worker-D_lbJ8Lc.js' ],
+    inspector: '+0.06',
+    drawnLap: '8.14 s',
+    layout: { overflow: false, feedbackBottom: 385.78125 },
+    errors: [],
+    passed: true
+  }
+]

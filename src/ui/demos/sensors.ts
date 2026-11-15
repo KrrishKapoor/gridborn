@@ -113,6 +113,7 @@ export function mountSensorDemo(root: HTMLElement): TeachingDemo {
   return {
     update(snapshot) {
       selected = hasSelected(snapshot);
+      checkbox.disabled = !selected; // Keep keyboard access correct even before an offscreen repaint.
       if (hasSelected(snapshot)) for (let i = 0; i < 7; i++) distances[i] = snapshot.storage.sensors[i * SENSOR_STRIDE]!;
       if (selected && follow) cancelPointer();
       ui.invalidate();

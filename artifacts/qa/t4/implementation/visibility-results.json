@@ -1,0 +1,36 @@
+{
+  "before": {
+    "runId": 1,
+    "tick": 42,
+    "running": true
+  },
+  "hidden1": {
+    "hidden": false,
+    "delivery": {
+      "runId": 1,
+      "tick": 68,
+      "running": true
+    },
+    "desired": true
+  },
+  "hidden2": {
+    "hidden": false,
+    "delivery": {
+      "runId": 1,
+      "tick": 131,
+      "running": true
+    },
+    "desired": true
+  },
+  "resumed": {
+    "hidden": false,
+    "delivery": {
+      "runId": 1,
+      "tick": 144,
+      "running": true
+    },
+    "desired": true,
+    "log": []
+  },
+  "passed": false
+}

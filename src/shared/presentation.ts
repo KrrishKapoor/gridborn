@@ -1,4 +1,4 @@
-import type { TrackIssue, TrackPreset } from './geometry';
+import type { TrackGeometry, TrackIssue, TrackPreset } from './geometry';
 import type { BestTrajectory, CarId, GenerationHistory, SimulationRate, SimulationSettings, SimulationSnapshot } from './simulation';
 
 /** T3 emits intentions; T4 owns simulation, editor, rendering, and lifecycle. */
@@ -27,6 +27,10 @@ export interface PageState {
   readonly selected: CarId | null;
   readonly bestLapSeconds: number | null;
   readonly history: GenerationHistory;
+  readonly circuitLabel?: string;
+  readonly pendingLabel?: string;
+  readonly pendingPopulation?: number;
+  readonly suspended?: boolean;
 }
 export interface GridbornPage {
   readonly heroCanvas: HTMLCanvasElement;
@@ -40,6 +44,8 @@ export interface GridbornPage {
 /** Demos may borrow a snapshot only during this call; copy needed values before returning. */
 export interface TeachingDemo {
   update(snapshot: SimulationSnapshot | null, history: GenerationHistory, best: BestTrajectory | null): void;
+  /** Immutable main-owned geometry; never transferred to the worker. */
+  setTrack?(track: TrackGeometry): void;
   setVisible(visible: boolean): void;
   destroy(): void;
 }

@@ -98,7 +98,7 @@ describe('worker acceptance, scheduling and lifecycle', () => {
     h.command({ type: 'select', runId: 1, car: { runId: 1, generation: 1, index: 4 } });
     expect(h.snapshots().at(-1)!.selected?.index).toBe(4);
     for (let i = 2; i < 30; i++) h.reset(i, { seed: -1 });
-    expect(h.events.filter((e) => e.type === 'error').length).toBeLessThanOrEqual(8);
+    expect(h.events.filter((e) => e.type === 'error')).toHaveLength(29);
     expect(h.runtime.engine!.runId).toBe(1);
   });
   it('restarts the exact seeded state and clears rate, selection and history records', () => {
@@ -107,5 +107,49 @@ describe('worker acceptance, scheduling and lifecycle', () => {
     h.reset(2);
     const next = h.snapshots().at(-1)!; expect(next.storage.cars).toEqual(initial);
     expect(next).toMatchObject({ rate: 1, selected: null, tick: 0, running: false }); expect(h.runtime.engine!.bestLap).toBeNull();
+  });
+});
+
+
+describe('production cadence and reset acknowledgements', () => {
+  it.each([1, 4] as const)('delivers fresh normal state at 60 Hz at %ix without a wall-clock gate', (rate) => {
+    const h = new Host(); h.reset(); h.command({ type: 'set-rate', runId: 1, rate });
+    h.command({ type: 'set-running', runId: 1, running: true });
+    for (const snapshot of h.snapshots()) h.recycle(snapshot);
+    h.events = [];
+    // Exact host timing reproduces the old alternating-delivery defect.
+    for (let i = 0; i < 600 * rate; i++) {
+      h.pump(1000 / 60 / rate);
+      for (const snapshot of h.snapshots()) if (snapshot.storage.cars.byteLength) h.recycle(snapshot);
+    }
+    const snapshots = h.snapshots();
+    expect(snapshots.length).toBeGreaterThanOrEqual(599);
+    expect(snapshots.length).toBeLessThanOrEqual(601);
+    expect(snapshots.every((s) => s.steps === rate)).toBe(true);
+  });
+  it('acknowledges an invalid reset after all eight malformed-command errors', () => {
+    const h = new Host(); h.reset(10); h.command({ type: 'set-running', runId: 10, running: true });
+    for (let i = 0; i < 8; i++) h.runtime.receive(i % 2 ? { type: 'set-running', runId: 10, running: 1 } : { type: 'set-rate', runId: 10, rate: 3 });
+    expect(h.events.filter((e) => e.type === 'error')).toHaveLength(8);
+    const accepted = h.runtime.engine;
+    h.reset(11, { population: 5000 });
+    expect(h.events.at(-1)).toMatchObject({ type: 'error', runId: 11 });
+    expect(h.runtime.engine).toBe(accepted); expect(h.runtime.running).toBe(true);
+    h.pump(100); expect(accepted!.tick).toBe(6);
+    h.reset(12); expect(h.runtime.engine!.runId).toBe(12);
+  });
+});
+
+describe('normal delivery phase', () => {
+  it('keeps 4x delivery at 60 Hz when pumps cross a four-step boundary by one step', () => {
+    const h = new Host(); h.reset(); h.command({ type: 'set-rate', runId: 1, rate: 4 }); h.command({ type: 'set-running', runId: 1, running: true });
+    for (const s of h.snapshots()) h.recycle(s); h.events = [];
+    let deliveries = 0;
+    for (let i = 0; i < 2000; i++) {
+      h.pump(5);
+      for (const s of h.snapshots()) { deliveries++; h.recycle(s); }
+      h.events = [];
+    }
+    expect(h.runtime.engine!.tick).toBe(2400); expect(deliveries).toBe(600);
   });
 });

@@ -1,3 +1,4 @@
+import type { TrackGeometry } from '../../shared/geometry';
 import type { TeachingDemo } from '../../shared/presentation';
 import { HISTORY_LIMIT, TRAJECTORY_STRIDE } from '../../shared/simulation';
 import type { GenerationHistory, GenerationStatistics } from '../../shared/simulation';
@@ -7,6 +8,7 @@ import { createSparkline } from '../sparkline';
 import { surface } from './surface';
 
 export function mountRacingLineDemo(root: HTMLElement): TeachingDemo {
+  let track: TrackGeometry | null = null;
   let sampleCount = 0;
   let samples = new Float32Array(0);
   let lap: number | null = null;
@@ -25,6 +27,7 @@ export function mountRacingLineDemo(root: HTMLElement): TeachingDemo {
     <svg class="racing-diagram" viewBox="0 0 640 330" role="img" aria-label="Recorded best path. No attempt has been supplied yet.">
       <g data-example hidden><path d="M120 300V210Q120 70 260 70H570" fill="none" stroke="#e6e9e0" stroke-width="100"/><path d="M70 300V210Q70 20 260 20H570M170 300V210Q170 120 260 120H570" fill="none" stroke="#a4ad9d" stroke-width="1.5"/><path data-corner fill="none" stroke="#246b32" stroke-width="3"/><circle data-apex r="5" fill="#246b32"/></g>
       <g data-empty><path d="M28 28v18m0-18h18M612 28h-18m18 0v18M28 302v-18m0 18h18M612 302h-18m18 0v-18" stroke="#b7c0ae" fill="none"/><text x="320" y="157" text-anchor="middle" class="svg-empty">A line has to be earned.</text><text x="320" y="183" text-anchor="middle" class="svg-note">Your best recorded attempt will appear here.</text></g>
+      <path data-road fill="none" stroke="#a4ad9d" stroke-width="1.2"/>
       <path data-path fill="none" stroke="#246b32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
       <circle data-start r="4" fill="#246b32" hidden/>
     </svg>
@@ -36,6 +39,8 @@ export function mountRacingLineDemo(root: HTMLElement): TeachingDemo {
   const graph = ui.get<SVGSVGElement>('.racing-diagram');
   function render() {
     const path = ui.get<SVGPathElement>('[data-path]');
+    const road = ui.get<SVGPathElement>('[data-road]');
+    road.style.display = !illustrate && hasPath ? '' : 'none';
     const empty = ui.get<SVGGElement>('[data-empty]');
     const example = ui.get<SVGGElement>('[data-example]');
     const start = ui.get<SVGCircleElement>('[data-start]');
@@ -64,7 +69,10 @@ export function mountRacingLineDemo(root: HTMLElement): TeachingDemo {
         minX = Math.min(minX, samples[i]!); minY = Math.min(minY, samples[i + 1]!);
         maxX = Math.max(maxX, samples[i]!); maxY = Math.max(maxY, samples[i + 1]!);
       }
-      const view = fitView({ minX: minX - 20, minY: minY - 20, maxX: maxX + 20, maxY: maxY + 20 }, 640, 330, 24);
+      const view = fitView(track?.bounds ?? { minX: minX - 20, minY: minY - 20, maxX: maxX + 20, maxY: maxY + 20 }, 640, 330, 24);
+      let walls = '';
+      if (track) for (let i = 0; i < track.walls.length; i += 4) walls += `M${track.walls[i]! * view.scale + view.offsetX},${track.walls[i + 1]! * view.scale + view.offsetY}L${track.walls[i + 2]! * view.scale + view.offsetX},${track.walls[i + 3]! * view.scale + view.offsetY}`;
+      road.setAttribute('d', walls);
       let d = '';
       for (let i = 0; i < sampleCount; i += TRAJECTORY_STRIDE) d += `${i ? 'L' : 'M'}${(samples[i]! * view.scale + view.offsetX).toFixed(2)},${(samples[i + 1]! * view.scale + view.offsetY).toFixed(2)}`;
       path.setAttribute('d', d);
@@ -85,6 +93,7 @@ export function mountRacingLineDemo(root: HTMLElement): TeachingDemo {
   ui.get('[data-mode]').addEventListener('click', () => { illustrate = !illustrate; ui.invalidate(); }, { signal: ui.signal });
   slider.addEventListener('input', ui.invalidate, { signal: ui.signal });
   return {
+    setTrack(value) { track = value; ui.invalidate(); },
     update(_snapshot, incomingHistory, best) {
       entries.length = 0;
       const offset = Math.max(0, incomingHistory.entries.length - HISTORY_LIMIT);

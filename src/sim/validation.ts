@@ -66,13 +66,18 @@ export function validateTrack(value: unknown): asserts value is TrackGeometry {
     }
   }
   requireValue([...endpoints.values()].every((neighbors) => neighbors.length === 2), 'Walls must form closed unbranched boundaries.');
-  const visited = new Set<string>(); let loops = 0;
+  const visited = new Set<string>(); const boundaries: number[][] = [];
   for (const key of endpoints.keys()) {
     if (visited.has(key)) continue;
-    loops++; const stack = [key];
-    while (stack.length) { const at = stack.pop()!; if (visited.has(at)) continue; visited.add(at); stack.push(...endpoints.get(at)!); }
+    const boundary: number[] = [];
+    let at = key;
+    while (!visited.has(at)) {
+      visited.add(at); boundary.push(...at.split(',').map(Number));
+      at = endpoints.get(at)!.find((neighbor) => !visited.has(neighbor)) ?? key;
+    }
+    boundaries.push(boundary);
   }
-  requireValue(loops === 2, 'Road requires two closed wall boundaries.');
+  requireValue(boundaries.length === 2, 'Road requires two closed wall boundaries.');
   const centerSegments = new Float32Array(n * 4);
   for (let i = 0; i < n; i++) {
     const next = (i + 1) % n;
@@ -82,6 +87,22 @@ export function validateTrack(value: unknown): asserts value is TrackGeometry {
   requireSimple(t.walls, 'Walls intersect or overlap.');
   for (let i = 0; i < centerSegments.length; i += 4) {
     for (let j = 0; j < t.walls.length; j += 4) requireValue(!intersects(centerSegments, i, t.walls, j), 'Centerline crosses a wall.');
+  }
+  // Both boundaries must describe the declared road, not a tiny decoy infield.
+  const [one, two] = boundaries as [number[], number[]];
+  requireValue(inside(one[0]!, one[1]!, two) !== inside(two[0]!, two[1]!, one), 'Road boundaries must be nested.');
+  for (let i = 0; i < t.centerline.length; i += 2) {
+    const x = t.centerline[i]!, y = t.centerline[i + 1]!;
+    requireValue(inside(x, y, one) !== inside(x, y, two), 'Centerline must lie between the road boundaries.');
+    for (const boundary of boundaries) {
+      let distance = Infinity;
+      for (let j = 0; j < boundary.length; j += 2) {
+        const k = (j + 2) % boundary.length;
+        distance = Math.min(distance, pointSegmentDistanceSq(x, y, boundary[j]!, boundary[j + 1]!, boundary[k]!, boundary[k + 1]!));
+      }
+      requireValue(distance >= (t.width * 0.35) ** 2 && distance <= (t.width * 0.8) ** 2,
+        'Both road boundaries must follow the centerline at the declared width.');
+    }
   }
   requireValue(point(t.spawn) && finite(t.spawn.heading) && point(t.startForward) && t.startLine && point(t.startLine.a) && point(t.startLine.b), 'Spawn/start line is invalid.');
   requireValue(Math.hypot(t.spawn.x - t.centerline[0]!, t.spawn.y - t.centerline[1]!) < 0.01, 'Spawn must be centerline vertex zero.');
@@ -140,4 +161,14 @@ function requireSimple(segments: Float32Array, message: string): void {
     }
     requireValue(shared, message);
   }
+}
+
+/** Ray parity works with either winding; called only during reset validation. */
+function inside(x: number, y: number, loop: number[]): boolean {
+  let result = false;
+  for (let i = 0, j = loop.length - 2; i < loop.length; j = i, i += 2) {
+    const ax = loop[i]!, ay = loop[i + 1]!, bx = loop[j]!, by = loop[j + 1]!;
+    if ((ay > y) !== (by > y) && x < (bx - ax) * (y - ay) / (by - ay) + ax) result = !result;
+  }
+  return result;
 }

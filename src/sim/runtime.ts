@@ -25,6 +25,7 @@ export class WorkerRuntime {
   private lastTime = 0;
   private accumulator = 0;
   private lastDelivery = -Infinity;
+  private lastDeliveryTick = 0;
   private computeMs = 0;
   private steps = 0;
   private dirty = false;
@@ -67,7 +68,7 @@ export class WorkerRuntime {
   }
 
   private reset(command: Extract<SimulationCommand, { type: 'reset' }>): void {
-    if (!Number.isSafeInteger(command.runId) || command.runId <= 0) { this.error(this.engine?.runId ?? 0, 'Run id must be a positive safe integer.'); return; }
+    if (!Number.isSafeInteger(command.runId) || command.runId <= 0) { this.error(this.engine?.runId ?? 0, 'Run id must be a positive safe integer.', true); return; }
     if (command.runId <= this.lastRequested) return;
     this.lastRequested = command.runId;
     try {
@@ -80,16 +81,18 @@ export class WorkerRuntime {
       const pool = [createSnapshotStorage(command.settings.population), createSnapshotStorage(command.settings.population), createSnapshotStorage(command.settings.population)];
       this.clearSchedule(); this.engine = candidate; this.pool = pool; this.outstanding = 0;
       this.running = false; this.rate = 1; this.accumulator = 0; this.steps = 0; this.computeMs = 0;
-      this.lastTime = this.host.now(); this.lastDelivery = -Infinity; this.dirty = false; this.errors = 0; this.lastError = '';
+      this.lastTime = this.host.now(); this.lastDelivery = -Infinity; this.lastDeliveryTick = 0; this.dirty = false; this.errors = 0; this.lastError = '';
       this.host.send({ type: 'ready', runId: command.runId });
       this.deliver(true);
-    } catch (error) { this.error(command.runId, error instanceof Error ? error.message : 'Reset failed.'); }
+    } catch (error) { this.error(command.runId, error instanceof Error ? error.message : 'Reset failed.', true); }
   }
 
-  private error(runId: number, message: string): void {
+  private error(runId: number, message: string, acknowledgement = false): void {
     const key = `${runId}:${message}`;
-    if (this.errors >= 8 || this.lastError === key) return;
-    this.errors++; this.lastError = key;
+    if (!acknowledgement) {
+      if (this.errors >= 8 || this.lastError === key) return;
+      this.errors++; this.lastError = key;
+    }
     this.host.send({ type: 'error', runId, message: message.slice(0, 240) });
   }
   private clearSchedule(): void {
@@ -115,7 +118,9 @@ export class WorkerRuntime {
     }
     const end = this.host.now();
     this.computeMs += Math.max(0, end - start); this.steps += count;
-    if (!this.running || end - this.lastDelivery >= (this.rate === 'fast' ? 100 : 1000 / 60)) this.deliver(false);
+    // Gate normal delivery by simulated steps, not a second wall clock. Timer
+    // rounding must not discard alternating 1x frames. 4x groups four steps.
+    if (!this.running || (count > 0 && (this.rate === 'fast' ? end - this.lastDelivery >= 100 : Math.floor(this.engine.tick / this.rate) > Math.floor(this.lastDeliveryTick / this.rate)))) this.deliver(false);
     if (this.running) this.schedule(this.rate === 'fast' ? 0 : Math.max(0, (FIXED_DT - this.accumulator) * 1000 / this.rate));
   };
 
@@ -129,6 +134,6 @@ export class WorkerRuntime {
     this.host.send({ type: 'snapshot', snapshot: { runId: engine.runId, generation: engine.generation, tick: engine.tick,
       generationTick: engine.generationTick, population: engine.settings.population, alive: engine.alive,
       running: this.running, rate: this.rate, selected: engine.selected, storage, computeMs: this.computeMs, steps: this.steps } }, snapshotTransferList(storage));
-    this.computeMs = 0; this.steps = 0; this.lastDelivery = this.host.now();
+    this.computeMs = 0; this.steps = 0; this.lastDelivery = this.host.now(); this.lastDeliveryTick = engine.tick;
   }
 }

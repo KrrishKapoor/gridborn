@@ -20,7 +20,7 @@ export function mountNetworkDemo(root: HTMLElement): TeachingDemo {
       <text x="522" y="218" class="svg-note">Throttle</text><text x="522" y="242" class="svg-value" data-throttle></text>
     </svg>
     <div class="diagram-controls two-controls"><label>Front clearance <input data-clearance type="range" min="0" max="100" value="65" aria-label="Illustrative front clearance"></label><label>Steering weight <input data-weight type="range" min="-2" max="2" step="0.05" value="0.5" aria-label="Illustrative steering weight"></label></div>
-    <p class="diagram-note" data-note>Change an input or a weight. Watch the outputs respond.</p>`, render);
+    <p class="diagram-note" data-note>Change an input or the gold connection. Watch the outputs respond.</p>`, render);
   const clearance = ui.get<HTMLInputElement>('[data-clearance]');
   const weight = ui.get<HTMLInputElement>('[data-weight]');
   const checkbox = ui.get<HTMLInputElement>('input[type=checkbox]');
@@ -75,14 +75,16 @@ export function mountNetworkDemo(root: HTMLElement): TeachingDemo {
     const w = live ? liveWeights : weights;
     const a = live ? liveActivations : activations;
     text(ui.get('[data-source]'), live ? 'Selected car · live network' : 'Illustration · 8 → 8 → 2');
-    text(ui.get('[data-note]'), live ? 'Actual weights and activations. Green is positive; dashed gray is negative.' : 'Change an input or a weight. Watch the outputs respond.');
+    text(ui.get('[data-note]'), live ? 'Actual weights and activations. Green is positive; dashed gray is negative.' : 'Change an input or the gold connection. Watch the outputs respond.');
     clearance.disabled = weight.disabled = live;
     checkbox.disabled = !selected;
     for (const { line, index } of edges) {
       const value = w[index]!;
-      line.setAttribute('stroke', value >= 0 ? '#246b32' : '#737c6d');
-      line.setAttribute('stroke-opacity', String(0.09 + Math.min(1, Math.abs(value)) * 0.55));
-      line.setAttribute('stroke-width', String(0.5 + Math.min(2, Math.abs(value)) * 1.1));
+      const adjusted = !live && index === 74;
+      line.setAttribute('data-adjusted', String(adjusted));
+      line.setAttribute('stroke', adjusted ? '#a66c13' : value >= 0 ? '#246b32' : '#737c6d');
+      line.setAttribute('stroke-opacity', String(adjusted ? 1 : 0.09 + Math.min(1, Math.abs(value)) * 0.55));
+      line.setAttribute('stroke-width', String(adjusted ? 3.5 : 0.5 + Math.min(2, Math.abs(value)) * 1.1));
       line.setAttribute('stroke-dasharray', value < 0 ? '3 4' : 'none');
     }
     nodes.forEach((node, index) => {
@@ -99,6 +101,7 @@ export function mountNetworkDemo(root: HTMLElement): TeachingDemo {
   return {
     update(snapshot) {
       selected = hasSelected(snapshot);
+      checkbox.disabled = !selected; // Keep keyboard access correct even before an offscreen repaint.
       if (selected && snapshot) {
         liveWeights.set(snapshot.storage.weights);
         liveActivations.set(snapshot.storage.activations);

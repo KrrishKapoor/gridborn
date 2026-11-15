@@ -23,20 +23,20 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
         <div class="hero-heading"><div><p class="eyebrow">Small brains. Open road.</p><h1 id="${id}-title">Learning the long way.</h1></div><p class="hero-deck">No map. No driving lessons.<br>  Just a thousand possible ways forward.</p></div>
         <div class="lab">
           <div class="track-column">
-            <div class="telemetry" aria-label="Simulation statistics"><div><span>Generation</span><strong data-generation>—</strong></div><div><span>Alive</span><strong data-alive>—</strong></div><div><span>Best lap</span><strong data-lap aria-label="No completed lap yet">—<small>no lap yet</small></strong></div><div class="fitness"><div><span>Fitness</span><small data-history-label>No history yet</small></div><svg data-fitness role="img" aria-label="No completed generations yet"></svg></div></div>
-            <div class="track-stage"><canvas class="hero-canvas" tabindex="0" role="img" aria-label="Live neuroevolution racing circuit" aria-describedby="${id}-hint"></canvas><canvas class="editor-canvas" aria-label="Draw a closed circuit" aria-hidden="true"></canvas><span class="stage-corner" aria-hidden="true">FIELD / 01</span></div>
+            <div class="telemetry" aria-label="Simulation statistics"><div><span>Generation</span><strong data-generation>—</strong></div><div><span>Alive</span><strong data-alive>—</strong></div><div><span>Best lap</span><strong data-lap aria-label="No completed lap yet"><span data-lap-value>—</span><small data-no-lap>no lap yet</small></strong></div><div class="fitness"><div><span>Fitness</span><small data-history-label>No history yet</small></div><svg data-fitness role="img" aria-label="No completed generations yet"></svg></div></div>
+            <div class="track-stage"><canvas class="hero-canvas" tabindex="0" role="button" aria-label="Inspect a racing car. Enter selects a driver; arrow keys cycle drivers; Escape closes inspection" aria-describedby="${id}-hint"></canvas><canvas class="editor-canvas" aria-label="Draw a closed circuit" aria-hidden="true"></canvas></div>
             <p class="track-hint" id="${id}-hint"><span class="status-dot" aria-hidden="true"></span><span data-stage-hint>Pick a car to look inside its brain.</span><span data-run-label>Ready</span></p>
+            <div class="track-feedback" role="status" aria-live="polite" aria-atomic="true"><span data-feedback></span></div>
           </div>
           <div class="control-rail" id="${id}-controls" aria-label="Simulation controls" role="group">
             <div class="transport"><button type="button" class="run-button" data-running aria-pressed="false"><span data-run-icon aria-hidden="true">▶</span><span data-run-text>Play</span></button><div class="rate-controls" role="group" aria-label="Simulation speed"><button type="button" data-rate="1" aria-pressed="true">1×</button><button type="button" data-rate="4" aria-pressed="false">4×</button><button type="button" data-rate="fast" aria-pressed="false" aria-label="Fast headless mode">Fast</button></div><p class="control-note" data-rate-note>Real-time simulation</p></div>
             <label class="field-label">Population<select data-population aria-label="Population"></select></label>
             <label class="field-label">Circuit<select data-preset aria-label="Circuit preset"><option value="" selected disabled>Load preset</option></select></label>
-            <div class="drawing-controls"><button type="button" data-drawing aria-pressed="false">Draw a circuit <span aria-hidden="true">↗</span></button><button type="button" data-clear class="quiet-button">Clear drawing</button></div>
+            <div class="drawing-controls"><button type="button" data-drawing aria-pressed="false"><span data-draw-text>Draw a circuit</span> <span data-draw-arrow aria-hidden="true">↗</span></button><button type="button" data-clear class="quiet-button">Clear drawing</button></div>
             <button type="button" data-reset class="reset-button">Reset learning <span aria-hidden="true">↺</span></button>
             <p class="control-note">New circuit, new population,<br> new beginning.</p>
           </div>
         </div>
-        <div class="track-feedback" role="status" aria-live="polite" aria-atomic="true"><span data-feedback>Choose a circuit, or draw a closed loop.</span></div>
         <aside class="inspection-panel" hidden aria-label="Selected car inspection"><div class="inspection-heading"><div><span class="eyebrow">Inside one driver</span><h2 data-selection>Selected car</h2></div><button type="button" class="quiet-button" data-close>Close inspection <span aria-hidden="true">×</span></button></div><div class="inspection-root"></div></aside>
       </section>
       <div class="article-divider"><span>From a wall to a racing line</span><span>Four small ideas <span aria-hidden="true">↓</span></span></div>
@@ -82,14 +82,22 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
     // A select changes itself before the callback. Restore the latest accepted state,
     // including a synchronous update from the owner, while an async reset is pending.
     options.actions.onPopulationChange(desired);
-    population.value = String(state.population);
+    population.value = String(state.pendingPopulation ?? state.population);
   }, { signal: events.signal });
   presets.addEventListener('change', () => {
     const requested = presets.value;
     presets.value = ''; // PageState deliberately has no accepted preset id.
     options.actions.onPreset(requested);
   }, { signal: events.signal });
-  function hint() { return state.drawing ? 'Draw a closed loop. The current circuit stays until a valid drawing is ready.' : 'Choose a circuit, or draw a closed loop.'; }
+  function hint() {
+    const current = state.circuitLabel ? `Current: ${state.circuitLabel}. ` : '';
+    return current + (state.pendingLabel ? `Applying ${state.pendingLabel}…` : state.drawing ? 'Learning waits while you draw. Close a generous loop.' : 'Draw a loop to make it yours.');
+  }
+  let lastHistoryRun = -1, lastHistoryCount = -1;
+  const panel = get<HTMLElement>('.inspection-panel');
+  page.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && state.selected) { event.preventDefault(); options.actions.onSelectionClear(); }
+  }, { signal: events.signal });
   return {
     heroCanvas, editorCanvas, inspectionRoot, demos,
     update(next) {
@@ -99,10 +107,13 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
       text(get('[data-generation]'), next.generation > 0 ? String(next.generation).padStart(2, '0') : '—');
       text(get('[data-alive]'), `${next.alive} / ${next.population}`);
       const lap = get('[data-lap]');
-      text(lap, next.bestLapSeconds === null ? '—' : `${next.bestLapSeconds.toFixed(2)} s`);
+      text(get('[data-lap-value]'), next.bestLapSeconds === null ? '—' : `${next.bestLapSeconds.toFixed(2)} s`);
+      get<HTMLElement>('[data-no-lap]').hidden = next.bestLapSeconds !== null;
       lap.setAttribute('aria-label', next.bestLapSeconds === null ? 'No completed lap yet' : `Best lap ${next.bestLapSeconds.toFixed(2)} seconds`);
       text(get('[data-history-label]'), next.history.completedGenerations ? `${next.history.completedGenerations} gen · best / mean` : 'No history yet');
-      drawSparkline(next.history);
+      if (next.history.runId !== lastHistoryRun || next.history.completedGenerations !== lastHistoryCount) {
+        drawSparkline(next.history); lastHistoryRun = next.history.runId; lastHistoryCount = next.history.completedGenerations;
+      }
       runButton.setAttribute('aria-pressed', String(next.running));
       text(get('[data-run-text]'), next.running ? 'Pause' : 'Play');
       text(get('[data-run-icon]'), next.running ? 'Ⅱ' : '▶');
@@ -111,16 +122,18 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
       if (![...population.options].some((option) => option.value === String(next.population))) {
         const option = document.createElement('option'); option.value = String(next.population); option.textContent = `${next.population} cars`; population.append(option);
       }
-      population.value = String(next.population);
+      population.value = String(next.pendingPopulation ?? next.population);
       drawingButton.setAttribute('aria-pressed', String(next.drawing));
-      text(drawingButton, next.drawing ? 'Stop drawing' : 'Draw a circuit ↗');
-      text(get('[data-stage-hint]'), next.drawing ? 'Draw one closed loop on the field.' : 'Pick a car to look inside its brain.');
-      text(get('[data-run-label]'), next.running ? next.rate === 'fast' ? 'Headless' : 'Running' : 'Paused');
+      text(get('[data-draw-text]'), next.drawing ? 'Stop drawing' : 'Draw a circuit');
+      get<HTMLElement>('[data-draw-arrow]').hidden = next.drawing;
+      text(get('[data-stage-hint]'), next.drawing ? 'Draw one closed loop on the field.' : next.selected ? `Inspecting car ${next.selected.index + 1} · details below` : next.rate === 'fast' ? 'Headless learning. Choose 1× to inspect.' : 'Pick a car, or focus the field and press Enter.');
+      text(get('[data-run-label]'), next.suspended ? 'Waiting' : next.running ? next.rate === 'fast' ? 'Headless' : 'Running' : 'Paused');
       page.classList.toggle('is-running', next.running);
       page.classList.toggle('is-drawing', next.drawing);
       // T1 alone enables overlay input and maintains its pointer capture.
       editorCanvas.setAttribute('aria-hidden', String(!next.drawing));
-      get<HTMLElement>('.inspection-panel').hidden = next.selected === null;
+      if (!next.selected && panel.contains(document.activeElement)) heroCanvas.focus({ preventScroll: true });
+      panel.hidden = next.selected === null;
       if (next.selected) text(get('[data-selection]'), `Car ${String(next.selected.index + 1).padStart(3, '0')} · generation ${next.selected.generation}`);
       if (!hasIssues) text(feedback, hint());
     },
@@ -128,7 +141,7 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
       if (destroyed) return;
       hasIssues = issues.length > 0;
       feedback.parentElement!.classList.toggle('has-issues', hasIssues);
-      text(feedback, hasIssues ? issues.map((issue) => issue.message).join(' ') : hint());
+      text(feedback, hasIssues ? `${state.circuitLabel ? `Current: ${state.circuitLabel}. ` : ''}${issues.map((issue) => issue.message).join(' ')}` : hint());
     },
     destroy() {
       if (destroyed) return;
