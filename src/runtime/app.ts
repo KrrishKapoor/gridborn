@@ -76,7 +76,9 @@ export function mountApp(root: HTMLElement): () => void {
   function setDrawing(enabled: boolean) {
     session.drawing = enabled;
     if (enabled) clearSelection();
+    renderer.setDrawing(enabled);
     editor.setEnabled(enabled && renderer.width > 2 && renderer.height > 2);
+    if (!enabled && document.activeElement === page.editorCanvas) page.heroCanvas.focus({ preventScroll: true });
     session.syncRunning(); dirty = true; updatePage();
   }
   function select(index: number, keyboard: boolean) {

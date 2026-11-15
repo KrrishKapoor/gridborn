@@ -33,6 +33,7 @@ export class Renderer {
   private line = new Path2D();
   private best: BestTrajectory | null = null;
   private track: TrackGeometry | null = null;
+  private drawing = false;
   private readonly background = document.createElement('canvas');
   /** Borrowed until the next draw; hit testing uses exactly these visible poses. */
   poses: Float32Array | null = null;
@@ -42,6 +43,7 @@ export class Renderer {
     this.context = canvas.getContext('2d')!;
   }
   setTrack(track: TrackGeometry): void { this.track = track; this.road = boundaryPath(track); this.setBest(null); this.cache(); }
+  setDrawing(enabled: boolean): void { if (enabled !== this.drawing) { this.drawing = enabled; this.cache(); } }
   setBest(best: BestTrajectory | null): void {
     if (this.best === best) return;
     this.best = best; this.line = new Path2D();
@@ -75,6 +77,16 @@ export class Renderer {
     const { a, b } = this.track.startLine;
     ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
     ctx.strokeStyle = '#66765e'; ctx.lineWidth = 3 / this.view.scale; ctx.setLineDash([4 / this.view.scale, 4 / this.view.scale]); ctx.stroke(); ctx.setLineDash([]);
+    if (this.drawing) {
+      // Reserve room for the road around the stroke; letterboxing is not drawable.
+      const inset = this.track.width / 2 + 8, v = this.view;
+      const x = v.offsetX + inset * v.scale, y = v.offsetY + inset * v.scale;
+      const width = (WORLD_WIDTH - 2 * inset) * v.scale, height = (WORLD_HEIGHT - 2 * inset) * v.scale;
+      ctx.setTransform(this.canvas.width / this.width, 0, 0, this.canvas.height / this.height, 0, 0);
+      ctx.beginPath(); ctx.rect(0, 0, this.width, this.height); ctx.rect(x, y, width, height);
+      ctx.fillStyle = 'rgba(52, 74, 55, 0.10)'; ctx.fill('evenodd');
+      ctx.strokeStyle = '#246b32'; ctx.lineWidth = 1; ctx.setLineDash([5, 5]); ctx.strokeRect(x, y, width, height); ctx.setLineDash([]);
+    }
   }
   draw(snapshot: SimulationSnapshot | null, headless: boolean, poses: Float32Array | undefined = snapshot?.storage.cars): number {
     if (this.width <= 2 || this.height <= 2) return 0;

@@ -24,7 +24,7 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
         <div class="lab">
           <div class="track-column">
             <div class="telemetry" aria-label="Simulation statistics"><div><span>Generation</span><strong data-generation>—</strong></div><div><span>Alive</span><strong data-alive>—</strong></div><div><span>Best lap</span><strong data-lap aria-label="No completed lap yet"><span data-lap-value>—</span><small data-no-lap>no lap yet</small></strong></div><div class="fitness"><div><span>Fitness</span><small data-history-label>No history yet</small></div><svg data-fitness role="img" aria-label="No completed generations yet"></svg></div></div>
-            <div class="track-stage"><canvas class="hero-canvas" tabindex="0" role="button" aria-label="Inspect a racing car. Enter selects a driver; arrow keys cycle drivers; Escape closes inspection" aria-describedby="${id}-hint"></canvas><canvas class="editor-canvas" aria-label="Draw a closed circuit" aria-hidden="true"></canvas></div>
+            <div class="track-stage"><canvas class="hero-canvas" tabindex="0" role="button" aria-label="Inspect a racing car. Enter selects a driver; arrow keys cycle drivers; Escape closes inspection" aria-describedby="${id}-hint"></canvas><canvas class="editor-canvas" tabindex="-1" aria-label="Draw a closed circuit. Escape cancels the stroke" aria-describedby="${id}-hint" aria-hidden="true"></canvas></div>
             <p class="track-hint" id="${id}-hint"><span class="status-dot" aria-hidden="true"></span><span data-stage-hint>Pick a car to look inside its brain.</span><span data-run-label>Ready</span></p>
             <div class="track-feedback" role="status" aria-live="polite" aria-atomic="true"><span data-feedback></span></div>
           </div>
@@ -126,7 +126,7 @@ export function mountPage(root: HTMLElement, options: PageOptions): GridbornPage
       drawingButton.setAttribute('aria-pressed', String(next.drawing));
       text(get('[data-draw-text]'), next.drawing ? 'Stop drawing' : 'Draw a circuit');
       get<HTMLElement>('[data-draw-arrow]').hidden = next.drawing;
-      text(get('[data-stage-hint]'), next.drawing ? 'Draw one closed loop on the field.' : next.selected ? `Inspecting car ${next.selected.index + 1} · details below` : next.rate === 'fast' ? 'Headless learning. Choose 1× to inspect.' : 'Pick a car, or focus the field and press Enter.');
+      text(get('[data-stage-hint]'), next.drawing ? 'Draw inside the dashed guide. Escape cancels the stroke.' : next.selected ? `Inspecting car ${next.selected.index + 1} · details below` : next.rate === 'fast' ? 'Headless learning. Choose 1× to inspect.' : 'Pick a car, or focus the field and press Enter.');
       text(get('[data-run-label]'), next.suspended ? 'Waiting' : next.running ? next.rate === 'fast' ? 'Headless' : 'Running' : 'Paused');
       page.classList.toggle('is-running', next.running);
       page.classList.toggle('is-drawing', next.drawing);
