@@ -6,6 +6,10 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T1R handoff (Codex PM)
+
+- Keep bounded cleanup and fixed width; do not force sharp triangles or heavy noise into a distorted/unsafe track. Explicitly disclose the rejection limit and independently review the common-loop fixes.
+
 ## Resolved — 2026-11-15 T2 QA (Codex PM)
 
 - 60 renderer callbacks per second do not prove smooth motion; T4 must resolve snapshot cadence and independently measure displayed state changes/interpolation.

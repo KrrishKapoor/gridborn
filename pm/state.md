@@ -15,7 +15,7 @@ Worker model: `codex / gpt-6-astra / reasoningEffort=xhigh`. QA model: `claudeAg
 | P0 | Plan and resolve initial choices | None | State, dated decisions, and question log committed and pushed before application code; root verified clean main | Complete: `1a64443` pushed |
 | T0 | Shared scaffold and contracts | P0 | Vite + TS + Vitest install/test/build work; light design tokens and responsive semantic shell render; stable typed track/simulation/inspection contracts and ownership map documented; independent three-viewport smoke QA passes | Accepted: Opus round 1 PASS; merged |
 | T1 | Track geometry and pointer editor | T0 accepted | Deterministic presets and freehand closed-loop smoothing produce valid tracks with width/start line; mouse/touch drawing, clear/reset, invalid tiny/self-intersecting input, and resize behave predictably; geometry tests/build and fresh task browser QA pass | Accepted round 1 PASS; merged; usability follow-up T1R required |
-| T1R | Improve natural stroke closure and jitter tolerance | T1 accepted | Overshot closure and normal phone jitter accept safe loops without allowing figure-eights, tiny paths, or overlapping walls; regression tests/build and fresh Opus round 2 pass | Worker running; fresh round 2 pending |
+| T1R | Improve natural stroke closure and jitter tolerance | T1 accepted | Overshot closure and normal phone jitter accept safe loops without allowing figure-eights, tiny paths, or overlapping walls; regression tests/build and fresh Opus round 2 pass | Worker complete; fresh Opus round 2/3 running |
 | T2 | Deterministic neuroevolution engine | T0 accepted | Typed-array physics, ray casting, NN forward pass, seeded RNG, selection/crossover/mutation, progress/lap fitness, stopped/fading crashes, generation statistics, and bounded worker stepping are real; unit tests/build pass; a browser harness demonstrates repeatable evolution and measured performance; fresh task QA passes | Accepted round 1 PASS; merged; runtime fixes in T4 |
 | T3 | Editorial page and four teaching demos | T0 accepted | Minimal light page has polished typography, whitespace, hero/control/inspection slots, and distinct live sensor/network/genetics/racing-line demos with one or two explanatory sentences each; responsive and accessible controls; fresh task QA passes | Accepted conditional PASS; merged; T4 fixes tracked |
 | T4 | Connect hero, editor, engine, controls, and inspection | T1, T2, T3 accepted | Live hundreds-car hero starts automatically, best trajectory glows, editor replaces track, generation/best-lap/sparkline are real, play/pause/1x/4x/headless work, car click/tap reveals live rays and NN weights/activations, 1,000-car mode is measured, hidden/resume/resize are safe; tests/build and fresh task QA pass | Worker running; QA round 0/3; parallel with T1R |
@@ -29,7 +29,7 @@ Every task review runs unit tests and production build plus real Playwright brow
 
 Final QA additionally draws a track and observes genuine subsequent generations, demonstrates actual best-lap improvement across generations on a fixed seed, clicks/taps a car and checks live inspection, samples FPS with default and 1,000-car populations, and judges visual polish in all three viewports. Record timing/population/browser conditions and simulation throughput separately from rendering FPS. No fabricated lap histories, canned best lines, or substituted scripted drivers.
 
-## Current execution
+## Initial execution (historical)
 
 - Baseline `8859a2f`: README and committed brief only.
 - Verified feature worktree clean on `feat/v1`, tracking `origin/feat/v1`.
@@ -63,7 +63,7 @@ Read this file, `pm/decisions.md`, `pm/questions.md`, and `pm/brief.md`. Inspect
 - Disposable scaffold low findings L1/L3/L6/L7 are explicitly assigned to the production T3/T4 replacements and their fresh QA. Persistent mono font L4 is assigned to T3. These are not silently marked fixed; final review must verify all applicable cases.
 - T1/T2/T3 started concurrently from accepted scaffold and clarified contract commit `520db628c744ed101640a3525d6e1229ac60169c`. Final product QA remains pending.
 
-### Active feature delegates
+### Initial feature delegates (historical)
 
 - [Gridborn T1 — track geometry and touch editor](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A9c1cb4b8-39cc-443d-80e7-4a27a8bfd522)
   - Task: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A9c1cb4b8-39cc-443d-80e7-4a27a8bfd522`.
@@ -145,3 +145,12 @@ Read this file, `pm/decisions.md`, `pm/questions.md`, and `pm/brief.md`. Inspect
 - Thread ID: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A5254ef37-d826-4bd9-9350-164887e17ca5`.
 - Isolated base `32a6bf520754bf7444d978353e2c69537dcc0179`; fixed Astra xhigh. Full product composition plus the specific T0/T2/T3 production corrections, meaningful regressions, README/handoff, actual browser/performance evidence. It must not edit T1R-owned track files.
 - T4 QA round 0/3. Current active work: T1R implementation and T4 integration. Final QA is not started. Next transition is driven by their completion notifications.
+
+### T1R complete; fresh T1 QA round 2 running
+
+- Branch `t3/track-loop-jitter-cleanup`, SHA `a4d57b38390e7b7bf2f86a07a084d889d44ae40a`, worktree `/Users/krrishai/.t3/worktrees/gridborn/t3-aaf85e2f-de6ced935d21bc76`; clean.
+- Worker reports M1 closure and L1 jitter resolved with bounded normalization, true-crossing safety regressions, byte-identical presets, explicit hidden-gesture cancellation, and harness feedback/44px improvements. 74 tests, build, 182 browser assertions and 360 seeded geometry probes passed. Sharp triangles/heavier noise remain documented rejections.
+- [Gridborn T1 QA round 2 — closure and jitter regression review](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Ae04ab6f2-e306-46d2-96c3-5b50520275f8)
+- QA task ID: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Ae04ab6f2-e306-46d2-96c3-5b50520275f8`.
+- QA thread ID: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Ae04ab6f2-e306-46d2-96c3-5b50520275f8`.
+- Reviewer checks the actual fix branch and writes `artifacts/qa/t1/round-2/`. No merge until its result. Active delegates are fresh T1 QA round 2 and T4 implementation; final whole-product QA remains pending.

@@ -2,6 +2,11 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T1R bounded cleanup handoff (Codex PM; implementation by T1R Astra worker)
+
+- Candidate closure trimming is limited to a short late tail following the start corridor, including a separate crossing check on the discarded tail. Jitter simplification is bounded by deviation and stroke travel; large crossings still fail before cleanup. Fresh Opus round 2 independently checks these safety claims.
+- Keep sharp triangular corners rejected with the actionable too-tight message when a constant-width safe road cannot be obtained without larger shape changes. This remains a disclosed usability limit, not a reason to weaken wall validation or silently change road width. Presets are reported byte-identical.
+
 ## 2026-11-15 — T2 acceptance and integration scheduling (Codex PM)
 
 - Accepted T2's scoped independent PASS (no high findings). Neural driving, lap validity, determinism, and real improvement are independently confirmed. Performance evidence is explicitly split: renderer rAF held 60 Hz, but state updates at 1× were only about 33 Hz and visibly uneven. Do not claim a smooth 60 fps product until T4 resolves and remeasures this.
