@@ -6,6 +6,11 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T1 handoff (Codex PM)
+
+- Drawing width inherits the selected circuit's width (presets use 92 world units).
+- Resize/scroll/view changes during drawing cancel the stroke instead of remapping it; density-only changes preserve it. Independent QA will test this behavior.
+
 ## Resolved — 2026-11-15 T0 QA (Codex PM)
 
 - Who owns overlay hit testing? T1 disables overlay pointer events outside drawing; T3 starts it disabled; T4 selects cars on the underlying hero canvas and suppresses selection while drawing.

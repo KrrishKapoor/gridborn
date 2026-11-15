@@ -2,6 +2,12 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T1 handoff defaults (Codex PM; implementation by T1 Astra worker)
+
+- Accepted for review: the editor inherits current track width, closes loose endpoints, resamples near 16-world-unit edges, and smooths based on road width. Raw crossings and narrow wall overlaps are rejected to preserve unambiguous drivable circuits.
+- CSS geometry changes cancel an unfinished stroke; DPR-only backing-store changes preserve it. Clear drawing retains the valid circuit. Deterministic local drawn IDs are separate from monotonic simulation run IDs.
+- These are reported implementation choices, not QA acceptance. Fresh Opus round 1 is running before merge.
+
 ## 2026-11-15 — T0 scoped acceptance and finding disposition (Codex PM)
 
 - Accepted the fresh independent T0 PASS under the requested “stop when no high-severity findings remain” rule. The 75/79 browser assertion count is retained verbatim; it is not represented as a complete all-checks pass. Production behavior is still unbuilt.

@@ -14,7 +14,7 @@ Worker model: `codex / gpt-6-astra / reasoningEffort=xhigh`. QA model: `claudeAg
 | --- | --- | --- | --- | --- |
 | P0 | Plan and resolve initial choices | None | State, dated decisions, and question log committed and pushed before application code; root verified clean main | Complete: `1a64443` pushed |
 | T0 | Shared scaffold and contracts | P0 | Vite + TS + Vitest install/test/build work; light design tokens and responsive semantic shell render; stable typed track/simulation/inspection contracts and ownership map documented; independent three-viewport smoke QA passes | Accepted: Opus round 1 PASS; merged |
-| T1 | Track geometry and pointer editor | T0 accepted | Deterministic presets and freehand closed-loop smoothing produce valid tracks with width/start line; mouse/touch drawing, clear/reset, invalid tiny/self-intersecting input, and resize behave predictably; geometry tests/build and fresh task browser QA pass | Worker running; QA round 0/3 |
+| T1 | Track geometry and pointer editor | T0 accepted | Deterministic presets and freehand closed-loop smoothing produce valid tracks with width/start line; mouse/touch drawing, clear/reset, invalid tiny/self-intersecting input, and resize behave predictably; geometry tests/build and fresh task browser QA pass | Worker complete; fresh QA round 1/3 running |
 | T2 | Deterministic neuroevolution engine | T0 accepted | Typed-array physics, ray casting, NN forward pass, seeded RNG, selection/crossover/mutation, progress/lap fitness, stopped/fading crashes, generation statistics, and bounded worker stepping are real; unit tests/build pass; a browser harness demonstrates repeatable evolution and measured performance; fresh task QA passes | Worker running; QA round 0/3 |
 | T3 | Editorial page and four teaching demos | T0 accepted | Minimal light page has polished typography, whitespace, hero/control/inspection slots, and distinct live sensor/network/genetics/racing-line demos with one or two explanatory sentences each; responsive and accessible controls; fresh task QA passes | Worker running; QA round 0/3 |
 | T4 | Connect hero, editor, engine, controls, and inspection | T1, T2, T3 accepted | Live hundreds-car hero starts automatically, best trajectory glows, editor replaces track, generation/best-lap/sparkline are real, play/pause/1x/4x/headless work, car click/tap reveals live rays and NN weights/activations, 1,000-car mode is measured, hidden/resume/resize are safe; tests/build and fresh task QA pass | Blocked on T1-T3 |
@@ -81,3 +81,13 @@ Read this file, `pm/decisions.md`, `pm/questions.md`, and `pm/brief.md`. Inspect
 
 - All three use codex / gpt-6-astra / reasoningEffort=xhigh. Each owns separate feature paths plus its own qa/tN harness. No active QA reviewer or shared-source editor is running.
 - On each completion: read its thread result, inspect branch/commit and handoff, then launch a new fresh Opus high task reviewer against that committed worker checkout before merge. Keep the other independent workers running.
+
+### T1 completed; independent QA round 1 running
+
+- Worker branch `t3/implement-track-editor`, HEAD `9ce4869861d8a76c77008927f49a9bcad331bdeb`, clean tracked worktree `/Users/krrishai/.t3/worktrees/gridborn/t3-12bf203f-400c3e2549c13447`.
+- Delivered scoped `src/track/**`, `qa/t1.html`, `qa/t1.ts`, and `docs/track.md`. Default clockwise oval: 1,965.48 world units, width 92, 123 centerline vertices / 246 walls.
+- Worker reports 51/51 tests, successful build, and 37 browser groups in the three viewports with no console errors. Independent acceptance pending.
+- [Gridborn T1 QA round 1 — track and touch review](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Aba656968-e047-48c0-a4dc-2cb1ac990432)
+- QA task ID: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Aba656968-e047-48c0-a4dc-2cb1ac990432`.
+- QA thread ID: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Aba656968-e047-48c0-a4dc-2cb1ac990432`.
+- Evidence destination: task checkout `artifacts/qa/t1/round-1/`. Next: read fresh QA result before T1 merge. T2 and T3 remain independently running.
