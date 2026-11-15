@@ -1,0 +1,1755 @@
+{
+  "url": "http://127.0.0.1:5291/qa/t1.html",
+  "when": "2026-11-15T11:21:40.435Z",
+  "results": [
+    {
+      "viewport": "1440x900",
+      "name": "initial layout: no horizontal overflow, overlay==road rect, backing=css*min(dpr,2), drawing enabled, default preset",
+      "pass": true,
+      "observed": {
+        "layout": {
+          "scrollW": 1440,
+          "innerW": 1440,
+          "scrollH": 947,
+          "innerH": 900,
+          "overlay": [
+            212,
+            231,
+            1016,
+            550
+          ],
+          "roadSame": true,
+          "stageBottom": 781,
+          "feedbackBottom": 873,
+          "over": [],
+          "controls": [
+            [
+              "preset",
+              40,
+              121
+            ],
+            [
+              "drawing",
+              40,
+              94
+            ],
+            [
+              "clear",
+              40,
+              109
+            ],
+            [
+              "reset",
+              40,
+              101
+            ],
+            [
+              "lifecycle",
+              40,
+              108
+            ]
+          ],
+          "touchAction": "none",
+          "view": {
+            "scale": 0.6575,
+            "offsetX": 113.5,
+            "offsetY": 12
+          }
+        },
+        "s0": {
+          "id": "broad-oval",
+          "length": 1965.48,
+          "bounds": {
+            "minX": 167,
+            "minY": 126.8,
+            "maxX": 1033,
+            "maxY": 673.1
+          },
+          "clockwise": true,
+          "counts": {
+            "commit": 0,
+            "invalid": 0,
+            "clear": 0,
+            "draft": 0
+          },
+          "feedback": "Drawing is on. Start anywhere inside the canvas. Escape cancels a draft.",
+          "kind": null,
+          "select": "broad-oval",
+          "name": "Broad oval",
+          "metrics": "1,965 world units · 92 wide · 246 walls",
+          "overlayPE": "auto",
+          "inlinePE": "auto",
+          "ink": 0,
+          "red": 0,
+          "hasEditor": true,
+          "scrollY": 0,
+          "backing": {
+            "w": 2032,
+            "h": 1100,
+            "rw": 2032
+          },
+          "css": 1016,
+          "dpr": 2,
+          "ptr": []
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: loose clockwise oval commits, maps to drawn world position, draft cleared",
+      "pass": true,
+      "observed": {
+        "before": "broad-oval",
+        "after": "drawn-1",
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "clockwise": true,
+        "midDraftInk": 8806,
+        "midFeedback": "Keep going around the loop. Lift to close and smooth it.",
+        "ink": 0,
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: counter-clockwise concave loop commits with CCW forward order",
+      "pass": true,
+      "observed": {
+        "id": "drawn-2",
+        "clockwise": false,
+        "bounds": {
+          "minX": 165.6,
+          "minY": 107.1,
+          "maxX": 1034.2,
+          "maxY": 630.2
+        },
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true",
+          "pointerdown:touch:2:true",
+          "pointerup:touch:2:true",
+          "lostpointercapture:touch:2:true"
+        ],
+        "scrollY": [
+          47,
+          47
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: sparse 7-sample stroke smooths into a valid circuit",
+      "pass": true,
+      "observed": {
+        "id": "drawn-3",
+        "length": 2099.1,
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: nearly-closed loop (7% gap) auto-closes and commits",
+      "pass": true,
+      "observed": {
+        "id": "drawn-4",
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits",
+      "pass": true,
+      "observed": {
+        "result": "commit",
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "reset circuit returns to Broad oval preset (select + readout)",
+      "pass": true,
+      "observed": {
+        "id": "broad-oval",
+        "metrics": "1,965 world units · 92 wide · 246 walls"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: tiny is rejected (too-short), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "Draw a larger loop with room for a full-width road. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 1521,
+        "ink": 1528
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: figureEight is rejected (self-intersection), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 17940,
+        "ink": 18032
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: outOfBounds is rejected (out-of-bounds), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "Keep the whole loop inside the drawing area, with room for the road. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 20046,
+        "ink": 20091
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: overshoot120 (usability probe) — outcome recorded",
+      "pass": true,
+      "observed": {
+        "outcome": "invalid",
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+      },
+      "note": "rejected: The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: triangle (usability probe) — outcome recorded",
+      "pass": true,
+      "observed": {
+        "outcome": "invalid",
+        "feedback": "Widen the tight bends so the road has room to turn. Current circuit kept."
+      },
+      "note": "rejected: Widen the tight bends so the road has room to turn. Current circuit kept."
+    },
+    {
+      "viewport": "1440x900",
+      "name": "Clear drawing after an invalid draft erases it and keeps the circuit",
+      "pass": true,
+      "observed": {
+        "preInk": 1510,
+        "ink": 0,
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: Clear clicked mid-stroke cancels; finger lift does not commit",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 6,
+          "invalid": 6,
+          "clear": 2,
+          "draft": 2894
+        },
+        "ink": 0,
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true",
+          "pointerdown:touch:7:true",
+          "lostpointercapture:touch:7:true",
+          "pointerup:touch:7:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: touchcancel/pointercancel cancels the draft with no commit",
+      "pass": true,
+      "observed": {
+        "ptr": [
+          "pointerdown:touch:7:true",
+          "lostpointercapture:touch:7:true",
+          "pointerup:touch:7:true",
+          "pointerdown:touch:8:true",
+          "pointercancel:touch:8:true",
+          "lostpointercapture:touch:8:true"
+        ],
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: stroke after cancel commits normally",
+      "pass": true,
+      "observed": {
+        "id": "drawn-13"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "multi-touch: secondary finger ignored; primary stroke commits with correct shape",
+      "pass": true,
+      "observed": {
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "ptr": [
+          "pointerdown:touch:10:true",
+          "pointerdown:touch:11:false",
+          "pointerup:touch:10:true",
+          "lostpointercapture:touch:10:true",
+          "pointerup:touch:11:false",
+          "lostpointercapture:touch:11:false"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "multi-touch: two fingers placed together; primary path still drives the stroke",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 9,
+          "invalid": 6,
+          "clear": 3,
+          "draft": 3762
+        },
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "ptr": [
+          "pointerdown:touch:12:true",
+          "pointerdown:touch:13:false",
+          "pointerup:touch:12:true",
+          "lostpointercapture:touch:12:true",
+          "pointerup:touch:13:false",
+          "lostpointercapture:touch:13:false"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: Drawing toggled off mid-stroke cancels; late lift cannot commit; overlay pointer-events none",
+      "pass": true,
+      "observed": {
+        "overlayPE": "none",
+        "feedback": "Drawing is off. Your circuit is kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "disabled overlay: hit-test reaches #road; mouse/touch drags emit nothing",
+      "pass": true,
+      "observed": {
+        "hitTest": "road",
+        "counts": {
+          "commit": 9,
+          "invalid": 6,
+          "clear": 4,
+          "draft": 3869
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "rapid 5x Drawing toggles mid-stroke: no commit, aria-pressed matches overlay state",
+      "pass": true,
+      "observed": {
+        "pressed": "false",
+        "overlayPE": "none"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "Reset/Clear/preset changes mid-stroke: no commit, ends on Broad oval",
+      "pass": true,
+      "observed": {
+        "id": "broad-oval",
+        "select": "broad-oval"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "presets are deterministic across reselection",
+      "pass": true,
+      "observed": {
+        "broad-oval": [
+          1965.48,
+          1965.48,
+          "1,965 world units · 92 wide · 246 walls"
+        ],
+        "riverbend": [
+          1976.67,
+          1976.67,
+          "1,977 world units · 92 wide · 248 walls"
+        ],
+        "club-circuit": [
+          2223.29,
+          2223.29,
+          "2,223 world units · 92 wide · 278 walls"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: Escape mid-stroke cancels; mouseup does not commit",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "drawnOptionDisabled": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "mouse: page scroll mid-stroke either cancels or keeps mapping consistent (no remapped commit)",
+      "pass": true,
+      "observed": {
+        "scrolled": false,
+        "scrollY": [
+          47,
+          47
+        ],
+        "commit": 1,
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "touch: viewport resize mid-stroke cancels, no commit, no remapping",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "css": [
+          1016,
+          1016
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "DPR change mid-stroke: backing store rebuilt at DPR 1, gesture survives and commits",
+      "pass": true,
+      "observed": {
+        "dpr": 1,
+        "backing": {
+          "w": 1016,
+          "h": 550,
+          "rw": 1016
+        },
+        "css": 1016,
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "commitDelta": 1
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "hidden/resume mid-stroke: no stale commit or stuck capture; next stroke works",
+      "pass": true,
+      "observed": {
+        "commitDelta": 1,
+        "clearDelta": 0,
+        "vis": {
+          "during": "visible",
+          "events": []
+        },
+        "ptr": [
+          "pointerdown:touch:19:true",
+          "pointerup:touch:19:true",
+          "lostpointercapture:touch:19:true",
+          "pointerdown:touch:20:true",
+          "pointerup:touch:20:true",
+          "lostpointercapture:touch:20:true"
+        ],
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": "recorded (headless tab switch fidelity limited)"
+    },
+    {
+      "viewport": "1440x900",
+      "name": "after resume a new stroke commits",
+      "pass": true,
+      "observed": {
+        "id": "drawn-19"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "window blur (with visibility hidden) mid-stroke cancels, no commit",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "Detach mid-stroke: no commit, overlay cleared, pointer-events none, controls disabled",
+      "pass": true,
+      "observed": {
+        "detached": {
+          "pe": "none",
+          "ta": "none",
+          "drawingDisabled": true,
+          "label": "Attach editor"
+        },
+        "ink": 0,
+        "feedback": "Editor detached. Input listeners and pending work removed."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "detached: drawing emits nothing",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 13,
+          "invalid": 6,
+          "clear": 9,
+          "draft": 5377
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "rapid detach/attach x7 then one stroke: exactly one commit (no duplicate listeners)",
+      "pass": true,
+      "observed": {
+        "commitDelta": 1,
+        "drafts": 221
+      },
+      "note": ""
+    },
+    {
+      "viewport": "1440x900",
+      "name": "console/page errors: none",
+      "pass": true,
+      "observed": {
+        "errors": [],
+        "focus": {
+          "id": "lifecycle",
+          "outline": "solid"
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "initial layout: no horizontal overflow, overlay==road rect, backing=css*min(dpr,2), drawing enabled, default preset",
+      "pass": true,
+      "observed": {
+        "layout": {
+          "scrollW": 390,
+          "innerW": 390,
+          "scrollH": 844,
+          "innerH": 844,
+          "overlay": [
+            18,
+            297,
+            354,
+            270
+          ],
+          "roadSame": true,
+          "stageBottom": 567,
+          "feedbackBottom": 659,
+          "over": [],
+          "controls": [
+            [
+              "preset",
+              40,
+              121
+            ],
+            [
+              "drawing",
+              40,
+              94
+            ],
+            [
+              "clear",
+              40,
+              109
+            ],
+            [
+              "reset",
+              40,
+              101
+            ],
+            [
+              "lifecycle",
+              40,
+              108
+            ]
+          ],
+          "touchAction": "none",
+          "view": {
+            "scale": 0.275,
+            "offsetX": 12,
+            "offsetY": 24.999999999999986
+          }
+        },
+        "s0": {
+          "id": "broad-oval",
+          "length": 1965.48,
+          "bounds": {
+            "minX": 167,
+            "minY": 126.8,
+            "maxX": 1033,
+            "maxY": 673.1
+          },
+          "clockwise": true,
+          "counts": {
+            "commit": 0,
+            "invalid": 0,
+            "clear": 0,
+            "draft": 0
+          },
+          "feedback": "Drawing is on. Start anywhere inside the canvas. Escape cancels a draft.",
+          "kind": null,
+          "select": "broad-oval",
+          "name": "Broad oval",
+          "metrics": "1,965 world units · 92 wide · 246 walls",
+          "overlayPE": "auto",
+          "inlinePE": "auto",
+          "ink": 0,
+          "red": 0,
+          "hasEditor": true,
+          "scrollY": 0,
+          "backing": {
+            "w": 708,
+            "h": 540,
+            "rw": 708
+          },
+          "css": 354,
+          "dpr": 3,
+          "ptr": []
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: loose clockwise oval commits, maps to drawn world position, draft cleared",
+      "pass": true,
+      "observed": {
+        "before": "broad-oval",
+        "after": "drawn-1",
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "clockwise": true,
+        "midDraftInk": 3751,
+        "midFeedback": "Keep going around the loop. Lift to close and smooth it.",
+        "ink": 0,
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: counter-clockwise concave loop commits with CCW forward order",
+      "pass": true,
+      "observed": {
+        "id": "drawn-2",
+        "clockwise": false,
+        "bounds": {
+          "minX": 165.6,
+          "minY": 107.1,
+          "maxX": 1034.2,
+          "maxY": 630.2
+        },
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true",
+          "pointerdown:touch:2:true",
+          "pointerup:touch:2:true",
+          "lostpointercapture:touch:2:true"
+        ],
+        "scrollY": [
+          0,
+          0
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: sparse 7-sample stroke smooths into a valid circuit",
+      "pass": true,
+      "observed": {
+        "id": "drawn-3",
+        "length": 2099.1,
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: nearly-closed loop (7% gap) auto-closes and commits",
+      "pass": true,
+      "observed": {
+        "id": "drawn-4",
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits",
+      "pass": false,
+      "observed": {
+        "result": "invalid",
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "reset circuit returns to Broad oval preset (select + readout)",
+      "pass": true,
+      "observed": {
+        "id": "broad-oval",
+        "metrics": "1,965 world units · 92 wide · 246 walls"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: tiny is rejected (too-short), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "Draw a larger loop with room for a full-width road. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 712,
+        "ink": 714
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: figureEight is rejected (self-intersection), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 7514,
+        "ink": 7531
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: outOfBounds is rejected (out-of-bounds), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "Keep the whole loop inside the drawing area, with room for the road. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 7531,
+        "ink": 7536
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: overshoot120 (usability probe) — outcome recorded",
+      "pass": true,
+      "observed": {
+        "outcome": "invalid",
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+      },
+      "note": "rejected: The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: triangle (usability probe) — outcome recorded",
+      "pass": true,
+      "observed": {
+        "outcome": "invalid",
+        "feedback": "Widen the tight bends so the road has room to turn. Current circuit kept."
+      },
+      "note": "rejected: Widen the tight bends so the road has room to turn. Current circuit kept."
+    },
+    {
+      "viewport": "390x844",
+      "name": "Clear drawing after an invalid draft erases it and keeps the circuit",
+      "pass": true,
+      "observed": {
+        "preInk": 714,
+        "ink": 0,
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: Clear clicked mid-stroke cancels; finger lift does not commit",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 5,
+          "invalid": 7,
+          "clear": 2,
+          "draft": 2414
+        },
+        "ink": 0,
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true",
+          "pointerdown:touch:7:true",
+          "lostpointercapture:touch:7:true",
+          "pointerup:touch:7:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: touchcancel/pointercancel cancels the draft with no commit",
+      "pass": true,
+      "observed": {
+        "ptr": [
+          "pointerdown:touch:7:true",
+          "lostpointercapture:touch:7:true",
+          "pointerup:touch:7:true",
+          "pointerdown:touch:8:true",
+          "pointercancel:touch:8:true",
+          "lostpointercapture:touch:8:true"
+        ],
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: stroke after cancel commits normally",
+      "pass": true,
+      "observed": {
+        "id": "drawn-13"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "multi-touch: secondary finger ignored; primary stroke commits with correct shape",
+      "pass": true,
+      "observed": {
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "ptr": [
+          "pointerdown:touch:10:true",
+          "pointerdown:touch:11:false",
+          "pointerup:touch:10:true",
+          "lostpointercapture:touch:10:true",
+          "pointerup:touch:11:false",
+          "lostpointercapture:touch:11:false"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "multi-touch: two fingers placed together; primary path still drives the stroke",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 8,
+          "invalid": 7,
+          "clear": 3,
+          "draft": 3282
+        },
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "ptr": [
+          "pointerdown:touch:12:true",
+          "pointerdown:touch:13:false",
+          "pointerup:touch:12:true",
+          "lostpointercapture:touch:12:true",
+          "pointerup:touch:13:false",
+          "lostpointercapture:touch:13:false"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: Drawing toggled off mid-stroke cancels; late lift cannot commit; overlay pointer-events none",
+      "pass": true,
+      "observed": {
+        "overlayPE": "none",
+        "feedback": "Drawing is off. Your circuit is kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "disabled overlay: hit-test reaches #road; mouse/touch drags emit nothing",
+      "pass": true,
+      "observed": {
+        "hitTest": "road",
+        "counts": {
+          "commit": 8,
+          "invalid": 7,
+          "clear": 4,
+          "draft": 3389
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "rapid 5x Drawing toggles mid-stroke: no commit, aria-pressed matches overlay state",
+      "pass": true,
+      "observed": {
+        "pressed": "false",
+        "overlayPE": "none"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "Reset/Clear/preset changes mid-stroke: no commit, ends on Broad oval",
+      "pass": true,
+      "observed": {
+        "id": "broad-oval",
+        "select": "broad-oval"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "presets are deterministic across reselection",
+      "pass": true,
+      "observed": {
+        "broad-oval": [
+          1965.48,
+          1965.48,
+          "1,965 world units · 92 wide · 246 walls"
+        ],
+        "riverbend": [
+          1976.67,
+          1976.67,
+          "1,977 world units · 92 wide · 248 walls"
+        ],
+        "club-circuit": [
+          2223.29,
+          2223.29,
+          "2,223 world units · 92 wide · 278 walls"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: Escape mid-stroke cancels; mouseup does not commit",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "drawnOptionDisabled": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "mouse: page scroll mid-stroke either cancels or keeps mapping consistent (no remapped commit)",
+      "pass": true,
+      "observed": {
+        "scrolled": false,
+        "scrollY": [
+          0,
+          0
+        ],
+        "commit": 1,
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "touch: viewport resize mid-stroke cancels, no commit, no remapping",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "css": [
+          354,
+          314
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "orientation swap to 844x390: backing resized, touch stroke commits at correct world position, no overflow",
+      "pass": true,
+      "observed": {
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "backing": {
+          "w": 1592,
+          "h": 480,
+          "rw": 1592
+        },
+        "css": 796,
+        "lay": {
+          "sw": 844,
+          "iw": 844
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "DPR change mid-stroke: backing store rebuilt at DPR 1, gesture survives and commits",
+      "pass": true,
+      "observed": {
+        "dpr": 1,
+        "backing": {
+          "w": 354,
+          "h": 270,
+          "rw": 354
+        },
+        "css": 354,
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "commitDelta": 1
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "hidden/resume mid-stroke: no stale commit or stuck capture; next stroke works",
+      "pass": true,
+      "observed": {
+        "commitDelta": 1,
+        "clearDelta": 0,
+        "vis": {
+          "during": "visible",
+          "events": []
+        },
+        "ptr": [
+          "pointerdown:touch:20:true",
+          "pointerup:touch:20:true",
+          "lostpointercapture:touch:20:true",
+          "pointerdown:touch:21:true",
+          "pointerup:touch:21:true",
+          "lostpointercapture:touch:21:true"
+        ],
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": "recorded (headless tab switch fidelity limited)"
+    },
+    {
+      "viewport": "390x844",
+      "name": "after resume a new stroke commits",
+      "pass": true,
+      "observed": {
+        "id": "drawn-20"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "window blur (with visibility hidden) mid-stroke cancels, no commit",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "Detach mid-stroke: no commit, overlay cleared, pointer-events none, controls disabled",
+      "pass": true,
+      "observed": {
+        "detached": {
+          "pe": "none",
+          "ta": "none",
+          "drawingDisabled": true,
+          "label": "Attach editor"
+        },
+        "ink": 0,
+        "feedback": "Editor detached. Input listeners and pending work removed."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "detached: drawing emits nothing",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 13,
+          "invalid": 7,
+          "clear": 9,
+          "draft": 5110
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "rapid detach/attach x7 then one stroke: exactly one commit (no duplicate listeners)",
+      "pass": true,
+      "observed": {
+        "commitDelta": 1,
+        "drafts": 221
+      },
+      "note": ""
+    },
+    {
+      "viewport": "390x844",
+      "name": "console/page errors: none",
+      "pass": true,
+      "observed": {
+        "errors": [],
+        "focus": {
+          "id": "lifecycle",
+          "outline": "solid"
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "initial layout: no horizontal overflow, overlay==road rect, backing=css*min(dpr,2), drawing enabled, default preset",
+      "pass": true,
+      "observed": {
+        "layout": {
+          "scrollW": 844,
+          "innerW": 844,
+          "scrollH": 511,
+          "innerH": 390,
+          "overlay": [
+            24,
+            121,
+            796,
+            240
+          ],
+          "roadSame": true,
+          "stageBottom": 361,
+          "feedbackBottom": 453,
+          "over": [],
+          "controls": [
+            [
+              "preset",
+              34,
+              117
+            ],
+            [
+              "drawing",
+              34,
+              90
+            ],
+            [
+              "clear",
+              34,
+              105
+            ],
+            [
+              "reset",
+              34,
+              97
+            ],
+            [
+              "lifecycle",
+              34,
+              104
+            ]
+          ],
+          "touchAction": "none",
+          "view": {
+            "scale": 0.27,
+            "offsetX": 236,
+            "offsetY": 12
+          }
+        },
+        "s0": {
+          "id": "broad-oval",
+          "length": 1965.48,
+          "bounds": {
+            "minX": 167,
+            "minY": 126.8,
+            "maxX": 1033,
+            "maxY": 673.1
+          },
+          "clockwise": true,
+          "counts": {
+            "commit": 0,
+            "invalid": 0,
+            "clear": 0,
+            "draft": 0
+          },
+          "feedback": "Drawing is on. Start anywhere inside the canvas. Escape cancels a draft.",
+          "kind": null,
+          "select": "broad-oval",
+          "name": "Broad oval",
+          "metrics": "1,965 world units · 92 wide · 246 walls",
+          "overlayPE": "auto",
+          "inlinePE": "auto",
+          "ink": 0,
+          "red": 0,
+          "hasEditor": true,
+          "scrollY": 0,
+          "backing": {
+            "w": 1592,
+            "h": 480,
+            "rw": 1592
+          },
+          "css": 796,
+          "dpr": 3,
+          "ptr": []
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: loose clockwise oval commits, maps to drawn world position, draft cleared",
+      "pass": true,
+      "observed": {
+        "before": "broad-oval",
+        "after": "drawn-1",
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "clockwise": true,
+        "midDraftInk": 3678,
+        "midFeedback": "Keep going around the loop. Lift to close and smooth it.",
+        "ink": 0,
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: counter-clockwise concave loop commits with CCW forward order",
+      "pass": true,
+      "observed": {
+        "id": "drawn-2",
+        "clockwise": false,
+        "bounds": {
+          "minX": 165.6,
+          "minY": 107.1,
+          "maxX": 1034.2,
+          "maxY": 630.2
+        },
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true",
+          "pointerdown:touch:2:true",
+          "pointerup:touch:2:true",
+          "lostpointercapture:touch:2:true"
+        ],
+        "scrollY": [
+          46,
+          46
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: sparse 7-sample stroke smooths into a valid circuit",
+      "pass": true,
+      "observed": {
+        "id": "drawn-3",
+        "length": 2099.1,
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: nearly-closed loop (7% gap) auto-closes and commits",
+      "pass": true,
+      "observed": {
+        "id": "drawn-4",
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits",
+      "pass": false,
+      "observed": {
+        "result": "invalid",
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "reset circuit returns to Broad oval preset (select + readout)",
+      "pass": true,
+      "observed": {
+        "id": "broad-oval",
+        "metrics": "1,965 world units · 92 wide · 246 walls"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: tiny is rejected (too-short), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "Draw a larger loop with room for a full-width road. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 708,
+        "ink": 708
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: figureEight is rejected (self-intersection), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 7323,
+        "ink": 7331
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: outOfBounds is rejected (out-of-bounds), red draft + message shown, last valid track kept",
+      "pass": true,
+      "observed": {
+        "feedback": "Keep the whole loop inside the drawing area, with room for the road. Current circuit kept.",
+        "id": "drawn-6",
+        "red": 8237,
+        "ink": 8245
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: overshoot120 (usability probe) — outcome recorded",
+      "pass": true,
+      "observed": {
+        "outcome": "invalid",
+        "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+      },
+      "note": "rejected: The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: triangle (usability probe) — outcome recorded",
+      "pass": true,
+      "observed": {
+        "outcome": "invalid",
+        "feedback": "Widen the tight bends so the road has room to turn. Current circuit kept."
+      },
+      "note": "rejected: Widen the tight bends so the road has room to turn. Current circuit kept."
+    },
+    {
+      "viewport": "844x390",
+      "name": "Clear drawing after an invalid draft erases it and keeps the circuit",
+      "pass": true,
+      "observed": {
+        "preInk": 708,
+        "ink": 0,
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: Clear clicked mid-stroke cancels; finger lift does not commit",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 5,
+          "invalid": 7,
+          "clear": 2,
+          "draft": 2410
+        },
+        "ink": 0,
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "ptr": [
+          "pointerdown:mouse:1:true",
+          "pointerup:mouse:1:true",
+          "lostpointercapture:mouse:1:true",
+          "pointerdown:touch:7:true",
+          "lostpointercapture:touch:7:true",
+          "pointerup:touch:7:true"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: touchcancel/pointercancel cancels the draft with no commit",
+      "pass": true,
+      "observed": {
+        "ptr": [
+          "pointerdown:touch:7:true",
+          "lostpointercapture:touch:7:true",
+          "pointerup:touch:7:true",
+          "pointerdown:touch:8:true",
+          "pointercancel:touch:8:true",
+          "lostpointercapture:touch:8:true"
+        ],
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: stroke after cancel commits normally",
+      "pass": true,
+      "observed": {
+        "id": "drawn-13"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "multi-touch: secondary finger ignored; primary stroke commits with correct shape",
+      "pass": true,
+      "observed": {
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "ptr": [
+          "pointerdown:touch:10:true",
+          "pointerdown:touch:11:false",
+          "pointerup:touch:10:true",
+          "lostpointercapture:touch:10:true",
+          "pointerup:touch:11:false",
+          "lostpointercapture:touch:11:false"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "multi-touch: two fingers placed together; primary path still drives the stroke",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 8,
+          "invalid": 7,
+          "clear": 3,
+          "draft": 3278
+        },
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "ptr": [
+          "pointerdown:touch:12:true",
+          "pointerdown:touch:13:false",
+          "pointerup:touch:12:true",
+          "lostpointercapture:touch:12:true",
+          "pointerup:touch:13:false",
+          "lostpointercapture:touch:13:false"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: Drawing toggled off mid-stroke cancels; late lift cannot commit; overlay pointer-events none",
+      "pass": true,
+      "observed": {
+        "overlayPE": "none",
+        "feedback": "Drawing is off. Your circuit is kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "disabled overlay: hit-test reaches #road; mouse/touch drags emit nothing",
+      "pass": true,
+      "observed": {
+        "hitTest": "road",
+        "counts": {
+          "commit": 8,
+          "invalid": 7,
+          "clear": 4,
+          "draft": 3385
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "rapid 5x Drawing toggles mid-stroke: no commit, aria-pressed matches overlay state",
+      "pass": true,
+      "observed": {
+        "pressed": "false",
+        "overlayPE": "none"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "Reset/Clear/preset changes mid-stroke: no commit, ends on Broad oval",
+      "pass": true,
+      "observed": {
+        "id": "broad-oval",
+        "select": "broad-oval"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "presets are deterministic across reselection",
+      "pass": true,
+      "observed": {
+        "broad-oval": [
+          1965.48,
+          1965.48,
+          "1,965 world units · 92 wide · 246 walls"
+        ],
+        "riverbend": [
+          1976.67,
+          1976.67,
+          "1,977 world units · 92 wide · 248 walls"
+        ],
+        "club-circuit": [
+          2223.29,
+          2223.29,
+          "2,223 world units · 92 wide · 278 walls"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: Escape mid-stroke cancels; mouseup does not commit",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "drawnOptionDisabled": true
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "mouse: page scroll mid-stroke either cancels or keeps mapping consistent (no remapped commit)",
+      "pass": true,
+      "observed": {
+        "scrolled": true,
+        "scrollY": [
+          46,
+          106
+        ],
+        "commit": 0,
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "touch: viewport resize mid-stroke cancels, no commit, no remapping",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept.",
+        "css": [
+          796,
+          756
+        ]
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "orientation swap to 390x844: backing resized, touch stroke commits at correct world position, no overflow",
+      "pass": true,
+      "observed": {
+        "bounds": {
+          "minX": 196.1,
+          "minY": 122,
+          "maxX": 1024.3,
+          "maxY": 669.5
+        },
+        "backing": {
+          "w": 708,
+          "h": 540,
+          "rw": 708
+        },
+        "css": 354,
+        "lay": {
+          "sw": 390,
+          "iw": 390
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "DPR change mid-stroke: backing store rebuilt at DPR 1, gesture survives and commits",
+      "pass": true,
+      "observed": {
+        "dpr": 1,
+        "backing": {
+          "w": 796,
+          "h": 240,
+          "rw": 796
+        },
+        "css": 796,
+        "feedback": "Circuit ready. Draw another loop to replace it.",
+        "commitDelta": 1
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "hidden/resume mid-stroke: no stale commit or stuck capture; next stroke works",
+      "pass": true,
+      "observed": {
+        "commitDelta": 1,
+        "clearDelta": 0,
+        "vis": {
+          "during": "visible",
+          "events": []
+        },
+        "ptr": [
+          "pointerdown:touch:20:true",
+          "pointerup:touch:20:true",
+          "lostpointercapture:touch:20:true",
+          "pointerdown:touch:21:true",
+          "pointerup:touch:21:true",
+          "lostpointercapture:touch:21:true"
+        ],
+        "feedback": "Circuit ready. Draw another loop to replace it."
+      },
+      "note": "recorded (headless tab switch fidelity limited)"
+    },
+    {
+      "viewport": "844x390",
+      "name": "after resume a new stroke commits",
+      "pass": true,
+      "observed": {
+        "id": "drawn-19"
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "window blur (with visibility hidden) mid-stroke cancels, no commit",
+      "pass": true,
+      "observed": {
+        "feedback": "Drawing cleared. Current circuit kept."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "Detach mid-stroke: no commit, overlay cleared, pointer-events none, controls disabled",
+      "pass": true,
+      "observed": {
+        "detached": {
+          "pe": "none",
+          "ta": "none",
+          "drawingDisabled": true,
+          "label": "Attach editor"
+        },
+        "ink": 0,
+        "feedback": "Editor detached. Input listeners and pending work removed."
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "detached: drawing emits nothing",
+      "pass": true,
+      "observed": {
+        "counts": {
+          "commit": 12,
+          "invalid": 7,
+          "clear": 10,
+          "draft": 5000
+        }
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "rapid detach/attach x7 then one stroke: exactly one commit (no duplicate listeners)",
+      "pass": true,
+      "observed": {
+        "commitDelta": 1,
+        "drafts": 221
+      },
+      "note": ""
+    },
+    {
+      "viewport": "844x390",
+      "name": "console/page errors: none",
+      "pass": true,
+      "observed": {
+        "errors": [],
+        "focus": {
+          "id": "lifecycle",
+          "outline": "solid"
+        }
+      },
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,1046 @@
+{
+  "reviewed": {
+    "worktree": "/Users/krrishai/.t3/worktrees/gridborn/t3-12bf203f-400c3e2549c13447",
+    "branch": "t3/implement-track-editor",
+    "head": "9ce4869861d8a76c77008927f49a9bcad331bdeb",
+    "trackedClean": true
+  },
+  "reviewer": "claude-opus-5-5 (fresh independent QA, effort high)",
+  "date": "2026-11-15",
+  "verdict": "PASS (no high-severity findings; 1 medium, 4 low disclosed)",
+  "commands": {
+    "node": "v26.13.1",
+    "npm": "11.20.0",
+    "npmCi": "pass (0 vulnerabilities)",
+    "npmTest": "pass 51/51 tests, 4 files",
+    "npmBuild": "pass (tsc --noEmit + vite build)"
+  },
+  "browser": {
+    "engine": "Playwright 1.65.1 driving system Chrome 157.0.8103.51 (isolated runner in round-1/runner)",
+    "previewPolicy": "preview_status ok, preview_open ok, preview_snapshot timed out twice (\"Preview automation snapshot timed out after 15000ms.\") -> switched to Playwright",
+    "url": "http://127.0.0.1:5291/qa/t1.html",
+    "checks": 104,
+    "passed": 102,
+    "failed": [
+      {
+        "viewport": "390x844",
+        "name": "touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits",
+        "observed": {
+          "result": "invalid",
+          "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+        }
+      },
+      {
+        "viewport": "844x390",
+        "name": "touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits",
+        "observed": {
+          "result": "invalid",
+          "feedback": "The loop crosses itself. Draw a loop without crossings. Current circuit kept."
+        }
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "medium",
+      "title": "Overshooting the start point by >=~80 world units is rejected as a self-crossing"
+    },
+    {
+      "id": "L1",
+      "severity": "low",
+      "title": "Slow, jittery strokes are intermittently rejected as self-crossing (raw-stroke micro-crossings)"
+    },
+    {
+      "id": "L2",
+      "severity": "low",
+      "title": "Sharp-cornered drawings (e.g. any triangle) are always rejected as too tight"
+    },
+    {
+      "id": "L3",
+      "severity": "low",
+      "title": "844x390 harness: validation feedback sits below the fold at initial scroll"
+    },
+    {
+      "id": "L4",
+      "severity": "low",
+      "title": "Harness controls are 40px (34px landscape), below the 44px touch guideline"
+    }
+  ],
+  "geometryProbe": {
+    "preset:broad-oval": {
+      "id": "broad-oval",
+      "n": 123,
+      "length": 1965.4808349609375,
+      "width": 92,
+      "finite": true,
+      "walls": 246,
+      "cumulativeOk": true,
+      "minWall": 10.600882150841874,
+      "maxWall": 21.34715543169956,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99997226273057,
+      "maxCenterClearance": 46.000043055415766,
+      "minEdge": 15.968837677900154,
+      "maxEdge": 15.982257617157414,
+      "wallCrossings": 0,
+      "rayLeft": 46.00384521484375,
+      "rayRight": 46.00384521484375,
+      "rayAhead": 244.94745497565117,
+      "startLineLength": 92.0076904296875,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": null,
+      "forwardMatchesStrokeDirection": null,
+      "spawnToStrokeStart": null,
+      "bounds": {
+        "minX": 167.01370239257812,
+        "minY": 126.83238220214844,
+        "maxX": 1032.986328125,
+        "maxY": 673.10498046875
+      },
+      "deterministic": true,
+      "freshArrays": true
+    },
+    "preset:riverbend": {
+      "id": "riverbend",
+      "n": 124,
+      "length": 1976.6702880859375,
+      "width": 92,
+      "finite": true,
+      "walls": 248,
+      "cumulativeOk": true,
+      "minWall": 5.9570909979434825,
+      "maxWall": 25.869983334354522,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999957503453146,
+      "maxCenterClearance": 46.00004991586835,
+      "minEdge": 15.913537832511562,
+      "maxEdge": 15.944067156553004,
+      "wallCrossings": 0,
+      "rayLeft": 46.00342050665538,
+      "rayRight": 46.00341357774475,
+      "rayAhead": 224.42550064927903,
+      "startLineLength": 92.00683410390289,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": null,
+      "forwardMatchesStrokeDirection": null,
+      "spawnToStrokeStart": null,
+      "bounds": {
+        "minX": 176.97605895996094,
+        "minY": 113.24885559082031,
+        "maxX": 1038.437255859375,
+        "maxY": 686.7954711914062
+      },
+      "deterministic": true,
+      "freshArrays": true
+    },
+    "preset:club-circuit": {
+      "id": "club-circuit",
+      "n": 139,
+      "length": 2223.294921875,
+      "width": 92,
+      "finite": true,
+      "walls": 278,
+      "cumulativeOk": true,
+      "minWall": 8.250860038004046,
+      "maxWall": 23.716987896539287,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99994743969161,
+      "maxCenterClearance": 46.00005626586662,
+      "minEdge": 15.976459862978615,
+      "maxEdge": 15.999694923821233,
+      "wallCrossings": 0,
+      "rayLeft": 46.04920535325781,
+      "rayRight": 46.0492063548913,
+      "rayAhead": 171.89065892255414,
+      "startLineLength": 92.09841170816489,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": null,
+      "forwardMatchesStrokeDirection": null,
+      "spawnToStrokeStart": null,
+      "bounds": {
+        "minX": 144.74217224121094,
+        "minY": 114,
+        "maxX": 1055.332275390625,
+        "maxY": 669.44873046875
+      },
+      "deterministic": true,
+      "freshArrays": true
+    },
+    "unknownPreset": "RangeError",
+    "oval-cw": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "oval-cw",
+      "n": 119,
+      "length": 1896.121826171875,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.812161817810747,
+      "maxWall": 21.045796810403232,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99996842390795,
+      "maxCenterClearance": 46.00002928497278,
+      "minEdge": 15.924146233588269,
+      "maxEdge": 15.936450057245315,
+      "wallCrossings": 0,
+      "rayLeft": 46.004722595214844,
+      "rayRight": 46.00471496582031,
+      "rayAhead": 233.43086695602432,
+      "startLineLength": 92.00943756103516,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 3.12872314453125,
+      "bounds": {
+        "minX": 186.5426788330078,
+        "minY": 127.1240005493164,
+        "maxX": 1013.4573364257812,
+        "maxY": 672.7855224609375
+      }
+    },
+    "oval-ccw": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "oval-ccw",
+      "n": 119,
+      "length": 1896.121826171875,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.812161817810747,
+      "maxWall": 21.045796810403232,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99996842390795,
+      "maxCenterClearance": 46.00002928497278,
+      "minEdge": 15.924146233588269,
+      "maxEdge": 15.936450057245315,
+      "wallCrossings": 0,
+      "rayLeft": 46.00471496582031,
+      "rayRight": 46.004722595214844,
+      "rayAhead": 233.4308413495154,
+      "startLineLength": 92.00943756103516,
+      "headingUnit": 1,
+      "centerlineClockwise": false,
+      "strokeClockwise": false,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 3.12872314453125,
+      "bounds": {
+        "minX": 186.5426788330078,
+        "minY": 127.1240005493164,
+        "maxX": 1013.4573364257812,
+        "maxY": 672.7855224609375
+      }
+    },
+    "oval-sparse-8": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "oval-sparse-8",
+      "n": 113,
+      "length": 1802.86669921875,
+      "width": 92,
+      "finite": true,
+      "walls": 226,
+      "cumulativeOk": true,
+      "minWall": 8.354960606261416,
+      "maxWall": 23.5313250802813,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999966505324,
+      "maxCenterClearance": 46.00002767731105,
+      "minEdge": 15.943142192077312,
+      "maxEdge": 15.958091947212536,
+      "wallCrossings": 0,
+      "rayLeft": 46.01853942871094,
+      "rayRight": 46.01853942871094,
+      "rayAhead": 221.8743991480898,
+      "startLineLength": 92.03707885742188,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": false,
+      "spawnToStrokeStart": 12.039840698242188,
+      "bounds": {
+        "minX": 202.01712036132812,
+        "minY": 136.02130126953125,
+        "maxX": 997.98291015625,
+        "maxY": 663.8326416015625
+      }
+    },
+    "oval-sparse-5": {
+      "ok": true,
+      "ms": 0.1,
+      "id": "oval-sparse-5",
+      "n": 106,
+      "length": 1683.656005859375,
+      "width": 92,
+      "finite": true,
+      "walls": 212,
+      "cumulativeOk": true,
+      "minWall": 2.49062581538692,
+      "maxWall": 29.129362261672895,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99996928066622,
+      "maxCenterClearance": 46.00002339530787,
+      "minEdge": 15.809994038299516,
+      "maxEdge": 15.89038457332261,
+      "wallCrossings": 0,
+      "rayLeft": 46.06085205078125,
+      "rayRight": 46.06085205078125,
+      "rayAhead": 159.41499966511878,
+      "startLineLength": 92.1217041015625,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": false,
+      "spawnToStrokeStart": 19.926101684570312,
+      "bounds": {
+        "minX": 224.22145080566406,
+        "minY": 143.86524963378906,
+        "maxX": 975.778564453125,
+        "maxY": 632.0739135742188
+      }
+    },
+    "square-4": {
+      "ok": true,
+      "ms": 0.3,
+      "id": "square-4",
+      "n": 128,
+      "length": 2043.2674560546875,
+      "width": 92,
+      "finite": true,
+      "walls": 256,
+      "cumulativeOk": true,
+      "minWall": 3.5042111303752486,
+      "maxWall": 28.30754316969858,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999971450956984,
+      "maxCenterClearance": 46.00002951859569,
+      "minEdge": 15.905867464975842,
+      "maxEdge": 15.96987137163593,
+      "wallCrossings": 0,
+      "rayLeft": 46.48648764105023,
+      "rayRight": 46.48648764105024,
+      "rayAhead": 97.53864306980812,
+      "startLineLength": 92.97297528210046,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": false,
+      "spawnToStrokeStart": 35.012100519851266,
+      "bounds": {
+        "minX": 204,
+        "minY": 154,
+        "maxX": 996,
+        "maxY": 646
+      }
+    },
+    "triangle-3": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-tight",
+          "message": "Widen the tight bends so the road has room to turn."
+        }
+      ]
+    },
+    "oval-jitter-6": {
+      "ok": false,
+      "ms": 0.1,
+      "issues": [
+        {
+          "code": "self-intersection",
+          "message": "The loop crosses itself. Draw a loop without crossings."
+        }
+      ]
+    },
+    "oval-jitter-15": {
+      "ok": false,
+      "ms": 0.1,
+      "issues": [
+        {
+          "code": "self-intersection",
+          "message": "The loop crosses itself. Draw a loop without crossings."
+        }
+      ]
+    },
+    "kidney-ccw": {
+      "ok": true,
+      "ms": 0.6,
+      "id": "kidney-ccw",
+      "n": 123,
+      "length": 1959.596923828125,
+      "width": 92,
+      "finite": true,
+      "walls": 246,
+      "cumulativeOk": true,
+      "minWall": 10.59812180596415,
+      "maxWall": 21.254749922032424,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999968478224375,
+      "maxCenterClearance": 46.000034936004106,
+      "minEdge": 15.921321823021087,
+      "maxEdge": 15.934995218919212,
+      "wallCrossings": 0,
+      "rayLeft": 46.00450134277344,
+      "rayRight": 46.004493713378906,
+      "rayAhead": 237.04673034341766,
+      "startLineLength": 92.00899505615234,
+      "headingUnit": 1,
+      "centerlineClockwise": false,
+      "strokeClockwise": false,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 3.053863525390625,
+      "bounds": {
+        "minX": 166.34718322753906,
+        "minY": 107.04936981201172,
+        "maxX": 1033.65283203125,
+        "maxY": 626.1550903320312
+      }
+    },
+    "bean-concave": {
+      "ok": true,
+      "ms": 0.5,
+      "id": "bean-concave",
+      "n": 131,
+      "length": 2086.199462890625,
+      "width": 92,
+      "finite": true,
+      "walls": 262,
+      "cumulativeOk": true,
+      "minWall": 11.410193885353367,
+      "maxWall": 20.433606774391254,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999952430790664,
+      "maxCenterClearance": 46.00003904900677,
+      "minEdge": 15.917794405678668,
+      "maxEdge": 15.928229395379464,
+      "wallCrossings": 0,
+      "rayLeft": 46.00398254394531,
+      "rayRight": 46.00398254394531,
+      "rayAhead": 244.17412984585215,
+      "startLineLength": 92.00796508789062,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 2.869384765625,
+      "bounds": {
+        "minX": 145.15640258789062,
+        "minY": 96.86540222167969,
+        "maxX": 1054.8436279296875,
+        "maxY": 638.9362182617188
+      }
+    },
+    "small-oval-ok": {
+      "ok": true,
+      "ms": 0.1,
+      "id": "small-oval-ok",
+      "n": 46,
+      "length": 728.0013427734375,
+      "width": 92,
+      "finite": true,
+      "walls": 92,
+      "cumulativeOk": true,
+      "minWall": 6.517152161892237,
+      "maxWall": 25.097661094832045,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99997349135761,
+      "maxCenterClearance": 46.000030546595475,
+      "minEdge": 15.807033661227905,
+      "maxEdge": 15.837789908251294,
+      "wallCrossings": 0,
+      "rayLeft": 46.0562125397828,
+      "rayRight": 46.056214722814865,
+      "rayAhead": 128.88817604334892,
+      "startLineLength": 92.11242726262032,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 9.741119706197518,
+      "bounds": {
+        "minX": 423.87347412109375,
+        "minY": 253.68490600585938,
+        "maxX": 776.1251220703125,
+        "maxY": 546.2650756835938
+      }
+    },
+    "rotated-start-left": {
+      "ok": true,
+      "ms": 0.3,
+      "id": "rotated-start-left",
+      "n": 119,
+      "length": 1896.1204833984375,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.797798866711954,
+      "maxWall": 21.060535216454287,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999966045148895,
+      "maxCenterClearance": 46.00002880147191,
+      "minEdge": 15.9234619140625,
+      "maxEdge": 15.936466351466516,
+      "wallCrossings": 0,
+      "rayLeft": 46.078826904296875,
+      "rayRight": 46.07884216308594,
+      "rayAhead": 127.66788631380892,
+      "startLineLength": 92.15766906738281,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 12.498367309570312,
+      "bounds": {
+        "minX": 186.41954040527344,
+        "minY": 127.16072845458984,
+        "maxX": 1013.2147216796875,
+        "maxY": 672.8392944335938
+      }
+    },
+    "gap-0.03": {
+      "ok": true,
+      "ms": 0.1,
+      "id": "gap-0.03",
+      "n": 119,
+      "length": 1896.2772216796875,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.814032890461245,
+      "maxWall": 21.046533348204267,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999970968981344,
+      "maxCenterClearance": 46.00002464481148,
+      "minEdge": 15.925469909404612,
+      "maxEdge": 15.93780851115205,
+      "wallCrossings": 0,
+      "rayLeft": 46.004423619774634,
+      "rayRight": 46.004424069635284,
+      "rayAhead": 232.37891875390062,
+      "startLineLength": 92.0088476894067,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 3.4815163892683847,
+      "bounds": {
+        "minX": 186.4916229248047,
+        "minY": 127.47738647460938,
+        "maxX": 1013.509765625,
+        "maxY": 672.8257446289062
+      }
+    },
+    "gap-0.08": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "gap-0.08",
+      "n": 119,
+      "length": 1894.5689697265625,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.803770632235393,
+      "maxWall": 21.028206873291776,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999971924145726,
+      "maxCenterClearance": 46.00002528956797,
+      "minEdge": 15.911298343347843,
+      "maxEdge": 15.923813014707283,
+      "wallCrossings": 0,
+      "rayLeft": 46.00620062489028,
+      "rayRight": 46.00620101476058,
+      "rayAhead": 217.8885081025472,
+      "startLineLength": 92.0124016396549,
+      "headingUnit": 0.9999999999999999,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 5.6015855126867535,
+      "bounds": {
+        "minX": 186.53521728515625,
+        "minY": 129.19610595703125,
+        "maxX": 1013.5104370117188,
+        "maxY": 672.8331909179688
+      }
+    },
+    "gap-0.2": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "gap-0.2",
+      "n": 117,
+      "length": 1865.2254638671875,
+      "width": 92,
+      "finite": true,
+      "walls": 234,
+      "cumulativeOk": true,
+      "minWall": 8.134794845734648,
+      "maxWall": 23.72081193956413,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99996983504933,
+      "maxCenterClearance": 46.00002966952074,
+      "minEdge": 15.924332757780661,
+      "maxEdge": 15.945816722032198,
+      "wallCrossings": 0,
+      "rayLeft": 46.02369582239092,
+      "rayRight": 46.02369706187372,
+      "rayAhead": 175.17568293358423,
+      "startLineLength": 92.04739288426977,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 11.986143590202186,
+      "bounds": {
+        "minX": 188.16038513183594,
+        "minY": 131.82386779785156,
+        "maxX": 1013.3612670898438,
+        "maxY": 672.8677978515625
+      }
+    },
+    "gap-0.4": {
+      "ok": false,
+      "ms": 0.1,
+      "issues": [
+        {
+          "code": "too-tight",
+          "message": "Widen the tight bends so the road has room to turn."
+        }
+      ]
+    },
+    "overshoot-10": {
+      "ok": true,
+      "ms": 0.1,
+      "id": "overshoot-10",
+      "n": 119,
+      "length": 1896.45068359375,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.81524880217075,
+      "maxWall": 21.04827544467329,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999961728869415,
+      "maxCenterClearance": 46.000027424828104,
+      "minEdge": 15.926900608668827,
+      "maxEdge": 15.939258260726863,
+      "wallCrossings": 0,
+      "rayLeft": 46.00471465562867,
+      "rayRight": 46.00471528254534,
+      "rayAhead": 233.45617651119818,
+      "startLineLength": 92.0094299381997,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 3.094024663621248,
+      "bounds": {
+        "minX": 186.48016357421875,
+        "minY": 127.08930969238281,
+        "maxX": 1013.5198974609375,
+        "maxY": 672.8252563476562
+      }
+    },
+    "overshoot-25": {
+      "ok": true,
+      "ms": 0.5,
+      "id": "overshoot-25",
+      "n": 119,
+      "length": 1896.6099853515625,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.792498548334024,
+      "maxWall": 21.073931772683945,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99996496492707,
+      "maxCenterClearance": 46.00003315729102,
+      "minEdge": 15.927708395042725,
+      "maxEdge": 15.940695042672223,
+      "wallCrossings": 0,
+      "rayLeft": 46.00752519910192,
+      "rayRight": 46.007525779091196,
+      "rayAhead": 226.69382198316734,
+      "startLineLength": 92.01505097819319,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 24.131205441437608,
+      "bounds": {
+        "minX": 186.50640869140625,
+        "minY": 126.40419006347656,
+        "maxX": 1013.4904174804688,
+        "maxY": 672.8779907226562
+      }
+    },
+    "overshoot-50": {
+      "ok": true,
+      "ms": 0.3,
+      "id": "overshoot-50",
+      "n": 119,
+      "length": 1896.5870361328125,
+      "width": 92,
+      "finite": true,
+      "walls": 238,
+      "cumulativeOk": true,
+      "minWall": 10.796655648711143,
+      "maxWall": 21.06903470090897,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.999965550049566,
+      "maxCenterClearance": 46.00003150897981,
+      "minEdge": 15.927696629478922,
+      "maxEdge": 15.94073447909188,
+      "wallCrossings": 0,
+      "rayLeft": 46.01591792548701,
+      "rayRight": 46.01591888130829,
+      "rayAhead": 220.90533854801708,
+      "startLineLength": 92.03183680680827,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 34.37706299757685,
+      "bounds": {
+        "minX": 186.41966247558594,
+        "minY": 126.67261505126953,
+        "maxX": 1013.3833618164062,
+        "maxY": 672.8707275390625
+      }
+    },
+    "overshoot-90": {
+      "ok": false,
+      "ms": 0.1,
+      "issues": [
+        {
+          "code": "self-intersection",
+          "message": "The loop crosses itself. Draw a loop without crossings."
+        }
+      ]
+    },
+    "tiny": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-short",
+          "message": "Draw a larger loop with room for a full-width road."
+        }
+      ]
+    },
+    "dot": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-short",
+          "message": "Draw a larger loop with room for a full-width road."
+        }
+      ]
+    },
+    "empty": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-short",
+          "message": "Draw a larger loop with room for a full-width road."
+        }
+      ]
+    },
+    "line-back-forth": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-tight",
+          "message": "Widen the tight bends so the road has room to turn."
+        }
+      ]
+    },
+    "figure-eight": {
+      "ok": false,
+      "ms": 0.1,
+      "issues": [
+        {
+          "code": "self-intersection",
+          "message": "The loop crosses itself. Draw a loop without crossings."
+        }
+      ]
+    },
+    "out-of-bounds-raw": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "out-of-bounds",
+          "message": "Keep the whole loop inside the drawing area, with room for the road."
+        }
+      ]
+    },
+    "out-of-bounds-road": {
+      "ok": true,
+      "ms": 0.6,
+      "id": "out-of-bounds-road",
+      "n": 161,
+      "length": 2570.6416015625,
+      "width": 92,
+      "finite": true,
+      "walls": 322,
+      "cumulativeOk": true,
+      "minWall": 8.971069799415082,
+      "maxWall": 22.929020264018053,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 45.99995622390099,
+      "maxCenterClearance": 46.000049805983956,
+      "minEdge": 15.945691093929858,
+      "maxEdge": 15.969400665718467,
+      "wallCrossings": 0,
+      "rayLeft": 46.00090789794922,
+      "rayRight": 46.00091552734375,
+      "rayAhead": 345.0405146020713,
+      "startLineLength": 92.00182342529297,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 1.4432525634765625,
+      "bounds": {
+        "minX": 0.8728556036949158,
+        "minY": 125.44234466552734,
+        "maxX": 1199.127197265625,
+        "maxY": 674.52587890625
+      }
+    },
+    "edge-touch-road": {
+      "ok": false,
+      "ms": 0.3,
+      "issues": [
+        {
+          "code": "out-of-bounds",
+          "message": "Move the loop away from the edge to leave room for the road."
+        }
+      ]
+    },
+    "needle": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-tight",
+          "message": "Widen the tight bends so the road has room to turn."
+        }
+      ]
+    },
+    "narrow-neck": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "too-tight",
+          "message": "The road overlaps itself. Space the turns farther apart."
+        }
+      ]
+    },
+    "nan": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "invalid-input",
+          "message": "Use finite points to draw one simple loop."
+        }
+      ]
+    },
+    "width-0": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "invalid-input",
+          "message": "Use a finite road width and draw one simple loop."
+        }
+      ]
+    },
+    "width-60": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "width-60",
+      "n": 121,
+      "length": 1923.0037841796875,
+      "width": 60,
+      "finite": true,
+      "walls": 242,
+      "cumulativeOk": true,
+      "minWall": 12.496992812425365,
+      "maxWall": 19.277175126937372,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 29.999968386715913,
+      "maxCenterClearance": 30.000029089116296,
+      "minEdge": 15.881692794022667,
+      "maxEdge": 15.89524656557901,
+      "wallCrossings": 0,
+      "rayLeft": 30.002960205078125,
+      "rayRight": 30.002960205078125,
+      "rayAhead": 190.95530612408444,
+      "startLineLength": 60.00592041015625,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 1.3916778564453125,
+      "bounds": {
+        "minX": 195.83897399902344,
+        "minY": 141.3887176513672,
+        "maxX": 1004.1610107421875,
+        "maxY": 658.5396118164062
+      }
+    },
+    "width-140": {
+      "ok": true,
+      "ms": 0.2,
+      "id": "width-140",
+      "n": 115,
+      "length": 1837.755615234375,
+      "width": 140,
+      "finite": true,
+      "walls": 230,
+      "cumulativeOk": true,
+      "minWall": 8.346703118375858,
+      "maxWall": 23.603473514618756,
+      "reversedWallSegments": 0,
+      "minCenterClearance": 69.99996879726439,
+      "maxCenterClearance": 70.00002746883493,
+      "minEdge": 15.971516801661847,
+      "maxEdge": 15.983233433569389,
+      "wallCrossings": 0,
+      "rayLeft": 70.0078353881836,
+      "rayRight": 70.00782775878906,
+      "rayAhead": 280.0197322003276,
+      "startLineLength": 140.01566314697266,
+      "headingUnit": 1,
+      "centerlineClockwise": true,
+      "strokeClockwise": true,
+      "forwardMatchesStrokeDirection": true,
+      "spawnToStrokeStart": 7.3118133544921875,
+      "bounds": {
+        "minX": 176.36187744140625,
+        "minY": 107.3039779663086,
+        "maxX": 1023.63818359375,
+        "maxY": 692.6155395507812
+      }
+    },
+    "huge-20000": {
+      "ok": false,
+      "ms": 0.9,
+      "issues": [
+        {
+          "code": "invalid-input",
+          "message": "Use fewer turns; draw one simple loop."
+        }
+      ]
+    },
+    "huge-20001": {
+      "ok": false,
+      "ms": 0,
+      "issues": [
+        {
+          "code": "invalid-input",
+          "message": "Use a finite road width and draw one simple loop."
+        }
+      ]
+    },
+    "multi-lap": {
+      "ok": false,
+      "ms": 0.6,
+      "issues": [
+        {
+          "code": "self-intersection",
+          "message": "The loop crosses itself. Draw a loop without crossings."
+        }
+      ]
+    },
+    "drawnDeterministic": true,
+    "inputUnmutated": true,
+    "structuredClone": true
+  },
+  "followUpProbe": {
+    "jitter sp=4 amp=±1": "0/20 rejected {}",
+    "jitter sp=4 amp=±2": "0/20 rejected {}",
+    "jitter sp=4 amp=±3": "9/20 rejected {\"self-intersection\":9}",
+    "jitter sp=4 amp=±4": "20/20 rejected {\"self-intersection\":20}",
+    "jitter sp=4 amp=±6": "20/20 rejected {\"self-intersection\":20}",
+    "jitter sp=8 amp=±1": "0/20 rejected {}",
+    "jitter sp=8 amp=±2": "0/20 rejected {}",
+    "jitter sp=8 amp=±3": "0/20 rejected {}",
+    "jitter sp=8 amp=±4": "0/20 rejected {}",
+    "jitter sp=8 amp=±6": "11/20 rejected {\"self-intersection\":11}",
+    "jitter sp=12 amp=±1": "0/20 rejected {}",
+    "jitter sp=12 amp=±2": "0/20 rejected {}",
+    "jitter sp=12 amp=±3": "0/20 rejected {}",
+    "jitter sp=12 amp=±4": "0/20 rejected {}",
+    "jitter sp=12 amp=±6": "0/20 rejected {}",
+    "wobble ±5": "ok",
+    "wobble ±10": "ok",
+    "wobble ±20": "ok",
+    "triangle dense scale 1": "too-tight: Widen the tight bends so the road has room to turn.",
+    "triangle dense scale 0.8": "too-tight: Widen the tight bends so the road has room to turn.",
+    "triangle dense scale 0.6": "too-tight: Widen the tight bends so the road has room to turn.",
+    "L-shape": "ok",
+    "hexagon": "ok",
+    "pentagon-120": "ok",
+    "overshoot 50 off 0.98": "ok",
+    "overshoot 50 off 1.02": "ok",
+    "overshoot 60 off 0.98": "ok",
+    "overshoot 60 off 1.02": "ok",
+    "overshoot 70 off 0.98": "ok",
+    "overshoot 70 off 1.02": "ok",
+    "overshoot 80 off 0.98": "self-intersection",
+    "overshoot 80 off 1.02": "self-intersection",
+    "overshoot 90 off 0.98": "self-intersection",
+    "overshoot 90 off 1.02": "self-intersection",
+    "overshoot 120 off 0.98": "self-intersection",
+    "overshoot 120 off 1.02": "self-intersection",
+    "overshoot 160 off 0.98": "self-intersection",
+    "overshoot 160 off 1.02": "self-intersection"
+  },
+  "jitterSweep": {
+    "390x844 spacing=1.5px jitter=±0.25px": "6/6 committed",
+    "390x844 spacing=1.5px jitter=±0.5px": "6/6 committed",
+    "390x844 spacing=1.5px jitter=±1px": "5/6 committed",
+    "390x844 spacing=3px jitter=±0.25px": "6/6 committed",
+    "390x844 spacing=3px jitter=±0.5px": "6/6 committed",
+    "390x844 spacing=3px jitter=±1px": "6/6 committed",
+    "390x844 spacing=5px jitter=±0.25px": "6/6 committed",
+    "390x844 spacing=5px jitter=±0.5px": "6/6 committed",
+    "390x844 spacing=5px jitter=±1px": "6/6 committed",
+    "1440x900 spacing=1.5px jitter=±0.25px": "6/6 committed",
+    "1440x900 spacing=1.5px jitter=±0.5px": "6/6 committed",
+    "1440x900 spacing=1.5px jitter=±1px": "6/6 committed",
+    "1440x900 spacing=3px jitter=±0.25px": "6/6 committed",
+    "1440x900 spacing=3px jitter=±0.5px": "6/6 committed",
+    "1440x900 spacing=3px jitter=±1px": "6/6 committed",
+    "1440x900 spacing=5px jitter=±0.25px": "6/6 committed",
+    "1440x900 spacing=5px jitter=±0.5px": "6/6 committed",
+    "1440x900 spacing=5px jitter=±1px": "6/6 committed"
+  },
+  "notVerified": [
+    "physical iOS/Android touch (Chromium CDP touch emulation only)",
+    "true tab hide/resume mid-stroke (headless tab switch left visibilityState visible; synthetic hidden+blur verified)",
+    "engine/physics consumption of the geometry (T2/T4 not present; contract verified geometrically only)",
+    "screen-reader announcement quality"
+  ]
+}

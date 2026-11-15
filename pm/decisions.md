@@ -2,6 +2,12 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T1 QA acceptance and closure correction (Codex PM)
+
+- T1's independent round 1 meets the no-high-severity gate and its implementation is merged. Its one medium issue (common overshot closure rejected) and low jitter issue affect a primary interaction, so a focused substantive geometry follow-up T1R is required before T4 integration. This is more than a cosmetic one-line review fix: normalization must preserve true self-intersection rejection and geometry invariants, with new deterministic and real-input regressions.
+- Prefer trimming a completed loop's short redundant tail and removing negligible hand jitter before validation, using conservative thresholds. Do not globally accept self-crossings or hide errors. Large sharp triangles may receive adaptive corner rounding when safe; overly tight shapes can still be rejected with actionable feedback.
+- T1 harness-only feedback placement and touch target findings can be corrected alongside its regression surface. Production validation visibility remains a T4 requirement. All findings remain recorded until the new independent round verifies them.
+
 ## 2026-11-15 — T3 conditional acceptance and T2 review (Codex PM)
 
 - Accepted and merged T3 under the requested no-high-severity threshold, explicitly taking the reviewer's handoff option for all three medium issues. Inspector visibility, focus restoration/Escape, and readable diagram text are mandatory T4 scope and must be independently re-reviewed before final acceptance. The 13 failed browser assertions remain recorded; no all-checks-pass claim is made.

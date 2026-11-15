@@ -6,6 +6,11 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T1 QA (Codex PM)
+
+- Overshooting a loop's start is ordinary drawing behavior: correct it conservatively before integration rather than asking visitors to stop precisely.
+- Jitter cleanup must retain rejection of true crossings and road overlap. This requires a geometry follow-up plus fresh QA, not simply removing validation.
+
 ## Resolved — 2026-11-15 T3 QA and T2 handoff (Codex PM)
 
 - T3 has no high-severity defect, but three medium issues need production fixes: assign them explicitly to T4's integrated inspector/layout work and fresh re-QA; do not call the product complete yet.

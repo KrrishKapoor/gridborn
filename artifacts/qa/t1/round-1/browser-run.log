@@ -1,0 +1,108 @@
+PASS [1440x900] initial layout: no horizontal overflow, overlay==road rect, backing=css*min(dpr,2), drawing enabled, default preset
+PASS [1440x900] mouse: loose clockwise oval commits, maps to drawn world position, draft cleared
+PASS [1440x900] touch: counter-clockwise concave loop commits with CCW forward order
+PASS [1440x900] mouse: sparse 7-sample stroke smooths into a valid circuit
+PASS [1440x900] touch: nearly-closed loop (7% gap) auto-closes and commits
+PASS [1440x900] touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits
+PASS [1440x900] reset circuit returns to Broad oval preset (select + readout)
+PASS [1440x900] touch: tiny is rejected (too-short), red draft + message shown, last valid track kept
+PASS [1440x900] mouse: figureEight is rejected (self-intersection), red draft + message shown, last valid track kept
+PASS [1440x900] mouse: outOfBounds is rejected (out-of-bounds), red draft + message shown, last valid track kept
+PASS [1440x900] touch: overshoot120 (usability probe) — outcome recorded — rejected: The loop crosses itself. Draw a loop without crossings. Current circuit kept.
+PASS [1440x900] mouse: triangle (usability probe) — outcome recorded — rejected: Widen the tight bends so the road has room to turn. Current circuit kept.
+PASS [1440x900] Clear drawing after an invalid draft erases it and keeps the circuit
+PASS [1440x900] touch: Clear clicked mid-stroke cancels; finger lift does not commit
+PASS [1440x900] touch: touchcancel/pointercancel cancels the draft with no commit
+PASS [1440x900] touch: stroke after cancel commits normally
+PASS [1440x900] multi-touch: secondary finger ignored; primary stroke commits with correct shape
+PASS [1440x900] multi-touch: two fingers placed together; primary path still drives the stroke
+PASS [1440x900] touch: Drawing toggled off mid-stroke cancels; late lift cannot commit; overlay pointer-events none
+PASS [1440x900] disabled overlay: hit-test reaches #road; mouse/touch drags emit nothing
+PASS [1440x900] rapid 5x Drawing toggles mid-stroke: no commit, aria-pressed matches overlay state
+PASS [1440x900] Reset/Clear/preset changes mid-stroke: no commit, ends on Broad oval
+PASS [1440x900] presets are deterministic across reselection
+PASS [1440x900] mouse: Escape mid-stroke cancels; mouseup does not commit
+PASS [1440x900] mouse: page scroll mid-stroke either cancels or keeps mapping consistent (no remapped commit)
+PASS [1440x900] touch: viewport resize mid-stroke cancels, no commit, no remapping
+PASS [1440x900] DPR change mid-stroke: backing store rebuilt at DPR 1, gesture survives and commits
+PASS [1440x900] hidden/resume mid-stroke: no stale commit or stuck capture; next stroke works — recorded (headless tab switch fidelity limited)
+PASS [1440x900] after resume a new stroke commits
+PASS [1440x900] window blur (with visibility hidden) mid-stroke cancels, no commit
+PASS [1440x900] Detach mid-stroke: no commit, overlay cleared, pointer-events none, controls disabled
+PASS [1440x900] detached: drawing emits nothing
+PASS [1440x900] rapid detach/attach x7 then one stroke: exactly one commit (no duplicate listeners)
+PASS [1440x900] console/page errors: none
+PASS [390x844] initial layout: no horizontal overflow, overlay==road rect, backing=css*min(dpr,2), drawing enabled, default preset
+PASS [390x844] mouse: loose clockwise oval commits, maps to drawn world position, draft cleared
+PASS [390x844] touch: counter-clockwise concave loop commits with CCW forward order
+PASS [390x844] mouse: sparse 7-sample stroke smooths into a valid circuit
+PASS [390x844] touch: nearly-closed loop (7% gap) auto-closes and commits
+FAIL [390x844] touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits
+PASS [390x844] reset circuit returns to Broad oval preset (select + readout)
+PASS [390x844] touch: tiny is rejected (too-short), red draft + message shown, last valid track kept
+PASS [390x844] mouse: figureEight is rejected (self-intersection), red draft + message shown, last valid track kept
+PASS [390x844] mouse: outOfBounds is rejected (out-of-bounds), red draft + message shown, last valid track kept
+PASS [390x844] touch: overshoot120 (usability probe) — outcome recorded — rejected: The loop crosses itself. Draw a loop without crossings. Current circuit kept.
+PASS [390x844] mouse: triangle (usability probe) — outcome recorded — rejected: Widen the tight bends so the road has room to turn. Current circuit kept.
+PASS [390x844] Clear drawing after an invalid draft erases it and keeps the circuit
+PASS [390x844] touch: Clear clicked mid-stroke cancels; finger lift does not commit
+PASS [390x844] touch: touchcancel/pointercancel cancels the draft with no commit
+PASS [390x844] touch: stroke after cancel commits normally
+PASS [390x844] multi-touch: secondary finger ignored; primary stroke commits with correct shape
+PASS [390x844] multi-touch: two fingers placed together; primary path still drives the stroke
+PASS [390x844] touch: Drawing toggled off mid-stroke cancels; late lift cannot commit; overlay pointer-events none
+PASS [390x844] disabled overlay: hit-test reaches #road; mouse/touch drags emit nothing
+PASS [390x844] rapid 5x Drawing toggles mid-stroke: no commit, aria-pressed matches overlay state
+PASS [390x844] Reset/Clear/preset changes mid-stroke: no commit, ends on Broad oval
+PASS [390x844] presets are deterministic across reselection
+PASS [390x844] mouse: Escape mid-stroke cancels; mouseup does not commit
+PASS [390x844] mouse: page scroll mid-stroke either cancels or keeps mapping consistent (no remapped commit)
+PASS [390x844] touch: viewport resize mid-stroke cancels, no commit, no remapping
+PASS [390x844] orientation swap to 844x390: backing resized, touch stroke commits at correct world position, no overflow
+PASS [390x844] DPR change mid-stroke: backing store rebuilt at DPR 1, gesture survives and commits
+PASS [390x844] hidden/resume mid-stroke: no stale commit or stuck capture; next stroke works — recorded (headless tab switch fidelity limited)
+PASS [390x844] after resume a new stroke commits
+PASS [390x844] window blur (with visibility hidden) mid-stroke cancels, no commit
+PASS [390x844] Detach mid-stroke: no commit, overlay cleared, pointer-events none, controls disabled
+PASS [390x844] detached: drawing emits nothing
+PASS [390x844] rapid detach/attach x7 then one stroke: exactly one commit (no duplicate listeners)
+PASS [390x844] console/page errors: none
+PASS [844x390] initial layout: no horizontal overflow, overlay==road rect, backing=css*min(dpr,2), drawing enabled, default preset
+PASS [844x390] mouse: loose clockwise oval commits, maps to drawn world position, draft cleared
+PASS [844x390] touch: counter-clockwise concave loop commits with CCW forward order
+PASS [844x390] mouse: sparse 7-sample stroke smooths into a valid circuit
+PASS [844x390] touch: nearly-closed loop (7% gap) auto-closes and commits
+FAIL [844x390] touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits
+PASS [844x390] reset circuit returns to Broad oval preset (select + readout)
+PASS [844x390] touch: tiny is rejected (too-short), red draft + message shown, last valid track kept
+PASS [844x390] mouse: figureEight is rejected (self-intersection), red draft + message shown, last valid track kept
+PASS [844x390] mouse: outOfBounds is rejected (out-of-bounds), red draft + message shown, last valid track kept
+PASS [844x390] touch: overshoot120 (usability probe) — outcome recorded — rejected: The loop crosses itself. Draw a loop without crossings. Current circuit kept.
+PASS [844x390] mouse: triangle (usability probe) — outcome recorded — rejected: Widen the tight bends so the road has room to turn. Current circuit kept.
+PASS [844x390] Clear drawing after an invalid draft erases it and keeps the circuit
+PASS [844x390] touch: Clear clicked mid-stroke cancels; finger lift does not commit
+PASS [844x390] touch: touchcancel/pointercancel cancels the draft with no commit
+PASS [844x390] touch: stroke after cancel commits normally
+PASS [844x390] multi-touch: secondary finger ignored; primary stroke commits with correct shape
+PASS [844x390] multi-touch: two fingers placed together; primary path still drives the stroke
+PASS [844x390] touch: Drawing toggled off mid-stroke cancels; late lift cannot commit; overlay pointer-events none
+PASS [844x390] disabled overlay: hit-test reaches #road; mouse/touch drags emit nothing
+PASS [844x390] rapid 5x Drawing toggles mid-stroke: no commit, aria-pressed matches overlay state
+PASS [844x390] Reset/Clear/preset changes mid-stroke: no commit, ends on Broad oval
+PASS [844x390] presets are deterministic across reselection
+PASS [844x390] mouse: Escape mid-stroke cancels; mouseup does not commit
+PASS [844x390] mouse: page scroll mid-stroke either cancels or keeps mapping consistent (no remapped commit)
+PASS [844x390] touch: viewport resize mid-stroke cancels, no commit, no remapping
+PASS [844x390] orientation swap to 390x844: backing resized, touch stroke commits at correct world position, no overflow
+PASS [844x390] DPR change mid-stroke: backing store rebuilt at DPR 1, gesture survives and commits
+PASS [844x390] hidden/resume mid-stroke: no stale commit or stuck capture; next stroke works — recorded (headless tab switch fidelity limited)
+PASS [844x390] after resume a new stroke commits
+PASS [844x390] window blur (with visibility hidden) mid-stroke cancels, no commit
+PASS [844x390] Detach mid-stroke: no commit, overlay cleared, pointer-events none, controls disabled
+PASS [844x390] detached: drawing emits nothing
+PASS [844x390] rapid detach/attach x7 then one stroke: exactly one commit (no duplicate listeners)
+PASS [844x390] console/page errors: none
+
+102/104 passed
+FAIL 390x844 touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits {"result":"invalid","feedback":"The loop crosses itself. Draw a loop without crossings. Current circuit kept."}
+FAIL 844x390 touch: slow noisy stroke (±1 CSS px jitter at ~1.5 px spacing) commits {"result":"invalid","feedback":"The loop crosses itself. Draw a loop without crossings. Current circuit kept."}
