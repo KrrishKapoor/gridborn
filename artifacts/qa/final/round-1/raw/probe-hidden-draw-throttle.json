@@ -1,0 +1,90 @@
+{
+ "summary": {
+  "label": "prod hidden-draw/throttle",
+  "passed": 7,
+  "total": 7,
+  "failed": []
+ },
+ "results": [
+  {
+   "name": "1440x900: controlled hide mid-stroke cancels; release does not commit; drawing ends, guide removed, focus to hero",
+   "pass": true,
+   "detail": {
+    "mid": "editor-canvas",
+    "u": [
+     "false",
+     "hero-canvas",
+     "Running"
+    ],
+    "guide": 0
+   }
+  },
+  {
+   "name": "1440x900: running intent restored after controlled visibility",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "1440x900: no errors",
+   "pass": true,
+   "detail": {
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "badResponses": []
+   }
+  },
+  {
+   "name": "390x844: controlled hide mid-stroke cancels; release does not commit; drawing ends, guide removed, focus to hero",
+   "pass": true,
+   "detail": {
+    "mid": "editor-canvas",
+    "u": [
+     "false",
+     "hero-canvas",
+     "Running"
+    ],
+    "guide": 0
+   }
+  },
+  {
+   "name": "390x844: running intent restored after controlled visibility",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "390x844: no errors",
+   "pass": true,
+   "detail": {
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "badResponses": []
+   }
+  },
+  {
+   "name": "4x CPU throttle, 1000 cars @1x: informational sample recorded",
+   "pass": true,
+   "detail": {
+    "fps": 60.17953895618098,
+    "cb": 0.5235880399463184,
+    "cbMax": 1.8000000715255737,
+    "changing": 1,
+    "snaps": 60.17953895618098,
+    "steps": 60.17953895618098,
+    "alive": 31
+   }
+  }
+ ],
+ "raw": {
+  "throttle4x1000": {
+   "fps": 60.17953895618098,
+   "cb": 0.5235880399463184,
+   "cbMax": 1.8000000715255737,
+   "changing": 1,
+   "snaps": 60.17953895618098,
+   "steps": 60.17953895618098,
+   "alive": 31
+  }
+ }
+}

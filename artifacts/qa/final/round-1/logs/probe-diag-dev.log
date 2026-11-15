@@ -1,0 +1,1 @@
+PASS DEV diagnostics read() equals intercepted worker events while paused {"n":20,"m":20,"best":[{"runId":1,"generation":20,"index":47},8.386256154378255],"tick":[18164,18164],"desired":[false,"fast"],"log":{"console":[],"pageErrors":[],"requestFailed":[],"badResponses":[]}}

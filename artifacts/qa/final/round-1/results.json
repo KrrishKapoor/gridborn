@@ -1,0 +1,1534 @@
+{
+ "reviewedSha": "50c48845a1787a64b064c2ca33aa511ad2ea8e12",
+ "suites": [
+  {
+   "file": "guide-dev.json",
+   "label": "dev 1440x900 guide",
+   "passed": 36,
+   "total": 36,
+   "failed": []
+  },
+  {
+   "file": "guide-dev.json",
+   "label": "dev 390x844 guide",
+   "passed": 35,
+   "total": 35,
+   "failed": []
+  },
+  {
+   "file": "guide-dev.json",
+   "label": "dev 844x390 guide",
+   "passed": 35,
+   "total": 35,
+   "failed": []
+  },
+  {
+   "file": "guide-prod-desktop.json",
+   "label": "prod 1440x900 guide (SUPERSEDED first iteration; failures were harness artifacts, see report)",
+   "passed": 33,
+   "total": 36,
+   "failed": [
+    "after commit: guide and shading removed",
+    "Stop drawing removes guide",
+    "no console/page/request errors"
+   ],
+   "superseded": true
+  },
+  {
+   "file": "guide-prod.json",
+   "label": "prod 1440x900 guide",
+   "passed": 36,
+   "total": 36,
+   "failed": []
+  },
+  {
+   "file": "guide-prod.json",
+   "label": "prod 390x844 guide",
+   "passed": 35,
+   "total": 35,
+   "failed": []
+  },
+  {
+   "file": "guide-prod.json",
+   "label": "prod 844x390 guide",
+   "passed": 35,
+   "total": 35,
+   "failed": []
+  },
+  {
+   "file": "learning-dev.json",
+   "label": "dev learning",
+   "passed": 13,
+   "total": 13,
+   "failed": []
+  },
+  {
+   "file": "learning-prod.json",
+   "label": "prod learning",
+   "passed": 12,
+   "total": 12,
+   "failed": []
+  },
+  {
+   "file": "lifecycle.json",
+   "label": "prod lifecycle",
+   "passed": 12,
+   "total": 12,
+   "failed": []
+  },
+  {
+   "file": "main-dev-1440x900.json",
+   "label": "dev 1440x900 main",
+   "passed": 63,
+   "total": 63,
+   "failed": []
+  },
+  {
+   "file": "main-dev-390x844.json",
+   "label": "dev 390x844 main",
+   "passed": 63,
+   "total": 63,
+   "failed": []
+  },
+  {
+   "file": "main-dev-844x390.json",
+   "label": "dev 844x390 main",
+   "passed": 63,
+   "total": 63,
+   "failed": []
+  },
+  {
+   "file": "main-prod-1440x900.json",
+   "label": "prod 1440x900 main",
+   "passed": 63,
+   "total": 63,
+   "failed": []
+  },
+  {
+   "file": "main-prod-390x844.json",
+   "label": "prod 390x844 main",
+   "passed": 63,
+   "total": 63,
+   "failed": []
+  },
+  {
+   "file": "main-prod-844x390.json",
+   "label": "prod 844x390 main",
+   "passed": 63,
+   "total": 63,
+   "failed": []
+  },
+  {
+   "file": "probe-hidden-draw-throttle.json",
+   "label": "prod hidden-draw/throttle",
+   "passed": 7,
+   "total": 7,
+   "failed": []
+  }
+ ],
+ "totals": {
+  "passed": 667,
+  "total": 670
+ },
+ "npm": {
+  "ci": "exit 0, 0 vulnerabilities (fsevents install-script warning only)",
+  "test": "144/144 passed, 12 files",
+  "build": "exit 0; dist/index.html + index-zy4M-xBt.js + index-Cd1wJ0fS.css + worker-D_lbJ8Lc.js (module worker); 0 matches for __gridborn/installDiagnostics/diagnostics"
+ },
+ "performance": {
+  "headless1440": [
+   {
+    "label": "512 early 1",
+    "frames": 300,
+    "rafFps": 59.94,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.72,
+    "callbackP95": 1.3,
+    "callbackMax": 1.6,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 284,
+    "snapshotsPerSec": 60.14,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 0.45,
+    "workerBusy": 0.03,
+    "alive": [
+     18,
+     495
+    ],
+    "generations": [
+     1,
+     1
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 early 4",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.36,
+    "callbackP95": 0.7,
+    "callbackMax": 1.5,
+    "freshShare": 0.87,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 4,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 140,
+    "snapshotsPerSec": 59.97,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 0.23,
+    "workerBusy": 0.06,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     1,
+     3
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 early fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.02,
+    "callbackP95": 0.1,
+    "callbackMax": 0.4,
+    "freshShare": 0.16,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9.39,
+    "stepsPerSec": 2704,
+    "workerMsPerStep": 0.16,
+    "workerBusy": 0.44,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     5,
+     19
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved 1",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 1.06,
+    "callbackP95": 1.4,
+    "callbackMax": 2,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 367,
+    "snapshotsPerSec": 60.16,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 1.09,
+    "workerBusy": 0.07,
+    "alive": [
+     44,
+     356
+    ],
+    "generations": [
+     60,
+     60
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved 4",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.93,
+    "callbackP95": 1.5,
+    "callbackMax": 1.9,
+    "freshShare": 1,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 4,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 410,
+    "snapshotsPerSec": 59.95,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 1.19,
+    "workerBusy": 0.29,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     61,
+     63
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.01,
+    "callbackP95": 0.1,
+    "callbackMax": 0.2,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9,
+    "stepsPerSec": 2028,
+    "workerMsPerStep": 0.28,
+    "workerBusy": 0.57,
+    "alive": [
+     26,
+     512
+    ],
+    "generations": [
+     68,
+     87
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early 1",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 1.24,
+    "callbackP95": 2.6,
+    "callbackMax": 3.1,
+    "freshShare": 0.97,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 556,
+    "snapshotsPerSec": 60.15,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 0.66,
+    "workerBusy": 0.04,
+    "alive": [
+     32,
+     978
+    ],
+    "generations": [
+     1,
+     1
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early 4",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.55,
+    "callbackP95": 1.2,
+    "callbackMax": 2.6,
+    "freshShare": 0.79,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 2,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 255,
+    "snapshotsPerSec": 59.95,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 0.36,
+    "workerBusy": 0.09,
+    "alive": [
+     1,
+     1000
+    ],
+    "generations": [
+     1,
+     2
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.02,
+    "callbackP95": 0.1,
+    "callbackMax": 0.2,
+    "freshShare": 0.16,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9.39,
+    "stepsPerSec": 2354,
+    "workerMsPerStep": 0.19,
+    "workerBusy": 0.45,
+    "alive": [
+     1,
+     1000
+    ],
+    "generations": [
+     4,
+     13
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved 1",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 1.47,
+    "callbackP95": 2.4,
+    "callbackMax": 2.8,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 813,
+    "snapshotsPerSec": 60.16,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 1.62,
+    "workerBusy": 0.1,
+    "alive": [
+     654,
+     836
+    ],
+    "generations": [
+     40,
+     40
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved 4",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.81,
+    "callbackP95": 1.1,
+    "callbackMax": 1.9,
+    "freshShare": 0.82,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 3,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 827,
+    "snapshotsPerSec": 59.97,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 1.15,
+    "workerBusy": 0.27,
+    "alive": [
+     2,
+     1000
+    ],
+    "generations": [
+     41,
+     43
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.01,
+    "callbackP95": 0.1,
+    "callbackMax": 0.2,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9,
+    "stepsPerSec": 1071,
+    "workerMsPerStep": 0.53,
+    "workerBusy": 0.57,
+    "alive": [
+     597,
+     1000
+    ],
+    "generations": [
+     46,
+     55
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "input latency 1000 @4x (pointerdown->aria-pressed, ms)",
+    "values": [
+     0.4,
+     0.4,
+     0.4,
+     0.5,
+     0.2,
+     0.3
+    ]
+   },
+   {
+    "label": "errors",
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "badResponses": []
+   }
+  ],
+  "headed1440": [
+   {
+    "label": "512 early 1",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 18.6,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 0.72,
+    "callbackP95": 1.3,
+    "callbackMax": 1.5,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 284,
+    "snapshotsPerSec": 60.16,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 0.42,
+    "workerBusy": 0.03,
+    "alive": [
+     18,
+     495
+    ],
+    "generations": [
+     1,
+     1
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 early 4",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 18.6,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 0.45,
+    "callbackP95": 1.4,
+    "callbackMax": 1.6,
+    "freshShare": 0.78,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 3,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 139,
+    "snapshotsPerSec": 59.96,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 0.31,
+    "workerBusy": 0.07,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     1,
+     3
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 early fast",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 18.6,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 0.02,
+    "callbackP95": 0.1,
+    "callbackMax": 0.3,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9.39,
+    "stepsPerSec": 2768,
+    "workerMsPerStep": 0.16,
+    "workerBusy": 0.45,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     5,
+     20
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved 1",
+    "frames": 301,
+    "rafFps": 60.15,
+    "intervalP50": 16.7,
+    "intervalP99": 18.5,
+    "intervalMax": 18.6,
+    "over20ms": 0,
+    "callbackAvg": 1.07,
+    "callbackP95": 1.5,
+    "callbackMax": 1.7,
+    "freshShare": 0.75,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 1,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 414,
+    "snapshotsPerSec": 59.95,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 1.79,
+    "workerBusy": 0.11,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     60,
+     61
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved 4",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 18.6,
+    "intervalMax": 18.6,
+    "over20ms": 0,
+    "callbackAvg": 0.88,
+    "callbackP95": 1.4,
+    "callbackMax": 1.7,
+    "freshShare": 0.99,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 3,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 409,
+    "snapshotsPerSec": 59.96,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 1.16,
+    "workerBusy": 0.28,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     61,
+     64
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved fast",
+    "frames": 300,
+    "rafFps": 59.98,
+    "intervalP50": 16.7,
+    "intervalP99": 18.2,
+    "intervalMax": 18.3,
+    "over20ms": 0,
+    "callbackAvg": 0.01,
+    "callbackP95": 0.1,
+    "callbackMax": 0.1,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9,
+    "stepsPerSec": 2035,
+    "workerMsPerStep": 0.28,
+    "workerBusy": 0.57,
+    "alive": [
+     3,
+     512
+    ],
+    "generations": [
+     68,
+     87
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early 1",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 18.5,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 1.25,
+    "callbackP95": 2.7,
+    "callbackMax": 3.2,
+    "freshShare": 0.98,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 556,
+    "snapshotsPerSec": 60.15,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 0.69,
+    "workerBusy": 0.04,
+    "alive": [
+     32,
+     970
+    ],
+    "generations": [
+     1,
+     1
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early 4",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 18.7,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 0.57,
+    "callbackP95": 1.3,
+    "callbackMax": 2.7,
+    "freshShare": 0.88,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 1,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 255,
+    "snapshotsPerSec": 59.97,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 0.37,
+    "workerBusy": 0.09,
+    "alive": [
+     1,
+     1000
+    ],
+    "generations": [
+     1,
+     2
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 18.5,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 0.02,
+    "callbackP95": 0.1,
+    "callbackMax": 0.4,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9.2,
+    "stepsPerSec": 2342,
+    "workerMsPerStep": 0.19,
+    "workerBusy": 0.45,
+    "alive": [
+     1,
+     1000
+    ],
+    "generations": [
+     4,
+     13
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved 1",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 18.6,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 1.54,
+    "callbackP95": 2.3,
+    "callbackMax": 2.9,
+    "freshShare": 0.83,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 728,
+    "snapshotsPerSec": 59.96,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 2.57,
+    "workerBusy": 0.15,
+    "alive": [
+     654,
+     699
+    ],
+    "generations": [
+     40,
+     40
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved 4",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 18.6,
+    "intervalMax": 18.7,
+    "over20ms": 0,
+    "callbackAvg": 0.87,
+    "callbackP95": 1.2,
+    "callbackMax": 2,
+    "freshShare": 0.91,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 4,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 805,
+    "snapshotsPerSec": 59.95,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 1.2,
+    "workerBusy": 0.29,
+    "alive": [
+     2,
+     1000
+    ],
+    "generations": [
+     41,
+     43
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved fast",
+    "frames": 300,
+    "rafFps": 59.98,
+    "intervalP50": 16.7,
+    "intervalP99": 18.3,
+    "intervalMax": 18.5,
+    "over20ms": 0,
+    "callbackAvg": 0.01,
+    "callbackP95": 0.1,
+    "callbackMax": 0.2,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9,
+    "stepsPerSec": 1100,
+    "workerMsPerStep": 0.53,
+    "workerBusy": 0.58,
+    "alive": [
+     6,
+     1000
+    ],
+    "generations": [
+     46,
+     56
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "input latency 1000 @4x (pointerdown->aria-pressed, ms)",
+    "values": [
+     0.6,
+     0.4,
+     0.2,
+     0.4,
+     0.2,
+     0.3
+    ]
+   },
+   {
+    "label": "errors",
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "badResponses": []
+   }
+  ],
+  "headless390": [
+   {
+    "label": "512 early 1",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.7,
+    "callbackP95": 1.4,
+    "callbackMax": 1.7,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 278,
+    "snapshotsPerSec": 59.97,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 0.41,
+    "workerBusy": 0.02,
+    "alive": [
+     18,
+     469
+    ],
+    "generations": [
+     1,
+     1
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 early 4",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.4,
+    "callbackP95": 1.3,
+    "callbackMax": 1.5,
+    "freshShare": 0.81,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 3,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 141,
+    "snapshotsPerSec": 59.95,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 0.31,
+    "workerBusy": 0.07,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     1,
+     3
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 early fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.02,
+    "callbackP95": 0.1,
+    "callbackMax": 0.3,
+    "freshShare": 0.16,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9.39,
+    "stepsPerSec": 2676,
+    "workerMsPerStep": 0.16,
+    "workerBusy": 0.44,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     5,
+     19
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved 1",
+    "frames": 300,
+    "rafFps": 59.93,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.96,
+    "callbackP95": 1.4,
+    "callbackMax": 1.9,
+    "freshShare": 1,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 2,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 376,
+    "snapshotsPerSec": 60.13,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 1.11,
+    "workerBusy": 0.07,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     60,
+     61
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved 4",
+    "frames": 300,
+    "rafFps": 59.95,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.86,
+    "callbackP95": 1.4,
+    "callbackMax": 2,
+    "freshShare": 1,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 2,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 409,
+    "snapshotsPerSec": 60.15,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 1.25,
+    "workerBusy": 0.3,
+    "alive": [
+     1,
+     512
+    ],
+    "generations": [
+     61,
+     63
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "512 evolved fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.01,
+    "callbackP95": 0.1,
+    "callbackMax": 0.1,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9,
+    "stepsPerSec": 2021,
+    "workerMsPerStep": 0.28,
+    "workerBusy": 0.57,
+    "alive": [
+     46,
+     512
+    ],
+    "generations": [
+     68,
+     87
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early 1",
+    "frames": 300,
+    "rafFps": 59.96,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 1.19,
+    "callbackP95": 2.5,
+    "callbackMax": 3.3,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 550,
+    "snapshotsPerSec": 60.16,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 0.51,
+    "workerBusy": 0.03,
+    "alive": [
+     32,
+     961
+    ],
+    "generations": [
+     1,
+     1
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early 4",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.53,
+    "callbackP95": 1.2,
+    "callbackMax": 2.4,
+    "freshShare": 0.99,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 2,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 256,
+    "snapshotsPerSec": 59.97,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 0.37,
+    "workerBusy": 0.09,
+    "alive": [
+     1,
+     1000
+    ],
+    "generations": [
+     1,
+     2
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 early fast",
+    "frames": 300,
+    "rafFps": 59.98,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.02,
+    "callbackP95": 0.1,
+    "callbackMax": 0.2,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9.4,
+    "stepsPerSec": 2348,
+    "workerMsPerStep": 0.19,
+    "workerBusy": 0.45,
+    "alive": [
+     1,
+     1000
+    ],
+    "generations": [
+     4,
+     13
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved 1",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 1.41,
+    "callbackP95": 2.1,
+    "callbackMax": 2.7,
+    "freshShare": 1,
+    "changingPoseShare": 1,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 693,
+    "snapshotsPerSec": 59.97,
+    "stepsPerSec": 60,
+    "workerMsPerStep": 1.6,
+    "workerBusy": 0.1,
+    "alive": [
+     1,
+     683
+    ],
+    "generations": [
+     40,
+     40
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved 4",
+    "frames": 300,
+    "rafFps": 59.98,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.75,
+    "callbackP95": 1,
+    "callbackMax": 2.3,
+    "freshShare": 0.84,
+    "changingPoseShare": 0.99,
+    "identicalDrawnFrames": 3,
+    "drawnFrameShare": 1,
+    "carsDrawnAvg": 796,
+    "snapshotsPerSec": 59.98,
+    "stepsPerSec": 240,
+    "workerMsPerStep": 1.14,
+    "workerBusy": 0.27,
+    "alive": [
+     2,
+     1000
+    ],
+    "generations": [
+     41,
+     43
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "1000 evolved fast",
+    "frames": 300,
+    "rafFps": 59.97,
+    "intervalP50": 16.7,
+    "intervalP99": 16.8,
+    "intervalMax": 16.8,
+    "over20ms": 0,
+    "callbackAvg": 0.01,
+    "callbackP95": 0.1,
+    "callbackMax": 0.2,
+    "freshShare": 0.15,
+    "changingPoseShare": 0,
+    "identicalDrawnFrames": 0,
+    "drawnFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "snapshotsPerSec": 9,
+    "stepsPerSec": 1084,
+    "workerMsPerStep": 0.53,
+    "workerBusy": 0.57,
+    "alive": [
+     597,
+     1000
+    ],
+    "generations": [
+     46,
+     56
+    ],
+    "longTasks": 0,
+    "longTaskMax": 0
+   },
+   {
+    "label": "input latency 1000 @4x (pointerdown->aria-pressed, ms)",
+    "values": [
+     0.4,
+     0.3,
+     0.2,
+     0.4,
+     0.1,
+     0.5
+    ]
+   },
+   {
+    "label": "errors",
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "badResponses": []
+   }
+  ]
+ },
+ "learning": {
+  "defaultOval": {
+   "gen1": {
+    "generation": 1,
+    "ticks": 711,
+    "bestFitness": 2.6905483921831923,
+    "meanFitness": 0.15361970761271768,
+    "completedLaps": 16,
+    "bestLapSeconds": 9.283548234504227
+   },
+   "gen60": {
+    "generation": 60,
+    "ticks": 528,
+    "bestFitness": 2.7229259830050996,
+    "meanFitness": 1.8494749198583071,
+    "completedLaps": 341,
+    "bestLapSeconds": 8.312220509847005
+   },
+   "records": [
+    [
+     1,
+     9.2835
+    ],
+    [
+     2,
+     8.7646
+    ],
+    [
+     4,
+     8.743
+    ],
+    [
+     5,
+     8.6853
+    ],
+    [
+     7,
+     8.576
+    ],
+    [
+     9,
+     8.555
+    ],
+    [
+     10,
+     8.5547
+    ],
+    [
+     11,
+     8.4585
+    ],
+    [
+     14,
+     8.4383
+    ],
+    [
+     17,
+     8.4226
+    ],
+    [
+     18,
+     8.4178
+    ],
+    [
+     19,
+     8.4116
+    ],
+    [
+     20,
+     8.3863
+    ],
+    [
+     21,
+     8.3727
+    ],
+    [
+     23,
+     8.3586
+    ],
+    [
+     24,
+     8.3524
+    ],
+    [
+     28,
+     8.3437
+    ],
+    [
+     29,
+     8.3395
+    ],
+    [
+     30,
+     8.3391
+    ],
+    [
+     32,
+     8.337
+    ],
+    [
+     37,
+     8.3329
+    ],
+    [
+     39,
+     8.3199
+    ],
+    [
+     48,
+     8.3166
+    ],
+    [
+     55,
+     8.3164
+    ],
+    [
+     57,
+     8.316
+    ],
+    [
+     59,
+     8.3122
+    ]
+   ]
+  },
+  "drawnCcw": {
+   "gens": 25,
+   "laps": [
+    10.100254602428516,
+    10.100254602428516,
+    9.751569534099406,
+    9.751569534099406,
+    9.751569534099406,
+    9.751569534099406,
+    9.751569534099406,
+    9.751569534099406,
+    9.751569534099406,
+    9.487608083089192,
+    9.478813425699869,
+    9.478813425699869,
+    9.469325002034505,
+    9.467993438620585,
+    9.463877614339193,
+    9.444609069824219,
+    9.34482905069987,
+    9.335333251953125,
+    9.335333251953125,
+    9.313763936360678,
+    9.313763936360678,
+    9.313763936360678,
+    9.30490748087565,
+    9.301888275146485,
+    9.290611012776692
+   ]
+  }
+ },
+ "verdict": "PASS",
+ "findings": [
+  {
+   "id": "L1",
+   "severity": "low",
+   "title": "Short landscape drawable guide is small (accepted design trade-off of retained letterboxed stage)"
+  },
+  {
+   "id": "L2",
+   "severity": "low",
+   "title": "Touch-only visitors see keyboard-only \"Escape cancels the stroke\" hint"
+  },
+  {
+   "id": "L3",
+   "severity": "low",
+   "title": "Retained: some intermediate laptop heights need scrolling; at 1000x700 the guide is not fully visible when drawing starts"
+  },
+  {
+   "id": "L4",
+   "severity": "low",
+   "title": "Retained: selection scrolls to inspector; selection clears per generation"
+  },
+  {
+   "id": "L5",
+   "severity": "low",
+   "title": "Retained: fast mode worker idle ~43-58%"
+  },
+  {
+   "id": "INFO",
+   "severity": "info",
+   "title": "Genuine OS/tab hiding not inducible in headed Playwright Chrome; physical iOS/Safari not tested"
+  }
+ ],
+ "totalsFinal": {
+  "passed": 634,
+  "total": 634
+ },
+ "supersededIterations": [
+  {
+   "run": "guide prod desktop iteration 1 (raw/guide-prod-desktop.json)",
+   "failed": [
+    "after commit: guide and shading removed",
+    "Stop drawing removes guide",
+    "no console/page/request errors"
+   ],
+   "cause": "guide-line probe counted the opaque road fill of the just-drawn circuit as guide pixels; console warnings were Chrome willReadFrequently warnings caused by the QA getImageData probe itself. Probe refined to the guide stroke colour and QA-caused warnings separated; rerun 106/106."
+  },
+  {
+   "run": "main prod desktop iteration 1 (log overwritten)",
+   "failed": [
+    "inspection updates live while running"
+   ],
+   "cause": "the clicked car crashed within 600 ms of resuming, so its activations were legitimately constant and the panel said \"Crashed \u00b7 stopped\". Check refined to accept honest stopped state and a separate keyboard-selected driving-car live check was added; rerun 63/63."
+  },
+  {
+   "run": "learning dev iteration 1 (log overwritten)",
+   "failed": [
+    "DEV diagnostics history equals intercepted worker generation events"
+   ],
+   "cause": "QA script read session.accepted.runId (field is .id) and compared while fast mode still ran. Fixed paused probe raw/probe-diag-dev.json PASS and rerun 13/13."
+  }
+ ]
+}

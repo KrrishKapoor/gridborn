@@ -1,0 +1,8 @@
+
+> gridborn@0.0.0 dev
+> vite --host 127.0.0.1 --strictPort --port 5394 --strictPort
+
+
+  VITE v8.3.8  ready in 47 ms
+
+  ➜  Local:   http://127.0.0.1:5394/

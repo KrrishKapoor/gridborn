@@ -4,7 +4,12 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 ## Open
 
-None. No credential or permission blocker found in initial repository/provider checks.
+None. Delivery is complete; no credential or permission blocker remains.
+
+## Resolved — 2026-11-15 final acceptance (Codex PM)
+
+- Accept the fresh final PASS with no high/medium issues and retain five documented low findings; do not change the accepted source after review. Preserve the 634/634 final-run evidence with the superseded harness attempts clearly distinguished.
+- Performance and touch claims stay bounded by the actual M5/Chrome/emulation evidence. Keep physical-device and genuine OS hiding unverified. Deployment remains Cortana's step after Krrish reviews.
 
 ## Resolved — 2026-11-15 T4 acceptance (Codex PM)
 

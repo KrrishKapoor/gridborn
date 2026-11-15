@@ -1,0 +1,13 @@
+PASS [prod learning] default oval: run A and replay B identical for 60 generations (stats + best paths) {"a":60,"b":60}
+PASS [prod learning] default oval: actual best lap improves over generations {"firstLap":9.283548234504227,"best":8.312220509847005,"records":26,"firstGen":{"generation":1,"ticks":711,"bestFitness":2.6905483921831923,"meanFitness":0.15361970761271768,"completedLaps":16,"bestLapSeconds":9.283548234504227},"lastGen":{"generation":60,"ticks":528,"bestFitness":2.7229259830050996,"meanFitness":1.8494749198583071,"completedLaps":341,"bestLapSeconds":8.312220509847005}}
+PASS [prod learning] default oval: completed laps and mean fitness rise {"c":[16,341],"m":[0.15361970761271768,1.8494749198583071]}
+PASS [prod learning] recorded best paths: ~10 Hz samples spanning the lap time, fitness = 2 + (1 - t/D) {"sample":[{"gen":1,"car":336,"lap":9.283548234504227,"samples":94,"tEnd":9.283548355102539,"len":1899.6965258213804,"fitErr":0},{"gen":2,"car":359,"lap":8.764620530037133,"samples":89,"tEnd":8.764620780944824,"len":1804.6978260548585,"fitErr":0},{"gen":4,"car":212,"lap":8.74301094138652,"samples":89,"tEnd":8.743010520935059,"len":1801.9053857060792,"fitErr":0}]}
+PASS [prod learning] every record path is a distinct recorded trajectory (not canned) {"uniq":26,"n":26}
+PASS [prod learning] evolved best line is not the centerline (cuts inside: shorter path, large median offset, within road) {"lenBest":1725.7617393145779,"centerline":1965.4808349609375,"medianOffset":39.62573578059385,"maxOffset":41.141151763986144}
+PASS [prod learning] 4x presentation produces the identical first 3 generations as fast {"c":[9.283548234504227,8.764620530037133,8.764620530037133],"a":[9.283548234504227,8.764620530037133,8.764620530037133]}
+PASS [prod learning] 1x presentation produces identical generation 1 {"d":{"generation":1,"ticks":711,"bestFitness":2.6905483921831923,"meanFitness":0.15361970761271768,"completedLaps":16,"bestLapSeconds":9.283548234504227},"a":{"generation":1,"ticks":711,"bestFitness":2.6905483921831923,"meanFitness":0.15361970761271768,"completedLaps":16,"bestLapSeconds":9.283548234504227}}
+PASS [prod learning] drawn CCW circuit: identical geometry from identical stroke
+PASS [prod learning] drawn CCW circuit: replay identical for 25 generations
+PASS [prod learning] drawn CCW circuit: actual best lap improves {"first":10.100254602428516,"best":9.290611012776692,"records":14}
+PASS [prod learning] no console/page/request errors {"console":[],"pageErrors":[],"requestFailed":[],"badResponses":[]}
+{"label":"prod learning","passed":12,"total":12,"failed":[]}

@@ -1,0 +1,1354 @@
+[
+ {
+  "label": "dev 1440x900 guide",
+  "passed": 36,
+  "total": 36,
+  "failed": [],
+  "results": [
+   {
+    "name": "no guide/shade before drawing",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 0,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 185.493125,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "corner brackets visible before drawing",
+    "pass": true,
+    "detail": {
+     "b": "block/block"
+    }
+   },
+   {
+    "name": "drawing: shaded letterbox (outside world)",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 72,
+     "guideCss": {
+      "x": 185.493125,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "drawing: shaded road-clearance band inside world",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 72,
+     "guideCss": {
+      "x": 185.493125,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "drawing: interior of guide not shaded",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 72,
+     "guideCss": {
+      "x": 185.493125,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "drawing: dashed guide line drawn",
+    "pass": true,
+    "detail": {
+     "lineDark": 72,
+     "lineMax": 255
+    }
+   },
+   {
+    "name": "drawing: corner brackets hidden",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "drawing: hint mentions dashed guide + Escape",
+    "pass": true,
+    "detail": {
+     "hint": "Draw inside the dashed guide. Escape cancels the stroke."
+    }
+   },
+   {
+    "name": "drawing: overlay owns input, cars suspended",
+    "pass": true,
+    "detail": {
+     "generation": "01",
+     "alive": "512 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+     "runLabel": "Waiting",
+     "feedback": "Current: Broad oval. Learning waits while you draw. Close a generous loop.",
+     "drawingPressed": "true",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "auto",
+     "active": "BUTTON",
+     "activeFocusVisible": false,
+     "isDrawingClass": true,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   },
+   {
+    "name": "drawing: tap on a car does not select (overlay owns click)",
+    "pass": true,
+    "detail": {
+     "selBefore": 1,
+     "selAfter": 1
+    }
+   },
+   {
+    "name": "pointerdown focuses the editor canvas",
+    "pass": true,
+    "detail": {
+     "midActive": "editor-canvas"
+    }
+   },
+   {
+    "name": "mouse/touch focus on editor shows no keyboard focus ring",
+    "pass": true,
+    "detail": {
+     "focusVisibleMid": false
+    }
+   },
+   {
+    "name": "draft visible mid-stroke, erased by Escape",
+    "pass": true,
+    "detail": {
+     "midDraft": 8910,
+     "afterEscDraft": 0
+    }
+   },
+   {
+    "name": "release after Escape does not commit",
+    "pass": true,
+    "detail": {
+     "resets": 1,
+     "r0": 1,
+     "afterEsc": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Broad oval. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "editor-canvas",
+      "activeFocusVisible": true,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     }
+    }
+   },
+   {
+    "name": "loops drawn right inside the guide are accepted",
+    "pass": true,
+    "detail": {
+     "ellipse-530x330": {
+      "committed": true,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours."
+     },
+     "superellipse-525x325": {
+      "committed": true,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours."
+     }
+    }
+   },
+   {
+    "name": "after commit: drawing ended and overlay inert",
+    "pass": true,
+    "detail": {
+     "generation": "01",
+     "alive": "512 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Pick a car, or focus the field and press Enter.",
+     "runLabel": "Running",
+     "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+     "drawingPressed": "false",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "none",
+     "active": "hero-canvas",
+     "activeFocusVisible": false,
+     "isDrawingClass": false,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   },
+   {
+    "name": "after commit: focus restored to hero (not body/editor)",
+    "pass": true,
+    "detail": {
+     "active": "hero-canvas"
+    }
+   },
+   {
+    "name": "after commit: restored focus has no visible ring for pointer users",
+    "pass": true,
+    "detail": {
+     "fv": false
+    }
+   },
+   {
+    "name": "after commit: guide and shading removed",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 185.493125,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "after commit: brackets restored",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "stroke crossing the guide into the shaded band is rejected with clear feedback",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Move the loop away from the edge to leave room for the road."
+    }
+   },
+   {
+    "name": "rejected stroke keeps previous run running/paused state",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "rejected draft stays visible (red) until next action",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "stroke into the shaded letterbox is rejected with clear feedback",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."
+    }
+   },
+   {
+    "name": "Clear drawing erases the draft, keeps guide",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "Reset learning while drawing keeps guide and drawing mode",
+    "pass": true,
+    "detail": {
+     "afterReset": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Your circuit. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "reset-button",
+      "activeFocusVisible": false,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     },
+     "gr": {
+      "letterboxA": 26,
+      "bandA": 26,
+      "insideA": 0,
+      "lineMax": 255,
+      "lineDark": 72,
+      "guideCss": {
+       "x": 185.493125,
+       "y": 50.29,
+       "w": 693.42,
+       "h": 439.42
+      }
+     }
+    }
+   },
+   {
+    "name": "Stop drawing removes guide",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 185.493125,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "Stop drawing leaves focus where the user is (button), no hero steal",
+    "pass": true,
+    "detail": {
+     "active": "BUTTON"
+    }
+   },
+   {
+    "name": "Preset while drawing ends drawing and removes guide",
+    "pass": true,
+    "detail": {
+     "pp": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Pick a car, or focus the field and press Enter.",
+      "runLabel": "Running",
+      "feedback": "Current: Riverbend. Draw a loop to make it yours.",
+      "drawingPressed": "false",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "none",
+      "active": "BUTTON",
+      "activeFocusVisible": false,
+      "isDrawingClass": false,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     },
+     "pgd": {
+      "letterboxA": 0,
+      "bandA": 0,
+      "insideA": 0,
+      "lineMax": 0,
+      "lineDark": 0,
+      "guideCss": {
+       "x": 185.493125,
+       "y": 50.29,
+       "w": 693.42,
+       "h": 439.42
+      }
+     }
+    }
+   },
+   {
+    "name": "resize mid-stroke cancels without commit",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "guide refits after resize",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 36,
+     "guideCss": {
+      "x": 158.19625,
+      "y": 50.29,
+      "w": 693.42,
+      "h": 439.42
+     }
+    }
+   },
+   {
+    "name": "keyboard: Draw toggle keeps focus on visible button with ring",
+    "pass": true,
+    "detail": {
+     "k": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Riverbend. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "BUTTON",
+      "activeFocusVisible": true,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     }
+    }
+   },
+   {
+    "name": "keyboard: Draw button focus ring visible",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "keyboard: Escape without stroke harmless; Enter stops drawing",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "no console/page/request errors",
+    "pass": true,
+    "detail": {
+     "console": [],
+     "pageErrors": [],
+     "requestFailed": [],
+     "badResponses": [],
+     "qaReadbackWarnings": 2,
+     "errs": []
+    }
+   },
+   {
+    "name": "no horizontal overflow",
+    "pass": true,
+    "detail": {}
+   }
+  ],
+  "tapFeedback": "Current: Broad oval. Draw a larger loop with room for a full-width road."
+ },
+ {
+  "label": "dev 390x844 guide",
+  "passed": 35,
+  "total": 35,
+  "failed": [],
+  "results": [
+   {
+    "name": "no guide/shade before drawing",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 0,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 27.999453125000002,
+      "y": 41.455182291666674,
+      "w": 294.00109375,
+      "h": 186.30838541666665
+     }
+    }
+   },
+   {
+    "name": "corner brackets visible before drawing",
+    "pass": true,
+    "detail": {
+     "b": "block/block"
+    }
+   },
+   {
+    "name": "drawing: shaded letterbox (outside world)",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 64,
+     "guideCss": {
+      "x": 27.999453125000002,
+      "y": 41.455182291666674,
+      "w": 294.00109375,
+      "h": 186.30838541666665
+     }
+    }
+   },
+   {
+    "name": "drawing: shaded road-clearance band inside world",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 64,
+     "guideCss": {
+      "x": 27.999453125000002,
+      "y": 41.455182291666674,
+      "w": 294.00109375,
+      "h": 186.30838541666665
+     }
+    }
+   },
+   {
+    "name": "drawing: interior of guide not shaded",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 64,
+     "guideCss": {
+      "x": 27.999453125000002,
+      "y": 41.455182291666674,
+      "w": 294.00109375,
+      "h": 186.30838541666665
+     }
+    }
+   },
+   {
+    "name": "drawing: dashed guide line drawn",
+    "pass": true,
+    "detail": {
+     "lineDark": 64,
+     "lineMax": 255
+    }
+   },
+   {
+    "name": "drawing: corner brackets hidden",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "drawing: hint mentions dashed guide + Escape",
+    "pass": true,
+    "detail": {
+     "hint": "Draw inside the dashed guide. Escape cancels the stroke."
+    }
+   },
+   {
+    "name": "drawing: overlay owns input, cars suspended",
+    "pass": true,
+    "detail": {
+     "generation": "01",
+     "alive": "512 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+     "runLabel": "Waiting",
+     "feedback": "Current: Broad oval. Learning waits while you draw. Close a generous loop.",
+     "drawingPressed": "true",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "auto",
+     "active": "BUTTON",
+     "activeFocusVisible": false,
+     "isDrawingClass": true,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   },
+   {
+    "name": "drawing: tap on a car does not select (overlay owns click)",
+    "pass": true,
+    "detail": {
+     "selBefore": 1,
+     "selAfter": 1
+    }
+   },
+   {
+    "name": "pointerdown focuses the editor canvas",
+    "pass": true,
+    "detail": {
+     "midActive": "editor-canvas"
+    }
+   },
+   {
+    "name": "mouse/touch focus on editor shows no keyboard focus ring",
+    "pass": true,
+    "detail": {
+     "focusVisibleMid": false
+    }
+   },
+   {
+    "name": "draft visible mid-stroke, erased by Escape",
+    "pass": true,
+    "detail": {
+     "midDraft": 3835,
+     "afterEscDraft": 0
+    }
+   },
+   {
+    "name": "release after Escape does not commit",
+    "pass": true,
+    "detail": {
+     "resets": 1,
+     "r0": 1,
+     "afterEsc": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Broad oval. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "editor-canvas",
+      "activeFocusVisible": true,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     }
+    }
+   },
+   {
+    "name": "loops drawn right inside the guide are accepted",
+    "pass": true,
+    "detail": {
+     "ellipse-530x330": {
+      "committed": true,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours."
+     },
+     "superellipse-525x325": {
+      "committed": true,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours."
+     }
+    }
+   },
+   {
+    "name": "after commit: drawing ended and overlay inert",
+    "pass": true,
+    "detail": {
+     "generation": "01",
+     "alive": "512 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Pick a car, or focus the field and press Enter.",
+     "runLabel": "Running",
+     "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+     "drawingPressed": "false",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "none",
+     "active": "hero-canvas",
+     "activeFocusVisible": false,
+     "isDrawingClass": false,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   },
+   {
+    "name": "after commit: focus restored to hero (not body/editor)",
+    "pass": true,
+    "detail": {
+     "active": "hero-canvas"
+    }
+   },
+   {
+    "name": "after commit: restored focus has no visible ring for pointer users",
+    "pass": true,
+    "detail": {
+     "fv": false
+    }
+   },
+   {
+    "name": "after commit: guide and shading removed",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 27.999453125000002,
+      "y": 41.455182291666674,
+      "w": 294.00109375,
+      "h": 186.30838541666665
+     }
+    }
+   },
+   {
+    "name": "after commit: brackets restored",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "stroke crossing the guide into the shaded band is rejected with clear feedback",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Move the loop away from the edge to leave room for the road."
+    }
+   },
+   {
+    "name": "rejected stroke keeps previous run running/paused state",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "rejected draft stays visible (red) until next action",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "stroke into the shaded letterbox is rejected with clear feedback",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."
+    }
+   },
+   {
+    "name": "Clear drawing erases the draft, keeps guide",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "Reset learning while drawing keeps guide and drawing mode",
+    "pass": true,
+    "detail": {
+     "afterReset": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Your circuit. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "reset-button",
+      "activeFocusVisible": false,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     },
+     "gr": {
+      "letterboxA": 26,
+      "bandA": 26,
+      "insideA": 0,
+      "lineMax": 255,
+      "lineDark": 64,
+      "guideCss": {
+       "x": 27.999453125000002,
+       "y": 41.455182291666674,
+       "w": 294.00109375,
+       "h": 186.30838541666665
+      }
+     }
+    }
+   },
+   {
+    "name": "Stop drawing removes guide",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 27.999453125000002,
+      "y": 41.455182291666674,
+      "w": 294.00109375,
+      "h": 186.30838541666665
+     }
+    }
+   },
+   {
+    "name": "Stop drawing leaves focus where the user is (button), no hero steal",
+    "pass": true,
+    "detail": {
+     "active": "BUTTON"
+    }
+   },
+   {
+    "name": "Preset while drawing ends drawing and removes guide",
+    "pass": true,
+    "detail": {
+     "pp": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Pick a car, or focus the field and press Enter.",
+      "runLabel": "Running",
+      "feedback": "Current: Riverbend. Draw a loop to make it yours.",
+      "drawingPressed": "false",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "none",
+      "active": "BUTTON",
+      "activeFocusVisible": false,
+      "isDrawingClass": false,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     },
+     "pgd": {
+      "letterboxA": 0,
+      "bandA": 0,
+      "insideA": 0,
+      "lineMax": 0,
+      "lineDark": 0,
+      "guideCss": {
+       "x": 27.999453125000002,
+       "y": 41.455182291666674,
+       "w": 294.00109375,
+       "h": 186.30838541666665
+      }
+     }
+    }
+   },
+   {
+    "name": "resize mid-stroke cancels without commit",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "guide refits after resize",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 32,
+     "guideCss": {
+      "x": 23.19934374999999,
+      "y": 34.34621875,
+      "w": 243.6013125,
+      "h": 154.37006250000002
+     }
+    }
+   },
+   {
+    "name": "touchcancel mid-stroke never commits",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "second finger ignored; primary stroke still commits a valid loop",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+     "drawing": "false"
+    }
+   },
+   {
+    "name": "no console/page/request errors",
+    "pass": true,
+    "detail": {
+     "console": [],
+     "pageErrors": [],
+     "requestFailed": [],
+     "badResponses": [],
+     "qaReadbackWarnings": 2,
+     "errs": []
+    }
+   },
+   {
+    "name": "no horizontal overflow",
+    "pass": true,
+    "detail": {}
+   }
+  ],
+  "tapFeedback": "Current: Broad oval. Draw a larger loop with room for a full-width road."
+ },
+ {
+  "label": "dev 844x390 guide",
+  "passed": 35,
+  "total": 35,
+  "failed": [],
+  "results": [
+   {
+    "name": "no guide/shade before drawing",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 0,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 124.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "corner brackets visible before drawing",
+    "pass": true,
+    "detail": {
+     "b": "block/block"
+    }
+   },
+   {
+    "name": "drawing: shaded letterbox (outside world)",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 27,
+     "guideCss": {
+      "x": 124.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "drawing: shaded road-clearance band inside world",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 27,
+     "guideCss": {
+      "x": 124.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "drawing: interior of guide not shaded",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 27,
+     "guideCss": {
+      "x": 124.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "drawing: dashed guide line drawn",
+    "pass": true,
+    "detail": {
+     "lineDark": 27,
+     "lineMax": 255
+    }
+   },
+   {
+    "name": "drawing: corner brackets hidden",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "drawing: hint mentions dashed guide + Escape",
+    "pass": true,
+    "detail": {
+     "hint": "Draw inside the dashed guide. Escape cancels the stroke."
+    }
+   },
+   {
+    "name": "drawing: overlay owns input, cars suspended",
+    "pass": true,
+    "detail": {
+     "generation": "01",
+     "alive": "512 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+     "runLabel": "Waiting",
+     "feedback": "Current: Broad oval. Learning waits while you draw. Close a generous loop.",
+     "drawingPressed": "true",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "auto",
+     "active": "BUTTON",
+     "activeFocusVisible": false,
+     "isDrawingClass": true,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   },
+   {
+    "name": "drawing: tap on a car does not select (overlay owns click)",
+    "pass": true,
+    "detail": {
+     "selBefore": 1,
+     "selAfter": 1
+    }
+   },
+   {
+    "name": "pointerdown focuses the editor canvas",
+    "pass": true,
+    "detail": {
+     "midActive": "editor-canvas"
+    }
+   },
+   {
+    "name": "mouse/touch focus on editor shows no keyboard focus ring",
+    "pass": true,
+    "detail": {
+     "focusVisibleMid": false
+    }
+   },
+   {
+    "name": "draft visible mid-stroke, erased by Escape",
+    "pass": true,
+    "detail": {
+     "midDraft": 2994,
+     "afterEscDraft": 0
+    }
+   },
+   {
+    "name": "release after Escape does not commit",
+    "pass": true,
+    "detail": {
+     "resets": 1,
+     "r0": 1,
+     "afterEsc": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Broad oval. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "editor-canvas",
+      "activeFocusVisible": true,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     }
+    }
+   },
+   {
+    "name": "loops drawn right inside the guide are accepted",
+    "pass": true,
+    "detail": {
+     "ellipse-530x330": {
+      "committed": true,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours."
+     },
+     "superellipse-525x325": {
+      "committed": true,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours."
+     }
+    }
+   },
+   {
+    "name": "after commit: drawing ended and overlay inert",
+    "pass": true,
+    "detail": {
+     "generation": "01",
+     "alive": "512 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Pick a car, or focus the field and press Enter.",
+     "runLabel": "Running",
+     "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+     "drawingPressed": "false",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "none",
+     "active": "hero-canvas",
+     "activeFocusVisible": false,
+     "isDrawingClass": false,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   },
+   {
+    "name": "after commit: focus restored to hero (not body/editor)",
+    "pass": true,
+    "detail": {
+     "active": "hero-canvas"
+    }
+   },
+   {
+    "name": "after commit: restored focus has no visible ring for pointer users",
+    "pass": true,
+    "detail": {
+     "fv": false
+    }
+   },
+   {
+    "name": "after commit: guide and shading removed",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 124.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "after commit: brackets restored",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "stroke crossing the guide into the shaded band is rejected with clear feedback",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Move the loop away from the edge to leave room for the road."
+    }
+   },
+   {
+    "name": "rejected stroke keeps previous run running/paused state",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "rejected draft stays visible (red) until next action",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "stroke into the shaded letterbox is rejected with clear feedback",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."
+    }
+   },
+   {
+    "name": "Clear drawing erases the draft, keeps guide",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "Reset learning while drawing keeps guide and drawing mode",
+    "pass": true,
+    "detail": {
+     "afterReset": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Draw inside the dashed guide. Escape cancels the stroke.",
+      "runLabel": "Waiting",
+      "feedback": "Current: Your circuit. Learning waits while you draw. Close a generous loop.",
+      "drawingPressed": "true",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "auto",
+      "active": "reset-button",
+      "activeFocusVisible": false,
+      "isDrawingClass": true,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     },
+     "gr": {
+      "letterboxA": 26,
+      "bandA": 26,
+      "insideA": 0,
+      "lineMax": 255,
+      "lineDark": 27,
+      "guideCss": {
+       "x": 124.36375,
+       "y": 20.48875,
+       "w": 227.2725,
+       "h": 144.0225
+      }
+     }
+    }
+   },
+   {
+    "name": "Stop drawing removes guide",
+    "pass": true,
+    "detail": {
+     "letterboxA": 0,
+     "bandA": 0,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 0,
+     "guideCss": {
+      "x": 124.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "Stop drawing leaves focus where the user is (button), no hero steal",
+    "pass": true,
+    "detail": {
+     "active": "BUTTON"
+    }
+   },
+   {
+    "name": "Preset while drawing ends drawing and removes guide",
+    "pass": true,
+    "detail": {
+     "pp": {
+      "generation": "01",
+      "alive": "512 / 512",
+      "lap": "—",
+      "noLap": true,
+      "history": "No history yet",
+      "hint": "Pick a car, or focus the field and press Enter.",
+      "runLabel": "Running",
+      "feedback": "Current: Riverbend. Draw a loop to make it yours.",
+      "drawingPressed": "false",
+      "running": "true",
+      "rate": "1",
+      "editorPE": "none",
+      "active": "BUTTON",
+      "activeFocusVisible": false,
+      "isDrawingClass": false,
+      "inspectionHidden": true,
+      "selection": "Selected car",
+      "overflowX": 0
+     },
+     "pgd": {
+      "letterboxA": 0,
+      "bandA": 0,
+      "insideA": 0,
+      "lineMax": 0,
+      "lineDark": 0,
+      "guideCss": {
+       "x": 124.36375,
+       "y": 20.48875,
+       "w": 227.2725,
+       "h": 144.0225
+      }
+     }
+    }
+   },
+   {
+    "name": "resize mid-stroke cancels without commit",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "guide refits after resize",
+    "pass": true,
+    "detail": {
+     "letterboxA": 26,
+     "bandA": 26,
+     "insideA": 0,
+     "lineMax": 255,
+     "lineDark": 27,
+     "guideCss": {
+      "x": 94.36375,
+      "y": 20.48875,
+      "w": 227.2725,
+      "h": 144.0225
+     }
+    }
+   },
+   {
+    "name": "touchcancel mid-stroke never commits",
+    "pass": true,
+    "detail": {}
+   },
+   {
+    "name": "second finger ignored; primary stroke still commits a valid loop",
+    "pass": true,
+    "detail": {
+     "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+     "drawing": "false"
+    }
+   },
+   {
+    "name": "no console/page/request errors",
+    "pass": true,
+    "detail": {
+     "console": [],
+     "pageErrors": [],
+     "requestFailed": [],
+     "badResponses": [],
+     "qaReadbackWarnings": 2,
+     "errs": []
+    }
+   },
+   {
+    "name": "no horizontal overflow",
+    "pass": true,
+    "detail": {}
+   }
+  ],
+  "tapFeedback": "Current: Broad oval. Draw a larger loop with room for a full-width road."
+ }
+]

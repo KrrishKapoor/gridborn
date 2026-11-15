@@ -2,6 +2,15 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — Final acceptance and retained low findings (Codex PM)
+
+- Accept the fresh final Opus round-1 PASS: zero high/medium findings, full mandatory browser behavior substantiated on the exact combined candidate, including the final guide and Escape corrections. Stop at one final round; no source change follows the accepted review.
+- Preserve all final scripts/logs/raw data and 149 screenshots, including the superseded harness attempts and their explanations. The valid final assertion total is 634/634; the aggregate JSON also intentionally retains a superseded 33/36 iteration. Do not mislabel script failures as app defects or silently remove them.
+- Retain final L1–L5 as low gaps: finger drawing is cramped on short landscape; the keyboard Escape hint also appears on touch-only screens (Stop drawing and Clear drawing remain available); some laptop heights require scrolling; selecting a car scrolls to its own ray/network inspector; fast mode leaves some worker capacity idle. These do not prevent the tested core experience.
+- Retain earlier conservative geometry limits: sharp/tight corners, some quantized phone jitter, and long retraced closure tails may be rejected safely. Selection intentionally clears each generation to preserve identity; offscreen demos refresh on reveal. No optional dark theme was added.
+- Coverage limits remain explicit: Chrome 157 on Apple M5, emulated mobile touch/DPR, no physical iOS/Safari/Android test, and controlled visibility rather than genuine OS hiding. Approximately 60 fps with 1,000 cars is a measured result for this machine, not a guarantee for all devices.
+- Hand off the static build command `npm run build` and output `dist/` for Cloudflare Pages project `gridborn`. Cortana deploys only after Krrish reviews; no deployment or main merge is performed here.
+
 ## 2026-11-15 — T4 acceptance and final review candidate (Codex PM)
 
 - Accept the independently reviewed integrated app under the required no-high threshold. The reviewer verified all earlier T2 runtime/reset/validation and T3 inspector/text fixes; preserve the original report and its exact assertion counts.
@@ -89,4 +98,4 @@ Newest decisions first. All product and quality requirements in `pm/brief.md` re
 
 ## Known gaps
 
-No high findings remain in accepted task reviews. The final combined review is pending, including verification of the small guide/Escape corrections. Retained low behavior and device/performance limits are listed in the newest decision; T1R additionally retains occasional integer-coordinate jitter rejection, sharp-corner rejection, and long-tail rejection while preserving the last valid track. Earlier T0/T2/T3 production findings were independently resolved in T4.
+Final independent QA has no high or medium findings. Retained low findings, geometry rejection limits, optional dark-mode omission and physical-device/OS-visibility verification limits are listed in the newest decision and `pm/handoff.md`. All mandatory work is complete; there is no credential or permission blocker.

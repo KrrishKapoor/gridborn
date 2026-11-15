@@ -1,0 +1,107 @@
+PASS [prod 1440x900 guide] no guide/shade before drawing {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":0,"lineDark":0,"guideCss":{"x":185.493125,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] corner brackets visible before drawing {"b":"block/block"}
+PASS [prod 1440x900 guide] drawing: shaded letterbox (outside world) {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":72,"guideCss":{"x":185.493125,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] drawing: shaded road-clearance band inside world {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":72,"guideCss":{"x":185.493125,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] drawing: interior of guide not shaded {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":72,"guideCss":{"x":185.493125,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] drawing: dashed guide line drawn {"lineDark":72,"lineMax":255}
+PASS [prod 1440x900 guide] drawing: corner brackets hidden
+PASS [prod 1440x900 guide] drawing: hint mentions dashed guide + Escape {"hint":"Draw inside the dashed guide. Escape cancels the stroke."}
+PASS [prod 1440x900 guide] drawing: overlay owns input, cars suspended {"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Broad oval. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":true
+PASS [prod 1440x900 guide] drawing: tap on a car does not select (overlay owns click) {"selBefore":1,"selAfter":1}
+PASS [prod 1440x900 guide] pointerdown focuses the editor canvas {"midActive":"editor-canvas"}
+PASS [prod 1440x900 guide] mouse/touch focus on editor shows no keyboard focus ring {"focusVisibleMid":false}
+PASS [prod 1440x900 guide] draft visible mid-stroke, erased by Escape {"midDraft":8910,"afterEscDraft":0}
+PASS [prod 1440x900 guide] release after Escape does not commit {"resets":1,"r0":1,"afterEsc":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Broad oval. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"editor-canvas","activeFocu
+PASS [prod 1440x900 guide] loops drawn right inside the guide are accepted {"ellipse-530x330":{"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours."},"superellipse-525x325":{"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours."}}
+PASS [prod 1440x900 guide] after commit: drawing ended and overlay inert {"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Your circuit. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"hero-canvas","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":true
+PASS [prod 1440x900 guide] after commit: focus restored to hero (not body/editor) {"active":"hero-canvas"}
+PASS [prod 1440x900 guide] after commit: restored focus has no visible ring for pointer users {"fv":false}
+PASS [prod 1440x900 guide] after commit: guide and shading removed {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":255,"lineDark":0,"guideCss":{"x":185.493125,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] after commit: brackets restored
+PASS [prod 1440x900 guide] stroke crossing the guide into the shaded band is rejected with clear feedback {"feedback":"Current: Your circuit. Move the loop away from the edge to leave room for the road."}
+PASS [prod 1440x900 guide] rejected stroke keeps previous run running/paused state
+PASS [prod 1440x900 guide] rejected draft stays visible (red) until next action
+PASS [prod 1440x900 guide] stroke into the shaded letterbox is rejected with clear feedback {"feedback":"Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."}
+PASS [prod 1440x900 guide] Clear drawing erases the draft, keeps guide
+PASS [prod 1440x900 guide] Reset learning while drawing keeps guide and drawing mode {"afterReset":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Your circuit. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"reset-button","activeFocusVisible":false
+PASS [prod 1440x900 guide] Stop drawing removes guide {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":255,"lineDark":0,"guideCss":{"x":185.493125,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] Stop drawing leaves focus where the user is (button), no hero steal {"active":"BUTTON"}
+PASS [prod 1440x900 guide] Preset while drawing ends drawing and removes guide {"pp":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Riverbend. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":true,"
+PASS [prod 1440x900 guide] resize mid-stroke cancels without commit
+PASS [prod 1440x900 guide] guide refits after resize {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":36,"guideCss":{"x":158.19625,"y":50.29,"w":693.42,"h":439.42}}
+PASS [prod 1440x900 guide] keyboard: Draw toggle keeps focus on visible button with ring {"k":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Riverbend. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"BUTTON","activeFocusVisible":true,"isDrawingClass":t
+PASS [prod 1440x900 guide] keyboard: Draw button focus ring visible
+PASS [prod 1440x900 guide] keyboard: Escape without stroke harmless; Enter stops drawing
+PASS [prod 1440x900 guide] no console/page/request errors {"console":[],"pageErrors":[],"requestFailed":[],"badResponses":[],"qaReadbackWarnings":2,"errs":[]}
+PASS [prod 1440x900 guide] no horizontal overflow
+PASS [prod 390x844 guide] no guide/shade before drawing {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":0,"lineDark":0,"guideCss":{"x":27.999453125000002,"y":41.455182291666674,"w":294.00109375,"h":186.30838541666665}}
+PASS [prod 390x844 guide] corner brackets visible before drawing {"b":"block/block"}
+PASS [prod 390x844 guide] drawing: shaded letterbox (outside world) {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":64,"guideCss":{"x":27.999453125000002,"y":41.455182291666674,"w":294.00109375,"h":186.30838541666665}}
+PASS [prod 390x844 guide] drawing: shaded road-clearance band inside world {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":64,"guideCss":{"x":27.999453125000002,"y":41.455182291666674,"w":294.00109375,"h":186.30838541666665}}
+PASS [prod 390x844 guide] drawing: interior of guide not shaded {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":64,"guideCss":{"x":27.999453125000002,"y":41.455182291666674,"w":294.00109375,"h":186.30838541666665}}
+PASS [prod 390x844 guide] drawing: dashed guide line drawn {"lineDark":64,"lineMax":255}
+PASS [prod 390x844 guide] drawing: corner brackets hidden
+PASS [prod 390x844 guide] drawing: hint mentions dashed guide + Escape {"hint":"Draw inside the dashed guide. Escape cancels the stroke."}
+PASS [prod 390x844 guide] drawing: overlay owns input, cars suspended {"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Broad oval. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":true
+PASS [prod 390x844 guide] drawing: tap on a car does not select (overlay owns click) {"selBefore":1,"selAfter":1}
+PASS [prod 390x844 guide] pointerdown focuses the editor canvas {"midActive":"editor-canvas"}
+PASS [prod 390x844 guide] mouse/touch focus on editor shows no keyboard focus ring {"focusVisibleMid":false}
+PASS [prod 390x844 guide] draft visible mid-stroke, erased by Escape {"midDraft":3835,"afterEscDraft":0}
+PASS [prod 390x844 guide] release after Escape does not commit {"resets":1,"r0":1,"afterEsc":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Broad oval. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"editor-canvas","activeFocu
+PASS [prod 390x844 guide] loops drawn right inside the guide are accepted {"ellipse-530x330":{"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours."},"superellipse-525x325":{"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours."}}
+PASS [prod 390x844 guide] after commit: drawing ended and overlay inert {"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Your circuit. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"hero-canvas","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":true
+PASS [prod 390x844 guide] after commit: focus restored to hero (not body/editor) {"active":"hero-canvas"}
+PASS [prod 390x844 guide] after commit: restored focus has no visible ring for pointer users {"fv":false}
+PASS [prod 390x844 guide] after commit: guide and shading removed {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":255,"lineDark":0,"guideCss":{"x":27.999453125000002,"y":41.455182291666674,"w":294.00109375,"h":186.30838541666665}}
+PASS [prod 390x844 guide] after commit: brackets restored
+PASS [prod 390x844 guide] stroke crossing the guide into the shaded band is rejected with clear feedback {"feedback":"Current: Your circuit. Move the loop away from the edge to leave room for the road."}
+PASS [prod 390x844 guide] rejected stroke keeps previous run running/paused state
+PASS [prod 390x844 guide] rejected draft stays visible (red) until next action
+PASS [prod 390x844 guide] stroke into the shaded letterbox is rejected with clear feedback {"feedback":"Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."}
+PASS [prod 390x844 guide] Clear drawing erases the draft, keeps guide
+PASS [prod 390x844 guide] Reset learning while drawing keeps guide and drawing mode {"afterReset":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Your circuit. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"reset-button","activeFocusVisible":false
+PASS [prod 390x844 guide] Stop drawing removes guide {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":255,"lineDark":0,"guideCss":{"x":27.999453125000002,"y":41.455182291666674,"w":294.00109375,"h":186.30838541666665}}
+PASS [prod 390x844 guide] Stop drawing leaves focus where the user is (button), no hero steal {"active":"BUTTON"}
+PASS [prod 390x844 guide] Preset while drawing ends drawing and removes guide {"pp":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Riverbend. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":true,"
+PASS [prod 390x844 guide] resize mid-stroke cancels without commit
+PASS [prod 390x844 guide] guide refits after resize {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":32,"guideCss":{"x":23.19934374999999,"y":34.34621875,"w":243.6013125,"h":154.37006250000002}}
+PASS [prod 390x844 guide] touchcancel mid-stroke never commits
+PASS [prod 390x844 guide] second finger ignored; primary stroke still commits a valid loop {"feedback":"Current: Your circuit. Draw a loop to make it yours.","drawing":"false"}
+PASS [prod 390x844 guide] no console/page/request errors {"console":[],"pageErrors":[],"requestFailed":[],"badResponses":[],"qaReadbackWarnings":2,"errs":[]}
+PASS [prod 390x844 guide] no horizontal overflow
+PASS [prod 844x390 guide] no guide/shade before drawing {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":0,"lineDark":0,"guideCss":{"x":124.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] corner brackets visible before drawing {"b":"block/block"}
+PASS [prod 844x390 guide] drawing: shaded letterbox (outside world) {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":27,"guideCss":{"x":124.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] drawing: shaded road-clearance band inside world {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":27,"guideCss":{"x":124.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] drawing: interior of guide not shaded {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":27,"guideCss":{"x":124.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] drawing: dashed guide line drawn {"lineDark":27,"lineMax":255}
+PASS [prod 844x390 guide] drawing: corner brackets hidden
+PASS [prod 844x390 guide] drawing: hint mentions dashed guide + Escape {"hint":"Draw inside the dashed guide. Escape cancels the stroke."}
+PASS [prod 844x390 guide] drawing: overlay owns input, cars suspended {"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Broad oval. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":true
+PASS [prod 844x390 guide] drawing: tap on a car does not select (overlay owns click) {"selBefore":1,"selAfter":1}
+PASS [prod 844x390 guide] pointerdown focuses the editor canvas {"midActive":"editor-canvas"}
+PASS [prod 844x390 guide] mouse/touch focus on editor shows no keyboard focus ring {"focusVisibleMid":false}
+PASS [prod 844x390 guide] draft visible mid-stroke, erased by Escape {"midDraft":2994,"afterEscDraft":0}
+PASS [prod 844x390 guide] release after Escape does not commit {"resets":1,"r0":1,"afterEsc":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Broad oval. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"editor-canvas","activeFocu
+PASS [prod 844x390 guide] loops drawn right inside the guide are accepted {"ellipse-530x330":{"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours."},"superellipse-525x325":{"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours."}}
+PASS [prod 844x390 guide] after commit: drawing ended and overlay inert {"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Your circuit. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"hero-canvas","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":true
+PASS [prod 844x390 guide] after commit: focus restored to hero (not body/editor) {"active":"hero-canvas"}
+PASS [prod 844x390 guide] after commit: restored focus has no visible ring for pointer users {"fv":false}
+PASS [prod 844x390 guide] after commit: guide and shading removed {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":255,"lineDark":0,"guideCss":{"x":124.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] after commit: brackets restored
+PASS [prod 844x390 guide] stroke crossing the guide into the shaded band is rejected with clear feedback {"feedback":"Current: Your circuit. Move the loop away from the edge to leave room for the road."}
+PASS [prod 844x390 guide] rejected stroke keeps previous run running/paused state
+PASS [prod 844x390 guide] rejected draft stays visible (red) until next action
+PASS [prod 844x390 guide] stroke into the shaded letterbox is rejected with clear feedback {"feedback":"Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."}
+PASS [prod 844x390 guide] Clear drawing erases the draft, keeps guide
+PASS [prod 844x390 guide] Reset learning while drawing keeps guide and drawing mode {"afterReset":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Draw inside the dashed guide. Escape cancels the stroke.","runLabel":"Waiting","feedback":"Current: Your circuit. Learning waits while you draw. Close a generous loop.","drawingPressed":"true","running":"true","rate":"1","editorPE":"auto","active":"reset-button","activeFocusVisible":false
+PASS [prod 844x390 guide] Stop drawing removes guide {"letterboxA":0,"bandA":0,"insideA":0,"lineMax":255,"lineDark":0,"guideCss":{"x":124.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] Stop drawing leaves focus where the user is (button), no hero steal {"active":"BUTTON"}
+PASS [prod 844x390 guide] Preset while drawing ends drawing and removes guide {"pp":{"generation":"01","alive":"512 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Riverbend. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":true,"
+PASS [prod 844x390 guide] resize mid-stroke cancels without commit
+PASS [prod 844x390 guide] guide refits after resize {"letterboxA":26,"bandA":26,"insideA":0,"lineMax":255,"lineDark":27,"guideCss":{"x":94.36375,"y":20.48875,"w":227.2725,"h":144.0225}}
+PASS [prod 844x390 guide] touchcancel mid-stroke never commits
+PASS [prod 844x390 guide] second finger ignored; primary stroke still commits a valid loop {"feedback":"Current: Your circuit. Draw a loop to make it yours.","drawing":"false"}
+PASS [prod 844x390 guide] no console/page/request errors {"console":[],"pageErrors":[],"requestFailed":[],"badResponses":[],"qaReadbackWarnings":2,"errs":[]}
+PASS [prod 844x390 guide] no horizontal overflow
+[{"label":"prod 1440x900 guide","passed":36,"total":36,"failed":[]},{"label":"prod 390x844 guide","passed":35,"total":35,"failed":[]},{"label":"prod 844x390 guide","passed":35,"total":35,"failed":[]}]

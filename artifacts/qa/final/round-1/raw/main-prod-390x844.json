@@ -1,0 +1,1095 @@
+{
+ "label": "prod 390x844 main",
+ "passed": 63,
+ "total": 63,
+ "failed": [],
+ "results": [
+  {
+   "name": "hero autostarts: 512 cars, running at 1x, ticks advancing",
+   "pass": true,
+   "detail": {
+    "ticks": 90,
+    "u": {
+     "generation": "01",
+     "alive": "314 / 512",
+     "lap": "—",
+     "noLap": true,
+     "history": "No history yet",
+     "hint": "Pick a car, or focus the field and press Enter.",
+     "runLabel": "Running",
+     "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+     "drawingPressed": "false",
+     "running": "true",
+     "rate": "1",
+     "editorPE": "none",
+     "active": "BODY",
+     "activeFocusVisible": false,
+     "isDrawingClass": false,
+     "inspectionHidden": true,
+     "selection": "Selected car",
+     "overflowX": 0
+    }
+   }
+  },
+  {
+   "name": "hero visible above the fold at this viewport",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "one module worker from built/served asset",
+   "pass": true,
+   "detail": {
+    "url": "http://127.0.0.1:4394/assets/worker-D_lbJ8Lc.js"
+   }
+  },
+  {
+   "name": "diagnostics global absent",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "draw cw: accepted",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-1",
+    "length": 2023.4652099609375,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 165.48486328125,
+     "minY": 107.1207504272461,
+     "maxX": 1034.51513671875,
+     "maxY": 692.805908203125
+    }
+   }
+  },
+  {
+   "name": "draw ccw: accepted",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-2",
+    "length": 2023.4652099609375,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 165.48486328125,
+     "minY": 107.1207504272461,
+     "maxX": 1034.51513671875,
+     "maxY": 692.805908203125
+    }
+   }
+  },
+  {
+   "name": "draw cw-overshoot-120: accepted",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-3",
+    "length": 2023.4652099609375,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 165.48486328125,
+     "minY": 107.1207504272461,
+     "maxX": 1034.51513671875,
+     "maxY": 692.805908203125
+    }
+   }
+  },
+  {
+   "name": "draw ccw-overshoot-150: accepted",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-4",
+    "length": 1925.291259765625,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 185.7477569580078,
+     "minY": 117.30880737304688,
+     "maxX": 1014.2522583007812,
+     "maxY": 682.6185302734375
+    }
+   }
+  },
+  {
+   "name": "draw cw-jitter-1px-a: accepted (jitter; accepted-low limit if rejected)",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-5",
+    "length": 2025.463623046875,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 164.48350524902344,
+     "minY": 107.11044311523438,
+     "maxX": 1034.892578125,
+     "maxY": 692.3378295898438
+    }
+   }
+  },
+  {
+   "name": "draw ccw-jitter-1px-b: accepted (jitter; accepted-low limit if rejected)",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-6",
+    "length": 1977.67236328125,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 174.849609375,
+     "minY": 111.59913635253906,
+     "maxX": 1025.5140380859375,
+     "maxY": 687.8526000976562
+    }
+   }
+  },
+  {
+   "name": "draw cw-jitter-1px-overshoot: accepted (jitter; accepted-low limit if rejected)",
+   "pass": true,
+   "detail": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-7",
+    "length": 2025.9139404296875,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 164.87515258789062,
+     "minY": 107.6508560180664,
+     "maxX": 1035.4874267578125,
+     "maxY": 692.5216064453125
+    }
+   }
+  },
+  {
+   "name": "jitter strokes: at least 2/3 accepted (T1R)",
+   "pass": true,
+   "detail": {
+    "cw-jitter-1px-a": true,
+    "ccw-jitter-1px-b": true,
+    "cw-jitter-1px-overshoot": true
+   }
+  },
+  {
+   "name": "invalid tiny rejected with feedback; previous run kept",
+   "pass": true,
+   "detail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. Draw a larger loop with room for a full-width road."
+   }
+  },
+  {
+   "name": "invalid figure-eight rejected with feedback; previous run kept",
+   "pass": true,
+   "detail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   }
+  },
+  {
+   "name": "invalid crossing-lobe-tail rejected with feedback; previous run kept",
+   "pass": true,
+   "detail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   }
+  },
+  {
+   "name": "invalid double-lap-retrace rejected with feedback; previous run kept",
+   "pass": true,
+   "detail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   }
+  },
+  {
+   "name": "invalid out-of-world rejected with feedback; previous run kept",
+   "pass": true,
+   "detail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."
+   }
+  },
+  {
+   "name": "invalid open-line rejected with feedback; previous run kept",
+   "pass": true,
+   "detail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   }
+  },
+  {
+   "name": "after rejections the previous circuit still runs",
+   "pass": true,
+   "detail": {
+    "label": "Current: Your circuit. Draw a loop to make it yours."
+   }
+  },
+  {
+   "name": "custom bean circuit committed",
+   "pass": true,
+   "detail": {
+    "fb": "Current: Your circuit. Draw a loop to make it yours."
+   }
+  },
+  {
+   "name": "drawn circuit: cars complete real laps after evolving",
+   "pass": true,
+   "detail": {
+    "generations": 18,
+    "firstLapGen": 1,
+    "firstLap": 9.616741944508023,
+    "bestLap": 8.702465311686197,
+    "lapRecords": [
+     9.617,
+     9.472,
+     9.274,
+     9.171,
+     9.107,
+     8.954,
+     8.951,
+     8.847,
+     8.738,
+     8.702
+    ],
+    "completedFirst": 17,
+    "completedLast": 321,
+    "meanFirst": 0.1549280638829818,
+    "meanLast": 1.716424491704751
+   }
+  },
+  {
+   "name": "drawn circuit: best lap improves across generations",
+   "pass": true,
+   "detail": {
+    "generations": 18,
+    "firstLapGen": 1,
+    "firstLap": 9.616741944508023,
+    "bestLap": 8.702465311686197,
+    "lapRecords": [
+     9.617,
+     9.472,
+     9.274,
+     9.171,
+     9.107,
+     8.954,
+     8.951,
+     8.847,
+     8.738,
+     8.702
+    ],
+    "completedFirst": 17,
+    "completedLast": 321,
+    "meanFirst": 0.1549280638829818,
+    "meanLast": 1.716424491704751
+   }
+  },
+  {
+   "name": "drawn circuit: best trajectory drives the drawn (clockwise) direction",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "telemetry best lap equals min actual generation lap",
+   "pass": true,
+   "detail": {
+    "ui": "8.70 s",
+    "actual": 8.702465311686197
+   }
+  },
+  {
+   "name": "sparkline/history label reflects completed generations",
+   "pass": true,
+   "detail": {
+    "history": "18 gen · best / mean"
+   }
+  },
+  {
+   "name": "preset Broad oval loads and runs",
+   "pass": true,
+   "detail": {
+    "fb": "Current: Broad oval. Draw a loop to make it yours."
+   }
+  },
+  {
+   "name": "preset Riverbend loads and runs",
+   "pass": true,
+   "detail": {
+    "fb": "Current: Riverbend. Draw a loop to make it yours."
+   }
+  },
+  {
+   "name": "preset Club circuit loads and runs",
+   "pass": true,
+   "detail": {
+    "fb": "Current: Club circuit. Draw a loop to make it yours."
+   }
+  },
+  {
+   "name": "pause freezes ticks and labels Paused",
+   "pass": true,
+   "detail": {
+    "t1": 57,
+    "t2": 57,
+    "u": "Paused"
+   }
+  },
+  {
+   "name": "play resumes",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "4x ~240 steps/s",
+   "pass": true,
+   "detail": {
+    "sps": 239.5,
+    "snaps": 60
+   }
+  },
+  {
+   "name": "fast: headless (no car draws) and much faster than 4x",
+   "pass": true,
+   "detail": {
+    "stepsPerSec": 3384,
+    "snapsPerSec": 9.5
+   }
+  },
+  {
+   "name": "fast: canvas explains cars are hidden",
+   "pass": true,
+   "detail": {
+    "generation": "10",
+    "alive": "2 / 512",
+    "lap": "9.72 s",
+    "noLap": false,
+    "history": "9 gen · best / mean",
+    "hint": "Headless learning. Choose 1× to inspect.",
+    "runLabel": "Headless",
+    "feedback": "Current: Club circuit. Draw a loop to make it yours.",
+    "drawingPressed": "false",
+    "running": "true",
+    "rate": "fast",
+    "editorPE": "none",
+    "active": "BUTTON",
+    "activeFocusVisible": false,
+    "isDrawingClass": false,
+    "inspectionHidden": true,
+    "selection": "Selected car",
+    "overflowX": 0
+   }
+  },
+  {
+   "name": "1x ~60 steps/s",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "rapid play/rate input converges to last intent (paused, 1x)",
+   "pass": true,
+   "detail": {
+    "fin": [
+     "false",
+     "1"
+    ],
+    "worker": [
+     false,
+     1
+    ]
+   }
+  },
+  {
+   "name": "population 1000 accepted and running",
+   "pass": true,
+   "detail": {
+    "alive": "999 / 1000"
+   }
+  },
+  {
+   "name": "rapid preset/reset input: monotonic IDs, final run is the last intent",
+   "pass": true,
+   "detail": {
+    "sent": [
+     [
+      15,
+      "riverbend"
+     ],
+     [
+      16,
+      "club-circuit"
+     ],
+     [
+      17,
+      "club-circuit"
+     ],
+     [
+      18,
+      "broad-oval"
+     ]
+    ]
+   }
+  },
+  {
+   "name": "tap/click on a drawn car selects exactly that car",
+   "pass": true,
+   "detail": {
+    "target": {
+     "idx": 178,
+     "x": 922.2305908203125,
+     "y": 238.45346069335938,
+     "near": 30
+    },
+    "got": {
+     "runId": 18,
+     "generation": 1,
+     "index": 178
+    }
+   }
+  },
+  {
+   "name": "inspector shown with car number and hero cue",
+   "pass": true,
+   "detail": {
+    "sel": "Car 179 · generation 1",
+    "hint": "Inspecting car 179 · details below"
+   }
+  },
+  {
+   "name": "activations equal an independent tanh forward pass of the actual weights",
+   "pass": true,
+   "detail": {
+    "err": 2.657977948850032e-8
+   }
+  },
+  {
+   "name": "7 ray endpoints consistent with car pose/heading and distances; inputs = distances",
+   "pass": true,
+   "detail": {
+    "rayErr": 0.000026737118861310448,
+    "inputErr": 0
+   }
+  },
+  {
+   "name": "inspector edges show actual weights; outputs shown",
+   "pass": true,
+   "detail": {
+    "w0": -0.913,
+    "actual": -0.91302090883255,
+    "steer": "+0.13",
+    "thr": "95%",
+    "state": "Driving · speed 219 · seven live distances"
+   }
+  },
+  {
+   "name": "inspection updates live while running (driving car), or shows stopped state honestly",
+   "pass": true,
+   "detail": {
+    "still": true,
+    "status": 1,
+    "domState": "Crashed · stopped · speed 0 · seven live distances"
+   }
+  },
+  {
+   "name": "Close hides inspector and focuses hero",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "keyboard Enter selects a driving car and focuses Close",
+   "pass": true,
+   "detail": {
+    "s1": {
+     "runId": 18,
+     "generation": 1,
+     "index": 39
+    },
+    "active": "quiet-button"
+   }
+  },
+  {
+   "name": "keyboard-selected driving car: activations change live while running",
+   "pass": true,
+   "detail": {
+    "st": [
+     0,
+     0
+    ],
+    "sel": true
+   }
+  },
+  {
+   "name": "ArrowRight cycles to another car (or same if only one alive)",
+   "pass": true,
+   "detail": {
+    "s1": 39,
+    "s2": 44
+   }
+  },
+  {
+   "name": "Escape closes inspection and restores hero focus with visible ring",
+   "pass": true,
+   "detail": {
+    "u3": [
+     true,
+     "hero-canvas",
+     true
+    ]
+   }
+  },
+  {
+   "name": "DPR-only change rebuilds hero backing store",
+   "pass": true,
+   "detail": {
+    "b1": [
+     350,
+     350
+    ]
+   }
+  },
+  {
+   "name": "rotation: no overflow, still running, no errors",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "320x568: no horizontal overflow",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "controlled hidden: worker ticks stop and rAF loop stops",
+   "pass": true,
+   "detail": {
+    "h0": {
+     "tick": 460,
+     "raf": 5893
+    },
+    "h1": {
+     "tick": 460,
+     "raf": 5893
+    }
+   }
+  },
+  {
+   "name": "controlled visible: running intent resumes without catch-up burst",
+   "pass": true,
+   "detail": {
+    "dt": 48
+   }
+  },
+  {
+   "name": "sensors demo responds to input",
+   "pass": true,
+   "detail": {
+    "changed": true,
+    "text": "Illustration · local perception Follow selected car 7 rays. One local view. 1 0.72 2 0.78 3 0.92 4 1.00 5 0.85 6 0.72 7 0.65 Position Heading Drag the car. A shorter ray means a nearer wall."
+   }
+  },
+  {
+   "name": "network demo responds to input",
+   "pass": true,
+   "detail": {
+    "changed": true,
+    "text": "Illustration · 8 → 8 → 2 Follow selected car SENSE COMBINE ACT ray 1 ray 2 ray 3 ray 4 ray 5 ray 6 ray 7 speed Steer +0.14 Throttle 53% Front clearance Steering weight Change an input or the gold connection. Watch the outputs respond."
+   }
+  },
+  {
+   "name": "genetics demo mutates on button",
+   "pass": true,
+   "detail": {
+    "changed": true,
+    "text": "Illustration · 12 weights, no actual lineage 1 mutation Parent A Candidate 1 Candidate 2 Candidate 3 Candidate 4 Parent B Candidate 1 Candidate 2 Candidate 3 Candidate 4 A B Child Select → combine → vary Crossover Mutate a weight Start again Ochre marks small weight changes. Useful variations can su"
+   }
+  },
+  {
+   "name": "racing-line demo shows the actual recorded best on the actual road",
+   "pass": true,
+   "detail": {
+    "changed": false,
+    "text": "Recorded best · 8.76 s lap Explore a corner A line has to be earned. Your best recorded attempt will appear here. COMPLETED GENERATIONS 3 completed · best / mean fitness Generation 2, car 360. A complete timed lap, recorded from the simulation."
+   }
+  },
+  {
+   "name": "demos label illustration vs live honestly",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "smallest rendered text >= 10.5px",
+   "pass": true,
+   "detail": {
+    "min": 11,
+    "where": "A.read-link:How it learns ↓"
+   }
+  },
+  {
+   "name": "touch targets >= 44px (inputs inside >=44 labels allowed)",
+   "pass": true,
+   "detail": {
+    "small": [
+     [
+      "INPUT:",
+      16,
+      16
+     ],
+     [
+      "INPUT:",
+      16,
+      16
+     ]
+    ]
+   }
+  },
+  {
+   "name": "no horizontal overflow",
+   "pass": true,
+   "detail": {}
+  },
+  {
+   "name": "canvases: no selection/callout, touch-action none",
+   "pass": true,
+   "detail": {
+    "ua": "none",
+    "wus": "none",
+    "touch": "none",
+    "eTouch": "none"
+   }
+  },
+  {
+   "name": "no console errors/warnings, page errors, failed or >=400 requests",
+   "pass": true,
+   "detail": {
+    "console": [],
+    "pageErrors": [],
+    "requestFailed": [],
+    "badResponses": [],
+    "errs": []
+   }
+  }
+ ],
+ "learning": {
+  "drawResults": {
+   "cw": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-1",
+    "length": 2023.4652099609375,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 165.48486328125,
+     "minY": 107.1207504272461,
+     "maxX": 1034.51513671875,
+     "maxY": 692.805908203125
+    }
+   },
+   "ccw": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-2",
+    "length": 2023.4652099609375,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 165.48486328125,
+     "minY": 107.1207504272461,
+     "maxX": 1034.51513671875,
+     "maxY": 692.805908203125
+    }
+   },
+   "cw-overshoot-120": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-3",
+    "length": 2023.4652099609375,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 165.48486328125,
+     "minY": 107.1207504272461,
+     "maxX": 1034.51513671875,
+     "maxY": 692.805908203125
+    }
+   },
+   "ccw-overshoot-150": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-4",
+    "length": 1925.291259765625,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 185.7477569580078,
+     "minY": 117.30880737304688,
+     "maxX": 1014.2522583007812,
+     "maxY": 682.6185302734375
+    }
+   },
+   "cw-jitter-1px-a": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-5",
+    "length": 2025.463623046875,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 164.48350524902344,
+     "minY": 107.11044311523438,
+     "maxX": 1034.892578125,
+     "maxY": 692.3378295898438
+    }
+   },
+   "ccw-jitter-1px-b": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-6",
+    "length": 1977.67236328125,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 174.849609375,
+     "minY": 111.59913635253906,
+     "maxX": 1025.5140380859375,
+     "maxY": 687.8526000976562
+    }
+   },
+   "cw-jitter-1px-overshoot": {
+    "committed": true,
+    "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+    "trackId": "drawn-7",
+    "length": 2025.9139404296875,
+    "sameDirection": true,
+    "bounds": {
+     "minX": 164.87515258789062,
+     "minY": 107.6508560180664,
+     "maxX": 1035.4874267578125,
+     "maxY": 692.5216064453125
+    }
+   }
+  },
+  "invalid": {
+   "tiny": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. Draw a larger loop with room for a full-width road."
+   },
+   "figure-eight": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   },
+   "crossing-lobe-tail": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   },
+   "double-lap-retrace": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   },
+   "out-of-world": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."
+   },
+   "open-line": {
+    "rejected": true,
+    "feedback": "Current: Your circuit. The loop crosses itself. Draw a loop without crossings."
+   }
+  },
+  "drawnBean": {
+   "generations": 18,
+   "firstLapGen": 1,
+   "firstLap": 9.616741944508023,
+   "bestLap": 8.702465311686197,
+   "lapRecords": [
+    9.617,
+    9.472,
+    9.274,
+    9.171,
+    9.107,
+    8.954,
+    8.951,
+    8.847,
+    8.738,
+    8.702
+   ],
+   "completedFirst": 17,
+   "completedLast": 321,
+   "meanFirst": 0.1549280638829818,
+   "meanLast": 1.716424491704751,
+   "history": [
+    {
+     "generation": 1,
+     "bestLapSeconds": 9.616741944508023,
+     "completedLaps": 17,
+     "bestFitness": 2.679441935183066,
+     "meanFitness": 0.1549280638829818,
+     "ticks": 730
+    },
+    {
+     "generation": 2,
+     "bestLapSeconds": 9.471666361201901,
+     "completedLaps": 37,
+     "bestFitness": 2.6842777879599367,
+     "meanFitness": 0.26709331094385763,
+     "ticks": 1125
+    },
+    {
+     "generation": 3,
+     "bestLapSeconds": 9.273862762767349,
+     "completedLaps": 62,
+     "bestFitness": 2.6908712412410885,
+     "meanFitness": 0.3953415520092698,
+     "ticks": 1007
+    },
+    {
+     "generation": 4,
+     "bestLapSeconds": 9.17076941899766,
+     "completedLaps": 65,
+     "bestFitness": 2.6943076860334116,
+     "meanFitness": 0.4130524487930751,
+     "ticks": 864
+    },
+    {
+     "generation": 5,
+     "bestLapSeconds": 9.17076941899766,
+     "completedLaps": 74,
+     "bestFitness": 2.6943076860334116,
+     "meanFitness": 0.46277955218500766,
+     "ticks": 706
+    },
+    {
+     "generation": 6,
+     "bestLapSeconds": 9.106733261890183,
+     "completedLaps": 98,
+     "bestFitness": 2.6964422246036603,
+     "meanFitness": 0.5787619189760647,
+     "ticks": 912
+    },
+    {
+     "generation": 7,
+     "bestLapSeconds": 8.953892517089844,
+     "completedLaps": 116,
+     "bestFitness": 2.7015369160970053,
+     "meanFitness": 0.6695842611869962,
+     "ticks": 838
+    },
+    {
+     "generation": 8,
+     "bestLapSeconds": 8.950863713357036,
+     "completedLaps": 101,
+     "bestFitness": 2.701637876221432,
+     "meanFitness": 0.5939984261440527,
+     "ticks": 1095
+    },
+    {
+     "generation": 9,
+     "bestLapSeconds": 8.950863713357036,
+     "completedLaps": 145,
+     "bestFitness": 2.701637876221432,
+     "meanFitness": 0.816421077318587,
+     "ticks": 1424
+    },
+    {
+     "generation": 10,
+     "bestLapSeconds": 8.950863713357036,
+     "completedLaps": 174,
+     "bestFitness": 2.701637876221432,
+     "meanFitness": 0.9641632756682039,
+     "ticks": 998
+    },
+    {
+     "generation": 11,
+     "bestLapSeconds": 8.847237566250596,
+     "completedLaps": 216,
+     "bestFitness": 2.70509208112498,
+     "meanFitness": 1.1859174696874353,
+     "ticks": 912
+    },
+    {
+     "generation": 12,
+     "bestLapSeconds": 8.847237566250596,
+     "completedLaps": 247,
+     "bestFitness": 2.70509208112498,
+     "meanFitness": 1.3424669620809493,
+     "ticks": 1255
+    },
+    {
+     "generation": 13,
+     "bestLapSeconds": 8.73795420328776,
+     "completedLaps": 248,
+     "bestFitness": 2.708734859890408,
+     "meanFitness": 1.3441624762182482,
+     "ticks": 872
+    },
+    {
+     "generation": 14,
+     "bestLapSeconds": 8.73795420328776,
+     "completedLaps": 270,
+     "bestFitness": 2.708734859890408,
+     "meanFitness": 1.4530339616025691,
+     "ticks": 1467
+    },
+    {
+     "generation": 15,
+     "bestLapSeconds": 8.73795420328776,
+     "completedLaps": 297,
+     "bestFitness": 2.708734859890408,
+     "meanFitness": 1.5899654899852291,
+     "ticks": 1443
+    },
+    {
+     "generation": 16,
+     "bestLapSeconds": 8.73795420328776,
+     "completedLaps": 272,
+     "bestFitness": 2.708734859890408,
+     "meanFitness": 1.466587049878819,
+     "ticks": 1705
+    },
+    {
+     "generation": 17,
+     "bestLapSeconds": 8.73795420328776,
+     "completedLaps": 326,
+     "bestFitness": 2.708734859890408,
+     "meanFitness": 1.7391190839251938,
+     "ticks": 873
+    },
+    {
+     "generation": 18,
+     "bestLapSeconds": 8.702465311686197,
+     "completedLaps": 321,
+     "bestFitness": 2.7099178229437935,
+     "meanFitness": 1.716424491704751,
+     "ticks": 921
+    }
+   ],
+   "best": [
+    {
+     "car": {
+      "runId": 9,
+      "generation": 1,
+      "index": 336
+     },
+     "lapSeconds": 9.616741944508023,
+     "fitness": 2.679441935183066,
+     "n": 98,
+     "area": 288101.42481069104
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 2,
+      "index": 186
+     },
+     "lapSeconds": 9.471666361201901,
+     "fitness": 2.6842777879599367,
+     "n": 96,
+     "area": 271809.6986525222
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 3,
+      "index": 439
+     },
+     "lapSeconds": 9.273862762767349,
+     "fitness": 2.6908712412410885,
+     "n": 94,
+     "area": 254469.45263906196
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 4,
+      "index": 20
+     },
+     "lapSeconds": 9.17076941899766,
+     "fitness": 2.6943076860334116,
+     "n": 93,
+     "area": 257530.47554490878
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 6,
+      "index": 427
+     },
+     "lapSeconds": 9.106733261890183,
+     "fitness": 2.6964422246036603,
+     "n": 93,
+     "area": 252647.2332056968
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 7,
+      "index": 195
+     },
+     "lapSeconds": 8.953892517089844,
+     "fitness": 2.7015369160970053,
+     "n": 91,
+     "area": 244268.297422627
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 8,
+      "index": 276
+     },
+     "lapSeconds": 8.950863713357036,
+     "fitness": 2.701637876221432,
+     "n": 91,
+     "area": 239746.44465755997
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 11,
+      "index": 18
+     },
+     "lapSeconds": 8.847237566250596,
+     "fitness": 2.70509208112498,
+     "n": 90,
+     "area": 240307.9100780841
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 13,
+      "index": 177
+     },
+     "lapSeconds": 8.73795420328776,
+     "fitness": 2.708734859890408,
+     "n": 89,
+     "area": 231706.98114785226
+    },
+    {
+     "car": {
+      "runId": 9,
+      "generation": 18,
+      "index": 501
+     },
+     "lapSeconds": 8.702465311686197,
+     "fitness": 2.7099178229437935,
+     "n": 89,
+     "area": 230658.5966628699
+    }
+   ]
+  },
+  "demos": {
+   "sensors": {
+    "changed": true,
+    "text": "Illustration · local perception Follow selected car 7 rays. One local view. 1 0.72 2 0.78 3 0.92 4 1.00 5 0.85 6 0.72 7 0.65 Position Heading Drag the car. A shorter ray means a nearer wall."
+   },
+   "network": {
+    "changed": true,
+    "text": "Illustration · 8 → 8 → 2 Follow selected car SENSE COMBINE ACT ray 1 ray 2 ray 3 ray 4 ray 5 ray 6 ray 7 speed Steer +0.14 Throttle 53% Front clearance Steering weight Change an input or the gold connection. Watch the outputs respond."
+   },
+   "genetics": {
+    "changed": true,
+    "text": "Illustration · 12 weights, no actual lineage 1 mutation Parent A Candidate 1 Candidate 2 Candidate 3 Candidate 4 Parent B Candidate 1 Candidate 2 Candidate 3 Candidate 4 A B Child Select → combine → vary Crossover Mutate a weight Start again Ochre marks small weight changes. Useful variations can su"
+   },
+   "racing-line": {
+    "changed": false,
+    "text": "Recorded best · 8.76 s lap Explore a corner A line has to be earned. Your best recorded attempt will appear here. COMPLETED GENERATIONS 3 completed · best / mean fitness Generation 2, car 360. A complete timed lap, recorded from the simulation."
+   }
+  }
+ }
+}

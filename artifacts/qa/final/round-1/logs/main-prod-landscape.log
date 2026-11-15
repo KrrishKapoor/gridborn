@@ -1,0 +1,64 @@
+PASS [prod 844x390 main] hero autostarts: 512 cars, running at 1x, ticks advancing {"ticks":91,"u":{"generation":"01","alive":"314 / 512","lap":"—","noLap":true,"history":"No history yet","hint":"Pick a car, or focus the field and press Enter.","runLabel":"Running","feedback":"Current: Broad oval. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"1","editorPE":"none","active":"BODY","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidde
+PASS [prod 844x390 main] hero visible above the fold at this viewport
+PASS [prod 844x390 main] one module worker from built/served asset {"url":"http://127.0.0.1:4394/assets/worker-D_lbJ8Lc.js"}
+PASS [prod 844x390 main] diagnostics global absent
+PASS [prod 844x390 main] draw cw: accepted {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-1","length":2023.4652099609375,"sameDirection":true,"bounds":{"minX":165.48487854003906,"minY":107.12073516845703,"maxX":1034.51513671875,"maxY":692.805908203125}}
+PASS [prod 844x390 main] draw ccw: accepted {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-2","length":2023.4652099609375,"sameDirection":true,"bounds":{"minX":165.48487854003906,"minY":107.12073516845703,"maxX":1034.51513671875,"maxY":692.805908203125}}
+PASS [prod 844x390 main] draw cw-overshoot-120: accepted {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-3","length":2023.4652099609375,"sameDirection":true,"bounds":{"minX":165.48487854003906,"minY":107.12073516845703,"maxX":1034.51513671875,"maxY":692.805908203125}}
+PASS [prod 844x390 main] draw ccw-overshoot-150: accepted {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-4","length":1925.291259765625,"sameDirection":true,"bounds":{"minX":185.7477569580078,"minY":117.30880737304688,"maxX":1014.2522583007812,"maxY":682.6185913085938}}
+PASS [prod 844x390 main] draw cw-jitter-1px-a: accepted (jitter; accepted-low limit if rejected) {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-5","length":2026.555908203125,"sameDirection":true,"bounds":{"minX":164.0933074951172,"minY":107.09220123291016,"maxX":1035.100341796875,"maxY":692.206298828125}}
+PASS [prod 844x390 main] draw ccw-jitter-1px-b: accepted (jitter; accepted-low limit if rejected) {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-6","length":1979.2896728515625,"sameDirection":true,"bounds":{"minX":174.29287719726562,"minY":111.42778778076172,"maxX":1026.0126953125,"maxY":687.9387817382812}}
+PASS [prod 844x390 main] draw cw-jitter-1px-overshoot: accepted (jitter; accepted-low limit if rejected) {"committed":true,"feedback":"Current: Your circuit. Draw a loop to make it yours.","trackId":"drawn-7","length":2027.204345703125,"sameDirection":true,"bounds":{"minX":164.60183715820312,"minY":107.79917907714844,"maxX":1035.985107421875,"maxY":692.44287109375}}
+PASS [prod 844x390 main] jitter strokes: at least 2/3 accepted (T1R) {"cw-jitter-1px-a":true,"ccw-jitter-1px-b":true,"cw-jitter-1px-overshoot":true}
+PASS [prod 844x390 main] invalid tiny rejected with feedback; previous run kept {"rejected":true,"feedback":"Current: Your circuit. Draw a larger loop with room for a full-width road."}
+PASS [prod 844x390 main] invalid figure-eight rejected with feedback; previous run kept {"rejected":true,"feedback":"Current: Your circuit. The loop crosses itself. Draw a loop without crossings."}
+PASS [prod 844x390 main] invalid crossing-lobe-tail rejected with feedback; previous run kept {"rejected":true,"feedback":"Current: Your circuit. The loop crosses itself. Draw a loop without crossings."}
+PASS [prod 844x390 main] invalid double-lap-retrace rejected with feedback; previous run kept {"rejected":true,"feedback":"Current: Your circuit. The loop crosses itself. Draw a loop without crossings."}
+PASS [prod 844x390 main] invalid out-of-world rejected with feedback; previous run kept {"rejected":true,"feedback":"Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road."}
+PASS [prod 844x390 main] invalid open-line rejected with feedback; previous run kept {"rejected":true,"feedback":"Current: Your circuit. The loop crosses itself. Draw a loop without crossings."}
+PASS [prod 844x390 main] after rejections the previous circuit still runs {"label":"Current: Your circuit. Draw a loop to make it yours."}
+PASS [prod 844x390 main] custom bean circuit committed {"fb":"Current: Your circuit. Draw a loop to make it yours."}
+PASS [prod 844x390 main] drawn circuit: cars complete real laps after evolving {"generations":18,"firstLapGen":1,"firstLap":9.616742707459117,"bestLap":8.737954711914062,"lapRecords":[9.617,9.472,9.274,9.171,9.107,8.954,8.951,8.847,8.738],"completedFirst":17,"completedLast":311,"meanFirst":0.1549280650487292,"meanLast":1.6684257646775065}
+PASS [prod 844x390 main] drawn circuit: best lap improves across generations {"generations":18,"firstLapGen":1,"firstLap":9.616742707459117,"bestLap":8.737954711914062,"lapRecords":[9.617,9.472,9.274,9.171,9.107,8.954,8.951,8.847,8.738],"completedFirst":17,"completedLast":311,"meanFirst":0.1549280650487292,"meanLast":1.6684257646775065}
+PASS [prod 844x390 main] drawn circuit: best trajectory drives the drawn (clockwise) direction
+PASS [prod 844x390 main] telemetry best lap equals min actual generation lap {"ui":"8.74 s","actual":8.737954711914062}
+PASS [prod 844x390 main] sparkline/history label reflects completed generations {"history":"18 gen · best / mean"}
+PASS [prod 844x390 main] preset Broad oval loads and runs {"fb":"Current: Broad oval. Draw a loop to make it yours."}
+PASS [prod 844x390 main] preset Riverbend loads and runs {"fb":"Current: Riverbend. Draw a loop to make it yours."}
+PASS [prod 844x390 main] preset Club circuit loads and runs {"fb":"Current: Club circuit. Draw a loop to make it yours."}
+PASS [prod 844x390 main] pause freezes ticks and labels Paused {"t1":56,"t2":56,"u":"Paused"}
+PASS [prod 844x390 main] play resumes
+PASS [prod 844x390 main] 4x ~240 steps/s {"sps":241.7,"snaps":60.5}
+PASS [prod 844x390 main] fast: headless (no car draws) and much faster than 4x {"stepsPerSec":3372,"snapsPerSec":9.5}
+PASS [prod 844x390 main] fast: canvas explains cars are hidden {"generation":"10","alive":"4 / 512","lap":"9.72 s","noLap":false,"history":"9 gen · best / mean","hint":"Headless learning. Choose 1× to inspect.","runLabel":"Headless","feedback":"Current: Club circuit. Draw a loop to make it yours.","drawingPressed":"false","running":"true","rate":"fast","editorPE":"none","active":"BUTTON","activeFocusVisible":false,"isDrawingClass":false,"inspectionHidden":tru
+PASS [prod 844x390 main] 1x ~60 steps/s
+PASS [prod 844x390 main] rapid play/rate input converges to last intent (paused, 1x) {"fin":["false","1"],"worker":[false,1]}
+PASS [prod 844x390 main] population 1000 accepted and running {"alive":"999 / 1000"}
+PASS [prod 844x390 main] rapid preset/reset input: monotonic IDs, final run is the last intent {"sent":[[15,"riverbend"],[16,"club-circuit"],[17,"club-circuit"],[18,"broad-oval"]]}
+PASS [prod 844x390 main] tap/click on a drawn car selects exactly that car {"target":{"idx":178,"x":922.2305908203125,"y":238.45346069335938,"near":30},"got":{"runId":18,"generation":1,"index":178}}
+PASS [prod 844x390 main] inspector shown with car number and hero cue {"sel":"Car 179 · generation 1","hint":"Inspecting car 179 · details below"}
+PASS [prod 844x390 main] activations equal an independent tanh forward pass of the actual weights {"err":2.657977948850032e-8}
+PASS [prod 844x390 main] 7 ray endpoints consistent with car pose/heading and distances; inputs = distances {"rayErr":0.000026737118861310448,"inputErr":0}
+PASS [prod 844x390 main] inspector edges show actual weights; outputs shown {"w0":-0.913,"actual":-0.91302090883255,"steer":"+0.13","thr":"95%","state":"Driving · speed 219 · seven live distances"}
+PASS [prod 844x390 main] inspection updates live while running (driving car), or shows stopped state honestly {"still":true,"status":1,"domState":"Crashed · stopped · speed 0 · seven live distances"}
+PASS [prod 844x390 main] Close hides inspector and focuses hero
+PASS [prod 844x390 main] keyboard Enter selects a driving car and focuses Close {"s1":{"runId":18,"generation":1,"index":39},"active":"quiet-button"}
+PASS [prod 844x390 main] keyboard-selected driving car: activations change live while running {"st":[0,0],"sel":true}
+PASS [prod 844x390 main] ArrowRight cycles to another car (or same if only one alive) {"s1":39,"s2":44}
+PASS [prod 844x390 main] Escape closes inspection and restores hero focus with visible ring {"u3":[true,"hero-canvas",true]}
+PASS [prod 844x390 main] DPR-only change rebuilds hero backing store {"b1":[476,476]}
+PASS [prod 844x390 main] rotation: no overflow, still running, no errors
+PASS [prod 844x390 main] 320x568: no horizontal overflow
+PASS [prod 844x390 main] controlled hidden: worker ticks stop and rAF loop stops {"h0":{"tick":460,"raf":5895},"h1":{"tick":460,"raf":5895}}
+PASS [prod 844x390 main] controlled visible: running intent resumes without catch-up burst {"dt":48}
+PASS [prod 844x390 main] sensors demo responds to input {"changed":true,"text":"Illustration · local perception Follow selected car 7 rays. One local view. 1 0.72 2 0.78 3 0.92 4 1.00 5 0.85 6 0.72 7 0.65 Position Heading Drag the car. A shorter ray means a nearer wall."}
+PASS [prod 844x390 main] network demo responds to input {"changed":true,"text":"Illustration · 8 → 8 → 2 Follow selected car SENSE COMBINE ACT ray 1 ray 2 ray 3 ray 4 ray 5 ray 6 ray 7 speed Steer +0.14 Throttle 53% Front clearance Steering weight Change an input or the gold connection. Watch the outputs respond."}
+PASS [prod 844x390 main] genetics demo mutates on button {"changed":true,"text":"Illustration · 12 weights, no actual lineage 1 mutation Parent A Candidate 1 Candidate 2 Candidate 3 Candidate 4 Parent B Candidate 1 Candidate 2 Candidate 3 Candidate 4 A B Child Select → combine → vary Crossover Mutate a weight Start again Ochre marks small weight changes. Useful variations can su"}
+PASS [prod 844x390 main] racing-line demo shows the actual recorded best on the actual road {"changed":false,"text":"Recorded best · 8.76 s lap Explore a corner A line has to be earned. Your best recorded attempt will appear here. COMPLETED GENERATIONS 3 completed · best / mean fitness Generation 2, car 360. A complete timed lap, recorded from the simulation."}
+PASS [prod 844x390 main] demos label illustration vs live honestly
+PASS [prod 844x390 main] smallest rendered text >= 10.5px {"min":11,"where":"SPAN.edition:An experiment in neuroevolutio"}
+PASS [prod 844x390 main] touch targets >= 44px (inputs inside >=44 labels allowed) {"small":[["INPUT:",16,16],["INPUT:",16,16]]}
+PASS [prod 844x390 main] no horizontal overflow
+PASS [prod 844x390 main] canvases: no selection/callout, touch-action none {"ua":"none","wus":"none","touch":"none","eTouch":"none"}
+PASS [prod 844x390 main] no console errors/warnings, page errors, failed or >=400 requests {"console":[],"pageErrors":[],"requestFailed":[],"badResponses":[],"errs":[]}
+[{"label":"prod 844x390 main","passed":63,"total":63,"failed":[]}]
