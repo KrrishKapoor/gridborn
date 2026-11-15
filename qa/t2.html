@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Gridborn · Task T2 harness</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;color:#20251f;background:#f7f7f2;font-synthesis:none}*{box-sizing:border-box}body{margin:0}main{max-width:1240px;margin:auto;padding:32px 24px 64px}h1{font-size:clamp(26px,4vw,44px);font-weight:550;letter-spacing:-.04em;margin:0 0 12px}p{line-height:1.5;max-width:800px;margin:8px 0;color:#5c645a}small,label{font-size:13px;color:#5c645a}.controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;padding:22px 0}label{display:grid;gap:5px}input,select,button{min-height:44px;font:inherit;border:1px solid #c5ccbf;border-radius:4px;background:#fff;color:#20251f;padding:8px 12px}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,canvas:focus-visible{outline:3px solid #195bb5;outline-offset:3px}input{max-width:112px}button.primary{background:#246b32;color:#fff;border-color:#246b32}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px;padding:20px 0;border-block:1px solid #d5dacd}.stats output{display:block;font-size:24px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}.stats small{display:block}canvas{display:block;width:100%;aspect-ratio:3/2;max-height:580px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}.layout{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(230px,1fr);gap:28px;margin-top:20px}h2{font-size:17px;font-weight:550;margin:12px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;line-height:1.5}table{border-collapse:collapse;font-size:12px;width:100%;font-variant-numeric:tabular-nums}th,td{text-align:left;padding:6px 5px;border-bottom:1px solid #d5dacd}th{font-weight:500}summary{cursor:pointer;min-height:44px;padding:12px 0}.bar{height:5px;background:#246b32;display:inline-block;vertical-align:middle}.activation{display:grid;grid-template-columns:40px 1fr 52px;align-items:center;font-size:11px;gap:5px;margin:6px 0}#error{color:#a02d20;min-height:24px}#status{font-size:13px}.bench{margin-top:32px;border-top:1px solid #d5dacd;padding-top:12px}.bench button{margin:8px 8px 8px 0}@media(max-width:740px){main{padding:24px 16px 48px}.layout{grid-template-columns:1fr;gap:8px}.controls{gap:8px}.stats{grid-template-columns:repeat(3,1fr);gap:12px}.stats output{font-size:21px}.stats small{font-size:11px}canvas{max-height:none}.controls button{flex-grow:1}}@media(max-height:450px) and (min-width:741px){main{padding-top:18px}canvas{max-height:360px}}
+</style>
+</head>
+<body><main>
+<h1>Task T2 harness</h1>
+<p>Real sensor networks. Real fixed-step driving. Independent oval fixture; this is a simulation check, not the integrated article. Green traces are recorded car paths.</p>
+<div class="controls">
+<button id="running" class="primary">Pause</button>
+<label>Rate<select id="rate"><option value="1">1×</option><option value="4">4×</option><option value="fast">Fast · headless</option></select></label>
+<label>Population<select id="population"><option>128</option><option selected>512</option><option>1000</option></select></label>
+<label>Seed<input id="seed" type="number" min="0" max="4294967295" value="1" step="1"></label>
+<button id="reset">Reset seed</button><button id="inspect">Inspect moving car</button><button id="clear">Clear selection</button>
+</div>
+<div class="stats">
+<div><small>Generation</small><output id="generation">1</output></div><div><small>Active / population</small><output id="alive">—</output></div>
+<div><small>Best real lap</small><output id="lap">No lap yet</output></div><div><small>Presentation FPS</small><output id="fps">—</output></div>
+<div><small>Render CPU / frame</small><output id="render">—</output></div><div><small>Worker CPU / step</small><output id="compute">—</output></div>
+</div>
+<p id="status" role="status">Starting module worker…</p><p id="error" role="alert"></p>
+<div class="layout"><div><canvas id="world" tabindex="0" aria-label="Real evolving cars on an oval. Tap a car to inspect, or use Inspect moving car."></canvas><p id="path">No recorded best path yet.</p></div>
+<section aria-label="Selected car inspection"><h2>Live selected car</h2><p id="selected">Select a car to inspect its actual inputs and activations.</p>
+<table><thead><tr><th>Ray</th><th>Distance</th><th>Hit x, y</th></tr></thead><tbody id="sensors"></tbody></table>
+<h2>8 hidden → 2 raw outputs</h2><div id="activations"></div><details><summary>Actual 90 weights</summary><pre id="weights">No selection</pre></details></section></div>
+<details open><summary>Completed generations (latest 12)</summary><table><thead><tr><th>Generation</th><th>Finishers</th><th>Best lap (s)</th><th>Fitness</th></tr></thead><tbody id="history"></tbody></table></details>
+<details><summary>Full record improvement history</summary><pre id="records">No completed generation yet.</pre></details>
+<section class="bench"><h2>Separate measurements</h2><p>Render test: a paused snapshot of all cars, drawn each animation frame. Worker test: fast batches, with car rendering off. Neither test substitutes simulated steps for display frames. Tests reset learning.</p>
+<button id="render-bench">Measure rendering · current population</button><button id="worker-bench">Measure worker · current population</button><button id="invalid">Test rejected reset</button><pre id="benchmark">No benchmark yet.</pre></section>
+</main><script type="module" src="/qa/t2.ts"></script></body></html>
