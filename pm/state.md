@@ -13,7 +13,7 @@ Worker model: `codex / gpt-6-astra / reasoningEffort=xhigh`. QA model: `claudeAg
 | ID | Small task | Dependencies | Done when | State |
 | --- | --- | --- | --- | --- |
 | P0 | Plan and resolve initial choices | None | State, dated decisions, and question log committed and pushed before application code; root verified clean main | Complete: `1a64443` pushed |
-| T0 | Shared scaffold and contracts | P0 | Vite + TS + Vitest install/test/build work; light design tokens and responsive semantic shell render; stable typed track/simulation/inspection contracts and ownership map documented; independent three-viewport smoke QA passes | Worker running; QA round 0/3 |
+| T0 | Shared scaffold and contracts | P0 | Vite + TS + Vitest install/test/build work; light design tokens and responsive semantic shell render; stable typed track/simulation/inspection contracts and ownership map documented; independent three-viewport smoke QA passes | Worker complete; fresh QA round 1/3 running |
 | T1 | Track geometry and pointer editor | T0 accepted | Deterministic presets and freehand closed-loop smoothing produce valid tracks with width/start line; mouse/touch drawing, clear/reset, invalid tiny/self-intersecting input, and resize behave predictably; geometry tests/build and fresh task browser QA pass | Blocked on T0 |
 | T2 | Deterministic neuroevolution engine | T0 accepted | Typed-array physics, ray casting, NN forward pass, seeded RNG, selection/crossover/mutation, progress/lap fitness, stopped/fading crashes, generation statistics, and bounded worker stepping are real; unit tests/build pass; a browser harness demonstrates repeatable evolution and measured performance; fresh task QA passes | Blocked on T0 |
 | T3 | Editorial page and four teaching demos | T0 accepted | Minimal light page has polished typography, whitespace, hero/control/inspection slots, and distinct live sensor/network/genetics/racing-line demos with one or two explanatory sentences each; responsive and accessible controls; fresh task QA passes | Blocked on T0 |
@@ -43,3 +43,13 @@ Final QA additionally draws a track and observes genuine subsequent generations,
 ## Resume instructions
 
 Read this file, `pm/decisions.md`, `pm/questions.md`, and `pm/brief.md`. Inspect actual Git and task results before updating status. Use each recorded task's T3 completion notification; do not poll active delegates. Read a supplied thread ID before reporting its result. Preserve exact task/thread links and branch/commit identities here. Always update and commit the PM logs after a significant transition.
+
+### T0 implementation complete; QA round 1 started
+
+- Worker branch `t3/scaffold-simulation-contracts`, HEAD `a327136b0579b8fca9e5827be967a66bb3e85781`; implementation `d6b6ef5b4719f84b5c3116c0ec7605402e3f58cd`.
+- Reviewed worktree: `/Users/krrishai/.t3/worktrees/gridborn/t3-150b05a4-79e5d2376bda99d9`.
+- Worker reports clean install, 12 passing tests, successful static build, and Chromium smoke checks in all three viewports. This is implementation evidence, not independent acceptance.
+- Contracts establish a 1200 × 800 world, 8 → 8 → 2 NN, per-run/generation/slot identities, recyclable snapshots, and separate actual-path/history events. `docs/architecture.md` defines exact feature ownership and isolated `qa/tN.html` harnesses.
+- Fresh reviewer: [Gridborn T0 QA round 1 — independent scaffold review](t3-thread://v2/6461e9d4-c1cb-4b2d-ab40-74f5ac908ae8/thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A30de6997-0b3d-4a83-bb53-c112e3c810fe).
+- QA task ID: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3A30de6997-0b3d-4a83-bb53-c112e3c810fe`.
+- QA uses the existing task worktree read-only for code, writes only `artifacts/qa/t0/round-1/`, and verifies the exact reviewed SHA. No merge yet. Next: read QA completion, resolve findings, then merge/push and release T1-T3.

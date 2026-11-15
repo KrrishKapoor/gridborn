@@ -6,6 +6,11 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 scaffold handoff (Codex PM)
+
+- Review location: use the completed worker checkout and exact SHA without changing branches; QA writes only evidence, PM preserves it on acceptance.
+- Concrete geometry and NN defaults: 1200 × 800 world; 7 ray distances plus speed into an 8 → 8 → 2 tanh network. These are within the fixed brief and now documented for feature workers.
+
 ## Resolved — 2026-11-15 (Codex PM)
 
 | Question | Resolution |

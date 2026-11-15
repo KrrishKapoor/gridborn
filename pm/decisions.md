@@ -2,6 +2,12 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — Scaffold handoff and review (Codex PM; contracts by T0 Astra worker)
+
+- Accepted the proposed 1200 × 800 logical world, 7 rays plus speed, and 8 → 8 → 2 topology as concrete shared interfaces, pending independent QA. Positive run IDs and generation-scoped selections prevent stale inspection after reset. Bounded transferable pools avoid per-step serialization allocations.
+- Task QA reviews the worker's existing isolated checkout at its committed SHA; the reviewer does not create another checkout or change branches. Its only writes are evidence under that checkout's `artifacts/qa/`. PM will preserve selected evidence during acceptance. This keeps QA on the actual task branch while the PM remains on `feat/v1`.
+- T0's browser preview snapshots timed out twice; the worker used the permitted independent Playwright fallback and reported successful checks. Each QA reviewer must independently follow the available browser-tool policy and document any fallback.
+
 ## 2026-11-15 — Initial execution defaults (Codex PM, on Krrish's behalf)
 
 - **Away mode:** Resolve normal product and implementation questions autonomously and record the answer here. Ask only for an unavailable credential or permission that truly blocks progress. No open preference question delays work.
