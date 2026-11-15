@@ -165,3 +165,9 @@ Read this file, `pm/decisions.md`, `pm/questions.md`, and `pm/brief.md`. Inspect
 - QA task ID: `node:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Af8be5a30-6cb7-4961-8498-74ee8c58e8a1`.
 - QA thread ID: `thread:delegated-task:command%3Amcp%3Aa545451b-9cfb-422c-a92f-7c588fdcd00f%3Adelegate-task%3Af8be5a30-6cb7-4961-8498-74ee8c58e8a1`.
 - Evidence target: subject worktree `artifacts/qa/t4/round-1/`. Current active delegates: T1 round 2 QA and T4 round 1 QA. Next: accept/fix each result, merge both, then start a NEW final Opus whole-product reviewer on exact merged feat/v1.
+
+### T1 round 2 interim completion notification (not a verdict)
+
+- The first QA run emitted an interim completion message while a browser script continued. Reading that exact thread showed an automatically resumed second run, actively triaging three browser assertions.
+- No final report/verdict has been accepted, no branch merged, and no replacement reviewer or extra round was started. This remains the same fresh T1 round 2 review. Await its final completion notification; do not poll.
+- T4 round 1 QA remains active independently. Final whole-product QA has not started.
