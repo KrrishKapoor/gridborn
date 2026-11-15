@@ -1,0 +1,129 @@
+{
+ "steps": [
+  {
+   "p": {
+    "ok": true,
+    "index": 336,
+    "x": 293.10019264777503,
+    "y": 396.22350896000864,
+    "gap": 8.067582193304288,
+    "gtick": 209,
+    "inactive": 0
+   }
+  },
+  {
+   "afterFirst": {
+    "generation": "01",
+    "alive": "30 / 512",
+    "lap": "—",
+    "lapLabel": "No completed lap yet",
+    "historyLabel": "No history yet",
+    "run": "Pause",
+    "runPressed": "true",
+    "rate": "1",
+    "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+    "issues": false,
+    "hint": "Inspecting car 337 · details below",
+    "runLabel": "Running",
+    "panelHidden": false,
+    "selection": "Car 337 · generation 1",
+    "population": "512",
+    "drawing": "false",
+    "active": "hero-canvas",
+    "meta": {
+     "t": 4109.899999976158,
+     "runId": 1,
+     "gen": 1,
+     "tick": 243,
+     "gtick": 243,
+     "steps": 1,
+     "ms": 0.19999992847442627,
+     "alive": 30,
+     "running": true,
+     "rate": 1,
+     "pop": 512,
+     "sel": 336,
+     "selGen": 1
+    },
+    "ready": [
+     1
+    ],
+    "errors": [],
+    "gens": 0,
+    "workers": 1,
+    "terminated": 0,
+    "lastGen": null
+   }
+  },
+  {
+   "followOff": {
+    "checked": false,
+    "src": "Illustration · local perception"
+   }
+  },
+  {
+   "p2": {
+    "ok": true,
+    "index": 466,
+    "x": 259.9976008613904,
+    "y": 428.2522383435567,
+    "gap": 9.238751639849408,
+    "gtick": 293,
+    "inactive": 0
+   }
+  },
+  {
+   "afterSecond": {
+    "selection": "Car 467 · generation 1",
+    "panelHidden": false
+   },
+   "sensors": {
+    "checked": false,
+    "src": "Illustration · local perception"
+   }
+  },
+  {
+   "network": "Selected car · live network"
+  },
+  {
+   "crashedPick": {
+    "ok": true,
+    "index": 62,
+    "x": 219.16734736363094,
+    "y": 435.42150376558305,
+    "gap": 8.541889783249555,
+    "gtick": 383,
+    "inactive": 0.30000004172325134
+   }
+  },
+  {
+   "crashedTarget": {
+    "ok": true,
+    "index": 253,
+    "x": 309.4102250607808,
+    "y": 378.4356596759955,
+    "gap": 17.335131718425178,
+    "gtick": 387,
+    "inactive": 1.2499995231628418
+   },
+   "inspect": {
+    "text": "Crashed · stopped · speed 0 · seven live distances",
+    "sel": "Car 254 · generation 1",
+    "hidden": false
+   }
+  },
+  {
+   "afterFade": {
+    "hidden": false,
+    "text": "Crashed · stopped · speed 0 · seven live distances",
+    "sel": 253
+   }
+  }
+ ],
+ "log": {
+  "console": [],
+  "pageErrors": [],
+  "failed": [],
+  "badStatus": []
+ }
+}

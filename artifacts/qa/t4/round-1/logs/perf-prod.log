@@ -1,0 +1,243 @@
+{"label":"512-early-1","pop":512,"rate":1,"seconds":5,"genStart":1,"genEnd":1,"rafFps":59.9,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.72,"callbackP95Ms":1.4,"snapshotsPerSec":59.9,"freshFrameShare":1,"changingPoseFrameShare":1,"carsDrawnAvg":292,"headlessFrames":0,"simStepsPerSec":60,"workerComputeMsPerStep":0.395,"workerBusyShare":0.024,"aliveMin":18,"aliveMax":511}
+{"label":"512-early-4","pop":512,"rate":4,"seconds":5,"genStart":1,"genEnd":3,"rafFps":60,"frameP50":16.7,"frameP95":16.7,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.4,"callbackP95Ms":1.3,"snapshotsPerSec":59.8,"freshFrameShare":0.997,"changingPoseFrameShare":0.99,"carsDrawnAvg":135,"headlessFrames":0,"simStepsPerSec":239,"workerComputeMsPerStep":0.259,"workerBusyShare":0.062,"aliveMin":1,"aliveMax":512}
+{"label":"512-early-fast","pop":512,"rate":"fast","seconds":5,"genStart":4,"genEnd":19,"rafFps":60,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.03,"callbackP95Ms":0.1,"snapshotsPerSec":9.4,"freshFrameShare":0.157,"changingPoseFrameShare":0,"carsDrawnAvg":0,"headlessFrames":61,"simStepsPerSec":2805,"workerComputeMsPerStep":0.156,"workerBusyShare":0.437,"aliveMin":1,"aliveMax":512}
+{"label":"512-evolved-1","pop":512,"rate":1,"seconds":5,"genStart":97,"genEnd":97,"rafFps":60,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.91,"callbackP95Ms":1.4,"snapshotsPerSec":60,"freshFrameShare":1,"changingPoseFrameShare":1,"carsDrawnAvg":391,"headlessFrames":0,"simStepsPerSec":60,"workerComputeMsPerStep":1.246,"workerBusyShare":0.075,"aliveMin":316,"aliveMax":372}
+interp 512 [{"checked":332,"worstDistance":0.05602},{"checked":332,"worstDistance":0.001},{"checked":332,"worstDistance":0.0009},{"checked":332,"worstDistance":0.00089}]
+{"label":"512-evolved-4","pop":512,"rate":4,"seconds":5,"genStart":98,"genEnd":100,"rafFps":59.9,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.96,"callbackP95Ms":1.5,"snapshotsPerSec":59.9,"freshFrameShare":0.9,"changingPoseFrameShare":0.99,"carsDrawnAvg":417,"headlessFrames":0,"simStepsPerSec":240,"workerComputeMsPerStep":1.271,"workerBusyShare":0.305,"aliveMin":2,"aliveMax":512}
+{"label":"512-evolved-fast","pop":512,"rate":"fast","seconds":5,"genStart":104,"genEnd":124,"rafFps":60,"frameP50":16.7,"frameP95":16.7,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.01,"callbackP95Ms":0.1,"snapshotsPerSec":9,"freshFrameShare":0.15,"changingPoseFrameShare":0,"carsDrawnAvg":0,"headlessFrames":59,"simStepsPerSec":2000,"workerComputeMsPerStep":0.284,"workerBusyShare":0.569,"aliveMin":40,"aliveMax":512}
+{"label":"1000-early-1","pop":1000,"rate":1,"seconds":5,"genStart":1,"genEnd":1,"rafFps":60,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":1.1,"callbackP95Ms":2.3,"snapshotsPerSec":60,"freshFrameShare":0.997,"changingPoseFrameShare":1,"carsDrawnAvg":578,"headlessFrames":0,"simStepsPerSec":60,"workerComputeMsPerStep":0.568,"workerBusyShare":0.034,"aliveMin":32,"aliveMax":999}
+{"label":"1000-early-4","pop":1000,"rate":4,"seconds":5,"genStart":1,"genEnd":2,"rafFps":60,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.55,"callbackP95Ms":1.4,"snapshotsPerSec":60.2,"freshFrameShare":0.96,"changingPoseFrameShare":0.993,"carsDrawnAvg":254,"headlessFrames":0,"simStepsPerSec":240,"workerComputeMsPerStep":0.376,"workerBusyShare":0.09,"aliveMin":1,"aliveMax":1000}
+{"label":"1000-early-fast","pop":1000,"rate":"fast","seconds":5,"genStart":3,"genEnd":13,"rafFps":60,"frameP50":16.7,"frameP95":16.8,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.02,"callbackP95Ms":0.1,"snapshotsPerSec":9.4,"freshFrameShare":0.153,"changingPoseFrameShare":0,"carsDrawnAvg":0,"headlessFrames":53,"simStepsPerSec":2373,"workerComputeMsPerStep":0.192,"workerBusyShare":0.455,"aliveMin":1,"aliveMax":1000}
+{"label":"1000-evolved-1","pop":1000,"rate":1,"seconds":5,"genStart":69,"genEnd":70,"rafFps":60,"frameP50":16.7,"frameP95":16.7,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":1.42,"callbackP95Ms":2.1,"snapshotsPerSec":60,"freshFrameShare":1,"changingPoseFrameShare":0.993,"carsDrawnAvg":750,"headlessFrames":0,"simStepsPerSec":60,"workerComputeMsPerStep":1.655,"workerBusyShare":0.099,"aliveMin":1,"aliveMax":1000}
+interp 1000 [{"checked":1000,"worstDistance":0.01031},{"checked":1000,"worstDistance":0.001},{"checked":1000,"worstDistance":0.001},{"checked":1000,"worstDistance":0.00099}]
+{"label":"1000-evolved-4","pop":1000,"rate":4,"seconds":5,"genStart":70,"genEnd":72,"rafFps":60,"frameP50":16.7,"frameP95":16.7,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.83,"callbackP95Ms":1.2,"snapshotsPerSec":60,"freshFrameShare":0.987,"changingPoseFrameShare":0.99,"carsDrawnAvg":814,"headlessFrames":0,"simStepsPerSec":240,"workerComputeMsPerStep":1.236,"workerBusyShare":0.296,"aliveMin":1,"aliveMax":1000}
+{"label":"1000-evolved-fast","pop":1000,"rate":"fast","seconds":5,"genStart":75,"genEnd":85,"rafFps":60,"frameP50":16.7,"frameP95":16.7,"frameP99":16.8,"frameMax":16.8,"over20ms":0,"over33ms":0,"callbackAvgMs":0.02,"callbackP95Ms":0.1,"snapshotsPerSec":9,"freshFrameShare":0.15,"changingPoseFrameShare":0,"carsDrawnAvg":0,"headlessFrames":55,"simStepsPerSec":1083,"workerComputeMsPerStep":0.537,"workerBusyShare":0.581,"aliveMin":606,"aliveMax":1000}
+{
+ "env": {
+  "chrome": "157.0.8103.51",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "mem": 25769803776,
+  "loadavgAtStart": [
+   1.60107421875,
+   1.51953125,
+   1.48388671875
+  ],
+  "viewport": "1440x900",
+  "dpr": 2,
+  "headless": true,
+  "warmupMs": 1000,
+  "sampleMs": 5000,
+  "loadavgAtEnd": [
+   2.31103515625,
+   1.8955078125,
+   1.64013671875
+  ]
+ },
+ "resp": [
+  {
+   "label": "512-early-4x",
+   "pauseToggleLatencyMs": [
+    0.2,
+    0.3,
+    -22.7,
+    0.3
+   ],
+   "eventTiming": [
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.7
+    },
+    {
+     "name": "pointerdown",
+     "duration": 16,
+     "delay": 0.3
+    },
+    {
+     "name": "mousedown",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "mouseup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.6
+    }
+   ]
+  },
+  {
+   "label": "512-evolved-4x",
+   "pauseToggleLatencyMs": [
+    0.1,
+    0.5,
+    0.3,
+    0.4
+   ],
+   "eventTiming": [
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.3
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.5
+    },
+    {
+     "name": "pointerdown",
+     "duration": 16,
+     "delay": 0.3
+    },
+    {
+     "name": "mousedown",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "mouseup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.7
+    }
+   ]
+  },
+  {
+   "label": "1000-early-4x",
+   "pauseToggleLatencyMs": [
+    0.3,
+    0.4,
+    0.3,
+    0.3
+   ],
+   "eventTiming": [
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.3
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.5
+    },
+    {
+     "name": "pointerdown",
+     "duration": 16,
+     "delay": 0.3
+    },
+    {
+     "name": "mousedown",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "mouseup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.5
+    }
+   ]
+  },
+  {
+   "label": "1000-evolved-4x",
+   "pauseToggleLatencyMs": [
+    -18.4,
+    0.4,
+    0.2,
+    0.4
+   ],
+   "eventTiming": [
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.2
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerdown",
+     "duration": 16,
+     "delay": 0.2
+    },
+    {
+     "name": "mousedown",
+     "duration": 16,
+     "delay": 0.2
+    },
+    {
+     "name": "pointerup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "mouseup",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "click",
+     "duration": 16,
+     "delay": 0.4
+    },
+    {
+     "name": "pointerover",
+     "duration": 16,
+     "delay": 0.6
+    }
+   ]
+  }
+ ]
+}

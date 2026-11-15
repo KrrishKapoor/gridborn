@@ -1,0 +1,190 @@
+{
+ "m2RealWorker": {
+  "malformedErrors": 8,
+  "invalidAfterExhaustion": {
+   "pending": null,
+   "accepted": 1,
+   "error": "Population must be 2–1000.",
+   "feedback": "Current: Broad oval. Population must be 2–1000. The current circuit and learning are kept.",
+   "lastError": {
+    "t": 1175.7000000476837,
+    "runId": 2,
+    "message": "Population must be 2–1000."
+   },
+   "tick": 96,
+   "running": true,
+   "ticksAdvanced": true
+  },
+  "invalidThenQueuedValid": {
+   "pending": null,
+   "queued": null,
+   "accepted": 4,
+   "pop": 256,
+   "error": "",
+   "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+   "uiPop": "256"
+  },
+  "log": {
+   "console": [],
+   "pageErrors": [],
+   "failed": [],
+   "badStatus": []
+  }
+ },
+ "history": {
+  "completed": 301,
+  "entries": 256,
+  "first": 46,
+  "last": 301,
+  "label": "301 gen · best / mean",
+  "racingLabel": "No history yet",
+  "sparkPoints": 6335,
+  "heap": 4796764,
+  "heap0": 5522974,
+  "seconds": 43.069
+ },
+ "cloneOk": true,
+ "pagehide": {
+  "bfcachePersisted": {
+   "terminated": 0,
+   "app": 1
+  },
+  "disposed": {
+   "terminated": 1,
+   "app": 0,
+   "raf": 2748,
+   "diag": "undefined",
+   "rafAdvanced": 0
+  }
+ },
+ "devLog": {
+  "console": [],
+  "pageErrors": [],
+  "failed": [],
+  "badStatus": []
+ },
+ "hmrTouch": {
+  "marker": null,
+  "workers": 1,
+  "terminated": 0,
+  "apps": 1,
+  "running": true,
+  "note": "marker null => full reload happened",
+  "log": {
+   "console": [],
+   "pageErrors": [],
+   "failed": [],
+   "badStatus": []
+  }
+ },
+ "realHidingAttempt": {
+  "secondTabFront": {
+   "hidden": false,
+   "vis": "visible",
+   "running": true
+  },
+  "freezeThenActive": {
+   "hidden": false,
+   "running": true,
+   "errors": 0
+  }
+ },
+ "reducedMotion": {
+  "scrollBehavior": "auto",
+  "running": true,
+  "drawn": 512,
+  "matches": true,
+  "log": {
+   "console": [],
+   "pageErrors": [],
+   "failed": [],
+   "badStatus": []
+  }
+ },
+ "widths": {
+  "601x900": {
+   "smallCount": 0,
+   "small": [],
+   "overflow": 0,
+   "hero": {
+    "top": 291.1875,
+    "bottom": 568.78125,
+    "w": 347,
+    "h": 277.59375,
+    "feedbackBottom": 644.78125,
+    "innerHeight": 900
+   },
+   "errors": 0
+  },
+  "700x1000": {
+   "smallCount": 0,
+   "small": [],
+   "overflow": 0,
+   "hero": {
+    "top": 291.1875,
+    "bottom": 647.984375,
+    "w": 446,
+    "h": 356.796875,
+    "feedbackBottom": 723.984375,
+    "innerHeight": 1000
+   },
+   "errors": 0
+  },
+  "800x1000": {
+   "smallCount": 0,
+   "small": [],
+   "overflow": 0,
+   "hero": {
+    "top": 291.625,
+    "bottom": 728.421875,
+    "w": 546,
+    "h": 436.796875,
+    "feedbackBottom": 804.421875,
+    "innerHeight": 1000
+   },
+   "errors": 0
+  },
+  "1000x700": {
+   "smallCount": 0,
+   "small": [],
+   "overflow": 0,
+   "hero": {
+    "top": 300.640625,
+    "bottom": 897.4375,
+    "w": 746,
+    "h": 596.796875,
+    "feedbackBottom": 973.4375,
+    "innerHeight": 700
+   },
+   "errors": 0
+  },
+  "1024x768": {
+   "smallCount": 0,
+   "small": [],
+   "overflow": 0,
+   "hero": {
+    "top": 245.578125,
+    "bottom": 616.296875,
+    "w": 685.84375,
+    "h": 370.71875,
+    "feedbackBottom": 692.296875,
+    "innerHeight": 768
+   },
+   "errors": 0
+  },
+  "667x375": {
+   "smallCount": 0,
+   "small": [],
+   "overflow": 0,
+   "hero": {
+    "top": 138.78125,
+    "bottom": 308.78125,
+    "w": 299,
+    "h": 170,
+    "feedbackBottom": 370.78125,
+    "innerHeight": 375
+   },
+   "errors": 0
+  }
+ }
+}

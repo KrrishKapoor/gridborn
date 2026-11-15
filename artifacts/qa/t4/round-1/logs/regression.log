@@ -1,0 +1,230 @@
+{
+ "cadence": {
+  "baseline-32a6bf5": [
+   {
+    "rate": 1,
+    "jitter": 0,
+    "seconds": 20,
+    "deliveriesPerSec": 40,
+    "freshFrameShare": 0.665,
+    "stepsPerSec": 60,
+    "stepsPerDelivery": {
+     "0": 3,
+     "1": 396,
+     "2": 401
+    },
+    "medianIntervalMs": 33.33,
+    "p90IntervalMs": 33.33,
+    "maxIntervalMs": 33.33,
+    "uniqueShownTickDeltas": [
+     1,
+     2
+    ]
+   },
+   {
+    "rate": 1,
+    "jitter": 1.5,
+    "seconds": 20,
+    "deliveriesPerSec": 38.35,
+    "freshFrameShare": 0.637,
+    "stepsPerSec": 60,
+    "stepsPerDelivery": {
+     "0": 3,
+     "1": 329,
+     "2": 435
+    },
+    "medianIntervalMs": 32.33,
+    "p90IntervalMs": 33.49,
+    "maxIntervalMs": 34.5,
+    "uniqueShownTickDeltas": [
+     1,
+     2
+    ]
+   },
+   {
+    "rate": 4,
+    "jitter": 0,
+    "seconds": 20,
+    "deliveriesPerSec": 53.45,
+    "freshFrameShare": 0.888,
+    "stepsPerSec": 240,
+    "stepsPerDelivery": {
+     "0": 3,
+     "4": 532,
+     "5": 534
+    },
+    "medianIntervalMs": 20.83,
+    "p90IntervalMs": 20.83,
+    "maxIntervalMs": 20.83,
+    "uniqueShownTickDeltas": [
+     4,
+     5
+    ]
+   },
+   {
+    "rate": 4,
+    "jitter": 1.5,
+    "seconds": 20,
+    "deliveriesPerSec": 52.8,
+    "freshFrameShare": 0.878,
+    "stepsPerSec": 240,
+    "stepsPerDelivery": {
+     "0": 3,
+     "4": 469,
+     "5": 584
+    },
+    "medianIntervalMs": 19.74,
+    "p90IntervalMs": 20.98,
+    "maxIntervalMs": 21.81,
+    "uniqueShownTickDeltas": [
+     4,
+     5
+    ]
+   }
+  ],
+  "current": [
+   {
+    "rate": 1,
+    "jitter": 0,
+    "seconds": 20,
+    "deliveriesPerSec": 60.1,
+    "freshFrameShare": 1,
+    "stepsPerSec": 60,
+    "stepsPerDelivery": {
+     "0": 3,
+     "1": 1199
+    },
+    "medianIntervalMs": 16.67,
+    "p90IntervalMs": 16.67,
+    "maxIntervalMs": 16.69,
+    "uniqueShownTickDeltas": [
+     1
+    ]
+   },
+   {
+    "rate": 1,
+    "jitter": 1.5,
+    "seconds": 20,
+    "deliveriesPerSec": 60.1,
+    "freshFrameShare": 1,
+    "stepsPerSec": 60,
+    "stepsPerDelivery": {
+     "0": 3,
+     "1": 1199
+    },
+    "medianIntervalMs": 16.68,
+    "p90IntervalMs": 17.45,
+    "maxIntervalMs": 18.06,
+    "uniqueShownTickDeltas": [
+     1
+    ]
+   },
+   {
+    "rate": 4,
+    "jitter": 0,
+    "seconds": 20,
+    "deliveriesPerSec": 60.1,
+    "freshFrameShare": 1,
+    "stepsPerSec": 240,
+    "stepsPerDelivery": {
+     "0": 3,
+     "4": 1199
+    },
+    "medianIntervalMs": 16.67,
+    "p90IntervalMs": 16.67,
+    "maxIntervalMs": 16.71,
+    "uniqueShownTickDeltas": [
+     4
+    ]
+   },
+   {
+    "rate": 4,
+    "jitter": 1.5,
+    "seconds": 20,
+    "deliveriesPerSec": 60.1,
+    "freshFrameShare": 1,
+    "stepsPerSec": 240,
+    "stepsPerDelivery": {
+     "0": 3,
+     "4": 1199
+    },
+    "medianIntervalMs": 16.66,
+    "p90IntervalMs": 17.51,
+    "maxIntervalMs": 18.11,
+    "uniqueShownTickDeltas": [
+     4
+    ]
+   }
+  ]
+ },
+ "m2": {
+  "baseline": {
+   "errorsBefore": 8,
+   "reply11": null,
+   "laterInvalidReplies": [],
+   "engineAfterInvalid": 10,
+   "validAfter": 14
+  },
+  "current": {
+   "errorsBefore": 8,
+   "reply11": "error:11:Population must be 2–1000.",
+   "laterInvalidReplies": [
+    "error:12",
+    "error:13",
+    "error:10"
+   ],
+   "engineAfterInvalid": 10,
+   "validAfter": 14
+  }
+ },
+ "session": {
+  "accepted0": 1,
+  "mid": {
+   "pending": 2,
+   "queued": 3
+  },
+  "afterInvalidThenValidQueued": {
+   "accepted": 3,
+   "acceptedTrack": "riverbend",
+   "pending": null,
+   "queued": null,
+   "error": ""
+  },
+  "afterSecondInvalid": {
+   "accepted": 3,
+   "pending": null,
+   "error": "Mutation rate must be 0–1."
+  }
+ },
+ "validation": {
+  "presets": [
+   {
+    "id": "broad-oval",
+    "current": "ok",
+    "baseline": "ok"
+   },
+   {
+    "id": "riverbend",
+    "current": "ok",
+    "baseline": "ok"
+   },
+   {
+    "id": "club-circuit",
+    "current": "ok",
+    "baseline": "ok"
+   }
+  ],
+  "drawnBuilt": "28/30",
+  "drawnAllValid": true,
+  "drawnFailures": [],
+  "fakeInner": {
+   "current": "Both road boundaries must follow the centerline at the declared width.",
+   "baseline": "ok"
+  },
+  "inconsistentWidth": {
+   "current": "Both road boundaries must follow the centerline at the declared width.",
+   "baseline": "ok"
+  },
+  "msPerValidate": 1.05
+ }
+}

@@ -1,0 +1,76 @@
+PASS [1440x900] auto-starts running at 1x with hundreds of cars
+PASS [1440x900] production diagnostics global matches build mode
+PASS [1440x900] no horizontal overflow
+PASS [1440x900] hero canvas fully in first viewport
+PASS [1440x900] play control in first viewport
+PASS [1440x900] canvas backing = css * min(dpr,2)
+PASS [1440x900] all rendered text >= 11px
+PASS [1440x900] hero draws cars each frame
+PASS [1440x900] 1x ≈ 60 sim steps/s and ≈60 snapshots/s
+PASS [1440x900] 4x ≈ 240 sim steps/s
+PASS [1440x900] fast is headless: no cars drawn, message shown, faster than 4x
+PASS [1440x900] pause stops stepping and motion
+PASS [1440x900] play resumes
+PASS [1440x900] click/tap on a moving car opens inspection of that car
+PASS [1440x900] pointer selection does not drop focus to body
+PASS [1440x900] inspector response visible in viewport after selection
+PASS [1440x900] hero cue names selected car
+PASS [1440x900] inspector shows 90 weights + 18 activations
+PASS [1440x900] running: inspector values equal one actual worker snapshot
+PASS [1440x900] running: hero rays, ring, pose and inspector rays from same snapshot
+PASS [1440x900] activations equal independent forward pass; inputs equal ray distances
+PASS [1440x900] live activations change while running
+PASS [1440x900] sensor & network demos follow the selected car
+PASS [1440x900] paused: inspector equals final snapshot exactly
+PASS [1440x900] explicit Follow=off preserved across new selection
+PASS [1440x900] keyboard Enter selects a car and opens inspector
+FAIL [1440x900] arrow keys cycle drivers {"k1":176,"k2":176,"k3":176,"state":{"generation":"09","alive":"1 / 512","lap":"8.58 s","lapLabel":"Best lap 8.58 seconds","historyLabel":"8 gen · best / mean","run":"Pause","runPressed":"true","rate":"1","feedback":"Current: Broad oval. Draw a loop to make it yours.","issues":false,"hint":"Inspecting car 176 · details below","runLabel":"Running","panelHidden":false,"selection":"Car 176 · generati
+PASS [1440x900] Escape closes and focus returns to hero canvas
+PASS [1440x900] Close button closes; focus not dropped to body
+PASS [1440x900] crashed car inspection says stopped
+PASS [1440x900] generation boundary clears stale selection
+PASS [1440x900] default track: laps completed and best lap improves over generations
+PASS [1440x900] telemetry shows real best lap and history
+PASS [1440x900] drawing suspends stepping, keeps Play intent (dir 1)
+PASS [1440x900] valid clockwise drawn loop commits and runs
+PASS [1440x900] drawn CW loop learns: subsequent generations, real laps, improvement
+PASS [1440x900] cars drive the drawn direction (dir 1)
+PASS [1440x900] drawing suspends stepping, keeps Play intent (dir -1)
+PASS [1440x900] valid counter-clockwise drawn loop commits and runs
+PASS [1440x900] drawn CCW loop learns: subsequent generations, real laps, improvement
+PASS [1440x900] cars drive the drawn direction (dir -1)
+PASS [1440x900] tiny stroke rejected with useful local message; run kept
+PASS [1440x900] tiny: after stopping drawing the same run continues
+PASS [1440x900] figure8 stroke rejected with useful local message; run kept
+PASS [1440x900] invalid feedback visible next to the canvas (no scroll)
+PASS [1440x900] figure8: after stopping drawing the same run continues
+FAIL [1440x900] Escape mid-stroke never commits {"runId":4,"before":3}
+PASS [1440x900] paused + 4x intent survive drawn-track acceptance
+PASS [1440x900] resume after accepted paused run steps at 4x
+PASS [1440x900] preset broad-oval accepted and learns laps
+PASS [1440x900] preset riverbend accepted and learns laps
+PASS [1440x900] preset club-circuit accepted and learns laps
+PASS [1440x900] population 1000 accepted; telemetry shows /1000
+PASS [1440x900] 1000 cars keep 1x real-time stepping
+PASS [1440x900] rapid resets coalesce; final state = last intent; ids monotonic; nothing pending
+PASS [1440x900] synthetic hidden: worker stops, rAF stops; resume restores running intent
+PASS [1440x900] rotated: no overflow, backing store matches
+PASS [1440x900] DPR-only change rebuilds backing store
+PASS [1440x900] 320px-wide phone: no horizontal overflow
+PASS [1440x900] 120x200 extreme surface: no errors; recovers running
+PASS [1440x900] sensor demo responds to input (illustration)
+PASS [1440x900] network demo slider changes output
+PASS [1440x900] genetics demo mutation/crossover respond
+PASS [1440x900] racing-line demo shows actual recorded line with road context, labelled
+PASS [1440x900] corner explorer labelled illustrative
+PASS [1440x900] article: no text < 11px anywhere (full page)
+PASS [1440x900] no console errors/warnings, page errors, failed requests
+PASS [1440x900] one worker, no detached incoming buffers
+{
+ "total": 68,
+ "passed": 66,
+ "failed": [
+  "arrow keys cycle drivers",
+  "Escape mid-stroke never commits"
+ ]
+}

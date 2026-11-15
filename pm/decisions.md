@@ -2,6 +2,14 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T4 acceptance and final review candidate (Codex PM)
+
+- Accept the independently reviewed integrated app under the required no-high threshold. The reviewer verified all earlier T2 runtime/reset/validation and T3 inspector/text fixes; preserve the original report and its exact assertion counts.
+- Fix the remaining medium drawing-area ambiguity before final QA: show a dashed guide and shade outside it only while drawing, leaving road-width clearance within the world. Keep responsive field proportions and the accepted deterministic geometry. Restore programmatic editor focus so Escape cancels strokes and return focus to the hero when drawing ends. These small review fixes were applied directly by PM under the orchestration rule for small findings; the final fresh reviewer verifies them.
+- Retain disclosed low behaviors: selecting a car scrolls to its inspector (with its own live ray view); a selection ends with its generation; some shorter/intermediate laptop screens require scrolling for the whole hero; fast-mode timer idle reduces throughput; offscreen demo labels refresh when revealed. None blocks the fixed three-viewport core experience. Avoid redesigning accepted interfaces during this final correction.
+- Performance is measured on Apple M5 / headless Chrome 157, not promised for every device. Touch is emulated; real OS visibility transitions, physical iOS, and injected worker-crash recovery remain unverified. Controlled visibility and pagehide cleanup are verified.
+- Final acceptance requires a NEW Opus 5.5 high reviewer of the exact combined feat/v1 candidate, including T1R, T4, and these small fixes. It may use a T3-created isolated verification checkout at that commit so PM bookkeeping cannot alter its subject. QA must not edit code or commit.
+
 ## 2026-11-15 — T1 round 2 acceptance and retained limits (Codex PM)
 
 - Accepted the fresh round-2 PASS with no high or medium findings. Overshoot is independently fixed; common fractional-coordinate jitter succeeds, with a small residual for integer-quantized input at coarse phone scales. Final integrated QA will exercise the corrected editor with the runtime.
@@ -81,4 +89,4 @@ Newest decisions first. All product and quality requirements in `pm/brief.md` re
 
 ## Known gaps
 
-T0 has no high-severity defects. Its low findings L1–L7 and the production implementation of clarified M1/L5 remain tracked for T3/T4 verification above. T3 adds three medium presentation findings and low polish issues assigned to T4 above. The full product, independently verified evolution/performance, and physical iOS behavior remain unverified.
+No high findings remain in accepted task reviews. The final combined review is pending, including verification of the small guide/Escape corrections. Retained low behavior and device/performance limits are listed in the newest decision; T1R additionally retains occasional integer-coordinate jitter rejection, sharp-corner rejection, and long-tail rejection while preserving the last valid track. Earlier T0/T2/T3 production findings were independently resolved in T4.

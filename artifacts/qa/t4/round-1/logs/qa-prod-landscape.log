@@ -1,0 +1,75 @@
+PASS [844x390] auto-starts running at 1x with hundreds of cars
+PASS [844x390] production diagnostics global matches build mode
+PASS [844x390] no horizontal overflow
+PASS [844x390] hero canvas fully in first viewport
+PASS [844x390] play control in first viewport
+PASS [844x390] canvas backing = css * min(dpr,2)
+PASS [844x390] all rendered text >= 11px
+PASS [844x390] touch targets >= 44px
+PASS [844x390] hero draws cars each frame
+PASS [844x390] 1x ≈ 60 sim steps/s and ≈60 snapshots/s
+PASS [844x390] 4x ≈ 240 sim steps/s
+PASS [844x390] fast is headless: no cars drawn, message shown, faster than 4x
+PASS [844x390] pause stops stepping and motion
+PASS [844x390] play resumes
+PASS [844x390] click/tap on a moving car opens inspection of that car
+PASS [844x390] pointer selection does not drop focus to body
+PASS [844x390] inspector response visible in viewport after selection
+PASS [844x390] hero cue names selected car
+PASS [844x390] inspector shows 90 weights + 18 activations
+PASS [844x390] running: inspector values equal one actual worker snapshot
+PASS [844x390] running: hero rays, ring, pose and inspector rays from same snapshot
+PASS [844x390] activations equal independent forward pass; inputs equal ray distances
+PASS [844x390] live activations change while running
+PASS [844x390] sensor & network demos follow the selected car
+PASS [844x390] paused: inspector equals final snapshot exactly
+PASS [844x390] explicit Follow=off preserved across new selection
+PASS [844x390] keyboard Enter selects a car and opens inspector
+PASS [844x390] arrow keys cycle drivers
+PASS [844x390] Escape closes and focus returns to hero canvas
+PASS [844x390] Close button closes; focus not dropped to body
+PASS [844x390] crashed car inspection says stopped
+PASS [844x390] generation boundary clears stale selection
+PASS [844x390] default track: laps completed and best lap improves over generations
+PASS [844x390] telemetry shows real best lap and history
+PASS [844x390] drawing suspends stepping, keeps Play intent (dir 1)
+PASS [844x390] valid clockwise drawn loop commits and runs
+PASS [844x390] drawn CW loop learns: subsequent generations, real laps, improvement
+PASS [844x390] cars drive the drawn direction (dir 1)
+PASS [844x390] drawing suspends stepping, keeps Play intent (dir -1)
+PASS [844x390] valid counter-clockwise drawn loop commits and runs
+PASS [844x390] drawn CCW loop learns: subsequent generations, real laps, improvement
+PASS [844x390] cars drive the drawn direction (dir -1)
+PASS [844x390] tiny stroke rejected with useful local message; run kept
+PASS [844x390] tiny: after stopping drawing the same run continues
+PASS [844x390] figure8 stroke rejected with useful local message; run kept
+PASS [844x390] invalid feedback visible next to the canvas (no scroll)
+PASS [844x390] figure8: after stopping drawing the same run continues
+PASS [844x390] touchcancel mid-stroke never commits
+PASS [844x390] paused + 4x intent survive drawn-track acceptance
+PASS [844x390] resume after accepted paused run steps at 4x
+PASS [844x390] preset broad-oval accepted and learns laps
+PASS [844x390] preset riverbend accepted and learns laps
+PASS [844x390] preset club-circuit accepted and learns laps
+PASS [844x390] population 1000 accepted; telemetry shows /1000
+PASS [844x390] 1000 cars keep 1x real-time stepping
+PASS [844x390] rapid resets coalesce; final state = last intent; ids monotonic; nothing pending
+PASS [844x390] synthetic hidden: worker stops, rAF stops; resume restores running intent
+PASS [844x390] rotated: no overflow, backing store matches
+PASS [844x390] DPR-only change rebuilds backing store
+PASS [844x390] 320px-wide phone: no horizontal overflow
+PASS [844x390] 120x200 extreme surface: no errors; recovers running
+PASS [844x390] sensor demo responds to input (illustration)
+PASS [844x390] network demo slider changes output
+PASS [844x390] genetics demo mutation/crossover respond
+PASS [844x390] racing-line demo shows actual recorded line with road context, labelled
+PASS [844x390] corner explorer labelled illustrative
+PASS [844x390] article: no text < 11px anywhere (full page)
+PASS [844x390] article: touch targets >= 44px
+PASS [844x390] no console errors/warnings, page errors, failed requests
+PASS [844x390] one worker, no detached incoming buffers
+{
+ "total": 70,
+ "passed": 70,
+ "failed": []
+}

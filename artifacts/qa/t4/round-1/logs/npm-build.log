@@ -1,0 +1,20 @@
+
+> gridborn@0.0.0 build
+> npm run typecheck && vite build
+
+
+> gridborn@0.0.0 typecheck
+> tsc --noEmit
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 27 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.78 kB │ gzip:  0.46 kB
+dist/assets/worker-D_lbJ8Lc.js  22.96 kB
+dist/assets/index-CsPrcw6Z.css  17.71 kB │ gzip:  4.26 kB
+dist/assets/index-DynAdxRS.js   59.67 kB │ gzip: 20.42 kB
+
+✓ built in 163ms
+build exit 0

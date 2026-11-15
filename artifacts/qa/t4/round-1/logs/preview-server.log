@@ -1,0 +1,5 @@
+
+> gridborn@0.0.0 preview
+> vite preview --host 127.0.0.1 --strictPort --port 4294
+
+  ➜  Local:   http://127.0.0.1:4294/

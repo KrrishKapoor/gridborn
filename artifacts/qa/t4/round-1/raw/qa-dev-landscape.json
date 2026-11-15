@@ -1,0 +1,2118 @@
+{
+ "base": "http://127.0.0.1:5294/",
+ "label": "dev",
+ "started": "2026-11-15T13:11:46.483Z",
+ "viewports": {
+  "844x390": {
+   "name": "844x390",
+   "checks": [
+    {
+     "name": "auto-starts running at 1x with hundreds of cars",
+     "pass": true,
+     "details": {
+      "meta": {
+       "t": 1872.0999999046326,
+       "runId": 1,
+       "gen": 1,
+       "tick": 109,
+       "gtick": 109,
+       "steps": 1,
+       "ms": 0.7999999523162842,
+       "alive": 201,
+       "running": true,
+       "rate": 1,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      },
+      "run": "Pause"
+     }
+    },
+    {
+     "name": "production diagnostics global matches build mode",
+     "pass": true,
+     "details": {}
+    },
+    {
+     "name": "no horizontal overflow",
+     "pass": true,
+     "details": {
+      "overflowX": 0
+     }
+    },
+    {
+     "name": "hero canvas fully in first viewport",
+     "pass": true,
+     "details": {
+      "top": 139,
+      "bottom": 324,
+      "left": 24,
+      "right": 500,
+      "w": 476,
+      "h": 185
+     }
+    },
+    {
+     "name": "play control in first viewport",
+     "pass": true,
+     "details": {
+      "top": 106,
+      "bottom": 150,
+      "left": 535,
+      "right": 680,
+      "w": 145,
+      "h": 44
+     }
+    },
+    {
+     "name": "canvas backing = css * min(dpr,2)",
+     "pass": true,
+     "details": {
+      "w": 952,
+      "h": 370,
+      "cssW": 476,
+      "cssH": 185,
+      "dpr": 3
+     }
+    },
+    {
+     "name": "all rendered text >= 11px",
+     "pass": true,
+     "details": {
+      "count": 0,
+      "sample": []
+     }
+    },
+    {
+     "name": "touch targets >= 44px",
+     "pass": true,
+     "details": {
+      "targets": []
+     }
+    },
+    {
+     "name": "hero draws cars each frame",
+     "pass": true,
+     "details": {
+      "drawn": 512
+     }
+    },
+    {
+     "name": "1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+     "pass": true,
+     "details": {
+      "ticks": 59.85634477634234,
+      "snaps": 59.85634477634234,
+      "raf": 59.85634477634234
+     }
+    },
+    {
+     "name": "4x ≈ 240 sim steps/s",
+     "pass": true,
+     "details": {
+      "ticks": 239.99468156971528,
+      "snaps": 59.8324690894027,
+      "raf": 60.497274301507176
+     }
+    },
+    {
+     "name": "fast is headless: no cars drawn, message shown, faster than 4x",
+     "pass": true,
+     "details": {
+      "rf": {
+       "ticks": 3005.5226562456965,
+       "snaps": 9.315323707646613,
+       "raf": 59.88422383487109
+      },
+      "n": 0,
+      "runLabel": "Headless",
+      "hint": "Headless learning. Choose 1× to inspect."
+     }
+    },
+    {
+     "name": "pause stops stepping and motion",
+     "pass": true,
+     "details": {
+      "p1": {
+       "tick": 7280,
+       "sum": 0
+      },
+      "p2": {
+       "tick": 7280,
+       "sum": 0,
+       "run": "Play",
+       "label": "Paused"
+      }
+     }
+    },
+    {
+     "name": "play resumes",
+     "pass": true,
+     "details": {
+      "p2": 7280,
+      "p3": 7319
+     }
+    },
+    {
+     "name": "click/tap on a moving car opens inspection of that car",
+     "pass": true,
+     "details": {
+      "pick": {
+       "ok": true,
+       "index": 175,
+       "x": 267.8036946868897,
+       "y": 184.23032492637634,
+       "gap": 8.932580008828074,
+       "tick": 7777,
+       "speed": 28.77377700805664
+      },
+      "selection": "Car 176 · generation 9",
+      "panelHidden": false
+     }
+    },
+    {
+     "name": "pointer selection does not drop focus to body",
+     "pass": true,
+     "details": {
+      "active": "hero-canvas"
+     }
+    },
+    {
+     "name": "inspector response visible in viewport after selection",
+     "pass": true,
+     "details": {
+      "top": 11.78125,
+      "bottom": 446.6875,
+      "headingTop": 52.78125,
+      "headingBottom": 79.78125,
+      "innerHeight": 390,
+      "heroCue": "Inspecting car 176 · details below",
+      "canvasTop": -235.21875,
+      "canvasBottom": -50.21875,
+      "active": "hero-canvas"
+     }
+    },
+    {
+     "name": "hero cue names selected car",
+     "pass": true,
+     "details": {
+      "top": 11.78125,
+      "bottom": 446.6875,
+      "headingTop": 52.78125,
+      "headingBottom": 79.78125,
+      "innerHeight": 390,
+      "heroCue": "Inspecting car 176 · details below",
+      "canvasTop": -235.21875,
+      "canvasBottom": -50.21875,
+      "active": "hero-canvas"
+     }
+    },
+    {
+     "name": "inspector shows 90 weights + 18 activations",
+     "pass": true,
+     "details": {
+      "nodes": 18,
+      "edges": 80,
+      "values": 108,
+      "matched": true,
+      "candidates": 3,
+      "matchTick": 7809,
+      "matchIndex": 175,
+      "latestTick": 7810,
+      "forwardErr": 2.0348436158279526e-8,
+      "raysOk": true,
+      "ringOk": true,
+      "poseOk": true,
+      "inspectorRaysOk": true,
+      "inputsOk": true,
+      "steer": "+0.10",
+      "throttle": "16%",
+      "stateText": "Driving · speed 34 · seven live distances",
+      "acts": [
+       0.262,
+       0.307,
+       0.511,
+       1,
+       0.515,
+       0.284,
+       0.25,
+       0.142,
+       0.863,
+       0.665,
+       0.674,
+       0.78,
+       -0.476,
+       -0.825,
+       -0.293,
+       0.688,
+       0.102,
+       -0.676
+      ]
+     }
+    },
+    {
+     "name": "running: inspector values equal one actual worker snapshot",
+     "pass": true,
+     "details": {
+      "c1": {
+       "m": true,
+       "t": 7809,
+       "l": 7810
+      },
+      "c2": {
+       "m": true,
+       "t": 7839
+      }
+     }
+    },
+    {
+     "name": "running: hero rays, ring, pose and inspector rays from same snapshot",
+     "pass": true,
+     "details": {
+      "nodes": 18,
+      "edges": 80,
+      "values": 108,
+      "matched": true,
+      "candidates": 4,
+      "matchTick": 7839,
+      "matchIndex": 175,
+      "latestTick": 7840,
+      "forwardErr": 2.750676308949096e-8,
+      "raysOk": true,
+      "ringOk": true,
+      "poseOk": true,
+      "inspectorRaysOk": true,
+      "inputsOk": true,
+      "steer": "+0.08",
+      "throttle": "16%",
+      "stateText": "Driving · speed 38 · seven live distances",
+      "acts": [
+       0.267,
+       0.313,
+       0.522,
+       1,
+       0.5,
+       0.277,
+       0.245,
+       0.159,
+       0.861,
+       0.686,
+       0.676,
+       0.774,
+       -0.478,
+       -0.814,
+       -0.274,
+       0.676,
+       0.084,
+       -0.675
+      ]
+     }
+    },
+    {
+     "name": "activations equal independent forward pass; inputs equal ray distances",
+     "pass": true,
+     "details": {
+      "forwardErr": 2.750676308949096e-8,
+      "inputsOk": true
+     }
+    },
+    {
+     "name": "live activations change while running",
+     "pass": true,
+     "details": {
+      "t1": 7809,
+      "t2": 7839
+     }
+    },
+    {
+     "name": "sensor & network demos follow the selected car",
+     "pass": true,
+     "details": {
+      "demo": [
+       "Selected car · live distances",
+       "Illustrative network",
+       "Waiting for a recorded attempt",
+       "Selected car · live network"
+      ]
+     }
+    },
+    {
+     "name": "paused: inspector equals final snapshot exactly",
+     "pass": true,
+     "details": {
+      "c3m": true,
+      "t": 7910,
+      "latestSel": 7910
+     }
+    },
+    {
+     "name": "explicit Follow=off preserved across new selection",
+     "pass": true,
+     "details": {
+      "f1": {
+       "checked": false,
+       "src": "Illustration · local perception"
+      },
+      "f2": {
+       "checked": false,
+       "src": "Illustration · local perception",
+       "net": "Selected car · live network",
+       "panel": true
+      }
+     }
+    },
+    {
+     "name": "keyboard Enter selects a car and opens inspector",
+     "pass": true,
+     "details": {
+      "selection": "Car 001 · generation 10",
+      "active": "quiet-button[close]"
+     }
+    },
+    {
+     "name": "arrow keys cycle drivers",
+     "pass": true,
+     "details": {
+      "k1": 1,
+      "k2": 2,
+      "k3": 1,
+      "state": {
+       "generation": "10",
+       "alive": "236 / 512",
+       "lap": "8.55 s",
+       "lapLabel": "Best lap 8.55 seconds",
+       "historyLabel": "9 gen · best / mean",
+       "run": "Pause",
+       "runPressed": "true",
+       "rate": "1",
+       "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+       "issues": false,
+       "hint": "Inspecting car 1 · details below",
+       "runLabel": "Running",
+       "panelHidden": false,
+       "selection": "Car 001 · generation 10",
+       "population": "512",
+       "drawing": "false",
+       "active": "quiet-button[close]",
+       "meta": {
+        "t": 49469,
+        "runId": 1,
+        "gen": 10,
+        "tick": 9616,
+        "gtick": 143,
+        "steps": 1,
+        "ms": 0.5,
+        "alive": 231,
+        "running": true,
+        "rate": 1,
+        "pop": 512,
+        "sel": 0,
+        "selGen": 10
+       },
+       "ready": [
+        1
+       ],
+       "errors": [],
+       "gens": 9,
+       "workers": 1,
+       "terminated": 0,
+       "lastGen": {
+        "runId": 1,
+        "generation": 9,
+        "ticks": 1800,
+        "bestFitness": 2.7148338546832482,
+        "meanFitness": 0.9663112667856718,
+        "completedLaps": 173,
+        "bestLapSeconds": 8.554984359502555,
+        "t": 47085.39999997616
+       }
+      }
+     }
+    },
+    {
+     "name": "Escape closes and focus returns to hero canvas",
+     "pass": true,
+     "details": {
+      "panelHidden": true,
+      "active": "hero-canvas"
+     }
+    },
+    {
+     "name": "Close button closes; focus not dropped to body",
+     "pass": true,
+     "details": {
+      "active": "hero-canvas"
+     }
+    },
+    {
+     "name": "crashed car inspection says stopped",
+     "pass": true,
+     "details": {
+      "target": {
+       "ok": true,
+       "index": 226,
+       "x": 238.06801950454712,
+       "y": 268.0216893768311,
+       "gap": 11.822864113335573,
+       "tick": 9881,
+       "speed": 0
+      },
+      "st": {
+       "text": "Crashed · stopped · speed 0 · seven live distances",
+       "sel": "Car 227 · generation 10",
+       "hidden": false
+      }
+     }
+    },
+    {
+     "name": "generation boundary clears stale selection",
+     "pass": true,
+     "details": {
+      "genBefore": 10,
+      "gen": 11,
+      "panelHidden": true
+     }
+    },
+    {
+     "name": "default track: laps completed and best lap improves over generations",
+     "pass": true,
+     "details": {
+      "gens": 30,
+      "firstLap": 9.283548234504227,
+      "best": 8.339064534505209,
+      "imp": 18
+     }
+    },
+    {
+     "name": "telemetry shows real best lap and history",
+     "pass": true,
+     "details": {
+      "lap": "8.34 s",
+      "best": 8.339064534505209,
+      "historyLabel": "30 gen · best / mean"
+     }
+    },
+    {
+     "name": "drawing suspends stepping, keeps Play intent (dir 1)",
+     "pass": true,
+     "details": {
+      "susp1": 24709,
+      "susp": {
+       "tick": 24709,
+       "label": "Waiting",
+       "run": "Pause"
+      }
+     }
+    },
+    {
+     "name": "valid clockwise drawn loop commits and runs",
+     "pass": true,
+     "details": {
+      "runId": 2,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+      "drawing": "false"
+     }
+    },
+    {
+     "name": "drawn CW loop learns: subsequent generations, real laps, improvement",
+     "pass": true,
+     "details": {
+      "gens": 21,
+      "firstLap": 10.268935712267382,
+      "best": 9.31927649191829,
+      "imp": 15
+     }
+    },
+    {
+     "name": "cars drive the drawn direction (dir 1)",
+     "pass": true,
+     "details": {
+      "drawnArea": 15551.123370432757,
+      "bestArea": 269537.81738145836
+     }
+    },
+    {
+     "name": "drawing suspends stepping, keeps Play intent (dir -1)",
+     "pass": true,
+     "details": {
+      "susp1": 22566,
+      "susp": {
+       "tick": 22566,
+       "label": "Waiting",
+       "run": "Pause"
+      }
+     }
+    },
+    {
+     "name": "valid counter-clockwise drawn loop commits and runs",
+     "pass": true,
+     "details": {
+      "runId": 3,
+      "feedback": "Current: Your circuit. Draw a loop to make it yours.",
+      "drawing": "false"
+     }
+    },
+    {
+     "name": "drawn CCW loop learns: subsequent generations, real laps, improvement",
+     "pass": true,
+     "details": {
+      "gens": 21,
+      "firstLap": 10.213737879400075,
+      "best": 9.368093416746854,
+      "imp": 11
+     }
+    },
+    {
+     "name": "cars drive the drawn direction (dir -1)",
+     "pass": true,
+     "details": {
+      "drawnArea": -15552.919909394393,
+      "bestArea": -271996.3882493994
+     }
+    },
+    {
+     "name": "tiny stroke rejected with useful local message; run kept",
+     "pass": true,
+     "details": {
+      "feedback": "Current: Your circuit. Draw a larger loop with room for a full-width road.",
+      "runId": 3,
+      "before": 3
+     }
+    },
+    {
+     "name": "tiny: after stopping drawing the same run continues",
+     "pass": true,
+     "details": {
+      "before": {
+       "t": 92486.89999997616,
+       "runId": 3,
+       "gen": 22,
+       "tick": 20634,
+       "gtick": 246,
+       "steps": 1,
+       "ms": 0.5,
+       "alive": 355,
+       "running": true,
+       "rate": 1,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      },
+      "after": {
+       "t": 94554.5,
+       "runId": 3,
+       "gen": 22,
+       "tick": 20677,
+       "gtick": 289,
+       "steps": 1,
+       "ms": 1.2000000476837158,
+       "alive": 355,
+       "running": true,
+       "rate": 1,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      }
+     }
+    },
+    {
+     "name": "figure8 stroke rejected with useful local message; run kept",
+     "pass": true,
+     "details": {
+      "feedback": "Current: Your circuit. Keep the whole loop inside the drawing area, with room for the road.",
+      "runId": 3,
+      "before": 3
+     }
+    },
+    {
+     "name": "invalid feedback visible next to the canvas (no scroll)",
+     "pass": true,
+     "details": {
+      "top": 353.78125,
+      "bottom": 385.78125,
+      "innerHeight": 390
+     }
+    },
+    {
+     "name": "figure8: after stopping drawing the same run continues",
+     "pass": true,
+     "details": {
+      "before": {
+       "t": 94554.5,
+       "runId": 3,
+       "gen": 22,
+       "tick": 20677,
+       "gtick": 289,
+       "steps": 1,
+       "ms": 1.2000000476837158,
+       "alive": 355,
+       "running": true,
+       "rate": 1,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      },
+      "after": {
+       "t": 97784.39999997616,
+       "runId": 3,
+       "gen": 22,
+       "tick": 20720,
+       "gtick": 332,
+       "steps": 1,
+       "ms": 1.7000000476837158,
+       "alive": 353,
+       "running": true,
+       "rate": 1,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      }
+     }
+    },
+    {
+     "name": "touchcancel mid-stroke never commits",
+     "pass": true,
+     "details": {
+      "runId": 3,
+      "before": 3
+     }
+    },
+    {
+     "name": "paused + 4x intent survive drawn-track acceptance",
+     "pass": true,
+     "details": {
+      "run": "Play",
+      "rate": "4",
+      "meta": {
+       "t": 103834.5,
+       "runId": 4,
+       "gen": 1,
+       "tick": 0,
+       "gtick": 0,
+       "steps": 0,
+       "ms": 0,
+       "alive": 512,
+       "running": false,
+       "rate": 4,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      }
+     }
+    },
+    {
+     "name": "resume after accepted paused run steps at 4x",
+     "pass": true,
+     "details": {
+      "t": 106156.69999992847,
+      "runId": 4,
+      "gen": 1,
+      "tick": 133,
+      "gtick": 133,
+      "steps": 5,
+      "ms": 2.9999998807907104,
+      "alive": 114,
+      "running": true,
+      "rate": 4,
+      "pop": 512,
+      "sel": -1,
+      "selGen": -1
+     }
+    },
+    {
+     "name": "preset broad-oval accepted and learns laps",
+     "pass": true,
+     "details": {
+      "gens": 21,
+      "firstLap": 9.283548234504227,
+      "firstLapGen": 1,
+      "best": 8.372653452555339,
+      "imp": 13,
+      "feedback": "Current: Broad oval. Draw a loop to make it yours."
+     }
+    },
+    {
+     "name": "preset riverbend accepted and learns laps",
+     "pass": true,
+     "details": {
+      "gens": 19,
+      "firstLap": 9.385792277008907,
+      "firstLapGen": 1,
+      "best": 8.504611707581727,
+      "imp": 10,
+      "feedback": "Current: Riverbend. Draw a loop to make it yours."
+     }
+    },
+    {
+     "name": "preset club-circuit accepted and learns laps",
+     "pass": true,
+     "details": {
+      "gens": 17,
+      "firstLap": 10.221489478818928,
+      "firstLapGen": 1,
+      "best": 9.5375621230109,
+      "imp": 8,
+      "feedback": "Current: Club circuit. Draw a loop to make it yours."
+     }
+    },
+    {
+     "name": "population 1000 accepted; telemetry shows /1000",
+     "pass": true,
+     "details": {
+      "pendingFeedback": "Current: Club circuit. Applying Club circuit · 1000 cars…",
+      "alive": "1000 / 1000",
+      "pop": 1000
+     }
+    },
+    {
+     "name": "1000 cars keep 1x real-time stepping",
+     "pass": true,
+     "details": {
+      "ticks": 60.529466538664,
+      "snaps": 60.529466538664,
+      "raf": 59.864307565711655
+     }
+    },
+    {
+     "name": "rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+     "pass": true,
+     "details": {
+      "sentCount": 9,
+      "feedback": "Current: Riverbend. Draw a loop to make it yours.",
+      "pop": 512,
+      "run": "Play",
+      "running": false
+     }
+    },
+    {
+     "name": "synthetic hidden: worker stops, rAF stops; resume restores running intent",
+     "pass": true,
+     "details": {
+      "h1": {
+       "tick": 50,
+       "raf": 8139
+      },
+      "h2": {
+       "tick": 50,
+       "raf": 8139,
+       "running": false
+      },
+      "h3": {
+       "t": 137664.19999992847,
+       "runId": 18,
+       "gen": 1,
+       "tick": 97,
+       "gtick": 97,
+       "steps": 1,
+       "ms": 1,
+       "alive": 278,
+       "running": true,
+       "rate": 1,
+       "pop": 512,
+       "sel": -1,
+       "selGen": -1
+      }
+     }
+    },
+    {
+     "name": "rotated: no overflow, backing store matches",
+     "pass": true,
+     "details": {
+      "overflowX": 0,
+      "b": {
+       "w": 700,
+       "h": 538,
+       "cssW": 350,
+       "cssH": 269.21875,
+       "dpr": 3
+      }
+     }
+    },
+    {
+     "name": "DPR-only change rebuilds backing store",
+     "pass": true,
+     "details": {
+      "w": 476,
+      "h": 185,
+      "cssW": 476,
+      "cssH": 185,
+      "dpr": 1
+     }
+    },
+    {
+     "name": "320px-wide phone: no horizontal overflow",
+     "pass": true,
+     "details": {
+      "w": 280,
+      "h": 215.375,
+      "overflow": 0
+     }
+    },
+    {
+     "name": "120x200 extreme surface: no errors; recovers running",
+     "pass": true,
+     "details": {
+      "tiny": {
+       "w": 80,
+       "h": 61.53125,
+       "overflow": 142
+      },
+      "pageErrors": []
+     }
+    },
+    {
+     "name": "sensor demo responds to input (illustration)",
+     "pass": true,
+     "details": {
+      "changed": true,
+      "src": "Illustration · local perception",
+      "follow": false
+     }
+    },
+    {
+     "name": "network demo slider changes output",
+     "pass": true,
+     "details": {
+      "before": "+0.15",
+      "after": "-0.58",
+      "src": "Illustration · 8 → 8 → 2"
+     }
+    },
+    {
+     "name": "genetics demo mutation/crossover respond",
+     "pass": true,
+     "details": {
+      "before": "104370 mutations",
+      "after": "3 mutations",
+      "note": "Ochre marks small weight changes. Useful variations can survive selection.",
+      "split": ""
+     }
+    },
+    {
+     "name": "racing-line demo shows actual recorded line with road context, labelled",
+     "pass": true,
+     "details": {
+      "src": "Recorded best · 8.56 s lap",
+      "note": "Generation 15, car 287. A complete timed lap, recorded from the simulation.",
+      "pathLen": 1183,
+      "roadLen": 18252,
+      "roadShown": true,
+      "pathShown": true,
+      "history": "15 completed · best / mean fitness"
+     }
+    },
+    {
+     "name": "corner explorer labelled illustrative",
+     "pass": true,
+     "details": {
+      "src": "Illustration · corner geometry",
+      "pressed": "true"
+     }
+    },
+    {
+     "name": "article: no text < 11px anywhere (full page)",
+     "pass": true,
+     "details": {
+      "count": 0,
+      "sample": []
+     }
+    },
+    {
+     "name": "article: touch targets >= 44px",
+     "pass": true,
+     "details": {
+      "targets": []
+     }
+    },
+    {
+     "name": "no console errors/warnings, page errors, failed requests",
+     "pass": true,
+     "details": {
+      "console": [],
+      "pageErrors": [],
+      "failed": [],
+      "badStatus": []
+     }
+    },
+    {
+     "name": "one worker, no detached incoming buffers",
+     "pass": true,
+     "details": {
+      "workers": 1,
+      "terminated": 0,
+      "detached": 0,
+      "recycles": 5169
+     }
+    }
+   ],
+   "data": {
+    "layoutTop": {
+     "overflowX": 0,
+     "innerHeight": 390,
+     "small": [],
+     "targets": [],
+     "hero": {
+      "top": 139,
+      "bottom": 324,
+      "left": 24,
+      "right": 500,
+      "w": 476,
+      "h": 185
+     },
+     "h1": {
+      "top": 54,
+      "bottom": 85,
+      "left": 24,
+      "right": 272,
+      "w": 248,
+      "h": 30
+     },
+     "telemetry": {
+      "top": 97,
+      "bottom": 139,
+      "left": 24,
+      "right": 500,
+      "w": 476,
+      "h": 42
+     },
+     "feedback": {
+      "top": 354,
+      "bottom": 386,
+      "left": 24,
+      "right": 500,
+      "w": 476,
+      "h": 32
+     },
+     "hint": {
+      "top": 324,
+      "bottom": 354,
+      "left": 24,
+      "right": 500,
+      "w": 476,
+      "h": 30
+     },
+     "controls": {
+      "top": 97,
+      "bottom": 386,
+      "left": 520,
+      "right": 820,
+      "w": 300,
+      "h": 289
+     },
+     "play": {
+      "top": 106,
+      "bottom": 150,
+      "left": 535,
+      "right": 680,
+      "w": 145,
+      "h": 44
+     },
+     "fitness": {
+      "top": 345,
+      "bottom": 378,
+      "left": 534,
+      "right": 820,
+      "w": 286,
+      "h": 33
+     },
+     "panel": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "w": 0,
+      "h": 0
+     },
+     "canvasBacking": {
+      "w": 952,
+      "h": 370,
+      "cssW": 476,
+      "cssH": 185,
+      "dpr": 3
+     }
+    },
+    "rate1": {
+     "ticks": 59.85634477634234,
+     "snaps": 59.85634477634234,
+     "raf": 59.85634477634234
+    },
+    "rate4": {
+     "ticks": 239.99468156971528,
+     "snaps": 59.8324690894027,
+     "raf": 60.497274301507176
+    },
+    "rateFast": {
+     "ticks": 3005.5226562456965,
+     "snaps": 9.315323707646613,
+     "raf": 59.88422383487109
+    },
+    "pick": {
+     "ok": true,
+     "index": 175,
+     "x": 267.8036946868897,
+     "y": 184.23032492637634,
+     "gap": 8.932580008828074,
+     "tick": 7777,
+     "speed": 28.77377700805664
+    },
+    "inspectionVisibility": {
+     "top": 11.78125,
+     "bottom": 446.6875,
+     "headingTop": 52.78125,
+     "headingBottom": 79.78125,
+     "innerHeight": 390,
+     "heroCue": "Inspecting car 176 · details below",
+     "canvasTop": -235.21875,
+     "canvasBottom": -50.21875,
+     "active": "hero-canvas"
+    },
+    "coherenceRunning": [
+     {
+      "nodes": 18,
+      "edges": 80,
+      "values": 108,
+      "matched": true,
+      "candidates": 3,
+      "matchTick": 7809,
+      "matchIndex": 175,
+      "latestTick": 7810,
+      "forwardErr": 2.0348436158279526e-8,
+      "raysOk": true,
+      "ringOk": true,
+      "poseOk": true,
+      "inspectorRaysOk": true,
+      "inputsOk": true,
+      "steer": "+0.10",
+      "throttle": "16%",
+      "stateText": "Driving · speed 34 · seven live distances",
+      "acts": [
+       0.262,
+       0.307,
+       0.511,
+       1,
+       0.515,
+       0.284,
+       0.25,
+       0.142,
+       0.863,
+       0.665,
+       0.674,
+       0.78,
+       -0.476,
+       -0.825,
+       -0.293,
+       0.688,
+       0.102,
+       -0.676
+      ]
+     },
+     {
+      "nodes": 18,
+      "edges": 80,
+      "values": 108,
+      "matched": true,
+      "candidates": 4,
+      "matchTick": 7839,
+      "matchIndex": 175,
+      "latestTick": 7840,
+      "forwardErr": 2.750676308949096e-8,
+      "raysOk": true,
+      "ringOk": true,
+      "poseOk": true,
+      "inspectorRaysOk": true,
+      "inputsOk": true,
+      "steer": "+0.08",
+      "throttle": "16%",
+      "stateText": "Driving · speed 38 · seven live distances",
+      "acts": [
+       0.267,
+       0.313,
+       0.522,
+       1,
+       0.5,
+       0.277,
+       0.245,
+       0.159,
+       0.861,
+       0.686,
+       0.676,
+       0.774,
+       -0.478,
+       -0.814,
+       -0.274,
+       0.676,
+       0.084,
+       -0.675
+      ]
+     }
+    ],
+    "demoSources": [
+     "Selected car · live distances",
+     "Illustrative network",
+     "Waiting for a recorded attempt",
+     "Selected car · live network"
+    ],
+    "coherencePaused": {
+     "nodes": 18,
+     "edges": 80,
+     "values": 108,
+     "matched": true,
+     "candidates": 5,
+     "matchTick": 7910,
+     "matchIndex": 175,
+     "latestTick": 7910,
+     "forwardErr": 2.9511431964834856e-8,
+     "raysOk": true,
+     "ringOk": true,
+     "poseOk": true,
+     "inspectorRaysOk": true,
+     "inputsOk": true,
+     "steer": "+0.06",
+     "throttle": "17%",
+     "stateText": "Driving · speed 45 · seven live distances",
+     "acts": [
+      0.28,
+      0.326,
+      0.532,
+      1,
+      0.487,
+      0.264,
+      0.232,
+      0.188,
+      0.862,
+      0.712,
+      0.683,
+      0.765,
+      -0.475,
+      -0.796,
+      -0.258,
+      0.653,
+      0.062,
+      -0.669
+     ]
+    },
+    "keyboardFocusAfterEnter": "quiet-button[close]",
+    "stoppedCar": {
+     "target": {
+      "ok": true,
+      "index": 226,
+      "x": 238.06801950454712,
+      "y": 268.0216893768311,
+      "gap": 11.822864113335573,
+      "tick": 9881,
+      "speed": 0
+     },
+     "st": {
+      "text": "Crashed · stopped · speed 0 · seven live distances",
+      "sel": "Car 227 · generation 10",
+      "hidden": false
+     }
+    },
+    "defaultLearning": {
+     "run": 1,
+     "gens": 30,
+     "firstLapGen": 1,
+     "firstLap": 9.283548234504227,
+     "bestLap": 8.339064534505209,
+     "improvements": 18,
+     "completedLapsLast": 329,
+     "history": [
+      {
+       "generation": 1,
+       "bestFitness": 2.6905483921831923,
+       "meanFitness": 0.15361970761271768,
+       "completedLaps": 16,
+       "bestLapSeconds": 9.283548234504227,
+       "ticks": 711
+      },
+      {
+       "generation": 2,
+       "bestFitness": 2.7078459823320955,
+       "meanFitness": 0.265345463503517,
+       "completedLaps": 37,
+       "bestLapSeconds": 8.764620530037133,
+       "ticks": 737
+      },
+      {
+       "generation": 3,
+       "bestFitness": 2.7078459823320955,
+       "meanFitness": 0.4620500984251279,
+       "completedLaps": 75,
+       "bestLapSeconds": 8.764620530037133,
+       "ticks": 842
+      },
+      {
+       "generation": 4,
+       "bestFitness": 2.7085663019537827,
+       "meanFitness": 0.393556175271044,
+       "completedLaps": 61,
+       "bestLapSeconds": 8.74301094138652,
+       "ticks": 1227
+      },
+      {
+       "generation": 5,
+       "bestFitness": 2.7104912971383808,
+       "meanFitness": 0.47837978311147306,
+       "completedLaps": 77,
+       "bestLapSeconds": 8.685261085848568,
+       "ticks": 905
+      },
+      {
+       "generation": 6,
+       "bestFitness": 2.7104912971383808,
+       "meanFitness": 0.6826949661969647,
+       "completedLaps": 118,
+       "bestLapSeconds": 8.685261085848568,
+       "ticks": 1279
+      },
+      {
+       "generation": 7,
+       "bestFitness": 2.714132308959961,
+       "meanFitness": 0.8078507967809566,
+       "completedLaps": 142,
+       "bestLapSeconds": 8.576030731201172,
+       "ticks": 1108
+      },
+      {
+       "generation": 8,
+       "bestFitness": 2.714132308959961,
+       "meanFitness": 0.8661120177818332,
+       "completedLaps": 153,
+       "bestLapSeconds": 8.576030731201172,
+       "ticks": 864
+      },
+      {
+       "generation": 9,
+       "bestFitness": 2.7148338546832482,
+       "meanFitness": 0.9663112667856718,
+       "completedLaps": 173,
+       "bestLapSeconds": 8.554984359502555,
+       "ticks": 1800
+      },
+      {
+       "generation": 10,
+       "bestFitness": 2.7148431518160208,
+       "meanFitness": 0.893117102418686,
+       "completedLaps": 159,
+       "bestLapSeconds": 8.554705445519375,
+       "ticks": 1171
+      },
+      {
+       "generation": 11,
+       "bestFitness": 2.718049070570204,
+       "meanFitness": 1.0834953665911855,
+       "completedLaps": 196,
+       "bestLapSeconds": 8.45852788289388,
+       "ticks": 928
+      },
+      {
+       "generation": 12,
+       "bestFitness": 2.718049070570204,
+       "meanFitness": 1.3173577041322182,
+       "completedLaps": 242,
+       "bestLapSeconds": 8.45852788289388,
+       "ticks": 803
+      },
+      {
+       "generation": 13,
+       "bestFitness": 2.718049070570204,
+       "meanFitness": 1.3359215147556964,
+       "completedLaps": 246,
+       "bestLapSeconds": 8.45852788289388,
+       "ticks": 750
+      },
+      {
+       "generation": 14,
+       "bestFitness": 2.7187229834662543,
+       "meanFitness": 1.5191492754090825,
+       "completedLaps": 282,
+       "bestLapSeconds": 8.43831049601237,
+       "ticks": 853
+      },
+      {
+       "generation": 15,
+       "bestFitness": 2.7187229834662543,
+       "meanFitness": 1.5785225301934116,
+       "completedLaps": 293,
+       "bestLapSeconds": 8.43831049601237,
+       "ticks": 647
+      },
+      {
+       "generation": 16,
+       "bestFitness": 2.7187229834662543,
+       "meanFitness": 1.5674034341415086,
+       "completedLaps": 290,
+       "bestLapSeconds": 8.43831049601237,
+       "ticks": 704
+      },
+      {
+       "generation": 17,
+       "bestFitness": 2.7192459530300566,
+       "meanFitness": 1.7225044895004922,
+       "completedLaps": 321,
+       "bestLapSeconds": 8.422621409098307,
+       "ticks": 771
+      },
+      {
+       "generation": 18,
+       "bestFitness": 2.719407805837424,
+       "meanFitness": 1.8176843016094877,
+       "completedLaps": 339,
+       "bestLapSeconds": 8.417765824877291,
+       "ticks": 638
+      },
+      {
+       "generation": 19,
+       "bestFitness": 2.7196126980251734,
+       "meanFitness": 1.7054789293925985,
+       "completedLaps": 317,
+       "bestLapSeconds": 8.411619059244792,
+       "ticks": 627
+      },
+      {
+       "generation": 20,
+       "bestFitness": 2.720458128187391,
+       "meanFitness": 1.712900888656298,
+       "completedLaps": 318,
+       "bestLapSeconds": 8.386256154378255,
+       "ticks": 705
+      },
+      {
+       "generation": 21,
+       "bestFitness": 2.720911551581489,
+       "meanFitness": 1.7172032537367452,
+       "completedLaps": 319,
+       "bestLapSeconds": 8.372653452555339,
+       "ticks": 762
+      },
+      {
+       "generation": 22,
+       "bestFitness": 2.720911551581489,
+       "meanFitness": 1.6772167778339513,
+       "completedLaps": 311,
+       "bestLapSeconds": 8.372653452555339,
+       "ticks": 694
+      },
+      {
+       "generation": 23,
+       "bestFitness": 2.721378758748372,
+       "meanFitness": 1.7453655853626944,
+       "completedLaps": 324,
+       "bestLapSeconds": 8.358637237548828,
+       "ticks": 744
+      },
+      {
+       "generation": 24,
+       "bestFitness": 2.721586346096463,
+       "meanFitness": 1.8130065543482123,
+       "completedLaps": 337,
+       "bestLapSeconds": 8.352409617106119,
+       "ticks": 577
+      },
+      {
+       "generation": 25,
+       "bestFitness": 2.721586346096463,
+       "meanFitness": 1.7412477052125617,
+       "completedLaps": 323,
+       "bestLapSeconds": 8.352409617106119,
+       "ticks": 654
+      },
+      {
+       "generation": 26,
+       "bestFitness": 2.721586346096463,
+       "meanFitness": 1.6700990450753879,
+       "completedLaps": 310,
+       "bestLapSeconds": 8.352409617106119,
+       "ticks": 601
+      },
+      {
+       "generation": 27,
+       "bestFitness": 2.721586346096463,
+       "meanFitness": 1.6744213712470182,
+       "completedLaps": 310,
+       "bestLapSeconds": 8.352409617106119,
+       "ticks": 616
+      },
+      {
+       "generation": 28,
+       "bestFitness": 2.721876881917318,
+       "meanFitness": 1.7491089419642396,
+       "completedLaps": 324,
+       "bestLapSeconds": 8.34369354248047,
+       "ticks": 658
+      },
+      {
+       "generation": 29,
+       "bestFitness": 2.7220182037353515,
+       "meanFitness": 1.743758837389969,
+       "completedLaps": 323,
+       "bestLapSeconds": 8.339453887939452,
+       "ticks": 657
+      },
+      {
+       "generation": 30,
+       "bestFitness": 2.7220311821831595,
+       "meanFitness": 1.7801159633482293,
+       "completedLaps": 329,
+       "bestLapSeconds": 8.339064534505209,
+       "ticks": 543
+      }
+     ]
+    },
+    "drawnCWLearning": {
+     "run": 2,
+     "gens": 21,
+     "firstLapGen": 1,
+     "firstLap": 10.268935712267382,
+     "bestLap": 9.31927649191829,
+     "improvements": 15,
+     "completedLapsLast": 297,
+     "history": [
+      {
+       "generation": 1,
+       "bestFitness": 2.6577021429244203,
+       "meanFitness": 0.13682736394083106,
+       "completedLaps": 14,
+       "bestLapSeconds": 10.268935712267382,
+       "ticks": 766
+      },
+      {
+       "generation": 2,
+       "bestFitness": 2.6604303848337767,
+       "meanFitness": 0.24542037146237944,
+       "completedLaps": 34,
+       "bestLapSeconds": 10.187088454986696,
+       "ticks": 951
+      },
+      {
+       "generation": 3,
+       "bestFitness": 2.6655518165578913,
+       "meanFitness": 0.2861625249667435,
+       "completedLaps": 42,
+       "bestLapSeconds": 10.033445503263257,
+       "ticks": 1498
+      },
+      {
+       "generation": 4,
+       "bestFitness": 2.6655518165578913,
+       "meanFitness": 0.3171821677352652,
+       "completedLaps": 48,
+       "bestLapSeconds": 10.033445503263257,
+       "ticks": 1437
+      },
+      {
+       "generation": 5,
+       "bestFitness": 2.6761637528140545,
+       "meanFitness": 0.465523822724252,
+       "completedLaps": 77,
+       "bestLapSeconds": 9.71508741557836,
+       "ticks": 1099
+      },
+      {
+       "generation": 6,
+       "bestFitness": 2.680229670999197,
+       "meanFitness": 0.5300682992590182,
+       "completedLaps": 90,
+       "bestLapSeconds": 9.593109870024097,
+       "ticks": 1295
+      },
+      {
+       "generation": 7,
+       "bestFitness": 2.680229670999197,
+       "meanFitness": 0.6406754068784541,
+       "completedLaps": 112,
+       "bestLapSeconds": 9.593109870024097,
+       "ticks": 1197
+      },
+      {
+       "generation": 8,
+       "bestFitness": 2.6804294836058027,
+       "meanFitness": 0.9274709125522069,
+       "completedLaps": 169,
+       "bestLapSeconds": 9.587115491825926,
+       "ticks": 1272
+      },
+      {
+       "generation": 9,
+       "bestFitness": 2.6804294836058027,
+       "meanFitness": 1.1032489037527717,
+       "completedLaps": 204,
+       "bestLapSeconds": 9.587115491825926,
+       "ticks": 985
+      },
+      {
+       "generation": 10,
+       "bestFitness": 2.6805934554194497,
+       "meanFitness": 1.295173824807898,
+       "completedLaps": 241,
+       "bestLapSeconds": 9.582196337416505,
+       "ticks": 1362
+      },
+      {
+       "generation": 11,
+       "bestFitness": 2.684884654515818,
+       "meanFitness": 1.3563795215542964,
+       "completedLaps": 254,
+       "bestLapSeconds": 9.45346036452547,
+       "ticks": 1766
+      },
+      {
+       "generation": 12,
+       "bestFitness": 2.6850452688289757,
+       "meanFitness": 1.443289451136621,
+       "completedLaps": 271,
+       "bestLapSeconds": 9.448641935130732,
+       "ticks": 877
+      },
+      {
+       "generation": 13,
+       "bestFitness": 2.6850452688289757,
+       "meanFitness": 1.528168559739122,
+       "completedLaps": 288,
+       "bestLapSeconds": 9.448641935130732,
+       "ticks": 970
+      },
+      {
+       "generation": 14,
+       "bestFitness": 2.686580780690131,
+       "meanFitness": 1.549801980350655,
+       "completedLaps": 292,
+       "bestLapSeconds": 9.402576579296069,
+       "ticks": 1008
+      },
+      {
+       "generation": 15,
+       "bestFitness": 2.686580780690131,
+       "meanFitness": 1.5931792253744028,
+       "completedLaps": 300,
+       "bestLapSeconds": 9.402576579296069,
+       "ticks": 835
+      },
+      {
+       "generation": 16,
+       "bestFitness": 2.6871636020340697,
+       "meanFitness": 1.617437479759428,
+       "completedLaps": 305,
+       "bestLapSeconds": 9.385091938977919,
+       "ticks": 865
+      },
+      {
+       "generation": 17,
+       "bestFitness": 2.6875670835643906,
+       "meanFitness": 1.6237079644278556,
+       "completedLaps": 305,
+       "bestLapSeconds": 9.372987493068287,
+       "ticks": 786
+      },
+      {
+       "generation": 18,
+       "bestFitness": 2.6877242705208406,
+       "meanFitness": 1.5600103852193903,
+       "completedLaps": 293,
+       "bestLapSeconds": 9.368271884374776,
+       "ticks": 1062
+      },
+      {
+       "generation": 19,
+       "bestFitness": 2.687861387780476,
+       "meanFitness": 1.6349829606709032,
+       "completedLaps": 307,
+       "bestLapSeconds": 9.364158366585713,
+       "ticks": 765
+      },
+      {
+       "generation": 20,
+       "bestFitness": 2.68846924572368,
+       "meanFitness": 1.4777216668341804,
+       "completedLaps": 277,
+       "bestLapSeconds": 9.345922628289598,
+       "ticks": 705
+      },
+      {
+       "generation": 21,
+       "bestFitness": 2.6893574502693904,
+       "meanFitness": 1.581169807714168,
+       "completedLaps": 297,
+       "bestLapSeconds": 9.31927649191829,
+       "ticks": 758
+      }
+     ]
+    },
+    "drawnCCWLearning": {
+     "run": 3,
+     "gens": 21,
+     "firstLapGen": 1,
+     "firstLap": 10.213737879400075,
+     "bestLap": 9.368093416746854,
+     "improvements": 11,
+     "completedLapsLast": 334,
+     "history": [
+      {
+       "generation": 1,
+       "bestFitness": 2.659542070686664,
+       "meanFitness": 0.1307238240128058,
+       "completedLaps": 10,
+       "bestLapSeconds": 10.213737879400075,
+       "ticks": 865
+      },
+      {
+       "generation": 2,
+       "bestFitness": 2.6669872311399625,
+       "meanFitness": 0.2603443978811096,
+       "completedLaps": 33,
+       "bestLapSeconds": 9.990383065801124,
+       "ticks": 1061
+      },
+      {
+       "generation": 3,
+       "bestFitness": 2.668888498911312,
+       "meanFitness": 0.327573069600205,
+       "completedLaps": 45,
+       "bestLapSeconds": 9.933345032660636,
+       "ticks": 1181
+      },
+      {
+       "generation": 4,
+       "bestFitness": 2.6716713453990875,
+       "meanFitness": 0.3783493528344569,
+       "completedLaps": 55,
+       "bestLapSeconds": 9.849859638027375,
+       "ticks": 1118
+      },
+      {
+       "generation": 5,
+       "bestFitness": 2.6722527092961137,
+       "meanFitness": 0.4468352751696977,
+       "completedLaps": 68,
+       "bestLapSeconds": 9.832418721116586,
+       "ticks": 1131
+      },
+      {
+       "generation": 6,
+       "bestFitness": 2.680502318989296,
+       "meanFitness": 0.5345473900702259,
+       "completedLaps": 86,
+       "bestLapSeconds": 9.584930430321121,
+       "ticks": 924
+      },
+      {
+       "generation": 7,
+       "bestFitness": 2.680502318989296,
+       "meanFitness": 0.5836998370768764,
+       "completedLaps": 95,
+       "bestLapSeconds": 9.584930430321121,
+       "ticks": 881
+      },
+      {
+       "generation": 8,
+       "bestFitness": 2.680502318989296,
+       "meanFitness": 0.6536084525819126,
+       "completedLaps": 111,
+       "bestLapSeconds": 9.584930430321121,
+       "ticks": 978
+      },
+      {
+       "generation": 9,
+       "bestFitness": 2.680502318989296,
+       "meanFitness": 0.8850439613422093,
+       "completedLaps": 155,
+       "bestLapSeconds": 9.584930430321121,
+       "ticks": 1187
+      },
+      {
+       "generation": 10,
+       "bestFitness": 2.680502318989296,
+       "meanFitness": 0.97768402066634,
+       "completedLaps": 174,
+       "bestLapSeconds": 9.584930430321121,
+       "ticks": 1305
+      },
+      {
+       "generation": 11,
+       "bestFitness": 2.680502318989296,
+       "meanFitness": 1.23329494399498,
+       "completedLaps": 225,
+       "bestLapSeconds": 9.584930430321121,
+       "ticks": 1094
+      },
+      {
+       "generation": 12,
+       "bestFitness": 2.682185690392191,
+       "meanFitness": 1.4399732429461825,
+       "completedLaps": 267,
+       "bestLapSeconds": 9.534429288234264,
+       "ticks": 1169
+      },
+      {
+       "generation": 13,
+       "bestFitness": 2.682185690392191,
+       "meanFitness": 1.5229416229391364,
+       "completedLaps": 283,
+       "bestLapSeconds": 9.534429288234264,
+       "ticks": 954
+      },
+      {
+       "generation": 14,
+       "bestFitness": 2.683280966111057,
+       "meanFitness": 1.6613729830578492,
+       "completedLaps": 312,
+       "bestLapSeconds": 9.501571016668294,
+       "ticks": 915
+      },
+      {
+       "generation": 15,
+       "bestFitness": 2.6835967361569697,
+       "meanFitness": 1.6212128782023976,
+       "completedLaps": 303,
+       "bestLapSeconds": 9.492097915290906,
+       "ticks": 956
+      },
+      {
+       "generation": 16,
+       "bestFitness": 2.684934316077805,
+       "meanFitness": 1.592829073157293,
+       "completedLaps": 297,
+       "bestLapSeconds": 9.451970517665847,
+       "ticks": 807
+      },
+      {
+       "generation": 17,
+       "bestFitness": 2.6877187766335604,
+       "meanFitness": 1.7557415888349441,
+       "completedLaps": 330,
+       "bestLapSeconds": 9.368436700993195,
+       "ticks": 759
+      },
+      {
+       "generation": 18,
+       "bestFitness": 2.6877187766335604,
+       "meanFitness": 1.6119863620192159,
+       "completedLaps": 302,
+       "bestLapSeconds": 9.368436700993195,
+       "ticks": 798
+      },
+      {
+       "generation": 19,
+       "bestFitness": 2.6877187766335604,
+       "meanFitness": 1.8536304348180073,
+       "completedLaps": 350,
+       "bestLapSeconds": 9.368436700993195,
+       "ticks": 717
+      },
+      {
+       "generation": 20,
+       "bestFitness": 2.6877302194417716,
+       "meanFitness": 1.9094089360196076,
+       "completedLaps": 361,
+       "bestLapSeconds": 9.368093416746854,
+       "ticks": 721
+      },
+      {
+       "generation": 21,
+       "bestFitness": 2.6877302194417716,
+       "meanFitness": 1.7755499734065976,
+       "completedLaps": 334,
+       "bestLapSeconds": 9.368093416746854,
+       "ticks": 867
+      }
+     ]
+    },
+    "invalidFeedbackRect": {
+     "top": 353.78125,
+     "bottom": 385.78125,
+     "innerHeight": 390,
+     "canvasVisible": true
+    },
+    "cancelPath": {
+     "committed": false
+    },
+    "presets": {
+     "broad-oval": {
+      "gens": 21,
+      "firstLap": 9.283548234504227,
+      "firstLapGen": 1,
+      "best": 8.372653452555339,
+      "imp": 13,
+      "feedback": "Current: Broad oval. Draw a loop to make it yours."
+     },
+     "riverbend": {
+      "gens": 19,
+      "firstLap": 9.385792277008907,
+      "firstLapGen": 1,
+      "best": 8.504611707581727,
+      "imp": 10,
+      "feedback": "Current: Riverbend. Draw a loop to make it yours."
+     },
+     "club-circuit": {
+      "gens": 17,
+      "firstLap": 10.221489478818928,
+      "firstLapGen": 1,
+      "best": 9.5375621230109,
+      "imp": 8,
+      "feedback": "Current: Club circuit. Draw a loop to make it yours."
+     }
+    },
+    "pendingFeedback": "Current: Club circuit. Applying Club circuit · 1000 cars…",
+    "rate1pop1000": {
+     "ticks": 60.529466538664,
+     "snaps": 60.529466538664,
+     "raf": 59.864307565711655
+    },
+    "rapid": {
+     "sent": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18
+     ],
+     "ready": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18
+     ],
+     "feedback": "Current: Riverbend. Draw a loop to make it yours.",
+     "meta": {
+      "t": 131980.69999992847,
+      "runId": 18,
+      "gen": 1,
+      "tick": 2,
+      "gtick": 2,
+      "steps": 0,
+      "ms": 0,
+      "alive": 512,
+      "running": false,
+      "rate": 1,
+      "pop": 512,
+      "sel": -1,
+      "selGen": -1
+     },
+     "run": "Play"
+    },
+    "tiny": {
+     "small320": {
+      "w": 280,
+      "h": 215.375,
+      "overflow": 0
+     },
+     "tiny": {
+      "w": 80,
+      "h": 61.53125,
+      "overflow": 142
+     }
+    },
+    "preDemoLearning": {
+     "run": 18,
+     "gens": 15,
+     "firstLapGen": 1,
+     "firstLap": 9.385792277008907,
+     "bestLap": 8.561117686226739,
+     "improvements": 8,
+     "completedLapsLast": 284,
+     "history": [
+      {
+       "generation": 1,
+       "bestFitness": 2.6871402574330365,
+       "meanFitness": 0.12065514065277883,
+       "completedLaps": 7,
+       "bestLapSeconds": 9.385792277008907,
+       "ticks": 692
+      },
+      {
+       "generation": 2,
+       "bestFitness": 2.692145421340297,
+       "meanFitness": 0.17274219708453875,
+       "completedLaps": 14,
+       "bestLapSeconds": 9.235637359791093,
+       "ticks": 742
+      },
+      {
+       "generation": 3,
+       "bestFitness": 2.692145421340297,
+       "meanFitness": 0.2362225218707797,
+       "completedLaps": 23,
+       "bestLapSeconds": 9.235637359791093,
+       "ticks": 1215
+      },
+      {
+       "generation": 4,
+       "bestFitness": 2.69638081784781,
+       "meanFitness": 0.2855821634824969,
+       "completedLaps": 32,
+       "bestLapSeconds": 9.108575464565702,
+       "ticks": 802
+      },
+      {
+       "generation": 5,
+       "bestFitness": 2.7002006041974593,
+       "meanFitness": 0.384037597334939,
+       "completedLaps": 50,
+       "bestLapSeconds": 8.993981874076221,
+       "ticks": 888
+      },
+      {
+       "generation": 6,
+       "bestFitness": 2.7002006041974593,
+       "meanFitness": 0.4295561906998608,
+       "completedLaps": 58,
+       "bestLapSeconds": 8.993981874076221,
+       "ticks": 988
+      },
+      {
+       "generation": 7,
+       "bestFitness": 2.7055589935152144,
+       "meanFitness": 0.4264800006910039,
+       "completedLaps": 59,
+       "bestLapSeconds": 8.833230194543564,
+       "ticks": 1205
+      },
+      {
+       "generation": 8,
+       "bestFitness": 2.7055589935152144,
+       "meanFitness": 0.5582929528555861,
+       "completedLaps": 84,
+       "bestLapSeconds": 8.833230194543564,
+       "ticks": 1227
+      },
+      {
+       "generation": 9,
+       "bestFitness": 2.7055589935152144,
+       "meanFitness": 0.6627334121584271,
+       "completedLaps": 103,
+       "bestLapSeconds": 8.833230194543564,
+       "ticks": 1041
+      },
+      {
+       "generation": 10,
+       "bestFitness": 2.7055589935152144,
+       "meanFitness": 0.8136758451917203,
+       "completedLaps": 134,
+       "bestLapSeconds": 8.833230194543564,
+       "ticks": 1125
+      },
+      {
+       "generation": 11,
+       "bestFitness": 2.7112529489020054,
+       "meanFitness": 0.8321249534875215,
+       "completedLaps": 137,
+       "bestLapSeconds": 8.662411532939839,
+       "ticks": 1032
+      },
+      {
+       "generation": 12,
+       "bestFitness": 2.7112529489020054,
+       "meanFitness": 0.8973915620793721,
+       "completedLaps": 151,
+       "bestLapSeconds": 8.662411532939839,
+       "ticks": 1347
+      },
+      {
+       "generation": 13,
+       "bestFitness": 2.711734242523555,
+       "meanFitness": 1.2496908571506886,
+       "completedLaps": 221,
+       "bestLapSeconds": 8.647972724293345,
+       "ticks": 1052
+      },
+      {
+       "generation": 14,
+       "bestFitness": 2.7139172779094016,
+       "meanFitness": 1.3784574717094935,
+       "completedLaps": 247,
+       "bestLapSeconds": 8.582481662717957,
+       "ticks": 940
+      },
+      {
+       "generation": 15,
+       "bestFitness": 2.714629410459109,
+       "meanFitness": 1.5533853593584728,
+       "completedLaps": 284,
+       "bestLapSeconds": 8.561117686226739,
+       "ticks": 1098
+      }
+     ]
+    },
+    "demos": {
+     "sensors": {
+      "changed": true,
+      "src": "Illustration · local perception",
+      "follow": false
+     },
+     "network": {
+      "before": "+0.15",
+      "after": "-0.58",
+      "src": "Illustration · 8 → 8 → 2"
+     },
+     "genetics": {
+      "before": "104370 mutations",
+      "after": "3 mutations",
+      "note": "Ochre marks small weight changes. Useful variations can survive selection.",
+      "split": ""
+     },
+     "racing": {
+      "src": "Recorded best · 8.56 s lap",
+      "note": "Generation 15, car 287. A complete timed lap, recorded from the simulation.",
+      "pathLen": 1183,
+      "roadLen": 18252,
+      "roadShown": true,
+      "pathShown": true,
+      "history": "15 completed · best / mean fitness"
+     },
+     "racingIllustrated": {
+      "src": "Illustration · corner geometry",
+      "pressed": "true"
+     }
+    },
+    "layoutFull": {
+     "small": [],
+     "targets": [],
+     "overflowX": 0
+    },
+    "log": {
+     "console": [],
+     "pageErrors": [],
+     "failed": [],
+     "badStatus": []
+    },
+    "final": {
+     "workers": 1,
+     "terminated": 0,
+     "detached": 0,
+     "recycles": 5169
+    }
+   }
+  }
+ },
+ "finished": "2026-11-15T13:14:18.806Z",
+ "summary": {
+  "total": 70,
+  "passed": 70,
+  "failed": []
+ }
+}

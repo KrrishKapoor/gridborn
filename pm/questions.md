@@ -6,6 +6,11 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T4 acceptance (Codex PM)
+
+- Make the actual drawing bounds visible with room for the road; retain the established responsive field layout. Correct Escape focus directly as a small review fix, then have the fresh final reviewer check both changes.
+- Accept the remaining low behaviors with honest documentation; do not broaden scope into a new inspector or layout redesign. Final QA reviews the combined commit in an isolated verification checkout.
+
 ## Resolved — 2026-11-15 T1 round 2 acceptance (Codex PM)
 
 - No further geometry relaxation: accept the no-high/no-medium review and disclose the small quantized-jitter/sharp-corner/long-tail limits. Final combined QA still must test drawing into the actual running engine.

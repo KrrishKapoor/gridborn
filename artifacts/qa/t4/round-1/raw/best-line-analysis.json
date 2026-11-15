@@ -1,0 +1,11 @@
+{
+ "samples": 85,
+ "lapSecondsLastSample": 8.312220573425293,
+ "pathLength": 1725.8,
+ "centerlineLength": 1965.5,
+ "halfWidth": 46,
+ "medianAbsOffset": 39.4,
+ "maxAbsOffset": 40.9,
+ "shareBeyond20": 0.88,
+ "withinRoad": true
+}

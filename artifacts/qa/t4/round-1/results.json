@@ -1,0 +1,1916 @@
+{
+ "subject": {
+  "worktree": "/Users/krrishai/.t3/worktrees/gridborn/t3-3c108d66-4ceed1d07eb1b5d3",
+  "branch": "t3/production-runtime-integration",
+  "head": "b1751e73ffb5d9850c6a129eb7d6651e0e8d2d5f"
+ },
+ "verdict": "PASS (no high findings); 1 medium, 6 low",
+ "commands": {
+  "npm ci": "exit 0",
+  "npm test": "121/121 passed, 11 files",
+  "npm run build": "exit 0 (tsc + vite); dist = index.html + index JS/CSS + module worker; no scaffold, no diagnostics"
+ },
+ "browser": {
+  "prod 1440x900": {
+   "passed": 66,
+   "total": 68,
+   "failed": [
+    {
+     "name": "arrow keys cycle drivers",
+     "details": {
+      "k1": 176,
+      "k2": 176,
+      "k3": 176,
+      "state": {
+       "generation": "09",
+       "alive": "1 / 512",
+       "lap": "8.58 s",
+       "lapLabel": "Best lap 8.58 seconds",
+       "historyLabel": "8 gen · best / mean",
+       "run": "Pause",
+       "runPressed": "true",
+       "rate": "1",
+       "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+       "issues": false,
+       "hint": "Inspecting car 176 · details below",
+       "runLabel": "Running",
+       "panelHidden": false,
+       "selection": "Car 176 · generation 9",
+       "population": "512",
+       "drawing": "false",
+       "active": "quiet-button[close]",
+       "meta": {
+        "t": 39502.5,
+        "runId": 1,
+        "gen": 9,
+        "tick": 9031,
+        "gtick": 1358,
+        "steps": 1,
+        "ms": 0,
+        "alive": 1,
+        "running": true,
+        "rate": 1,
+        "pop": 512,
+        "sel": 175,
+        "selGen": 9
+       },
+       "ready": [
+        1
+       ],
+       "errors": [],
+       "gens": 8,
+       "workers": 1,
+       "terminated": 0,
+       "lastGen": {
+        "runId": 1,
+        "generation": 8,
+        "ticks": 864,
+        "bestFitness": 2.714132308959961,
+        "meanFitness": 0.8661120177818332,
+        "completedLaps": 153,
+        "bestLapSeconds": 8.576030731201172,
+        "t": 16026.399999976158
+       }
+      }
+     }
+    },
+    {
+     "name": "Escape mid-stroke never commits",
+     "details": {
+      "runId": 4,
+      "before": 3
+     }
+    }
+   ],
+   "checks": [
+    "PASS auto-starts running at 1x with hundreds of cars",
+    "PASS production diagnostics global matches build mode",
+    "PASS no horizontal overflow",
+    "PASS hero canvas fully in first viewport",
+    "PASS play control in first viewport",
+    "PASS canvas backing = css * min(dpr,2)",
+    "PASS all rendered text >= 11px",
+    "PASS hero draws cars each frame",
+    "PASS 1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+    "PASS 4x ≈ 240 sim steps/s",
+    "PASS fast is headless: no cars drawn, message shown, faster than 4x",
+    "PASS pause stops stepping and motion",
+    "PASS play resumes",
+    "PASS click/tap on a moving car opens inspection of that car",
+    "PASS pointer selection does not drop focus to body",
+    "PASS inspector response visible in viewport after selection",
+    "PASS hero cue names selected car",
+    "PASS inspector shows 90 weights + 18 activations",
+    "PASS running: inspector values equal one actual worker snapshot",
+    "PASS running: hero rays, ring, pose and inspector rays from same snapshot",
+    "PASS activations equal independent forward pass; inputs equal ray distances",
+    "PASS live activations change while running",
+    "PASS sensor & network demos follow the selected car",
+    "PASS paused: inspector equals final snapshot exactly",
+    "PASS explicit Follow=off preserved across new selection",
+    "PASS keyboard Enter selects a car and opens inspector",
+    "FAIL arrow keys cycle drivers",
+    "PASS Escape closes and focus returns to hero canvas",
+    "PASS Close button closes; focus not dropped to body",
+    "PASS crashed car inspection says stopped",
+    "PASS generation boundary clears stale selection",
+    "PASS default track: laps completed and best lap improves over generations",
+    "PASS telemetry shows real best lap and history",
+    "PASS drawing suspends stepping, keeps Play intent (dir 1)",
+    "PASS valid clockwise drawn loop commits and runs",
+    "PASS drawn CW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir 1)",
+    "PASS drawing suspends stepping, keeps Play intent (dir -1)",
+    "PASS valid counter-clockwise drawn loop commits and runs",
+    "PASS drawn CCW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir -1)",
+    "PASS tiny stroke rejected with useful local message; run kept",
+    "PASS tiny: after stopping drawing the same run continues",
+    "PASS figure8 stroke rejected with useful local message; run kept",
+    "PASS invalid feedback visible next to the canvas (no scroll)",
+    "PASS figure8: after stopping drawing the same run continues",
+    "FAIL Escape mid-stroke never commits",
+    "PASS paused + 4x intent survive drawn-track acceptance",
+    "PASS resume after accepted paused run steps at 4x",
+    "PASS preset broad-oval accepted and learns laps",
+    "PASS preset riverbend accepted and learns laps",
+    "PASS preset club-circuit accepted and learns laps",
+    "PASS population 1000 accepted; telemetry shows /1000",
+    "PASS 1000 cars keep 1x real-time stepping",
+    "PASS rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+    "PASS synthetic hidden: worker stops, rAF stops; resume restores running intent",
+    "PASS rotated: no overflow, backing store matches",
+    "PASS DPR-only change rebuilds backing store",
+    "PASS 320px-wide phone: no horizontal overflow",
+    "PASS 120x200 extreme surface: no errors; recovers running",
+    "PASS sensor demo responds to input (illustration)",
+    "PASS network demo slider changes output",
+    "PASS genetics demo mutation/crossover respond",
+    "PASS racing-line demo shows actual recorded line with road context, labelled",
+    "PASS corner explorer labelled illustrative",
+    "PASS article: no text < 11px anywhere (full page)",
+    "PASS no console errors/warnings, page errors, failed requests",
+    "PASS one worker, no detached incoming buffers"
+   ]
+  },
+  "prod 390x844": {
+   "passed": 70,
+   "total": 70,
+   "failed": [],
+   "checks": [
+    "PASS auto-starts running at 1x with hundreds of cars",
+    "PASS production diagnostics global matches build mode",
+    "PASS no horizontal overflow",
+    "PASS hero canvas fully in first viewport",
+    "PASS play control in first viewport",
+    "PASS canvas backing = css * min(dpr,2)",
+    "PASS all rendered text >= 11px",
+    "PASS touch targets >= 44px",
+    "PASS hero draws cars each frame",
+    "PASS 1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+    "PASS 4x ≈ 240 sim steps/s",
+    "PASS fast is headless: no cars drawn, message shown, faster than 4x",
+    "PASS pause stops stepping and motion",
+    "PASS play resumes",
+    "PASS click/tap on a moving car opens inspection of that car",
+    "PASS pointer selection does not drop focus to body",
+    "PASS inspector response visible in viewport after selection",
+    "PASS hero cue names selected car",
+    "PASS inspector shows 90 weights + 18 activations",
+    "PASS running: inspector values equal one actual worker snapshot",
+    "PASS running: hero rays, ring, pose and inspector rays from same snapshot",
+    "PASS activations equal independent forward pass; inputs equal ray distances",
+    "PASS live activations change while running",
+    "PASS sensor & network demos follow the selected car",
+    "PASS paused: inspector equals final snapshot exactly",
+    "PASS explicit Follow=off preserved across new selection",
+    "PASS keyboard Enter selects a car and opens inspector",
+    "PASS arrow keys cycle drivers",
+    "PASS Escape closes and focus returns to hero canvas",
+    "PASS Close button closes; focus not dropped to body",
+    "PASS crashed car inspection says stopped",
+    "PASS generation boundary clears stale selection",
+    "PASS default track: laps completed and best lap improves over generations",
+    "PASS telemetry shows real best lap and history",
+    "PASS drawing suspends stepping, keeps Play intent (dir 1)",
+    "PASS valid clockwise drawn loop commits and runs",
+    "PASS drawn CW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir 1)",
+    "PASS drawing suspends stepping, keeps Play intent (dir -1)",
+    "PASS valid counter-clockwise drawn loop commits and runs",
+    "PASS drawn CCW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir -1)",
+    "PASS tiny stroke rejected with useful local message; run kept",
+    "PASS tiny: after stopping drawing the same run continues",
+    "PASS figure8 stroke rejected with useful local message; run kept",
+    "PASS invalid feedback visible next to the canvas (no scroll)",
+    "PASS figure8: after stopping drawing the same run continues",
+    "PASS touchcancel mid-stroke never commits",
+    "PASS paused + 4x intent survive drawn-track acceptance",
+    "PASS resume after accepted paused run steps at 4x",
+    "PASS preset broad-oval accepted and learns laps",
+    "PASS preset riverbend accepted and learns laps",
+    "PASS preset club-circuit accepted and learns laps",
+    "PASS population 1000 accepted; telemetry shows /1000",
+    "PASS 1000 cars keep 1x real-time stepping",
+    "PASS rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+    "PASS synthetic hidden: worker stops, rAF stops; resume restores running intent",
+    "PASS rotated: no overflow, backing store matches",
+    "PASS DPR-only change rebuilds backing store",
+    "PASS 320px-wide phone: no horizontal overflow",
+    "PASS 120x200 extreme surface: no errors; recovers running",
+    "PASS sensor demo responds to input (illustration)",
+    "PASS network demo slider changes output",
+    "PASS genetics demo mutation/crossover respond",
+    "PASS racing-line demo shows actual recorded line with road context, labelled",
+    "PASS corner explorer labelled illustrative",
+    "PASS article: no text < 11px anywhere (full page)",
+    "PASS article: touch targets >= 44px",
+    "PASS no console errors/warnings, page errors, failed requests",
+    "PASS one worker, no detached incoming buffers"
+   ]
+  },
+  "prod 844x390": {
+   "passed": 70,
+   "total": 70,
+   "failed": [],
+   "checks": [
+    "PASS auto-starts running at 1x with hundreds of cars",
+    "PASS production diagnostics global matches build mode",
+    "PASS no horizontal overflow",
+    "PASS hero canvas fully in first viewport",
+    "PASS play control in first viewport",
+    "PASS canvas backing = css * min(dpr,2)",
+    "PASS all rendered text >= 11px",
+    "PASS touch targets >= 44px",
+    "PASS hero draws cars each frame",
+    "PASS 1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+    "PASS 4x ≈ 240 sim steps/s",
+    "PASS fast is headless: no cars drawn, message shown, faster than 4x",
+    "PASS pause stops stepping and motion",
+    "PASS play resumes",
+    "PASS click/tap on a moving car opens inspection of that car",
+    "PASS pointer selection does not drop focus to body",
+    "PASS inspector response visible in viewport after selection",
+    "PASS hero cue names selected car",
+    "PASS inspector shows 90 weights + 18 activations",
+    "PASS running: inspector values equal one actual worker snapshot",
+    "PASS running: hero rays, ring, pose and inspector rays from same snapshot",
+    "PASS activations equal independent forward pass; inputs equal ray distances",
+    "PASS live activations change while running",
+    "PASS sensor & network demos follow the selected car",
+    "PASS paused: inspector equals final snapshot exactly",
+    "PASS explicit Follow=off preserved across new selection",
+    "PASS keyboard Enter selects a car and opens inspector",
+    "PASS arrow keys cycle drivers",
+    "PASS Escape closes and focus returns to hero canvas",
+    "PASS Close button closes; focus not dropped to body",
+    "PASS crashed car inspection says stopped",
+    "PASS generation boundary clears stale selection",
+    "PASS default track: laps completed and best lap improves over generations",
+    "PASS telemetry shows real best lap and history",
+    "PASS drawing suspends stepping, keeps Play intent (dir 1)",
+    "PASS valid clockwise drawn loop commits and runs",
+    "PASS drawn CW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir 1)",
+    "PASS drawing suspends stepping, keeps Play intent (dir -1)",
+    "PASS valid counter-clockwise drawn loop commits and runs",
+    "PASS drawn CCW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir -1)",
+    "PASS tiny stroke rejected with useful local message; run kept",
+    "PASS tiny: after stopping drawing the same run continues",
+    "PASS figure8 stroke rejected with useful local message; run kept",
+    "PASS invalid feedback visible next to the canvas (no scroll)",
+    "PASS figure8: after stopping drawing the same run continues",
+    "PASS touchcancel mid-stroke never commits",
+    "PASS paused + 4x intent survive drawn-track acceptance",
+    "PASS resume after accepted paused run steps at 4x",
+    "PASS preset broad-oval accepted and learns laps",
+    "PASS preset riverbend accepted and learns laps",
+    "PASS preset club-circuit accepted and learns laps",
+    "PASS population 1000 accepted; telemetry shows /1000",
+    "PASS 1000 cars keep 1x real-time stepping",
+    "PASS rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+    "PASS synthetic hidden: worker stops, rAF stops; resume restores running intent",
+    "PASS rotated: no overflow, backing store matches",
+    "PASS DPR-only change rebuilds backing store",
+    "PASS 320px-wide phone: no horizontal overflow",
+    "PASS 120x200 extreme surface: no errors; recovers running",
+    "PASS sensor demo responds to input (illustration)",
+    "PASS network demo slider changes output",
+    "PASS genetics demo mutation/crossover respond",
+    "PASS racing-line demo shows actual recorded line with road context, labelled",
+    "PASS corner explorer labelled illustrative",
+    "PASS article: no text < 11px anywhere (full page)",
+    "PASS article: touch targets >= 44px",
+    "PASS no console errors/warnings, page errors, failed requests",
+    "PASS one worker, no detached incoming buffers"
+   ]
+  },
+  "dev 1440x900": {
+   "passed": 67,
+   "total": 68,
+   "failed": [
+    {
+     "name": "Escape mid-stroke never commits",
+     "details": {
+      "runId": 4,
+      "before": 3
+     }
+    }
+   ],
+   "checks": [
+    "PASS auto-starts running at 1x with hundreds of cars",
+    "PASS production diagnostics global matches build mode",
+    "PASS no horizontal overflow",
+    "PASS hero canvas fully in first viewport",
+    "PASS play control in first viewport",
+    "PASS canvas backing = css * min(dpr,2)",
+    "PASS all rendered text >= 11px",
+    "PASS hero draws cars each frame",
+    "PASS 1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+    "PASS 4x ≈ 240 sim steps/s",
+    "PASS fast is headless: no cars drawn, message shown, faster than 4x",
+    "PASS pause stops stepping and motion",
+    "PASS play resumes",
+    "PASS click/tap on a moving car opens inspection of that car",
+    "PASS pointer selection does not drop focus to body",
+    "PASS inspector response visible in viewport after selection",
+    "PASS hero cue names selected car",
+    "PASS inspector shows 90 weights + 18 activations",
+    "PASS running: inspector values equal one actual worker snapshot",
+    "PASS running: hero rays, ring, pose and inspector rays from same snapshot",
+    "PASS activations equal independent forward pass; inputs equal ray distances",
+    "PASS live activations change while running",
+    "PASS sensor & network demos follow the selected car",
+    "PASS paused: inspector equals final snapshot exactly",
+    "PASS explicit Follow=off preserved across new selection",
+    "PASS keyboard Enter selects a car and opens inspector",
+    "PASS arrow keys cycle drivers",
+    "PASS Escape closes and focus returns to hero canvas",
+    "PASS Close button closes; focus not dropped to body",
+    "PASS crashed car inspection says stopped",
+    "PASS generation boundary clears stale selection",
+    "PASS default track: laps completed and best lap improves over generations",
+    "PASS telemetry shows real best lap and history",
+    "PASS drawing suspends stepping, keeps Play intent (dir 1)",
+    "PASS valid clockwise drawn loop commits and runs",
+    "PASS drawn CW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir 1)",
+    "PASS drawing suspends stepping, keeps Play intent (dir -1)",
+    "PASS valid counter-clockwise drawn loop commits and runs",
+    "PASS drawn CCW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir -1)",
+    "PASS tiny stroke rejected with useful local message; run kept",
+    "PASS tiny: after stopping drawing the same run continues",
+    "PASS figure8 stroke rejected with useful local message; run kept",
+    "PASS invalid feedback visible next to the canvas (no scroll)",
+    "PASS figure8: after stopping drawing the same run continues",
+    "FAIL Escape mid-stroke never commits",
+    "PASS paused + 4x intent survive drawn-track acceptance",
+    "PASS resume after accepted paused run steps at 4x",
+    "PASS preset broad-oval accepted and learns laps",
+    "PASS preset riverbend accepted and learns laps",
+    "PASS preset club-circuit accepted and learns laps",
+    "PASS population 1000 accepted; telemetry shows /1000",
+    "PASS 1000 cars keep 1x real-time stepping",
+    "PASS rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+    "PASS synthetic hidden: worker stops, rAF stops; resume restores running intent",
+    "PASS rotated: no overflow, backing store matches",
+    "PASS DPR-only change rebuilds backing store",
+    "PASS 320px-wide phone: no horizontal overflow",
+    "PASS 120x200 extreme surface: no errors; recovers running",
+    "PASS sensor demo responds to input (illustration)",
+    "PASS network demo slider changes output",
+    "PASS genetics demo mutation/crossover respond",
+    "PASS racing-line demo shows actual recorded line with road context, labelled",
+    "PASS corner explorer labelled illustrative",
+    "PASS article: no text < 11px anywhere (full page)",
+    "PASS no console errors/warnings, page errors, failed requests",
+    "PASS one worker, no detached incoming buffers"
+   ]
+  },
+  "dev 390x844": {
+   "passed": 70,
+   "total": 70,
+   "failed": [],
+   "checks": [
+    "PASS auto-starts running at 1x with hundreds of cars",
+    "PASS production diagnostics global matches build mode",
+    "PASS no horizontal overflow",
+    "PASS hero canvas fully in first viewport",
+    "PASS play control in first viewport",
+    "PASS canvas backing = css * min(dpr,2)",
+    "PASS all rendered text >= 11px",
+    "PASS touch targets >= 44px",
+    "PASS hero draws cars each frame",
+    "PASS 1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+    "PASS 4x ≈ 240 sim steps/s",
+    "PASS fast is headless: no cars drawn, message shown, faster than 4x",
+    "PASS pause stops stepping and motion",
+    "PASS play resumes",
+    "PASS click/tap on a moving car opens inspection of that car",
+    "PASS pointer selection does not drop focus to body",
+    "PASS inspector response visible in viewport after selection",
+    "PASS hero cue names selected car",
+    "PASS inspector shows 90 weights + 18 activations",
+    "PASS running: inspector values equal one actual worker snapshot",
+    "PASS running: hero rays, ring, pose and inspector rays from same snapshot",
+    "PASS activations equal independent forward pass; inputs equal ray distances",
+    "PASS live activations change while running",
+    "PASS sensor & network demos follow the selected car",
+    "PASS paused: inspector equals final snapshot exactly",
+    "PASS explicit Follow=off preserved across new selection",
+    "PASS keyboard Enter selects a car and opens inspector",
+    "PASS arrow keys cycle drivers",
+    "PASS Escape closes and focus returns to hero canvas",
+    "PASS Close button closes; focus not dropped to body",
+    "PASS crashed car inspection says stopped",
+    "PASS generation boundary clears stale selection",
+    "PASS default track: laps completed and best lap improves over generations",
+    "PASS telemetry shows real best lap and history",
+    "PASS drawing suspends stepping, keeps Play intent (dir 1)",
+    "PASS valid clockwise drawn loop commits and runs",
+    "PASS drawn CW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir 1)",
+    "PASS drawing suspends stepping, keeps Play intent (dir -1)",
+    "PASS valid counter-clockwise drawn loop commits and runs",
+    "PASS drawn CCW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir -1)",
+    "PASS tiny stroke rejected with useful local message; run kept",
+    "PASS tiny: after stopping drawing the same run continues",
+    "PASS figure8 stroke rejected with useful local message; run kept",
+    "PASS invalid feedback visible next to the canvas (no scroll)",
+    "PASS figure8: after stopping drawing the same run continues",
+    "PASS touchcancel mid-stroke never commits",
+    "PASS paused + 4x intent survive drawn-track acceptance",
+    "PASS resume after accepted paused run steps at 4x",
+    "PASS preset broad-oval accepted and learns laps",
+    "PASS preset riverbend accepted and learns laps",
+    "PASS preset club-circuit accepted and learns laps",
+    "PASS population 1000 accepted; telemetry shows /1000",
+    "PASS 1000 cars keep 1x real-time stepping",
+    "PASS rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+    "PASS synthetic hidden: worker stops, rAF stops; resume restores running intent",
+    "PASS rotated: no overflow, backing store matches",
+    "PASS DPR-only change rebuilds backing store",
+    "PASS 320px-wide phone: no horizontal overflow",
+    "PASS 120x200 extreme surface: no errors; recovers running",
+    "PASS sensor demo responds to input (illustration)",
+    "PASS network demo slider changes output",
+    "PASS genetics demo mutation/crossover respond",
+    "PASS racing-line demo shows actual recorded line with road context, labelled",
+    "PASS corner explorer labelled illustrative",
+    "PASS article: no text < 11px anywhere (full page)",
+    "PASS article: touch targets >= 44px",
+    "PASS no console errors/warnings, page errors, failed requests",
+    "PASS one worker, no detached incoming buffers"
+   ]
+  },
+  "dev 844x390": {
+   "passed": 70,
+   "total": 70,
+   "failed": [],
+   "checks": [
+    "PASS auto-starts running at 1x with hundreds of cars",
+    "PASS production diagnostics global matches build mode",
+    "PASS no horizontal overflow",
+    "PASS hero canvas fully in first viewport",
+    "PASS play control in first viewport",
+    "PASS canvas backing = css * min(dpr,2)",
+    "PASS all rendered text >= 11px",
+    "PASS touch targets >= 44px",
+    "PASS hero draws cars each frame",
+    "PASS 1x ≈ 60 sim steps/s and ≈60 snapshots/s",
+    "PASS 4x ≈ 240 sim steps/s",
+    "PASS fast is headless: no cars drawn, message shown, faster than 4x",
+    "PASS pause stops stepping and motion",
+    "PASS play resumes",
+    "PASS click/tap on a moving car opens inspection of that car",
+    "PASS pointer selection does not drop focus to body",
+    "PASS inspector response visible in viewport after selection",
+    "PASS hero cue names selected car",
+    "PASS inspector shows 90 weights + 18 activations",
+    "PASS running: inspector values equal one actual worker snapshot",
+    "PASS running: hero rays, ring, pose and inspector rays from same snapshot",
+    "PASS activations equal independent forward pass; inputs equal ray distances",
+    "PASS live activations change while running",
+    "PASS sensor & network demos follow the selected car",
+    "PASS paused: inspector equals final snapshot exactly",
+    "PASS explicit Follow=off preserved across new selection",
+    "PASS keyboard Enter selects a car and opens inspector",
+    "PASS arrow keys cycle drivers",
+    "PASS Escape closes and focus returns to hero canvas",
+    "PASS Close button closes; focus not dropped to body",
+    "PASS crashed car inspection says stopped",
+    "PASS generation boundary clears stale selection",
+    "PASS default track: laps completed and best lap improves over generations",
+    "PASS telemetry shows real best lap and history",
+    "PASS drawing suspends stepping, keeps Play intent (dir 1)",
+    "PASS valid clockwise drawn loop commits and runs",
+    "PASS drawn CW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir 1)",
+    "PASS drawing suspends stepping, keeps Play intent (dir -1)",
+    "PASS valid counter-clockwise drawn loop commits and runs",
+    "PASS drawn CCW loop learns: subsequent generations, real laps, improvement",
+    "PASS cars drive the drawn direction (dir -1)",
+    "PASS tiny stroke rejected with useful local message; run kept",
+    "PASS tiny: after stopping drawing the same run continues",
+    "PASS figure8 stroke rejected with useful local message; run kept",
+    "PASS invalid feedback visible next to the canvas (no scroll)",
+    "PASS figure8: after stopping drawing the same run continues",
+    "PASS touchcancel mid-stroke never commits",
+    "PASS paused + 4x intent survive drawn-track acceptance",
+    "PASS resume after accepted paused run steps at 4x",
+    "PASS preset broad-oval accepted and learns laps",
+    "PASS preset riverbend accepted and learns laps",
+    "PASS preset club-circuit accepted and learns laps",
+    "PASS population 1000 accepted; telemetry shows /1000",
+    "PASS 1000 cars keep 1x real-time stepping",
+    "PASS rapid resets coalesce; final state = last intent; ids monotonic; nothing pending",
+    "PASS synthetic hidden: worker stops, rAF stops; resume restores running intent",
+    "PASS rotated: no overflow, backing store matches",
+    "PASS DPR-only change rebuilds backing store",
+    "PASS 320px-wide phone: no horizontal overflow",
+    "PASS 120x200 extreme surface: no errors; recovers running",
+    "PASS sensor demo responds to input (illustration)",
+    "PASS network demo slider changes output",
+    "PASS genetics demo mutation/crossover respond",
+    "PASS racing-line demo shows actual recorded line with road context, labelled",
+    "PASS corner explorer labelled illustrative",
+    "PASS article: no text < 11px anywhere (full page)",
+    "PASS article: touch targets >= 44px",
+    "PASS no console errors/warnings, page errors, failed requests",
+    "PASS one worker, no detached incoming buffers"
+   ]
+  }
+ },
+ "failureClassification": {
+  "arrow keys cycle drivers": "harness timing (desktop only): only 1 of 512 cars alive, so cycling correctly reselects the same car; isolated probe-keys.mjs shows 6→40→45→53→45",
+  "Escape mid-stroke never commits": "REAL defect L1: editor canvas lacks tabindex in production markup"
+ },
+ "regression": {
+  "cadence": {
+   "baseline-32a6bf5": [
+    {
+     "rate": 1,
+     "jitter": 0,
+     "seconds": 20,
+     "deliveriesPerSec": 40,
+     "freshFrameShare": 0.665,
+     "stepsPerSec": 60,
+     "stepsPerDelivery": {
+      "0": 3,
+      "1": 396,
+      "2": 401
+     },
+     "medianIntervalMs": 33.33,
+     "p90IntervalMs": 33.33,
+     "maxIntervalMs": 33.33,
+     "uniqueShownTickDeltas": [
+      1,
+      2
+     ]
+    },
+    {
+     "rate": 1,
+     "jitter": 1.5,
+     "seconds": 20,
+     "deliveriesPerSec": 38.35,
+     "freshFrameShare": 0.637,
+     "stepsPerSec": 60,
+     "stepsPerDelivery": {
+      "0": 3,
+      "1": 329,
+      "2": 435
+     },
+     "medianIntervalMs": 32.33,
+     "p90IntervalMs": 33.49,
+     "maxIntervalMs": 34.5,
+     "uniqueShownTickDeltas": [
+      1,
+      2
+     ]
+    },
+    {
+     "rate": 4,
+     "jitter": 0,
+     "seconds": 20,
+     "deliveriesPerSec": 53.45,
+     "freshFrameShare": 0.888,
+     "stepsPerSec": 240,
+     "stepsPerDelivery": {
+      "0": 3,
+      "4": 532,
+      "5": 534
+     },
+     "medianIntervalMs": 20.83,
+     "p90IntervalMs": 20.83,
+     "maxIntervalMs": 20.83,
+     "uniqueShownTickDeltas": [
+      4,
+      5
+     ]
+    },
+    {
+     "rate": 4,
+     "jitter": 1.5,
+     "seconds": 20,
+     "deliveriesPerSec": 52.8,
+     "freshFrameShare": 0.878,
+     "stepsPerSec": 240,
+     "stepsPerDelivery": {
+      "0": 3,
+      "4": 469,
+      "5": 584
+     },
+     "medianIntervalMs": 19.74,
+     "p90IntervalMs": 20.98,
+     "maxIntervalMs": 21.81,
+     "uniqueShownTickDeltas": [
+      4,
+      5
+     ]
+    }
+   ],
+   "current": [
+    {
+     "rate": 1,
+     "jitter": 0,
+     "seconds": 20,
+     "deliveriesPerSec": 60.1,
+     "freshFrameShare": 1,
+     "stepsPerSec": 60,
+     "stepsPerDelivery": {
+      "0": 3,
+      "1": 1199
+     },
+     "medianIntervalMs": 16.67,
+     "p90IntervalMs": 16.67,
+     "maxIntervalMs": 16.69,
+     "uniqueShownTickDeltas": [
+      1
+     ]
+    },
+    {
+     "rate": 1,
+     "jitter": 1.5,
+     "seconds": 20,
+     "deliveriesPerSec": 60.1,
+     "freshFrameShare": 1,
+     "stepsPerSec": 60,
+     "stepsPerDelivery": {
+      "0": 3,
+      "1": 1199
+     },
+     "medianIntervalMs": 16.68,
+     "p90IntervalMs": 17.45,
+     "maxIntervalMs": 18.06,
+     "uniqueShownTickDeltas": [
+      1
+     ]
+    },
+    {
+     "rate": 4,
+     "jitter": 0,
+     "seconds": 20,
+     "deliveriesPerSec": 60.1,
+     "freshFrameShare": 1,
+     "stepsPerSec": 240,
+     "stepsPerDelivery": {
+      "0": 3,
+      "4": 1199
+     },
+     "medianIntervalMs": 16.67,
+     "p90IntervalMs": 16.67,
+     "maxIntervalMs": 16.71,
+     "uniqueShownTickDeltas": [
+      4
+     ]
+    },
+    {
+     "rate": 4,
+     "jitter": 1.5,
+     "seconds": 20,
+     "deliveriesPerSec": 60.1,
+     "freshFrameShare": 1,
+     "stepsPerSec": 240,
+     "stepsPerDelivery": {
+      "0": 3,
+      "4": 1199
+     },
+     "medianIntervalMs": 16.66,
+     "p90IntervalMs": 17.51,
+     "maxIntervalMs": 18.11,
+     "uniqueShownTickDeltas": [
+      4
+     ]
+    }
+   ]
+  },
+  "m2": {
+   "baseline": {
+    "errorsBefore": 8,
+    "reply11": null,
+    "laterInvalidReplies": [],
+    "engineAfterInvalid": 10,
+    "validAfter": 14
+   },
+   "current": {
+    "errorsBefore": 8,
+    "reply11": "error:11:Population must be 2–1000.",
+    "laterInvalidReplies": [
+     "error:12",
+     "error:13",
+     "error:10"
+    ],
+    "engineAfterInvalid": 10,
+    "validAfter": 14
+   }
+  },
+  "session": {
+   "accepted0": 1,
+   "mid": {
+    "pending": 2,
+    "queued": 3
+   },
+   "afterInvalidThenValidQueued": {
+    "accepted": 3,
+    "acceptedTrack": "riverbend",
+    "pending": null,
+    "queued": null,
+    "error": ""
+   },
+   "afterSecondInvalid": {
+    "accepted": 3,
+    "pending": null,
+    "error": "Mutation rate must be 0–1."
+   }
+  },
+  "validation": {
+   "presets": [
+    {
+     "id": "broad-oval",
+     "current": "ok",
+     "baseline": "ok"
+    },
+    {
+     "id": "riverbend",
+     "current": "ok",
+     "baseline": "ok"
+    },
+    {
+     "id": "club-circuit",
+     "current": "ok",
+     "baseline": "ok"
+    }
+   ],
+   "drawnBuilt": "28/30",
+   "drawnAllValid": true,
+   "drawnFailures": [],
+   "fakeInner": {
+    "current": "Both road boundaries must follow the centerline at the declared width.",
+    "baseline": "ok"
+   },
+   "inconsistentWidth": {
+    "current": "Both road boundaries must follow the centerline at the declared width.",
+    "baseline": "ok"
+   },
+   "msPerValidate": 1.05
+  }
+ },
+ "lifecycle": {
+  "m2RealWorker": {
+   "malformedErrors": 8,
+   "invalidAfterExhaustion": {
+    "pending": null,
+    "accepted": 1,
+    "error": "Population must be 2–1000.",
+    "feedback": "Current: Broad oval. Population must be 2–1000. The current circuit and learning are kept.",
+    "lastError": {
+     "t": 1175.7000000476837,
+     "runId": 2,
+     "message": "Population must be 2–1000."
+    },
+    "tick": 96,
+    "running": true,
+    "ticksAdvanced": true
+   },
+   "invalidThenQueuedValid": {
+    "pending": null,
+    "queued": null,
+    "accepted": 4,
+    "pop": 256,
+    "error": "",
+    "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+    "uiPop": "256"
+   },
+   "log": {
+    "console": [],
+    "pageErrors": [],
+    "failed": [],
+    "badStatus": []
+   }
+  },
+  "history": {
+   "completed": 301,
+   "entries": 256,
+   "first": 46,
+   "last": 301,
+   "label": "301 gen · best / mean",
+   "racingLabel": "No history yet",
+   "sparkPoints": 6335,
+   "heap": 4796764,
+   "heap0": 5522974,
+   "seconds": 43.069
+  },
+  "cloneOk": true,
+  "pagehide": {
+   "bfcachePersisted": {
+    "terminated": 0,
+    "app": 1
+   },
+   "disposed": {
+    "terminated": 1,
+    "app": 0,
+    "raf": 2748,
+    "diag": "undefined",
+    "rafAdvanced": 0
+   }
+  },
+  "devLog": {
+   "console": [],
+   "pageErrors": [],
+   "failed": [],
+   "badStatus": []
+  },
+  "hmrTouch": {
+   "marker": null,
+   "workers": 1,
+   "terminated": 0,
+   "apps": 1,
+   "running": true,
+   "note": "marker null => full reload happened",
+   "log": {
+    "console": [],
+    "pageErrors": [],
+    "failed": [],
+    "badStatus": []
+   }
+  },
+  "realHidingAttempt": {
+   "secondTabFront": {
+    "hidden": false,
+    "vis": "visible",
+    "running": true
+   },
+   "freezeThenActive": {
+    "hidden": false,
+    "running": true,
+    "errors": 0
+   }
+  },
+  "reducedMotion": {
+   "scrollBehavior": "auto",
+   "running": true,
+   "drawn": 512,
+   "matches": true,
+   "log": {
+    "console": [],
+    "pageErrors": [],
+    "failed": [],
+    "badStatus": []
+   }
+  },
+  "widths": {
+   "601x900": {
+    "smallCount": 0,
+    "small": [],
+    "overflow": 0,
+    "hero": {
+     "top": 291.1875,
+     "bottom": 568.78125,
+     "w": 347,
+     "h": 277.59375,
+     "feedbackBottom": 644.78125,
+     "innerHeight": 900
+    },
+    "errors": 0
+   },
+   "700x1000": {
+    "smallCount": 0,
+    "small": [],
+    "overflow": 0,
+    "hero": {
+     "top": 291.1875,
+     "bottom": 647.984375,
+     "w": 446,
+     "h": 356.796875,
+     "feedbackBottom": 723.984375,
+     "innerHeight": 1000
+    },
+    "errors": 0
+   },
+   "800x1000": {
+    "smallCount": 0,
+    "small": [],
+    "overflow": 0,
+    "hero": {
+     "top": 291.625,
+     "bottom": 728.421875,
+     "w": 546,
+     "h": 436.796875,
+     "feedbackBottom": 804.421875,
+     "innerHeight": 1000
+    },
+    "errors": 0
+   },
+   "1000x700": {
+    "smallCount": 0,
+    "small": [],
+    "overflow": 0,
+    "hero": {
+     "top": 300.640625,
+     "bottom": 897.4375,
+     "w": 746,
+     "h": 596.796875,
+     "feedbackBottom": 973.4375,
+     "innerHeight": 700
+    },
+    "errors": 0
+   },
+   "1024x768": {
+    "smallCount": 0,
+    "small": [],
+    "overflow": 0,
+    "hero": {
+     "top": 245.578125,
+     "bottom": 616.296875,
+     "w": 685.84375,
+     "h": 370.71875,
+     "feedbackBottom": 692.296875,
+     "innerHeight": 768
+    },
+    "errors": 0
+   },
+   "667x375": {
+    "smallCount": 0,
+    "small": [],
+    "overflow": 0,
+    "hero": {
+     "top": 138.78125,
+     "bottom": 308.78125,
+     "w": 299,
+     "h": 170,
+     "feedbackBottom": 370.78125,
+     "innerHeight": 375
+    },
+    "errors": 0
+   }
+  }
+ },
+ "performance": {
+  "env": {
+   "chrome": "157.0.8103.51",
+   "cpu": "Apple M5",
+   "cores": 10,
+   "mem": 25769803776,
+   "loadavgAtStart": [
+    1.60107421875,
+    1.51953125,
+    1.48388671875
+   ],
+   "viewport": "1440x900",
+   "dpr": 2,
+   "headless": true,
+   "warmupMs": 1000,
+   "sampleMs": 5000,
+   "loadavgAtEnd": [
+    2.31103515625,
+    1.8955078125,
+    1.64013671875
+   ]
+  },
+  "rows": [
+   {
+    "label": "512-early-1",
+    "pop": 512,
+    "rate": 1,
+    "seconds": 5,
+    "genStart": 1,
+    "genEnd": 1,
+    "rafFps": 59.9,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.72,
+    "callbackP95Ms": 1.4,
+    "snapshotsPerSec": 59.9,
+    "freshFrameShare": 1,
+    "changingPoseFrameShare": 1,
+    "carsDrawnAvg": 292,
+    "headlessFrames": 0,
+    "simStepsPerSec": 60,
+    "workerComputeMsPerStep": 0.395,
+    "workerBusyShare": 0.024,
+    "aliveMin": 18,
+    "aliveMax": 511
+   },
+   {
+    "label": "512-early-4",
+    "pop": 512,
+    "rate": 4,
+    "seconds": 5,
+    "genStart": 1,
+    "genEnd": 3,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.7,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.4,
+    "callbackP95Ms": 1.3,
+    "snapshotsPerSec": 59.8,
+    "freshFrameShare": 0.997,
+    "changingPoseFrameShare": 0.99,
+    "carsDrawnAvg": 135,
+    "headlessFrames": 0,
+    "simStepsPerSec": 239,
+    "workerComputeMsPerStep": 0.259,
+    "workerBusyShare": 0.062,
+    "aliveMin": 1,
+    "aliveMax": 512
+   },
+   {
+    "label": "512-early-fast",
+    "pop": 512,
+    "rate": "fast",
+    "seconds": 5,
+    "genStart": 4,
+    "genEnd": 19,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.03,
+    "callbackP95Ms": 0.1,
+    "snapshotsPerSec": 9.4,
+    "freshFrameShare": 0.157,
+    "changingPoseFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "headlessFrames": 61,
+    "simStepsPerSec": 2805,
+    "workerComputeMsPerStep": 0.156,
+    "workerBusyShare": 0.437,
+    "aliveMin": 1,
+    "aliveMax": 512
+   },
+   {
+    "label": "512-evolved-1",
+    "pop": 512,
+    "rate": 1,
+    "seconds": 5,
+    "genStart": 97,
+    "genEnd": 97,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.91,
+    "callbackP95Ms": 1.4,
+    "snapshotsPerSec": 60,
+    "freshFrameShare": 1,
+    "changingPoseFrameShare": 1,
+    "carsDrawnAvg": 391,
+    "headlessFrames": 0,
+    "simStepsPerSec": 60,
+    "workerComputeMsPerStep": 1.246,
+    "workerBusyShare": 0.075,
+    "aliveMin": 316,
+    "aliveMax": 372
+   },
+   {
+    "label": "512-evolved-4",
+    "pop": 512,
+    "rate": 4,
+    "seconds": 5,
+    "genStart": 98,
+    "genEnd": 100,
+    "rafFps": 59.9,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.96,
+    "callbackP95Ms": 1.5,
+    "snapshotsPerSec": 59.9,
+    "freshFrameShare": 0.9,
+    "changingPoseFrameShare": 0.99,
+    "carsDrawnAvg": 417,
+    "headlessFrames": 0,
+    "simStepsPerSec": 240,
+    "workerComputeMsPerStep": 1.271,
+    "workerBusyShare": 0.305,
+    "aliveMin": 2,
+    "aliveMax": 512
+   },
+   {
+    "label": "512-evolved-fast",
+    "pop": 512,
+    "rate": "fast",
+    "seconds": 5,
+    "genStart": 104,
+    "genEnd": 124,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.7,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.01,
+    "callbackP95Ms": 0.1,
+    "snapshotsPerSec": 9,
+    "freshFrameShare": 0.15,
+    "changingPoseFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "headlessFrames": 59,
+    "simStepsPerSec": 2000,
+    "workerComputeMsPerStep": 0.284,
+    "workerBusyShare": 0.569,
+    "aliveMin": 40,
+    "aliveMax": 512
+   },
+   {
+    "label": "1000-early-1",
+    "pop": 1000,
+    "rate": 1,
+    "seconds": 5,
+    "genStart": 1,
+    "genEnd": 1,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 1.1,
+    "callbackP95Ms": 2.3,
+    "snapshotsPerSec": 60,
+    "freshFrameShare": 0.997,
+    "changingPoseFrameShare": 1,
+    "carsDrawnAvg": 578,
+    "headlessFrames": 0,
+    "simStepsPerSec": 60,
+    "workerComputeMsPerStep": 0.568,
+    "workerBusyShare": 0.034,
+    "aliveMin": 32,
+    "aliveMax": 999
+   },
+   {
+    "label": "1000-early-4",
+    "pop": 1000,
+    "rate": 4,
+    "seconds": 5,
+    "genStart": 1,
+    "genEnd": 2,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.55,
+    "callbackP95Ms": 1.4,
+    "snapshotsPerSec": 60.2,
+    "freshFrameShare": 0.96,
+    "changingPoseFrameShare": 0.993,
+    "carsDrawnAvg": 254,
+    "headlessFrames": 0,
+    "simStepsPerSec": 240,
+    "workerComputeMsPerStep": 0.376,
+    "workerBusyShare": 0.09,
+    "aliveMin": 1,
+    "aliveMax": 1000
+   },
+   {
+    "label": "1000-early-fast",
+    "pop": 1000,
+    "rate": "fast",
+    "seconds": 5,
+    "genStart": 3,
+    "genEnd": 13,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.8,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.02,
+    "callbackP95Ms": 0.1,
+    "snapshotsPerSec": 9.4,
+    "freshFrameShare": 0.153,
+    "changingPoseFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "headlessFrames": 53,
+    "simStepsPerSec": 2373,
+    "workerComputeMsPerStep": 0.192,
+    "workerBusyShare": 0.455,
+    "aliveMin": 1,
+    "aliveMax": 1000
+   },
+   {
+    "label": "1000-evolved-1",
+    "pop": 1000,
+    "rate": 1,
+    "seconds": 5,
+    "genStart": 69,
+    "genEnd": 70,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.7,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 1.42,
+    "callbackP95Ms": 2.1,
+    "snapshotsPerSec": 60,
+    "freshFrameShare": 1,
+    "changingPoseFrameShare": 0.993,
+    "carsDrawnAvg": 750,
+    "headlessFrames": 0,
+    "simStepsPerSec": 60,
+    "workerComputeMsPerStep": 1.655,
+    "workerBusyShare": 0.099,
+    "aliveMin": 1,
+    "aliveMax": 1000
+   },
+   {
+    "label": "1000-evolved-4",
+    "pop": 1000,
+    "rate": 4,
+    "seconds": 5,
+    "genStart": 70,
+    "genEnd": 72,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.7,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.83,
+    "callbackP95Ms": 1.2,
+    "snapshotsPerSec": 60,
+    "freshFrameShare": 0.987,
+    "changingPoseFrameShare": 0.99,
+    "carsDrawnAvg": 814,
+    "headlessFrames": 0,
+    "simStepsPerSec": 240,
+    "workerComputeMsPerStep": 1.236,
+    "workerBusyShare": 0.296,
+    "aliveMin": 1,
+    "aliveMax": 1000
+   },
+   {
+    "label": "1000-evolved-fast",
+    "pop": 1000,
+    "rate": "fast",
+    "seconds": 5,
+    "genStart": 75,
+    "genEnd": 85,
+    "rafFps": 60,
+    "frameP50": 16.7,
+    "frameP95": 16.7,
+    "frameP99": 16.8,
+    "frameMax": 16.8,
+    "over20ms": 0,
+    "over33ms": 0,
+    "callbackAvgMs": 0.02,
+    "callbackP95Ms": 0.1,
+    "snapshotsPerSec": 9,
+    "freshFrameShare": 0.15,
+    "changingPoseFrameShare": 0,
+    "carsDrawnAvg": 0,
+    "headlessFrames": 55,
+    "simStepsPerSec": 1083,
+    "workerComputeMsPerStep": 0.537,
+    "workerBusyShare": 0.581,
+    "aliveMin": 606,
+    "aliveMax": 1000
+   }
+  ],
+  "responsiveness": [
+   {
+    "label": "512-early-4x",
+    "pauseToggleLatencyMs": [
+     0.2,
+     0.3,
+     -22.7,
+     0.3
+    ],
+    "eventTiming": [
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.7
+     },
+     {
+      "name": "pointerdown",
+      "duration": 16,
+      "delay": 0.3
+     },
+     {
+      "name": "mousedown",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "mouseup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.6
+     }
+    ]
+   },
+   {
+    "label": "512-evolved-4x",
+    "pauseToggleLatencyMs": [
+     0.1,
+     0.5,
+     0.3,
+     0.4
+    ],
+    "eventTiming": [
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.3
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.5
+     },
+     {
+      "name": "pointerdown",
+      "duration": 16,
+      "delay": 0.3
+     },
+     {
+      "name": "mousedown",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "mouseup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.7
+     }
+    ]
+   },
+   {
+    "label": "1000-early-4x",
+    "pauseToggleLatencyMs": [
+     0.3,
+     0.4,
+     0.3,
+     0.3
+    ],
+    "eventTiming": [
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.3
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.5
+     },
+     {
+      "name": "pointerdown",
+      "duration": 16,
+      "delay": 0.3
+     },
+     {
+      "name": "mousedown",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "mouseup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.5
+     }
+    ]
+   },
+   {
+    "label": "1000-evolved-4x",
+    "pauseToggleLatencyMs": [
+     -18.4,
+     0.4,
+     0.2,
+     0.4
+    ],
+    "eventTiming": [
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.2
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerdown",
+      "duration": 16,
+      "delay": 0.2
+     },
+     {
+      "name": "mousedown",
+      "duration": 16,
+      "delay": 0.2
+     },
+     {
+      "name": "pointerup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "mouseup",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "click",
+      "duration": 16,
+      "delay": 0.4
+     },
+     {
+      "name": "pointerover",
+      "duration": 16,
+      "delay": 0.6
+     }
+    ]
+   }
+  ]
+ },
+ "determinism": {
+  "summary": {
+   "replayFastVsFast60": true,
+   "fastVs4x8": true,
+   "fastVs1x2": true,
+   "firstLapGen": 1,
+   "firstLap": 9.283548234504227,
+   "bestLap": 8.312220509847005,
+   "improvementSeconds": 0.9713277246572218,
+   "lapRecords": [
+    [
+     1,
+     9.284
+    ],
+    [
+     2,
+     8.765
+    ],
+    [
+     4,
+     8.743
+    ],
+    [
+     5,
+     8.685
+    ],
+    [
+     7,
+     8.576
+    ],
+    [
+     9,
+     8.555
+    ],
+    [
+     10,
+     8.555
+    ],
+    [
+     11,
+     8.459
+    ],
+    [
+     14,
+     8.438
+    ],
+    [
+     17,
+     8.423
+    ],
+    [
+     18,
+     8.418
+    ],
+    [
+     19,
+     8.412
+    ],
+    [
+     20,
+     8.386
+    ],
+    [
+     21,
+     8.373
+    ],
+    [
+     23,
+     8.359
+    ],
+    [
+     24,
+     8.352
+    ],
+    [
+     28,
+     8.344
+    ],
+    [
+     29,
+     8.339
+    ],
+    [
+     30,
+     8.339
+    ],
+    [
+     32,
+     8.337
+    ],
+    [
+     37,
+     8.333
+    ],
+    [
+     39,
+     8.32
+    ],
+    [
+     48,
+     8.317
+    ],
+    [
+     55,
+     8.316
+    ],
+    [
+     57,
+     8.316
+    ],
+    [
+     59,
+     8.312
+    ]
+   ],
+   "meanFitnessGen1": 0.15361970761271768,
+   "meanFitnessGen60": 1.8494749198583071,
+   "completedLapsGen1": 16,
+   "completedLapsGen60": 341,
+   "bestEventsA": 26,
+   "bestEventLapsA": [
+    9.283548234504227,
+    8.764620530037133,
+    8.74301094138652,
+    8.685261085848568,
+    8.576030731201172,
+    8.554984359502555,
+    8.554705445519375,
+    8.45852788289388,
+    8.43831049601237,
+    8.422621409098307,
+    8.417765824877291,
+    8.411619059244792,
+    8.386256154378255,
+    8.372653452555339,
+    8.358637237548828,
+    8.352409617106119,
+    8.34369354248047,
+    8.339453887939452,
+    8.339064534505209,
+    8.33700205485026,
+    8.33285166422526,
+    8.319927469889322,
+    8.316623433430989,
+    8.316424051920572,
+    8.315953572591146,
+    8.312220509847005
+   ],
+   "runs": [
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "bestLine": {
+  "samples": 85,
+  "lapSecondsLastSample": 8.312220573425293,
+  "pathLength": 1725.8,
+  "centerlineLength": 1965.5,
+  "halfWidth": 46,
+  "medianAbsOffset": 39.4,
+  "maxAbsOffset": 40.9,
+  "shareBeyond20": 0.88,
+  "withinRoad": true
+ },
+ "letterbox": {
+  "1440x900": {
+   "canvasCss": [
+    1064.40625,
+    540
+   ],
+   "worldCss": [
+    762,
+    508
+   ],
+   "unusableSideBands": 151,
+   "unusableTopBands": 16,
+   "strokeFracOfField": [
+    0.84,
+    0.72
+   ],
+   "feedback": "Current: Broad oval. Keep the whole loop inside the drawing area, with room for the road.",
+   "accepted": false
+  },
+  "390x844": {
+   "canvasCss": [
+    350,
+    269.21875
+   ],
+   "worldCss": [
+    323,
+    215
+   ],
+   "unusableSideBands": 13,
+   "unusableTopBands": 27,
+   "strokeFracOfField": [
+    0.84,
+    0.72
+   ],
+   "feedback": "Current: Broad oval. Move the loop away from the edge to leave room for the road.",
+   "accepted": false
+  },
+  "844x390": {
+   "canvasCss": [
+    476,
+    185
+   ],
+   "worldCss": [
+    250,
+    167
+   ],
+   "unusableSideBands": 113,
+   "unusableTopBands": 9,
+   "strokeFracOfField": [
+    0.84,
+    0.72
+   ],
+   "feedback": "Current: Broad oval. Keep the whole loop inside the drawing area, with room for the road.",
+   "accepted": false
+  }
+ },
+ "laptopViewports": {
+  "1280x720": {
+   "canvasTop": 257,
+   "canvasBottom": 753,
+   "innerHeight": 720,
+   "visibleFrac": 0.93,
+   "worldBottom": 737
+  },
+  "1366x768": {
+   "canvasTop": 260,
+   "canvasBottom": 799,
+   "innerHeight": 768,
+   "visibleFrac": 0.94,
+   "worldBottom": 783
+  },
+  "1280x800": {
+   "canvasTop": 257,
+   "canvasBottom": 753,
+   "innerHeight": 800,
+   "visibleFrac": 1,
+   "worldBottom": 737
+  },
+  "1536x864": {
+   "canvasTop": 263,
+   "canvasBottom": 803,
+   "innerHeight": 864,
+   "visibleFrac": 1,
+   "worldBottom": 787
+  },
+  "1000x700": {
+   "canvasTop": 301,
+   "canvasBottom": 897,
+   "innerHeight": 700,
+   "visibleFrac": 0.67,
+   "worldBottom": 837
+  }
+ },
+ "followProbe": {
+  "steps": [
+   {
+    "p": {
+     "ok": true,
+     "index": 336,
+     "x": 293.10019264777503,
+     "y": 396.22350896000864,
+     "gap": 8.067582193304288,
+     "gtick": 209,
+     "inactive": 0
+    }
+   },
+   {
+    "afterFirst": {
+     "generation": "01",
+     "alive": "30 / 512",
+     "lap": "—",
+     "lapLabel": "No completed lap yet",
+     "historyLabel": "No history yet",
+     "run": "Pause",
+     "runPressed": "true",
+     "rate": "1",
+     "feedback": "Current: Broad oval. Draw a loop to make it yours.",
+     "issues": false,
+     "hint": "Inspecting car 337 · details below",
+     "runLabel": "Running",
+     "panelHidden": false,
+     "selection": "Car 337 · generation 1",
+     "population": "512",
+     "drawing": "false",
+     "active": "hero-canvas",
+     "meta": {
+      "t": 4109.899999976158,
+      "runId": 1,
+      "gen": 1,
+      "tick": 243,
+      "gtick": 243,
+      "steps": 1,
+      "ms": 0.19999992847442627,
+      "alive": 30,
+      "running": true,
+      "rate": 1,
+      "pop": 512,
+      "sel": 336,
+      "selGen": 1
+     },
+     "ready": [
+      1
+     ],
+     "errors": [],
+     "gens": 0,
+     "workers": 1,
+     "terminated": 0,
+     "lastGen": null
+    }
+   },
+   {
+    "followOff": {
+     "checked": false,
+     "src": "Illustration · local perception"
+    }
+   },
+   {
+    "p2": {
+     "ok": true,
+     "index": 466,
+     "x": 259.9976008613904,
+     "y": 428.2522383435567,
+     "gap": 9.238751639849408,
+     "gtick": 293,
+     "inactive": 0
+    }
+   },
+   {
+    "afterSecond": {
+     "selection": "Car 467 · generation 1",
+     "panelHidden": false
+    },
+    "sensors": {
+     "checked": false,
+     "src": "Illustration · local perception"
+    }
+   },
+   {
+    "network": "Selected car · live network"
+   },
+   {
+    "crashedPick": {
+     "ok": true,
+     "index": 62,
+     "x": 219.16734736363094,
+     "y": 435.42150376558305,
+     "gap": 8.541889783249555,
+     "gtick": 383,
+     "inactive": 0.30000004172325134
+    }
+   },
+   {
+    "crashedTarget": {
+     "ok": true,
+     "index": 253,
+     "x": 309.4102250607808,
+     "y": 378.4356596759955,
+     "gap": 17.335131718425178,
+     "gtick": 387,
+     "inactive": 1.2499995231628418
+    },
+    "inspect": {
+     "text": "Crashed · stopped · speed 0 · seven live distances",
+     "sel": "Car 254 · generation 1",
+     "hidden": false
+    }
+   },
+   {
+    "afterFade": {
+     "hidden": false,
+     "text": "Crashed · stopped · speed 0 · seven live distances",
+     "sel": 253
+    }
+   }
+  ],
+  "log": {
+   "console": [],
+   "pageErrors": [],
+   "failed": [],
+   "badStatus": []
+  }
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "1440x900": {
+  "canvasCss": [
+   1064.40625,
+   540
+  ],
+  "worldCss": [
+   762,
+   508
+  ],
+  "unusableSideBands": 151,
+  "unusableTopBands": 16,
+  "strokeFracOfField": [
+   0.84,
+   0.72
+  ],
+  "feedback": "Current: Broad oval. Keep the whole loop inside the drawing area, with room for the road.",
+  "accepted": false
+ },
+ "390x844": {
+  "canvasCss": [
+   350,
+   269.21875
+  ],
+  "worldCss": [
+   323,
+   215
+  ],
+  "unusableSideBands": 13,
+  "unusableTopBands": 27,
+  "strokeFracOfField": [
+   0.84,
+   0.72
+  ],
+  "feedback": "Current: Broad oval. Move the loop away from the edge to leave room for the road.",
+  "accepted": false
+ },
+ "844x390": {
+  "canvasCss": [
+   476,
+   185
+  ],
+  "worldCss": [
+   250,
+   167
+  ],
+  "unusableSideBands": 113,
+  "unusableTopBands": 9,
+  "strokeFracOfField": [
+   0.84,
+   0.72
+  ],
+  "feedback": "Current: Broad oval. Keep the whole loop inside the drawing area, with room for the road.",
+  "accepted": false
+ }
+}

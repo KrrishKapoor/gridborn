@@ -1,0 +1,37 @@
+{
+ "1280x720": {
+  "canvasTop": 257,
+  "canvasBottom": 753,
+  "innerHeight": 720,
+  "visibleFrac": 0.93,
+  "worldBottom": 737
+ },
+ "1366x768": {
+  "canvasTop": 260,
+  "canvasBottom": 799,
+  "innerHeight": 768,
+  "visibleFrac": 0.94,
+  "worldBottom": 783
+ },
+ "1280x800": {
+  "canvasTop": 257,
+  "canvasBottom": 753,
+  "innerHeight": 800,
+  "visibleFrac": 1,
+  "worldBottom": 737
+ },
+ "1536x864": {
+  "canvasTop": 263,
+  "canvasBottom": 803,
+  "innerHeight": 864,
+  "visibleFrac": 1,
+  "worldBottom": 787
+ },
+ "1000x700": {
+  "canvasTop": 301,
+  "canvasBottom": 897,
+  "innerHeight": 700,
+  "visibleFrac": 0.67,
+  "worldBottom": 837
+ }
+}
