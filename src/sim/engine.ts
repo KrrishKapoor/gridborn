@@ -43,9 +43,11 @@ export class Engine {
   selected: CarId | null = null;
   bestFitness = -1;
   bestLap: number | null = null;
-  private readonly compareRank = (a: number, b: number): number =>
-    fitness(this.distances[b]!, this.track.length, this.laps[b]!, this.deadlineTicks * FIXED_DT)
-    - fitness(this.distances[a]!, this.track.length, this.laps[a]!, this.deadlineTicks * FIXED_DT) || a - b;
+  private readonly compareRank = (a: number, b: number): number => {
+    const lapA = this.laps[a]!, lapB = this.laps[b]!;
+    if (lapA > 0 || lapB > 0) return lapA > 0 && lapB > 0 ? lapA - lapB || a - b : lapA > 0 ? -1 : 1;
+    return this.distances[b]! - this.distances[a]! || a - b;
+  };
 
   constructor(readonly runId: number, readonly track: TrackGeometry, readonly settings: SimulationSettings, private readonly events: EngineEvents) {
     const n = settings.population;

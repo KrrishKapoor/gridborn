@@ -30,7 +30,8 @@ describe('lap gates and honest fitness', () => {
     expect(fitness(1000, 1000, 30, 30)).toBeGreaterThan(fitness(9999, 1000, 0, 30));
     expect(fitness(1000, 1000, 10, 30)).toBeGreaterThan(fitness(1000, 1000, 11, 30));
     expect(fitness(200, 1000, 0, 30)).toBeGreaterThan(fitness(100, 1000, 0, 30));
-    expect(fitness(-500, 1000, 0, 30)).toBe(0);
+    expect(fitness(-500, 1000, 0, 30)).toBeLessThan(fitness(-100, 1000, 0, 30));
+    expect(fitness(2000, 1000, 0, 30)).toBeGreaterThan(fitness(1000, 1000, 0, 30));
   });
   it('crashes a straight-driving network at the wall, retains its pose and fades it', () => {
     const engine = new Engine(1, track, { ...DEFAULT_SETTINGS, population: 2, eliteCount: 1 }, events);
@@ -80,7 +81,7 @@ describe('serialized reset and buffer validation', () => {
   it.each([
     { seed: -1 }, { seed: 2 ** 32 }, { population: 1 }, { population: 1001 }, { population: 3.2 },
     { eliteCount: 0 }, { eliteCount: 512 }, { mutationRate: 1.1 }, { mutationRate: NaN }, { mutationScale: -1 },
-    { generationSeconds: 0 }, { generationSeconds: Infinity }, { rayLength: 0 }, { maxSpeed: NaN },
+    { generationSeconds: 0 }, { generationSeconds: Infinity }, { rayLength: 0 }, { rayLength: 1e300 }, { maxSpeed: NaN },
   ])('rejects malformed settings %j', (change) => { expect(() => validateSettings({ ...DEFAULT_SETTINGS, ...change })).toThrow(); });
   it('rejects invalid lengths, open walls, NaNs, bounds, spawn and direction', () => {
     expect(() => validateTrack({ ...track, length: track.length + 100 })).toThrow();
@@ -90,6 +91,19 @@ describe('serialized reset and buffer validation', () => {
     expect(() => validateTrack({ ...track, bounds: { ...track.bounds, maxX: 1400 } })).toThrow();
     expect(() => validateTrack({ ...track, spawn: { ...track.spawn, x: 5 } })).toThrow();
     expect(() => validateTrack({ ...track, startForward: { x: -1, y: 0 } })).toThrow();
+  });
+  it('rejects topologically invalid but finite closed geometry', () => {
+    const points = track.centerline.slice();
+    const x = points[40]!, y = points[41]!; points[40] = points[140]!; points[41] = points[141]!; points[140] = x; points[141] = y;
+    const cumulativeLengths = new Float32Array(points.length / 2 + 1);
+    for (let i = 0; i < points.length / 2; i++) {
+      const next = (i + 1) % (points.length / 2);
+      cumulativeLengths[i + 1] = cumulativeLengths[i]! + Math.hypot(points[next * 2]! - points[i * 2]!, points[next * 2 + 1]! - points[i * 2 + 1]!);
+    }
+    expect(() => validateTrack({ ...track, centerline: points, cumulativeLengths, length: cumulativeLengths.at(-1)! })).toThrow(/intersects/);
+    const walls = track.walls.slice(), x1 = walls[2]!, y1 = walls[3]!, x2 = walls[6]!, y2 = walls[7]!;
+    walls.set([x2, y2], 2); walls.set([x2, y2, x1, y1], 4); walls.set([x1, y1], 8);
+    expect(() => validateTrack({ ...track, walls })).toThrow(/intersect/);
   });
   it('requires full distinct ArrayBuffers of exact lengths, never detached/subarray/shared buffers', () => {
     const s = createSnapshotStorage(16); expect(validStorage(s, 16)).toBe(true); expect(validStorage(s, 15)).toBe(false);

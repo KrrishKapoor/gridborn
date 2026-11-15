@@ -24,7 +24,8 @@ export function lapCrossing(track: TrackGeometry, progress: number, gates: numbe
   return along >= 0 && along <= 1 ? fraction : -1;
 }
 
-/** Finishers [2,3] always outrank incomplete [0,1]; lower real lap time wins. */
+/** Finishers [2,3] always outrank incomplete (-1,1); lower real lap time wins.
+ * Signed progress maps monotonically without clipping reverse travel or extra distance. */
 export function fitness(progress: number, length: number, lap: number, deadline: number): number {
-  return lap > 0 ? 2 + Math.max(0, 1 - lap / deadline) : Math.max(0, Math.min(1, progress / length));
+  return lap > 0 ? 2 + Math.max(0, 1 - lap / deadline) : progress / (length + Math.abs(progress));
 }

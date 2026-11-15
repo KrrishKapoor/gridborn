@@ -26,7 +26,7 @@ export function validateSettings(value: unknown): asserts value is SimulationSet
   requireValue(finite(s.mutationRate) && s.mutationRate >= 0 && s.mutationRate <= 1, 'Mutation rate must be 0–1.');
   requireValue(finite(s.mutationScale) && s.mutationScale >= 0, 'Mutation scale must be finite and nonnegative.');
   requireValue(positive(s.generationSeconds) && Math.ceil(s.generationSeconds * 60) <= 0x7fffffff, 'Generation deadline must fit a positive signed 32-bit tick count.');
-  requireValue(positive(s.rayLength) && s.rayLength <= Number.MAX_VALUE / 4, 'Ray length must be finite and positive.');
+  requireValue(positive(s.rayLength) && s.rayLength <= 3.4028234663852886e38 / 4, 'Ray length must be positive and safely representable in Float32 sensor storage.');
   requireValue(positive(s.maxSpeed) && s.maxSpeed <= Number.MAX_VALUE / 4, 'Maximum speed must be finite and positive.');
 }
 
@@ -52,16 +52,37 @@ export function validateTrack(value: unknown): asserts value is TrackGeometry {
   requireValue(Math.abs(length - t.length) < Math.max(0.02, length * 1e-5), 'Track length does not match its geometry.');
   const b = t.bounds;
   requireValue(b && [b.minX, b.minY, b.maxX, b.maxY].every(finite) && b.minX >= 0 && b.minY >= 0 && b.maxX <= WORLD_WIDTH && b.maxY <= WORLD_HEIGHT && b.maxX > b.minX && b.maxY > b.minY, 'Road bounds must fit the logical world.');
-  const endpoints = new Map<string, number>();
+  for (let i = 0; i < t.centerline.length; i += 2) {
+    requireValue(t.centerline[i]! >= b.minX && t.centerline[i]! <= b.maxX && t.centerline[i + 1]! >= b.minY && t.centerline[i + 1]! <= b.maxY, 'Centerline is outside road bounds.');
+  }
+  const endpoints = new Map<string, string[]>();
   for (let i = 0; i < t.walls.length; i += 4) {
     requireValue(Math.hypot(t.walls[i + 2]! - t.walls[i]!, t.walls[i + 3]! - t.walls[i + 1]!) > 1e-4, 'Wall contains a zero-length edge.');
     for (let k = 0; k < 4; k += 2) {
       const x = t.walls[i + k]!, y = t.walls[i + k + 1]!;
       requireValue(x >= b.minX - 0.01 && x <= b.maxX + 0.01 && y >= b.minY - 0.01 && y <= b.maxY + 0.01, 'Wall is outside road bounds.');
-      const key = `${x},${y}`; endpoints.set(key, (endpoints.get(key) ?? 0) + 1);
+      const key = `${x},${y}`, other = k === 0 ? `${t.walls[i + 2]},${t.walls[i + 3]}` : `${t.walls[i]},${t.walls[i + 1]}`;
+      const neighbors = endpoints.get(key); if (neighbors) neighbors.push(other); else endpoints.set(key, [other]);
     }
   }
-  requireValue([...endpoints.values()].every((degree) => degree === 2), 'Walls must form closed unbranched boundaries.');
+  requireValue([...endpoints.values()].every((neighbors) => neighbors.length === 2), 'Walls must form closed unbranched boundaries.');
+  const visited = new Set<string>(); let loops = 0;
+  for (const key of endpoints.keys()) {
+    if (visited.has(key)) continue;
+    loops++; const stack = [key];
+    while (stack.length) { const at = stack.pop()!; if (visited.has(at)) continue; visited.add(at); stack.push(...endpoints.get(at)!); }
+  }
+  requireValue(loops === 2, 'Road requires two closed wall boundaries.');
+  const centerSegments = new Float32Array(n * 4);
+  for (let i = 0; i < n; i++) {
+    const next = (i + 1) % n;
+    centerSegments.set([t.centerline[i * 2]!, t.centerline[i * 2 + 1]!, t.centerline[next * 2]!, t.centerline[next * 2 + 1]!], i * 4);
+  }
+  requireSimple(centerSegments, 'Centerline intersects itself.');
+  requireSimple(t.walls, 'Walls intersect or overlap.');
+  for (let i = 0; i < centerSegments.length; i += 4) {
+    for (let j = 0; j < t.walls.length; j += 4) requireValue(!intersects(centerSegments, i, t.walls, j), 'Centerline crosses a wall.');
+  }
   requireValue(point(t.spawn) && finite(t.spawn.heading) && point(t.startForward) && t.startLine && point(t.startLine.a) && point(t.startLine.b), 'Spawn/start line is invalid.');
   requireValue(Math.hypot(t.spawn.x - t.centerline[0]!, t.spawn.y - t.centerline[1]!) < 0.01, 'Spawn must be centerline vertex zero.');
   const f = t.startForward;
@@ -90,4 +111,33 @@ export function validStorage(value: unknown, population: number): value is Snaps
     for (let j = 0; j < i; j++) if (a.buffer === arrays[j]!.buffer) return false;
   }
   return true;
+}
+
+
+/** Reset-only topology checks. AABB rejection keeps ordinary sampled loops cheap. */
+function intersects(a: Float32Array, i: number, b: Float32Array, j: number): boolean {
+  const ax = a[i]!, ay = a[i + 1]!, bx = a[i + 2]!, by = a[i + 3]!;
+  const cx = b[j]!, cy = b[j + 1]!, dx = b[j + 2]!, dy = b[j + 3]!;
+  if (Math.max(ax, bx) < Math.min(cx, dx) || Math.max(cx, dx) < Math.min(ax, bx)
+    || Math.max(ay, by) < Math.min(cy, dy) || Math.max(cy, dy) < Math.min(ay, by)) return false;
+  const c1 = (bx - ax) * (cy - ay) - (by - ay) * (cx - ax);
+  const c2 = (bx - ax) * (dy - ay) - (by - ay) * (dx - ax);
+  const c3 = (dx - cx) * (ay - cy) - (dy - cy) * (ax - cx);
+  const c4 = (dx - cx) * (by - cy) - (dy - cy) * (bx - cx);
+  return c1 * c2 <= 0 && c3 * c4 <= 0;
+}
+function requireSimple(segments: Float32Array, message: string): void {
+  for (let i = 0; i < segments.length; i += 4) for (let j = i + 4; j < segments.length; j += 4) {
+    if (!intersects(segments, i, segments, j)) continue;
+    let shared = false;
+    for (let a = 0; a < 4; a += 2) for (let b = 0; b < 4; b += 2) {
+      if (segments[i + a] !== segments[j + b] || segments[i + a + 1] !== segments[j + b + 1]) continue;
+      const ax = segments[i + 2 - a]! - segments[i + a]!, ay = segments[i + 3 - a]! - segments[i + a + 1]!;
+      const bx = segments[j + 2 - b]! - segments[j + b]!, by = segments[j + 3 - b]! - segments[j + b + 1]!;
+      // Adjacent segments may meet, but must not double back along the same ray.
+      requireValue(Math.abs(ax * by - ay * bx) > 1e-8 || ax * bx + ay * by < 0, message);
+      shared = true;
+    }
+    requireValue(shared, message);
+  }
 }
