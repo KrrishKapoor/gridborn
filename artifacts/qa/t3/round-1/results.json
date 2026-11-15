@@ -1,0 +1,5516 @@
+{
+  "url": "http://127.0.0.1:5197/qa/t3.html",
+  "startedAt": "2026-11-15T11:11:56.482Z",
+  "browser": "Google Chrome 157.0.8103.51 (headless, playwright-core)",
+  "viewports": {
+    "desktop-1440x900": {
+      "name": "desktop-1440x900",
+      "checks": [
+        {
+          "name": "initial empty states: no fabricated generation/lap/history",
+          "ok": true,
+          "detail": {
+            "generation": "—",
+            "alive": "0 / 512",
+            "lap": "—",
+            "lapLabel": "No completed lap yet",
+            "fitness": "Fitness history: no completed generations yet",
+            "fitnessPath": "",
+            "racing": {
+              "source": "Waiting for a recorded attempt",
+              "note": "No timed lap yet. Partial attempts are labeled as partial.",
+              "d": "",
+              "pathShown": false,
+              "emptyShown": true,
+              "exampleShown": false,
+              "historyLabel": "No history yet",
+              "historyD": ""
+            },
+            "panelHidden": true,
+            "run": "Paused"
+          }
+        },
+        {
+          "name": "no horizontal page overflow",
+          "ok": true,
+          "detail": {
+            "scrollWidth": 1440,
+            "overflow": []
+          }
+        },
+        {
+          "name": "no clipped control/heading text",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "visible interactive targets >= 44x44",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "h1 visible in first viewport",
+          "ok": true,
+          "detail": {
+            "top": 138,
+            "bottom": 199.9375
+          }
+        },
+        {
+          "name": "hero canvas fully in first viewport",
+          "ok": true,
+          "detail": {
+            "hero": {
+              "top": 288.9375,
+              "bottom": 828.9375,
+              "width": 1064.40625,
+              "height": 540
+            },
+            "fraction": 1
+          }
+        },
+        {
+          "name": "Play control in first viewport",
+          "ok": true,
+          "detail": {
+            "top": 244.9375,
+            "bottom": 288.9375
+          }
+        },
+        {
+          "name": "hero/editor canvases identical CSS boxes",
+          "ok": true,
+          "detail": {
+            "top": 288.9375,
+            "bottom": 828.9375,
+            "width": 1064.40625,
+            "height": 540
+          }
+        },
+        {
+          "name": "disabled editor overlay passes center hit to hero canvas",
+          "ok": true,
+          "detail": {
+            "pe": "none",
+            "hit": "hero-canvas"
+          }
+        },
+        {
+          "name": "mono font token applied to indices and telemetry",
+          "ok": true,
+          "detail": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace"
+        },
+        {
+          "name": "touch-action/user-select restricted to interactive surfaces",
+          "ok": true,
+          "detail": {
+            "heroCanvas": "none",
+            "sensorSvg": "none",
+            "networkSvg": "auto",
+            "lessonText": "auto"
+          }
+        },
+        {
+          "name": "text contrast >= 4.5:1 on sampled text",
+          "ok": false,
+          "detail": {
+            "eyebrow": 5.7,
+            "lessonIndex": 5.7,
+            "controlNote": 5.7,
+            "trackHint": 5.7,
+            "stageCorner": 4.27,
+            "diagramNote": 5.7,
+            "lessonCopy": 5.7,
+            "lessonAside": 6.06,
+            "feedback": 5.7,
+            "caption": 5.7,
+            "fieldLabel": 5.7,
+            "footerNote": 5.7,
+            "svgNote": 5.7,
+            "ratePressedOnSoft": 5.5
+          }
+        },
+        {
+          "name": "semantics: one h1, one main, labeled controls",
+          "ok": true,
+          "detail": {
+            "h1": 1,
+            "main": 1,
+            "h2": [
+              "Selected car",
+              "A little sight. Enough to start.",
+              "A small brain. A moving car.",
+              "Keep what works. Try a small change.",
+              "The line is the consequence."
+            ],
+            "unlabeledControls": 0
+          }
+        },
+        {
+          "name": "rendered text nodes under 10px (informational, flagged if any)",
+          "ok": false,
+          "detail": {
+            "sizes": {
+              "16.0": 2,
+              "23.0": 3,
+              "12.0": 18,
+              "10.0": 26,
+              "59.0": 1,
+              "13.0": 2,
+              "21.5": 3,
+              "9.0": 9,
+              "11.0": 24,
+              "42.0": 8,
+              "14.0": 4,
+              "15.0": 17,
+              "12.5": 3,
+              "31.0": 1,
+              "26.0": 2
+            },
+            "tiny": [
+              "9px small.: No history yet",
+              "9px span.stage-corner: FIELD / 01",
+              "9px small.: 1",
+              "9px small.: 2",
+              "9px small.: 3",
+              "9px small.: 4",
+              "9px small.: 5",
+              "9px small.: 6",
+              "9px small.: 7"
+            ]
+          }
+        },
+        {
+          "name": "no idle animation frames over 1s",
+          "ok": true,
+          "detail": {
+            "rafRequests": 0
+          }
+        },
+        {
+          "name": "play/pause emit intents and reflect update",
+          "ok": true,
+          "detail": {
+            "play": {
+              "intent": {
+                "action": "running",
+                "value": true
+              },
+              "pressed": "true",
+              "text": "ⅡPause",
+              "label": "Running",
+              "focusKept": true
+            },
+            "pause": {
+              "intent": {
+                "action": "running",
+                "value": false
+              },
+              "pressed": "false",
+              "text": "▶Play"
+            }
+          }
+        },
+        {
+          "name": "rate 4x/fast/1x explicit intents + pressed state",
+          "ok": true,
+          "detail": [
+            {
+              "intent": {
+                "action": "rate",
+                "value": 4
+              },
+              "pressed": "false,true,false",
+              "note": "Four simulated seconds per second",
+              "focusKept": true
+            },
+            {
+              "intent": {
+                "action": "rate",
+                "value": "fast"
+              },
+              "pressed": "false,false,true",
+              "note": "Headless · throughput mode",
+              "focusKept": true
+            },
+            {
+              "intent": {
+                "action": "rate",
+                "value": 1
+              },
+              "pressed": "true,false,false",
+              "note": "Real-time simulation",
+              "focusKept": true
+            }
+          ]
+        },
+        {
+          "name": "population 1000 intent and accepted value",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "population",
+              "value": 1000
+            },
+            "value": "1000",
+            "alive": "0 / 1000",
+            "focusKept": true,
+            "options": [
+              "128",
+              "256",
+              "512",
+              "1000"
+            ]
+          }
+        },
+        {
+          "name": "preset intent and picker returns to placeholder",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "preset",
+              "value": "bend"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "draw/clear/stop/reset intents",
+          "ok": true,
+          "detail": {
+            "drawOn": {
+              "intent": {
+                "action": "drawing",
+                "value": true
+              },
+              "pressed": "true",
+              "text": "Stop drawing",
+              "editorPE": "none",
+              "editorHidden": "false",
+              "hint": "Draw one closed loop on the field.",
+              "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+              "focusKept": true,
+              "heroReceivesClickWhileDrawingOverlayDisabled": true
+            },
+            "clear": {
+              "action": "clear drawing"
+            },
+            "drawOff": {
+              "intent": {
+                "action": "drawing",
+                "value": false
+              },
+              "pressed": "false",
+              "text": "Draw a circuit ↗"
+            },
+            "reset": {
+              "intent": {
+                "action": "reset"
+              },
+              "generation": "—"
+            }
+          }
+        },
+        {
+          "name": "page update never enables editor overlay; hero still receives clicks",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "drawing",
+              "value": true
+            },
+            "pressed": "true",
+            "text": "Stop drawing",
+            "editorPE": "none",
+            "editorHidden": "false",
+            "hint": "Draw one closed loop on the field.",
+            "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+            "focusKept": true,
+            "heroReceivesClickWhileDrawingOverlayDisabled": true
+          }
+        },
+        {
+          "name": "keyboard focus kept on controls across updates",
+          "ok": true,
+          "detail": {
+            "play": true,
+            "rate": true,
+            "pop": true,
+            "draw": true
+          }
+        },
+        {
+          "name": "inspection root and children stable across updates",
+          "ok": true
+        },
+        {
+          "name": "rapid Play before ack repeats same intent; reflects only on ack",
+          "ok": true,
+          "detail": {
+            "rapidPlay": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "beforeAck": "false",
+            "afterAck": "true",
+            "popPending": {
+              "valueDuringPending": "1000",
+              "was": "1000"
+            },
+            "popAccepted": "256",
+            "rateFinal": "false,true,false",
+            "finalRunning": true
+          }
+        },
+        {
+          "name": "population select restores accepted value while pending, then shows ack",
+          "ok": true,
+          "detail": {
+            "rapidPlay": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "beforeAck": "false",
+            "afterAck": "true",
+            "popPending": {
+              "valueDuringPending": "1000",
+              "was": "1000"
+            },
+            "popAccepted": "256",
+            "rateFinal": "false,true,false",
+            "finalRunning": true
+          }
+        },
+        {
+          "name": "rapid rate clicks settle to last acknowledged value",
+          "ok": true,
+          "detail": "false,true,false"
+        },
+        {
+          "name": "network illustration: weight/input sliders change outputs; independent recompute matches",
+          "ok": true,
+          "detail": {
+            "a": {
+              "steer": "+0.15",
+              "throttle": "52%",
+              "node3": "0.6779999780654907",
+              "edge74": "1.05"
+            },
+            "b": {
+              "steer": "-0.95",
+              "throttle": "52%",
+              "node3": "0.6779999780654907",
+              "edge74": "2.7"
+            },
+            "d": {
+              "steer": "-0.97",
+              "throttle": "51%",
+              "node3": "0.08",
+              "edge74": "2.7"
+            },
+            "expect": {
+              "steer": "-0.97",
+              "throttle": "51%"
+            },
+            "source": "Illustration · 8 → 8 → 2"
+          }
+        },
+        {
+          "name": "mouse drag moves sensor car and readings; no drag after release",
+          "ok": true,
+          "detail": {
+            "before": {
+              "r": [
+                "0.68",
+                "0.75",
+                "0.89",
+                "1.00",
+                "0.89",
+                "0.75",
+                "0.68"
+              ],
+              "pos": "328"
+            },
+            "afterDrag": {
+              "r": [
+                "1.00",
+                "1.00",
+                "1.00",
+                "0.90",
+                "0.50",
+                "0.30",
+                "0.26"
+              ],
+              "pos": "420"
+            },
+            "afterStray": "420"
+          }
+        },
+        {
+          "name": "article text selectable by mouse drag",
+          "ok": true,
+          "detail": {
+            "sel": 125,
+            "dragSel": 48
+          }
+        },
+        {
+          "name": "keyboard sliders move/rotate sensor car with visible focus",
+          "ok": true,
+          "detail": {
+            "p0": "420",
+            "p1": "410",
+            "heading": "20",
+            "transform": "translate(410 260.00001112131304) rotate(20)",
+            "readings": [
+              "1.00",
+              "1.00",
+              "1.00",
+              "0.62",
+              "0.40",
+              "0.31",
+              "0.33"
+            ],
+            "focusOutline": "solid rgb(25, 91, 181)"
+          }
+        },
+        {
+          "name": "illustrative ray-wall intersection geometrically correct (side rays hit x=178/478)",
+          "ok": true,
+          "detail": {
+            "leftRay": [
+              328,
+              260.00001112131304,
+              178,
+              260.00001112131304
+            ],
+            "rightRay": [
+              328,
+              260.00001112131304,
+              478,
+              260.00001112131304
+            ],
+            "readings": [
+              "0.68",
+              "0.79",
+              "0.93",
+              "1.00",
+              "0.93",
+              "0.79",
+              "0.68"
+            ]
+          }
+        },
+        {
+          "name": "genetics: crossover moves split and child inheritance",
+          "ok": true,
+          "detail": {
+            "initialChild": "AAAAAABBBBBB",
+            "split0": "M331 28V146M331 196V258",
+            "child3": "AAABBBBBBBBB",
+            "split3": "M202 28V146M202 196V258",
+            "parentAChangesRowAandChildLeft": true,
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            },
+            "caption": "Illustration · 12 weights, no actual lineage"
+          }
+        },
+        {
+          "name": "genetics: parent change affects A-side of child only",
+          "ok": true,
+          "detail": {
+            "initialChild": "AAAAAABBBBBB",
+            "split0": "M331 28V146M331 196V258",
+            "child3": "AAABBBBBBBBB",
+            "split3": "M202 28V146M202 196V258",
+            "parentAChangesRowAandChildLeft": true,
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            },
+            "caption": "Illustration · 12 weights, no actual lineage"
+          }
+        },
+        {
+          "name": "genetics: mutate caps at 12 and disables; 3 mutations = 3 ochre child genes; reset restores",
+          "ok": true,
+          "detail": {
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            }
+          }
+        },
+        {
+          "name": "genetics labeled illustrative, no actual lineage",
+          "ok": true,
+          "detail": "Illustration · 12 weights, no actual lineage"
+        },
+        {
+          "name": "network live mode maps 90 weights/18 activations exactly (destination-major), throttle mapping",
+          "ok": true,
+          "detail": {
+            "edgeCount": 80,
+            "nodeCount": 18,
+            "mismatches": 0,
+            "steer": "-0.23",
+            "throttle": "9%",
+            "expectSteer": "-0.23",
+            "expectThrottle": "9%"
+          }
+        },
+        {
+          "name": "sensor live mode shows supplied normalized distances; walls hidden; illustration controls disabled",
+          "ok": true,
+          "detail": {
+            "readings": [
+              "0.15",
+              "0.26",
+              "0.37",
+              "0.48",
+              "0.59",
+              "0.70",
+              "0.81"
+            ],
+            "expected": [
+              "0.15",
+              "0.26",
+              "0.37",
+              "0.48",
+              "0.59",
+              "0.70",
+              "0.81"
+            ],
+            "source": "Selected car · live distances",
+            "wallsHidden": true,
+            "slidersDisabled": true,
+            "followEnabled": true,
+            "rayLen0": 33.000001311302185
+          }
+        },
+        {
+          "name": "detached/mutated buffers after update: deferred redraw uses owned copies",
+          "ok": true,
+          "detail": {
+            "detached": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "racingHistory": {
+              "label": "5 completed · best / mean fitness",
+              "points": 5
+            },
+            "heroSparkPoints": 5
+          }
+        },
+        {
+          "name": "inspection shell shows selected car and keeps root child",
+          "ok": true,
+          "detail": {
+            "hidden": false,
+            "heading": "Car 008 · generation 4",
+            "rootChildren": 1
+          }
+        },
+        {
+          "name": "inspection heading visible without scrolling after selecting from hero",
+          "ok": false,
+          "detail": {
+            "panelTop": 905,
+            "panelBottom": 1072,
+            "canvasBottom": 829,
+            "vh": 900,
+            "panelHeadingVisible": false
+          }
+        },
+        {
+          "name": "unchecking Follow returns sensors to illustration",
+          "ok": true,
+          "detail": {
+            "source": "Illustration · local perception",
+            "walls": ""
+          }
+        },
+        {
+          "name": "stale generation/run/out-of-range/null selection fall back to illustration",
+          "ok": true,
+          "detail": {
+            "g": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "r": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "o": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "n": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ]
+          }
+        },
+        {
+          "name": "stale-run best ignored (empty state)",
+          "ok": true,
+          "detail": {
+            "source": "Waiting for a recorded attempt",
+            "note": "No timed lap yet. Partial attempts are labeled as partial.",
+            "d": "",
+            "pathShown": false,
+            "emptyShown": true,
+            "exampleShown": false,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+          }
+        },
+        {
+          "name": "partial attempt labeled partial, all samples drawn, copy survives mutation+detach",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · partial attempt",
+            "note": "Generation 3, car 3. This car has not completed a timed lap.",
+            "points": 40
+          }
+        },
+        {
+          "name": "complete lap labeled with supplied time and only supplied samples",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · 41.24 s lap",
+            "note": "Generation 6, car 12. A complete timed lap, recorded from the simulation.",
+            "points": 60
+          }
+        },
+        {
+          "name": "offscreen update + detach: deferred racing redraw accurate",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · 39.50 s lap",
+            "points": 24
+          }
+        },
+        {
+          "name": "explore corner labeled illustrative, slider changes arc, actual history retained",
+          "ok": true,
+          "detail": {
+            "source": "Illustration · corner geometry",
+            "note": "Explore wider and tighter arcs. This is geometry, not a measured racing result.",
+            "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+            "pathShown": false,
+            "emptyShown": false,
+            "exampleShown": true,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00",
+            "slider": true
+          }
+        },
+        {
+          "name": "rapid corner-mode toggling ends in consistent state",
+          "ok": true,
+          "detail": {
+            "pressed": "false",
+            "source": "Recorded best · 39.50 s lap",
+            "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+            "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+            "pathShown": true,
+            "emptyShown": false,
+            "exampleShown": false,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+          }
+        },
+        {
+          "name": "sparkline: empty→hidden, one entry→single point, N entries→N points, peak follows data",
+          "ok": true,
+          "detail": {
+            "empty": {
+              "best": "",
+              "dot": "hidden",
+              "label": "Fitness history: no completed generations yet"
+            },
+            "one": {
+              "best": "M100.00,5.00",
+              "dot": "visible",
+              "label": "Fitness over generations 1 to 1. Latest best 14.00, mean 6.00. Green is best; gray is mean."
+            },
+            "three": {
+              "best": "M4.00,39.77L100.00,5.00L196.00,37.74",
+              "dot": "visible",
+              "label": "Fitness over generations 1 to 3. Latest best 19.00, mean 8.00. Green is best; gray is mean."
+            },
+            "windowed": {
+              "best": "M4.00,42.61L4.75,42.41L5.51,42.36L6.26,42.16L7.01,41.97L7.76,41.92L8.52,41.72L9.27,41.53L10.02,41.48L10.78,41.28L11.53,41.08L12.28,41.03L13.04,40.84L13.79,40.64L14.54,40.59L15.29,40.39L16.05,40.20L16.80,40.15L17.55,39.95L18.31,39.76L19.06,39.71L19.81,39.51L20.56,39.31L21.32,39.26L22.07,39.07L22.82,38.87L23.58,38.82L24.33,38.62L25.08,38.43L25.84,38.38L26.59,38.18L27.34,37.99L28.09,37.94L28.85,37.74L29.60,37.54L30.35,37.49L31.11,37.30L31.86,37.10L32.61,37.05L33.36,36.86L34.12,36.66L34.87,36.61L35.62,36.41L36.38,36.22L37.13,36.17L37.88,35.97L38.64,35.77L39.39,35.72L40.14,35.53L40.89,35.33L41.65,35.28L42.40,35.09L43.15,34.89L43.91,34.84L44.66,34.64L45.41,34.45L46.16,34.40L46.92,34.20L47.67,34.00L48.42,33.95L49.18,33.76L49.93,33.56L50.68,33.51L51.44,33.32L52.19,33.12L52.94,33.07L53.69,32.87L54.45,32.68L55.20,32.63L55.95,32.43L56.71,32.23L57.46,32.18L58.21,31.99L58.96,31.79L59.72,31.74L60.47,31.55L61.22,31.35L61.98,31.30L62.73,31.10L63.48,30.91L64.24,30.86L64.99,30.66L65.74,30.46L66.49,30.42L67.25,30.22L68.00,30.02L68.75,29.97L69.51,29.78L70.26,29.58L71.01,29.53L71.76,29.33L72.52,29.14L73.27,29.09L74.02,28.89L74.78,28.69L75.53,28.65L76.28,28.45L77.04,28.25L77.79,28.20L78.54,28.01L79.29,27.81L80.05,27.76L80.80,27.56L81.55,27.37L82.31,27.32L83.06,27.12L83.81,26.92L84.56,26.88L85.32,26.68L86.07,26.48L86.82,26.43L87.58,26.24L88.33,26.04L89.08,25.99L89.84,25.79L90.59,25.60L91.34,25.55L92.09,25.35L92.85,25.16L93.60,25.11L94.35,24.91L95.11,24.71L95.86,24.66L96.61,24.47L97.36,24.27L98.12,24.22L98.87,24.02L99.62,23.83L100.38,23.78L101.13,23.58L101.88,23.39L102.64,23.34L103.39,23.14L104.14,22.94L104.89,22.89L105.65,22.70L106.40,22.50L107.15,22.45L107.91,22.25L108.66,22.06L109.41,22.01L110.16,21.81L110.92,21.62L111.67,21.57L112.42,21.37L113.18,21.17L113.93,21.12L114.68,20.93L115.44,20.73L116.19,20.68L116.94,20.49L117.69,20.29L118.45,20.24L119.20,20.04L119.95,19.85L120.71,19.80L121.46,19.60L122.21,19.40L122.96,19.35L123.72,19.16L124.47,18.96L125.22,18.91L125.98,18.72L126.73,18.52L127.48,18.47L128.24,18.27L128.99,18.08L129.74,18.03L130.49,17.83L131.25,17.63L132.00,17.58L132.75,17.39L133.51,17.19L134.26,17.14L135.01,16.95L135.76,16.75L136.52,16.70L137.27,16.50L138.02,16.31L138.78,16.26L139.53,16.06L140.28,15.86L141.04,15.82L141.79,15.62L142.54,15.42L143.29,15.37L144.05,15.18L144.80,14.98L145.55,14.93L146.31,14.73L147.06,14.54L147.81,14.49L148.56,14.29L149.32,14.09L150.07,14.05L150.82,13.85L151.58,13.65L152.33,13.60L153.08,13.41L153.84,13.21L154.59,13.16L155.34,12.96L156.09,12.77L156.85,12.72L157.60,12.52L158.35,12.32L159.11,12.28L159.86,12.08L160.61,11.88L161.36,11.83L162.12,11.64L162.87,11.44L163.62,11.39L164.38,11.19L165.13,11.00L165.88,10.95L166.64,10.75L167.39,10.55L168.14,10.51L168.89,10.31L169.65,10.11L170.40,10.06L171.15,9.87L171.91,9.67L172.66,9.62L173.41,9.42L174.16,9.23L174.92,9.18L175.67,8.98L176.42,8.79L177.18,8.74L177.93,8.54L178.68,8.34L179.44,8.29L180.19,8.10L180.94,7.90L181.69,7.85L182.45,7.65L183.20,7.46L183.95,7.41L184.71,7.21L185.46,7.02L186.21,6.97L186.96,6.77L187.72,6.57L188.47,6.52L189.22,6.33L189.98,6.13L190.73,6.08L191.48,5.88L192.24,5.69L192.99,5.64L193.74,5.44L194.49,5.25L195.25,5.20L196.00,5.00",
+              "dot": "visible",
+              "label": "Fitness over generations 45 to 300. Latest best 779.00, mean 261.00. Green is best; gray is mean.",
+              "heroLabel": "300 gen · best / mean"
+            }
+          }
+        },
+        {
+          "name": "Close inspection emits onSelectionClear and hides panel; root kept",
+          "ok": true,
+          "detail": {
+            "focusedBefore": true,
+            "intent": {
+              "action": "clear selection"
+            },
+            "hidden": true,
+            "active": "body",
+            "rootStill": true
+          }
+        },
+        {
+          "name": "keyboard focus not lost to <body> after closing inspection",
+          "ok": false,
+          "detail": {
+            "focusedBefore": true,
+            "intent": {
+              "action": "clear selection"
+            },
+            "hidden": true,
+            "active": "body",
+            "rootStill": true
+          }
+        },
+        {
+          "name": "showTrackIssues shows polite atomic feedback and clears",
+          "ok": true,
+          "detail": {
+            "a": {
+              "text": "This loop crosses itself. Draw a wider loop without crossings; your current circuit is unchanged.",
+              "cls": "track-feedback has-issues",
+              "live": "polite",
+              "role": "status"
+            },
+            "cleared": "Choose a circuit, or draw a closed loop.",
+            "cls": "track-feedback"
+          }
+        },
+        {
+          "name": "Tab order reaches controls with visible 2px focus ring",
+          "ok": true,
+          "detail": [
+            "INPUT:Illustrative car h:solid/2px",
+            "INPUT:Illustrative front:solid/2px",
+            "INPUT:Illustrative steer:solid/2px",
+            "SELECT:Illustrative paren:solid/2px",
+            "SELECT:Illustrative paren:solid/2px",
+            "INPUT:Illustrative cross:solid/2px"
+          ]
+        },
+        {
+          "name": "setVisible(false) suspends painting; setVisible(true) paints owned copy",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 1,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "document hidden: no frames; restore paints latest owned data",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 1,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "offscreen demos request no frames on update",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 1,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "rotate/resize: no overflow, canvases equal, diagrams fit",
+          "ok": true,
+          "detail": [
+            {
+              "vw": 900,
+              "scrollWidth": 900,
+              "equal": true,
+              "backing": [
+                1292,
+                1034,
+                1292,
+                1034
+              ],
+              "svgWidths": [
+                487,
+                487,
+                487,
+                487
+              ]
+            },
+            {
+              "vw": 1440,
+              "scrollWidth": 1440,
+              "equal": true,
+              "backing": [
+                2129,
+                1080,
+                2129,
+                1080
+              ],
+              "svgWidths": [
+                798,
+                798,
+                798,
+                798
+              ]
+            }
+          ]
+        },
+        {
+          "name": "destroy removes page, stops frames, post-destroy calls safe",
+          "ok": true,
+          "detail": {
+            "removed": true,
+            "rafAfterDestroy": 0,
+            "postDestroySafe": true,
+            "mount0": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount1": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount2": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "calls": [
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ]
+            ],
+            "hostEmpty": true
+          }
+        },
+        {
+          "name": "recreate x3: fresh pages mount/emit/destroy cleanly with unique ids",
+          "ok": true,
+          "detail": {
+            "removed": true,
+            "rafAfterDestroy": 0,
+            "postDestroySafe": true,
+            "mount0": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount1": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount2": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "calls": [
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ]
+            ],
+            "hostEmpty": true
+          }
+        },
+        {
+          "name": "no console errors/warnings, page errors, or failed requests",
+          "ok": true,
+          "detail": {
+            "console": [],
+            "pageErrors": [],
+            "failed": []
+          }
+        }
+      ],
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "audit": {
+        "vw": 1440,
+        "vh": 900,
+        "scrollWidth": 1440,
+        "overflow": [],
+        "clipped": [],
+        "small": [],
+        "sizes": {
+          "16.0": 2,
+          "23.0": 3,
+          "12.0": 18,
+          "10.0": 26,
+          "59.0": 1,
+          "13.0": 2,
+          "21.5": 3,
+          "9.0": 9,
+          "11.0": 24,
+          "42.0": 8,
+          "14.0": 4,
+          "15.0": 17,
+          "12.5": 3,
+          "31.0": 1,
+          "26.0": 2
+        },
+        "tinyList": [
+          "9px small.: No history yet",
+          "9px span.stage-corner: FIELD / 01",
+          "9px small.: 1",
+          "9px small.: 2",
+          "9px small.: 3",
+          "9px small.: 4",
+          "9px small.: 5",
+          "9px small.: 6",
+          "9px small.: 7"
+        ],
+        "hero": {
+          "top": 288.9375,
+          "bottom": 828.9375,
+          "width": 1064.40625,
+          "height": 540
+        },
+        "editorEqual": true,
+        "editorPointerEvents": "none",
+        "centerHit": "hero-canvas",
+        "h1": {
+          "top": 138,
+          "bottom": 199.9375
+        },
+        "run": {
+          "top": 244.9375,
+          "bottom": 288.9375
+        },
+        "telemetry": {
+          "top": 224.9375,
+          "bottom": 288.9375
+        },
+        "heroCanvasFullyVisible": true,
+        "heroVisibleFraction": 1,
+        "runVisible": true,
+        "mono": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "telemFont": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "touchAction": {
+          "heroCanvas": "none",
+          "sensorSvg": "none",
+          "networkSvg": "auto",
+          "lessonText": "auto"
+        },
+        "userSelect": {
+          "lessonText": "auto",
+          "heroCanvas": "none",
+          "sensorSvg": "none"
+        },
+        "contrast": {
+          "eyebrow": 5.7,
+          "lessonIndex": 5.7,
+          "controlNote": 5.7,
+          "trackHint": 5.7,
+          "stageCorner": 4.27,
+          "diagramNote": 5.7,
+          "lessonCopy": 5.7,
+          "lessonAside": 6.06,
+          "feedback": 5.7,
+          "caption": 5.7,
+          "fieldLabel": 5.7,
+          "footerNote": 5.7,
+          "svgNote": 5.7,
+          "ratePressedOnSoft": 5.5
+        },
+        "semantics": {
+          "h1": 1,
+          "main": 1,
+          "h2": [
+            "Selected car",
+            "A little sight. Enough to start.",
+            "A small brain. A moving car.",
+            "Keep what works. Try a small change.",
+            "The line is the consequence."
+          ],
+          "unlabeledControls": 0
+        }
+      },
+      "screenshots": [
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-hero.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-sensors.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-network.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-genetics.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-racing-line.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-full.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-sensors-live.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-network-live.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-hero-selected.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-racing-line-lap.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-racing-line-corner.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/desktop-1440x900-keyboard-focus.png"
+      ],
+      "initial": {
+        "generation": "—",
+        "alive": "0 / 512",
+        "lap": "—",
+        "lapLabel": "No completed lap yet",
+        "fitness": "Fitness history: no completed generations yet",
+        "fitnessPath": "",
+        "racing": {
+          "source": "Waiting for a recorded attempt",
+          "note": "No timed lap yet. Partial attempts are labeled as partial.",
+          "d": "",
+          "pathShown": false,
+          "emptyShown": true,
+          "exampleShown": false,
+          "historyLabel": "No history yet",
+          "historyD": ""
+        },
+        "panelHidden": true,
+        "run": "Paused"
+      },
+      "textSizes": {
+        "16.0": 2,
+        "23.0": 3,
+        "12.0": 18,
+        "10.0": 26,
+        "59.0": 1,
+        "13.0": 2,
+        "21.5": 3,
+        "9.0": 9,
+        "11.0": 24,
+        "42.0": 8,
+        "14.0": 4,
+        "15.0": 17,
+        "12.5": 3,
+        "31.0": 1,
+        "26.0": 2
+      },
+      "controls": {
+        "play": {
+          "intent": {
+            "action": "running",
+            "value": true
+          },
+          "pressed": "true",
+          "text": "ⅡPause",
+          "label": "Running",
+          "focusKept": true
+        },
+        "pause": {
+          "intent": {
+            "action": "running",
+            "value": false
+          },
+          "pressed": "false",
+          "text": "▶Play"
+        },
+        "rate4": {
+          "intent": {
+            "action": "rate",
+            "value": 4
+          },
+          "pressed": "false,true,false",
+          "note": "Four simulated seconds per second",
+          "focusKept": true
+        },
+        "ratefast": {
+          "intent": {
+            "action": "rate",
+            "value": "fast"
+          },
+          "pressed": "false,false,true",
+          "note": "Headless · throughput mode",
+          "focusKept": true
+        },
+        "rate1": {
+          "intent": {
+            "action": "rate",
+            "value": 1
+          },
+          "pressed": "true,false,false",
+          "note": "Real-time simulation",
+          "focusKept": true
+        },
+        "population": {
+          "intent": {
+            "action": "population",
+            "value": 1000
+          },
+          "value": "1000",
+          "alive": "0 / 1000",
+          "focusKept": true,
+          "options": [
+            "128",
+            "256",
+            "512",
+            "1000"
+          ]
+        },
+        "preset": {
+          "intent": {
+            "action": "preset",
+            "value": "bend"
+          },
+          "value": ""
+        },
+        "drawOn": {
+          "intent": {
+            "action": "drawing",
+            "value": true
+          },
+          "pressed": "true",
+          "text": "Stop drawing",
+          "editorPE": "none",
+          "editorHidden": "false",
+          "hint": "Draw one closed loop on the field.",
+          "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+          "focusKept": true,
+          "heroReceivesClickWhileDrawingOverlayDisabled": true
+        },
+        "clear": {
+          "action": "clear drawing"
+        },
+        "drawOff": {
+          "intent": {
+            "action": "drawing",
+            "value": false
+          },
+          "pressed": "false",
+          "text": "Draw a circuit ↗"
+        },
+        "reset": {
+          "intent": {
+            "action": "reset"
+          },
+          "generation": "—"
+        },
+        "stableInspectionRoot": true,
+        "intentCount": 11
+      },
+      "delayed": {
+        "rapidPlay": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "beforeAck": "false",
+        "afterAck": "true",
+        "popPending": {
+          "valueDuringPending": "1000",
+          "was": "1000"
+        },
+        "popAccepted": "256",
+        "rateFinal": "false,true,false",
+        "finalRunning": true
+      },
+      "networkIllustration": {
+        "a": {
+          "steer": "+0.15",
+          "throttle": "52%",
+          "node3": "0.6779999780654907",
+          "edge74": "1.05"
+        },
+        "b": {
+          "steer": "-0.95",
+          "throttle": "52%",
+          "node3": "0.6779999780654907",
+          "edge74": "2.7"
+        },
+        "d": {
+          "steer": "-0.97",
+          "throttle": "51%",
+          "node3": "0.08",
+          "edge74": "2.7"
+        },
+        "expect": {
+          "steer": "-0.97",
+          "throttle": "51%"
+        },
+        "source": "Illustration · 8 → 8 → 2"
+      },
+      "sensorMouse": {
+        "before": {
+          "r": [
+            "0.68",
+            "0.75",
+            "0.89",
+            "1.00",
+            "0.89",
+            "0.75",
+            "0.68"
+          ],
+          "pos": "328"
+        },
+        "afterDrag": {
+          "r": [
+            "1.00",
+            "1.00",
+            "1.00",
+            "0.90",
+            "0.50",
+            "0.30",
+            "0.26"
+          ],
+          "pos": "420"
+        },
+        "afterStray": "420"
+      },
+      "sensorKeyboard": {
+        "p0": "420",
+        "p1": "410",
+        "heading": "20",
+        "transform": "translate(410 260.00001112131304) rotate(20)",
+        "readings": [
+          "1.00",
+          "1.00",
+          "1.00",
+          "0.62",
+          "0.40",
+          "0.31",
+          "0.33"
+        ],
+        "focusOutline": "solid rgb(25, 91, 181)"
+      },
+      "sensorGeometry": {
+        "lines": [
+          [
+            328,
+            260.00001112131304,
+            178,
+            260.00001112131304
+          ],
+          [
+            328,
+            260.00001112131304,
+            178,
+            173.3974707428691
+          ],
+          [
+            328,
+            260.00001112131304,
+            225.48998500013204,
+            82.4474568568939
+          ],
+          [
+            328,
+            260.00001112131304,
+            328,
+            40.00001112131304
+          ],
+          [
+            328,
+            260.00001112131304,
+            430.51001499986796,
+            82.4474568568939
+          ],
+          [
+            328,
+            260.00001112131304,
+            478,
+            173.3974707428692
+          ],
+          [
+            328,
+            260.00001112131304,
+            478,
+            260.00001112131304
+          ]
+        ],
+        "readings": [
+          "0.68",
+          "0.79",
+          "0.93",
+          "1.00",
+          "0.93",
+          "0.79",
+          "0.68"
+        ],
+        "carY": "translate(328 260.00001112131304) rotate(0)"
+      },
+      "genetics": {
+        "initialChild": "AAAAAABBBBBB",
+        "split0": "M331 28V146M331 196V258",
+        "child3": "AAABBBBBBBBB",
+        "split3": "M202 28V146M202 196V258",
+        "parentAChangesRowAandChildLeft": true,
+        "after20": {
+          "count": "12 mutations",
+          "ochre": 12,
+          "disabled": true,
+          "note": "Ochre marks small weight changes. Useful variations can survive selection."
+        },
+        "after3": {
+          "count": "3 mutations",
+          "ochre": 3,
+          "parentsOnlyUnmutated": true,
+          "titles": 3
+        },
+        "reset": {
+          "count": "0 mutations",
+          "a": "0",
+          "crossover": "6",
+          "child": "AAAAAABBBBBB"
+        },
+        "caption": "Illustration · 12 weights, no actual lineage"
+      },
+      "selection": {
+        "detachedLengths": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "network": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.23",
+          "throttle": "9%",
+          "expectSteer": "-0.23",
+          "expectThrottle": "9%"
+        },
+        "sensor": {
+          "readings": [
+            "0.15",
+            "0.26",
+            "0.37",
+            "0.48",
+            "0.59",
+            "0.70",
+            "0.81"
+          ],
+          "expected": [
+            "0.15",
+            "0.26",
+            "0.37",
+            "0.48",
+            "0.59",
+            "0.70",
+            "0.81"
+          ],
+          "source": "Selected car · live distances",
+          "wallsHidden": true,
+          "slidersDisabled": true,
+          "followEnabled": true,
+          "rayLen0": 33.000001311302185
+        },
+        "panel": {
+          "hidden": false,
+          "heading": "Car 008 · generation 4",
+          "rootChildren": 1
+        },
+        "racingHistory": {
+          "label": "5 completed · best / mean fitness",
+          "points": 5
+        },
+        "heroSparkPoints": 5,
+        "heroHistoryLabel": "5 gen · best / mean"
+      },
+      "inspectionPlacement": {
+        "panelTop": 905,
+        "panelBottom": 1072,
+        "canvasBottom": 829,
+        "vh": 900,
+        "panelHeadingVisible": false
+      },
+      "stale": {
+        "staleGeneration": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "staleRun": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "outOfRange": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "nullSnapshot": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "staleBest": {
+          "source": "Waiting for a recorded attempt",
+          "note": "No timed lap yet. Partial attempts are labeled as partial.",
+          "d": "",
+          "pathShown": false,
+          "emptyShown": true,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "partial": {
+          "source": "Recorded best · partial attempt",
+          "note": "Generation 3, car 3. This car has not completed a timed lap.",
+          "d": "M528.71,165.00L526.00,185.96L517.95,206.37L504.76,225.72L486.78,243.49L464.47,259.23L438.41,272.53L409.28,283.04L377.82,290.50L344.86,294.70L311.24,295.55L277.85,293.01L245.53,287.16L215.14,278.15L187.45,266.20L163.19,251.64L142.98,234.83L127.34,216.21L116.69,196.27L111.29,175.51L111.29,154.49L116.69,133.73L127.34,113.79L142.98,95.17L163.19,78.36L187.45,63.80L215.14,51.85L245.53,42.84L277.85,36.99L311.24,34.45L344.86,35.30L377.82,39.50L409.28,46.96L438.41,57.47L464.47,70.77L486.78,86.51L504.76,104.28L517.95,123.63L526.00,144.04L528.71,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "partialPoints": 40,
+        "lap": {
+          "source": "Recorded best · 41.24 s lap",
+          "note": "Generation 6, car 12. A complete timed lap, recorded from the simulation.",
+          "d": "M528.81,165.00L527.63,178.88L524.09,192.61L518.24,206.02L510.14,218.96L499.88,231.30L487.58,242.88L473.39,253.59L457.45,263.28L439.96,271.87L421.10,279.24L401.10,285.32L380.18,290.04L358.57,293.34L336.52,295.18L314.29,295.55L292.12,294.44L270.26,291.87L248.97,287.85L228.47,282.45L209.02,275.71L190.82,267.72L174.08,258.57L158.99,248.35L145.72,237.19L134.43,225.22L125.24,212.56L118.26,199.36L113.55,185.77L111.19,171.95L111.19,158.05L113.55,144.23L118.26,130.64L125.24,117.44L134.43,104.78L145.72,92.81L158.99,81.65L174.08,71.43L190.82,62.28L209.02,54.29L228.47,47.55L248.97,42.15L270.26,38.13L292.12,35.56L314.29,34.45L336.52,34.82L358.57,36.66L380.18,39.96L401.10,44.68L421.10,50.76L439.96,58.13L457.45,66.72L473.39,76.41L487.58,87.12L499.88,98.70L510.14,111.04L518.24,123.98L524.09,137.39L527.63,151.12L528.81,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "lapPoints": 60,
+        "deferred": {
+          "source": "Recorded best · 39.50 s lap",
+          "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "deferredPoints": 24,
+        "explore": {
+          "source": "Illustration · corner geometry",
+          "note": "Explore wider and tighter arcs. This is geometry, not a measured racing result.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": false,
+          "emptyShown": false,
+          "exampleShown": true,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00",
+          "slider": true
+        },
+        "cornerChanges": true,
+        "afterRapidToggle": {
+          "pressed": "false",
+          "source": "Recorded best · 39.50 s lap",
+          "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        }
+      },
+      "sparkline": {
+        "empty": {
+          "best": "",
+          "dot": "hidden",
+          "label": "Fitness history: no completed generations yet"
+        },
+        "one": {
+          "best": "M100.00,5.00",
+          "dot": "visible",
+          "label": "Fitness over generations 1 to 1. Latest best 14.00, mean 6.00. Green is best; gray is mean."
+        },
+        "three": {
+          "best": "M4.00,39.77L100.00,5.00L196.00,37.74",
+          "dot": "visible",
+          "label": "Fitness over generations 1 to 3. Latest best 19.00, mean 8.00. Green is best; gray is mean."
+        },
+        "windowed": {
+          "best": "M4.00,42.61L4.75,42.41L5.51,42.36L6.26,42.16L7.01,41.97L7.76,41.92L8.52,41.72L9.27,41.53L10.02,41.48L10.78,41.28L11.53,41.08L12.28,41.03L13.04,40.84L13.79,40.64L14.54,40.59L15.29,40.39L16.05,40.20L16.80,40.15L17.55,39.95L18.31,39.76L19.06,39.71L19.81,39.51L20.56,39.31L21.32,39.26L22.07,39.07L22.82,38.87L23.58,38.82L24.33,38.62L25.08,38.43L25.84,38.38L26.59,38.18L27.34,37.99L28.09,37.94L28.85,37.74L29.60,37.54L30.35,37.49L31.11,37.30L31.86,37.10L32.61,37.05L33.36,36.86L34.12,36.66L34.87,36.61L35.62,36.41L36.38,36.22L37.13,36.17L37.88,35.97L38.64,35.77L39.39,35.72L40.14,35.53L40.89,35.33L41.65,35.28L42.40,35.09L43.15,34.89L43.91,34.84L44.66,34.64L45.41,34.45L46.16,34.40L46.92,34.20L47.67,34.00L48.42,33.95L49.18,33.76L49.93,33.56L50.68,33.51L51.44,33.32L52.19,33.12L52.94,33.07L53.69,32.87L54.45,32.68L55.20,32.63L55.95,32.43L56.71,32.23L57.46,32.18L58.21,31.99L58.96,31.79L59.72,31.74L60.47,31.55L61.22,31.35L61.98,31.30L62.73,31.10L63.48,30.91L64.24,30.86L64.99,30.66L65.74,30.46L66.49,30.42L67.25,30.22L68.00,30.02L68.75,29.97L69.51,29.78L70.26,29.58L71.01,29.53L71.76,29.33L72.52,29.14L73.27,29.09L74.02,28.89L74.78,28.69L75.53,28.65L76.28,28.45L77.04,28.25L77.79,28.20L78.54,28.01L79.29,27.81L80.05,27.76L80.80,27.56L81.55,27.37L82.31,27.32L83.06,27.12L83.81,26.92L84.56,26.88L85.32,26.68L86.07,26.48L86.82,26.43L87.58,26.24L88.33,26.04L89.08,25.99L89.84,25.79L90.59,25.60L91.34,25.55L92.09,25.35L92.85,25.16L93.60,25.11L94.35,24.91L95.11,24.71L95.86,24.66L96.61,24.47L97.36,24.27L98.12,24.22L98.87,24.02L99.62,23.83L100.38,23.78L101.13,23.58L101.88,23.39L102.64,23.34L103.39,23.14L104.14,22.94L104.89,22.89L105.65,22.70L106.40,22.50L107.15,22.45L107.91,22.25L108.66,22.06L109.41,22.01L110.16,21.81L110.92,21.62L111.67,21.57L112.42,21.37L113.18,21.17L113.93,21.12L114.68,20.93L115.44,20.73L116.19,20.68L116.94,20.49L117.69,20.29L118.45,20.24L119.20,20.04L119.95,19.85L120.71,19.80L121.46,19.60L122.21,19.40L122.96,19.35L123.72,19.16L124.47,18.96L125.22,18.91L125.98,18.72L126.73,18.52L127.48,18.47L128.24,18.27L128.99,18.08L129.74,18.03L130.49,17.83L131.25,17.63L132.00,17.58L132.75,17.39L133.51,17.19L134.26,17.14L135.01,16.95L135.76,16.75L136.52,16.70L137.27,16.50L138.02,16.31L138.78,16.26L139.53,16.06L140.28,15.86L141.04,15.82L141.79,15.62L142.54,15.42L143.29,15.37L144.05,15.18L144.80,14.98L145.55,14.93L146.31,14.73L147.06,14.54L147.81,14.49L148.56,14.29L149.32,14.09L150.07,14.05L150.82,13.85L151.58,13.65L152.33,13.60L153.08,13.41L153.84,13.21L154.59,13.16L155.34,12.96L156.09,12.77L156.85,12.72L157.60,12.52L158.35,12.32L159.11,12.28L159.86,12.08L160.61,11.88L161.36,11.83L162.12,11.64L162.87,11.44L163.62,11.39L164.38,11.19L165.13,11.00L165.88,10.95L166.64,10.75L167.39,10.55L168.14,10.51L168.89,10.31L169.65,10.11L170.40,10.06L171.15,9.87L171.91,9.67L172.66,9.62L173.41,9.42L174.16,9.23L174.92,9.18L175.67,8.98L176.42,8.79L177.18,8.74L177.93,8.54L178.68,8.34L179.44,8.29L180.19,8.10L180.94,7.90L181.69,7.85L182.45,7.65L183.20,7.46L183.95,7.41L184.71,7.21L185.46,7.02L186.21,6.97L186.96,6.77L187.72,6.57L188.47,6.52L189.22,6.33L189.98,6.13L190.73,6.08L191.48,5.88L192.24,5.69L192.99,5.64L193.74,5.44L194.49,5.25L195.25,5.20L196.00,5.00",
+          "dot": "visible",
+          "label": "Fitness over generations 45 to 300. Latest best 779.00, mean 261.00. Green is best; gray is mean.",
+          "heroLabel": "300 gen · best / mean"
+        }
+      },
+      "closeSelection": {
+        "focusedBefore": true,
+        "intent": {
+          "action": "clear selection"
+        },
+        "hidden": true,
+        "active": "body",
+        "rootStill": true
+      },
+      "tabOrder": [
+        "INPUT:Illustrative car h:solid/2px",
+        "INPUT:Illustrative front:solid/2px",
+        "INPUT:Illustrative steer:solid/2px",
+        "SELECT:Illustrative paren:solid/2px",
+        "SELECT:Illustrative paren:solid/2px",
+        "INPUT:Illustrative cross:solid/2px"
+      ],
+      "lifecycle": {
+        "steerBefore": "+0.15",
+        "hiddenSteer": "+0.15",
+        "hiddenRan": 1,
+        "visibleCompare": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.88",
+          "throttle": "16%",
+          "expectSteer": "-0.88",
+          "expectThrottle": "16%"
+        },
+        "docHiddenRequests": 0,
+        "restoredCompare": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.61",
+          "throttle": "57%",
+          "expectSteer": "-0.61",
+          "expectThrottle": "57%"
+        },
+        "offscreenRequests": 0,
+        "demosInViewAtTop": 0
+      },
+      "resize": [
+        {
+          "vw": 900,
+          "scrollWidth": 900,
+          "equal": true,
+          "backing": [
+            1292,
+            1034,
+            1292,
+            1034
+          ],
+          "svgWidths": [
+            487,
+            487,
+            487,
+            487
+          ]
+        },
+        {
+          "vw": 1440,
+          "scrollWidth": 1440,
+          "equal": true,
+          "backing": [
+            2129,
+            1080,
+            2129,
+            1080
+          ],
+          "svgWidths": [
+            798,
+            798,
+            798,
+            798
+          ]
+        }
+      ],
+      "destroy": {
+        "removed": true,
+        "rafAfterDestroy": 0,
+        "postDestroySafe": true,
+        "mount0": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "mount1": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "mount2": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "calls": [
+          [
+            "onRunningChange",
+            false
+          ],
+          [
+            "onRunningChange",
+            false
+          ],
+          [
+            "onRunningChange",
+            false
+          ]
+        ],
+        "hostEmpty": true
+      }
+    },
+    "portrait-390x844": {
+      "name": "portrait-390x844",
+      "checks": [
+        {
+          "name": "initial empty states: no fabricated generation/lap/history",
+          "ok": true,
+          "detail": {
+            "generation": "—",
+            "alive": "0 / 512",
+            "lap": "—",
+            "lapLabel": "No completed lap yet",
+            "fitness": "Fitness history: no completed generations yet",
+            "fitnessPath": "",
+            "racing": {
+              "source": "Waiting for a recorded attempt",
+              "note": "No timed lap yet. Partial attempts are labeled as partial.",
+              "d": "",
+              "pathShown": false,
+              "emptyShown": true,
+              "exampleShown": false,
+              "historyLabel": "No history yet",
+              "historyD": ""
+            },
+            "panelHidden": true,
+            "run": "Paused"
+          }
+        },
+        {
+          "name": "no horizontal page overflow",
+          "ok": true,
+          "detail": {
+            "scrollWidth": 390,
+            "overflow": []
+          }
+        },
+        {
+          "name": "no clipped control/heading text",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "visible interactive targets >= 44x44",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "h1 visible in first viewport",
+          "ok": true,
+          "detail": {
+            "top": 140.5,
+            "bottom": 175.3125
+          }
+        },
+        {
+          "name": "hero canvas fully in first viewport",
+          "ok": true,
+          "detail": {
+            "hero": {
+              "top": 290.3125,
+              "bottom": 559.53125,
+              "width": 350,
+              "height": 269.21875
+            },
+            "fraction": 1
+          }
+        },
+        {
+          "name": "Play control in first viewport",
+          "ok": true,
+          "detail": {
+            "top": 610.53125,
+            "bottom": 654.53125
+          }
+        },
+        {
+          "name": "hero/editor canvases identical CSS boxes",
+          "ok": true,
+          "detail": {
+            "top": 290.3125,
+            "bottom": 559.53125,
+            "width": 350,
+            "height": 269.21875
+          }
+        },
+        {
+          "name": "disabled editor overlay passes center hit to hero canvas",
+          "ok": true,
+          "detail": {
+            "pe": "none",
+            "hit": "hero-canvas"
+          }
+        },
+        {
+          "name": "mono font token applied to indices and telemetry",
+          "ok": true,
+          "detail": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace"
+        },
+        {
+          "name": "touch-action/user-select restricted to interactive surfaces",
+          "ok": true,
+          "detail": {
+            "heroCanvas": "none",
+            "sensorSvg": "none",
+            "networkSvg": "auto",
+            "lessonText": "auto"
+          }
+        },
+        {
+          "name": "text contrast >= 4.5:1 on sampled text",
+          "ok": false,
+          "detail": {
+            "eyebrow": 5.7,
+            "lessonIndex": 5.7,
+            "controlNote": 5.7,
+            "trackHint": 5.7,
+            "stageCorner": 4.27,
+            "diagramNote": 5.7,
+            "lessonCopy": 5.7,
+            "lessonAside": 6.06,
+            "feedback": 5.7,
+            "caption": 5.7,
+            "fieldLabel": 5.7,
+            "footerNote": 5.7,
+            "svgNote": 5.7,
+            "ratePressedOnSoft": 5.5
+          }
+        },
+        {
+          "name": "semantics: one h1, one main, labeled controls",
+          "ok": true,
+          "detail": {
+            "h1": 1,
+            "main": 1,
+            "h2": [
+              "Selected car",
+              "A little sight. Enough to start.",
+              "A small brain. A moving car.",
+              "Keep what works. Try a small change.",
+              "The line is the consequence."
+            ],
+            "unlabeledControls": 0
+          }
+        },
+        {
+          "name": "rendered text nodes under 10px (informational, flagged if any)",
+          "ok": false,
+          "detail": {
+            "sizes": {
+              "16.0": 2,
+              "21.0": 3,
+              "11.0": 20,
+              "9.0": 22,
+              "33.0": 1,
+              "10.0": 43,
+              "19.0": 3,
+              "12.0": 8,
+              "35.0": 8,
+              "13.0": 4,
+              "13.5": 1,
+              "23.0": 2
+            },
+            "tiny": [
+              "9px p.eyebrow: Small brains. Open road.",
+              "9px small.: No history yet",
+              "9px span.stage-corner: FIELD / 01",
+              "9px span.: Paused",
+              "9px span.: From a wall to a racing line",
+              "9px span.: Four small ideas",
+              "9px span.: ↓",
+              "9px span.: Illustration",
+              "9px label.follow-control: Follow selected car",
+              "9.8px text.svg-note: 7 rays.",
+              "9.8px text.svg-note: One local view.",
+              "9px small.: 1",
+              "9px small.: 2",
+              "9px small.: 3",
+              "9px small.: 4",
+              "9px small.: 5",
+              "9px small.: 6",
+              "9px small.: 7",
+              "9px span.: Illustrative network",
+              "9px label.follow-control: Follow selected car",
+              "9.8px text.svg-heading: SENSE",
+              "9.8px text.svg-heading: COMBINE",
+              "9.8px text.svg-heading: ACT",
+              "9.8px text.svg-note: ray 1",
+              "9.8px text.svg-note: ray 2",
+              "9.8px text.svg-note: ray 3",
+              "9.8px text.svg-note: ray 4",
+              "9.8px text.svg-note: ray 5",
+              "9.8px text.svg-note: ray 6",
+              "9.8px text.svg-note: ray 7",
+              "9.8px text.svg-note: speed",
+              "9.8px text.svg-note: Steer",
+              "9.8px text.svg-note: Throttle",
+              "9px span.: Illustration · 12 weights, n",
+              "9px span.: 0 mutations",
+              "9.8px text.svg-note: A",
+              "9.8px text.svg-note: B",
+              "9.8px text.svg-note: Child",
+              "9.8px text.svg-note: Select → combine → vary",
+              "9px span.: Waiting for a recorded attem",
+              "9.8px text.svg-note: Your best recorded attempt w",
+              "9px span.eyebrow: Completed generations"
+            ]
+          }
+        },
+        {
+          "name": "no idle animation frames over 1s",
+          "ok": true,
+          "detail": {
+            "rafRequests": 0
+          }
+        },
+        {
+          "name": "play/pause emit intents and reflect update",
+          "ok": true,
+          "detail": {
+            "play": {
+              "intent": {
+                "action": "running",
+                "value": true
+              },
+              "pressed": "true",
+              "text": "ⅡPause",
+              "label": "Running",
+              "focusKept": true
+            },
+            "pause": {
+              "intent": {
+                "action": "running",
+                "value": false
+              },
+              "pressed": "false",
+              "text": "▶Play"
+            }
+          }
+        },
+        {
+          "name": "rate 4x/fast/1x explicit intents + pressed state",
+          "ok": true,
+          "detail": [
+            {
+              "intent": {
+                "action": "rate",
+                "value": 4
+              },
+              "pressed": "false,true,false",
+              "note": "Four simulated seconds per second",
+              "focusKept": true
+            },
+            {
+              "intent": {
+                "action": "rate",
+                "value": "fast"
+              },
+              "pressed": "false,false,true",
+              "note": "Headless · throughput mode",
+              "focusKept": true
+            },
+            {
+              "intent": {
+                "action": "rate",
+                "value": 1
+              },
+              "pressed": "true,false,false",
+              "note": "Real-time simulation",
+              "focusKept": true
+            }
+          ]
+        },
+        {
+          "name": "population 1000 intent and accepted value",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "population",
+              "value": 1000
+            },
+            "value": "1000",
+            "alive": "0 / 1000",
+            "focusKept": true,
+            "options": [
+              "128",
+              "256",
+              "512",
+              "1000"
+            ]
+          }
+        },
+        {
+          "name": "preset intent and picker returns to placeholder",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "preset",
+              "value": "bend"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "draw/clear/stop/reset intents",
+          "ok": true,
+          "detail": {
+            "drawOn": {
+              "intent": {
+                "action": "drawing",
+                "value": true
+              },
+              "pressed": "true",
+              "text": "Stop drawing",
+              "editorPE": "none",
+              "editorHidden": "false",
+              "hint": "Draw one closed loop on the field.",
+              "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+              "focusKept": true,
+              "heroReceivesClickWhileDrawingOverlayDisabled": true
+            },
+            "clear": {
+              "action": "clear drawing"
+            },
+            "drawOff": {
+              "intent": {
+                "action": "drawing",
+                "value": false
+              },
+              "pressed": "false",
+              "text": "Draw a circuit ↗"
+            },
+            "reset": {
+              "intent": {
+                "action": "reset"
+              },
+              "generation": "—"
+            }
+          }
+        },
+        {
+          "name": "page update never enables editor overlay; hero still receives clicks",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "drawing",
+              "value": true
+            },
+            "pressed": "true",
+            "text": "Stop drawing",
+            "editorPE": "none",
+            "editorHidden": "false",
+            "hint": "Draw one closed loop on the field.",
+            "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+            "focusKept": true,
+            "heroReceivesClickWhileDrawingOverlayDisabled": true
+          }
+        },
+        {
+          "name": "keyboard focus kept on controls across updates",
+          "ok": true,
+          "detail": {
+            "play": true,
+            "rate": true,
+            "pop": true,
+            "draw": true
+          }
+        },
+        {
+          "name": "inspection root and children stable across updates",
+          "ok": true
+        },
+        {
+          "name": "rapid Play before ack repeats same intent; reflects only on ack",
+          "ok": true,
+          "detail": {
+            "rapidPlay": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "beforeAck": "false",
+            "afterAck": "true",
+            "popPending": {
+              "valueDuringPending": "1000",
+              "was": "1000"
+            },
+            "popAccepted": "256",
+            "rateFinal": "false,true,false",
+            "finalRunning": true
+          }
+        },
+        {
+          "name": "population select restores accepted value while pending, then shows ack",
+          "ok": true,
+          "detail": {
+            "rapidPlay": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "beforeAck": "false",
+            "afterAck": "true",
+            "popPending": {
+              "valueDuringPending": "1000",
+              "was": "1000"
+            },
+            "popAccepted": "256",
+            "rateFinal": "false,true,false",
+            "finalRunning": true
+          }
+        },
+        {
+          "name": "rapid rate clicks settle to last acknowledged value",
+          "ok": true,
+          "detail": "false,true,false"
+        },
+        {
+          "name": "network illustration: weight/input sliders change outputs; independent recompute matches",
+          "ok": true,
+          "detail": {
+            "a": {
+              "steer": "+0.15",
+              "throttle": "52%",
+              "node3": "0.6779999780654907",
+              "edge74": "1.05"
+            },
+            "b": {
+              "steer": "-0.95",
+              "throttle": "52%",
+              "node3": "0.6779999780654907",
+              "edge74": "2.7"
+            },
+            "d": {
+              "steer": "-0.97",
+              "throttle": "51%",
+              "node3": "0.08",
+              "edge74": "2.7"
+            },
+            "expect": {
+              "steer": "-0.97",
+              "throttle": "51%"
+            },
+            "source": "Illustration · 8 → 8 → 2"
+          }
+        },
+        {
+          "name": "touch drag moves sensor car and readings; page does not scroll during drag",
+          "ok": true,
+          "detail": {
+            "before": {
+              "r": [
+                "0.68",
+                "0.75",
+                "0.89",
+                "1.00",
+                "0.89",
+                "0.75",
+                "0.68"
+              ],
+              "pos": "328"
+            },
+            "afterDrag": {
+              "r": [
+                "1.00",
+                "1.00",
+                "1.00",
+                "0.90",
+                "0.50",
+                "0.30",
+                "0.26"
+              ],
+              "pos": "420",
+              "scrollY": 1054
+            },
+            "afterCancel": "330",
+            "afterStray": "330",
+            "scrollBefore": 1054
+          }
+        },
+        {
+          "name": "touchcancel ends drag (no movement afterwards)",
+          "ok": true,
+          "detail": {
+            "afterCancel": "330",
+            "afterStray": "330"
+          }
+        },
+        {
+          "name": "touch scroll works over article text and non-draggable diagrams",
+          "ok": true,
+          "detail": {
+            "onText": 121,
+            "onNetwork": 119
+          }
+        },
+        {
+          "name": "keyboard sliders move/rotate sensor car with visible focus",
+          "ok": true,
+          "detail": {
+            "p0": "330",
+            "p1": "320",
+            "heading": "20",
+            "transform": "translate(320 260) rotate(20)",
+            "readings": [
+              "0.69",
+              "0.82",
+              "1.00",
+              "1.00",
+              "0.84",
+              "0.73",
+              "1.00"
+            ],
+            "focusOutline": "solid rgb(25, 91, 181)"
+          }
+        },
+        {
+          "name": "illustrative ray-wall intersection geometrically correct (side rays hit x=178/478)",
+          "ok": true,
+          "detail": {
+            "leftRay": [
+              328,
+              260,
+              178,
+              260
+            ],
+            "rightRay": [
+              328,
+              260,
+              478,
+              260
+            ],
+            "readings": [
+              "0.68",
+              "0.79",
+              "0.93",
+              "1.00",
+              "0.93",
+              "0.79",
+              "0.68"
+            ]
+          }
+        },
+        {
+          "name": "genetics: crossover moves split and child inheritance",
+          "ok": true,
+          "detail": {
+            "initialChild": "AAAAAABBBBBB",
+            "split0": "M331 28V146M331 196V258",
+            "child3": "AAABBBBBBBBB",
+            "split3": "M202 28V146M202 196V258",
+            "parentAChangesRowAandChildLeft": true,
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            },
+            "caption": "Illustration · 12 weights, no actual lineage"
+          }
+        },
+        {
+          "name": "genetics: parent change affects A-side of child only",
+          "ok": true,
+          "detail": {
+            "initialChild": "AAAAAABBBBBB",
+            "split0": "M331 28V146M331 196V258",
+            "child3": "AAABBBBBBBBB",
+            "split3": "M202 28V146M202 196V258",
+            "parentAChangesRowAandChildLeft": true,
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            },
+            "caption": "Illustration · 12 weights, no actual lineage"
+          }
+        },
+        {
+          "name": "genetics: mutate caps at 12 and disables; 3 mutations = 3 ochre child genes; reset restores",
+          "ok": true,
+          "detail": {
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            }
+          }
+        },
+        {
+          "name": "genetics labeled illustrative, no actual lineage",
+          "ok": true,
+          "detail": "Illustration · 12 weights, no actual lineage"
+        },
+        {
+          "name": "network live mode maps 90 weights/18 activations exactly (destination-major), throttle mapping",
+          "ok": true,
+          "detail": {
+            "edgeCount": 80,
+            "nodeCount": 18,
+            "mismatches": 0,
+            "steer": "-0.23",
+            "throttle": "9%",
+            "expectSteer": "-0.23",
+            "expectThrottle": "9%"
+          }
+        },
+        {
+          "name": "sensor live mode shows supplied normalized distances; walls hidden; illustration controls disabled",
+          "ok": true,
+          "detail": {
+            "readings": [
+              "0.15",
+              "0.26",
+              "0.37",
+              "0.48",
+              "0.59",
+              "0.70",
+              "0.81"
+            ],
+            "expected": [
+              "0.15",
+              "0.26",
+              "0.37",
+              "0.48",
+              "0.59",
+              "0.70",
+              "0.81"
+            ],
+            "source": "Selected car · live distances",
+            "wallsHidden": true,
+            "slidersDisabled": true,
+            "followEnabled": true,
+            "rayLen0": 33.000001311302185
+          }
+        },
+        {
+          "name": "detached/mutated buffers after update: deferred redraw uses owned copies",
+          "ok": true,
+          "detail": {
+            "detached": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "racingHistory": {
+              "label": "5 completed · best / mean fitness",
+              "points": 5
+            },
+            "heroSparkPoints": 5
+          }
+        },
+        {
+          "name": "inspection shell shows selected car and keeps root child",
+          "ok": true,
+          "detail": {
+            "hidden": false,
+            "heading": "Car 008 · generation 4",
+            "rootChildren": 1
+          }
+        },
+        {
+          "name": "inspection heading visible without scrolling after selecting from hero",
+          "ok": false,
+          "detail": {
+            "panelTop": 882,
+            "panelBottom": 1075,
+            "canvasBottom": 560,
+            "vh": 844,
+            "panelHeadingVisible": false
+          }
+        },
+        {
+          "name": "unchecking Follow returns sensors to illustration",
+          "ok": true,
+          "detail": {
+            "source": "Illustration · local perception",
+            "walls": ""
+          }
+        },
+        {
+          "name": "stale generation/run/out-of-range/null selection fall back to illustration",
+          "ok": true,
+          "detail": {
+            "g": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "r": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "o": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "n": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ]
+          }
+        },
+        {
+          "name": "stale-run best ignored (empty state)",
+          "ok": true,
+          "detail": {
+            "source": "Waiting for a recorded attempt",
+            "note": "No timed lap yet. Partial attempts are labeled as partial.",
+            "d": "",
+            "pathShown": false,
+            "emptyShown": true,
+            "exampleShown": false,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+          }
+        },
+        {
+          "name": "partial attempt labeled partial, all samples drawn, copy survives mutation+detach",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · partial attempt",
+            "note": "Generation 3, car 3. This car has not completed a timed lap.",
+            "points": 40
+          }
+        },
+        {
+          "name": "complete lap labeled with supplied time and only supplied samples",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · 41.24 s lap",
+            "note": "Generation 6, car 12. A complete timed lap, recorded from the simulation.",
+            "points": 60
+          }
+        },
+        {
+          "name": "offscreen update + detach: deferred racing redraw accurate",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · 39.50 s lap",
+            "points": 24
+          }
+        },
+        {
+          "name": "explore corner labeled illustrative, slider changes arc, actual history retained",
+          "ok": true,
+          "detail": {
+            "source": "Illustration · corner geometry",
+            "note": "Explore wider and tighter arcs. This is geometry, not a measured racing result.",
+            "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+            "pathShown": false,
+            "emptyShown": false,
+            "exampleShown": true,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00",
+            "slider": true
+          }
+        },
+        {
+          "name": "rapid corner-mode toggling ends in consistent state",
+          "ok": true,
+          "detail": {
+            "pressed": "false",
+            "source": "Recorded best · 39.50 s lap",
+            "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+            "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+            "pathShown": true,
+            "emptyShown": false,
+            "exampleShown": false,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+          }
+        },
+        {
+          "name": "sparkline: empty→hidden, one entry→single point, N entries→N points, peak follows data",
+          "ok": true,
+          "detail": {
+            "empty": {
+              "best": "",
+              "dot": "hidden",
+              "label": "Fitness history: no completed generations yet"
+            },
+            "one": {
+              "best": "M100.00,5.00",
+              "dot": "visible",
+              "label": "Fitness over generations 1 to 1. Latest best 14.00, mean 6.00. Green is best; gray is mean."
+            },
+            "three": {
+              "best": "M4.00,39.77L100.00,5.00L196.00,37.74",
+              "dot": "visible",
+              "label": "Fitness over generations 1 to 3. Latest best 19.00, mean 8.00. Green is best; gray is mean."
+            },
+            "windowed": {
+              "best": "M4.00,42.61L4.75,42.41L5.51,42.36L6.26,42.16L7.01,41.97L7.76,41.92L8.52,41.72L9.27,41.53L10.02,41.48L10.78,41.28L11.53,41.08L12.28,41.03L13.04,40.84L13.79,40.64L14.54,40.59L15.29,40.39L16.05,40.20L16.80,40.15L17.55,39.95L18.31,39.76L19.06,39.71L19.81,39.51L20.56,39.31L21.32,39.26L22.07,39.07L22.82,38.87L23.58,38.82L24.33,38.62L25.08,38.43L25.84,38.38L26.59,38.18L27.34,37.99L28.09,37.94L28.85,37.74L29.60,37.54L30.35,37.49L31.11,37.30L31.86,37.10L32.61,37.05L33.36,36.86L34.12,36.66L34.87,36.61L35.62,36.41L36.38,36.22L37.13,36.17L37.88,35.97L38.64,35.77L39.39,35.72L40.14,35.53L40.89,35.33L41.65,35.28L42.40,35.09L43.15,34.89L43.91,34.84L44.66,34.64L45.41,34.45L46.16,34.40L46.92,34.20L47.67,34.00L48.42,33.95L49.18,33.76L49.93,33.56L50.68,33.51L51.44,33.32L52.19,33.12L52.94,33.07L53.69,32.87L54.45,32.68L55.20,32.63L55.95,32.43L56.71,32.23L57.46,32.18L58.21,31.99L58.96,31.79L59.72,31.74L60.47,31.55L61.22,31.35L61.98,31.30L62.73,31.10L63.48,30.91L64.24,30.86L64.99,30.66L65.74,30.46L66.49,30.42L67.25,30.22L68.00,30.02L68.75,29.97L69.51,29.78L70.26,29.58L71.01,29.53L71.76,29.33L72.52,29.14L73.27,29.09L74.02,28.89L74.78,28.69L75.53,28.65L76.28,28.45L77.04,28.25L77.79,28.20L78.54,28.01L79.29,27.81L80.05,27.76L80.80,27.56L81.55,27.37L82.31,27.32L83.06,27.12L83.81,26.92L84.56,26.88L85.32,26.68L86.07,26.48L86.82,26.43L87.58,26.24L88.33,26.04L89.08,25.99L89.84,25.79L90.59,25.60L91.34,25.55L92.09,25.35L92.85,25.16L93.60,25.11L94.35,24.91L95.11,24.71L95.86,24.66L96.61,24.47L97.36,24.27L98.12,24.22L98.87,24.02L99.62,23.83L100.38,23.78L101.13,23.58L101.88,23.39L102.64,23.34L103.39,23.14L104.14,22.94L104.89,22.89L105.65,22.70L106.40,22.50L107.15,22.45L107.91,22.25L108.66,22.06L109.41,22.01L110.16,21.81L110.92,21.62L111.67,21.57L112.42,21.37L113.18,21.17L113.93,21.12L114.68,20.93L115.44,20.73L116.19,20.68L116.94,20.49L117.69,20.29L118.45,20.24L119.20,20.04L119.95,19.85L120.71,19.80L121.46,19.60L122.21,19.40L122.96,19.35L123.72,19.16L124.47,18.96L125.22,18.91L125.98,18.72L126.73,18.52L127.48,18.47L128.24,18.27L128.99,18.08L129.74,18.03L130.49,17.83L131.25,17.63L132.00,17.58L132.75,17.39L133.51,17.19L134.26,17.14L135.01,16.95L135.76,16.75L136.52,16.70L137.27,16.50L138.02,16.31L138.78,16.26L139.53,16.06L140.28,15.86L141.04,15.82L141.79,15.62L142.54,15.42L143.29,15.37L144.05,15.18L144.80,14.98L145.55,14.93L146.31,14.73L147.06,14.54L147.81,14.49L148.56,14.29L149.32,14.09L150.07,14.05L150.82,13.85L151.58,13.65L152.33,13.60L153.08,13.41L153.84,13.21L154.59,13.16L155.34,12.96L156.09,12.77L156.85,12.72L157.60,12.52L158.35,12.32L159.11,12.28L159.86,12.08L160.61,11.88L161.36,11.83L162.12,11.64L162.87,11.44L163.62,11.39L164.38,11.19L165.13,11.00L165.88,10.95L166.64,10.75L167.39,10.55L168.14,10.51L168.89,10.31L169.65,10.11L170.40,10.06L171.15,9.87L171.91,9.67L172.66,9.62L173.41,9.42L174.16,9.23L174.92,9.18L175.67,8.98L176.42,8.79L177.18,8.74L177.93,8.54L178.68,8.34L179.44,8.29L180.19,8.10L180.94,7.90L181.69,7.85L182.45,7.65L183.20,7.46L183.95,7.41L184.71,7.21L185.46,7.02L186.21,6.97L186.96,6.77L187.72,6.57L188.47,6.52L189.22,6.33L189.98,6.13L190.73,6.08L191.48,5.88L192.24,5.69L192.99,5.64L193.74,5.44L194.49,5.25L195.25,5.20L196.00,5.00",
+              "dot": "visible",
+              "label": "Fitness over generations 45 to 300. Latest best 779.00, mean 261.00. Green is best; gray is mean.",
+              "heroLabel": "300 gen · best / mean"
+            }
+          }
+        },
+        {
+          "name": "Close inspection emits onSelectionClear and hides panel; root kept",
+          "ok": true,
+          "detail": {
+            "focusedBefore": true,
+            "intent": {
+              "action": "clear selection"
+            },
+            "hidden": true,
+            "active": "body",
+            "rootStill": true
+          }
+        },
+        {
+          "name": "keyboard focus not lost to <body> after closing inspection",
+          "ok": false,
+          "detail": {
+            "focusedBefore": true,
+            "intent": {
+              "action": "clear selection"
+            },
+            "hidden": true,
+            "active": "body",
+            "rootStill": true
+          }
+        },
+        {
+          "name": "showTrackIssues shows polite atomic feedback and clears",
+          "ok": true,
+          "detail": {
+            "a": {
+              "text": "This loop crosses itself. Draw a wider loop without crossings; your current circuit is unchanged.",
+              "cls": "track-feedback has-issues",
+              "live": "polite",
+              "role": "status"
+            },
+            "cleared": "Choose a circuit, or draw a closed loop.",
+            "cls": "track-feedback"
+          }
+        },
+        {
+          "name": "Tab order reaches controls with visible 2px focus ring",
+          "ok": true,
+          "detail": [
+            "INPUT:Illustrative car h:solid/2px",
+            "INPUT:Illustrative front:solid/2px",
+            "INPUT:Illustrative steer:solid/2px",
+            "SELECT:Illustrative paren:solid/2px",
+            "SELECT:Illustrative paren:solid/2px",
+            "INPUT:Illustrative cross:solid/2px"
+          ]
+        },
+        {
+          "name": "setVisible(false) suspends painting; setVisible(true) paints owned copy",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 0,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "document hidden: no frames; restore paints latest owned data",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 0,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "offscreen demos request no frames on update",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 0,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "rotate/resize: no overflow, canvases equal, diagrams fit",
+          "ok": true,
+          "detail": [
+            {
+              "vw": 844,
+              "scrollWidth": 844,
+              "equal": true,
+              "backing": [
+                952,
+                460,
+                952,
+                460
+              ],
+              "svgWidths": [
+                458,
+                458,
+                458,
+                458
+              ]
+            },
+            {
+              "vw": 390,
+              "scrollWidth": 390,
+              "equal": true,
+              "backing": [
+                700,
+                538,
+                700,
+                538
+              ],
+              "svgWidths": [
+                350,
+                350,
+                350,
+                350
+              ]
+            }
+          ]
+        },
+        {
+          "name": "destroy removes page, stops frames, post-destroy calls safe",
+          "ok": true,
+          "detail": {
+            "removed": true,
+            "rafAfterDestroy": 0,
+            "postDestroySafe": true,
+            "mount0": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount1": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount2": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "calls": [
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ]
+            ],
+            "hostEmpty": true
+          }
+        },
+        {
+          "name": "recreate x3: fresh pages mount/emit/destroy cleanly with unique ids",
+          "ok": true,
+          "detail": {
+            "removed": true,
+            "rafAfterDestroy": 0,
+            "postDestroySafe": true,
+            "mount0": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount1": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount2": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "calls": [
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ]
+            ],
+            "hostEmpty": true
+          }
+        },
+        {
+          "name": "no console errors/warnings, page errors, or failed requests",
+          "ok": true,
+          "detail": {
+            "console": [],
+            "pageErrors": [],
+            "failed": []
+          }
+        }
+      ],
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "audit": {
+        "vw": 390,
+        "vh": 844,
+        "scrollWidth": 390,
+        "overflow": [],
+        "clipped": [],
+        "small": [],
+        "sizes": {
+          "16.0": 2,
+          "21.0": 3,
+          "11.0": 20,
+          "9.0": 22,
+          "33.0": 1,
+          "10.0": 43,
+          "19.0": 3,
+          "12.0": 8,
+          "35.0": 8,
+          "13.0": 4,
+          "13.5": 1,
+          "23.0": 2
+        },
+        "tinyList": [
+          "9px p.eyebrow: Small brains. Open road.",
+          "9px small.: No history yet",
+          "9px span.stage-corner: FIELD / 01",
+          "9px span.: Paused",
+          "9px span.: From a wall to a racing line",
+          "9px span.: Four small ideas",
+          "9px span.: ↓",
+          "9px span.: Illustration",
+          "9px label.follow-control: Follow selected car",
+          "9.8px text.svg-note: 7 rays.",
+          "9.8px text.svg-note: One local view.",
+          "9px small.: 1",
+          "9px small.: 2",
+          "9px small.: 3",
+          "9px small.: 4",
+          "9px small.: 5",
+          "9px small.: 6",
+          "9px small.: 7",
+          "9px span.: Illustrative network",
+          "9px label.follow-control: Follow selected car",
+          "9.8px text.svg-heading: SENSE",
+          "9.8px text.svg-heading: COMBINE",
+          "9.8px text.svg-heading: ACT",
+          "9.8px text.svg-note: ray 1",
+          "9.8px text.svg-note: ray 2",
+          "9.8px text.svg-note: ray 3",
+          "9.8px text.svg-note: ray 4",
+          "9.8px text.svg-note: ray 5",
+          "9.8px text.svg-note: ray 6",
+          "9.8px text.svg-note: ray 7",
+          "9.8px text.svg-note: speed",
+          "9.8px text.svg-note: Steer",
+          "9.8px text.svg-note: Throttle",
+          "9px span.: Illustration · 12 weights, n",
+          "9px span.: 0 mutations",
+          "9.8px text.svg-note: A",
+          "9.8px text.svg-note: B",
+          "9.8px text.svg-note: Child",
+          "9.8px text.svg-note: Select → combine → vary",
+          "9px span.: Waiting for a recorded attem",
+          "9.8px text.svg-note: Your best recorded attempt w",
+          "9px span.eyebrow: Completed generations"
+        ],
+        "hero": {
+          "top": 290.3125,
+          "bottom": 559.53125,
+          "width": 350,
+          "height": 269.21875
+        },
+        "editorEqual": true,
+        "editorPointerEvents": "none",
+        "centerHit": "hero-canvas",
+        "h1": {
+          "top": 140.5,
+          "bottom": 175.3125
+        },
+        "run": {
+          "top": 610.53125,
+          "bottom": 654.53125
+        },
+        "telemetry": {
+          "top": 196.3125,
+          "bottom": 290.3125
+        },
+        "heroCanvasFullyVisible": true,
+        "heroVisibleFraction": 1,
+        "runVisible": true,
+        "mono": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "telemFont": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "touchAction": {
+          "heroCanvas": "none",
+          "sensorSvg": "none",
+          "networkSvg": "auto",
+          "lessonText": "auto"
+        },
+        "userSelect": {
+          "lessonText": "auto",
+          "heroCanvas": "none",
+          "sensorSvg": "none"
+        },
+        "contrast": {
+          "eyebrow": 5.7,
+          "lessonIndex": 5.7,
+          "controlNote": 5.7,
+          "trackHint": 5.7,
+          "stageCorner": 4.27,
+          "diagramNote": 5.7,
+          "lessonCopy": 5.7,
+          "lessonAside": 6.06,
+          "feedback": 5.7,
+          "caption": 5.7,
+          "fieldLabel": 5.7,
+          "footerNote": 5.7,
+          "svgNote": 5.7,
+          "ratePressedOnSoft": 5.5
+        },
+        "semantics": {
+          "h1": 1,
+          "main": 1,
+          "h2": [
+            "Selected car",
+            "A little sight. Enough to start.",
+            "A small brain. A moving car.",
+            "Keep what works. Try a small change.",
+            "The line is the consequence."
+          ],
+          "unlabeledControls": 0
+        }
+      },
+      "screenshots": [
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-hero.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-sensors.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-network.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-genetics.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-racing-line.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-full.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-sensors-live.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-network-live.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-hero-selected.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-racing-line-lap.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-racing-line-corner.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/portrait-390x844-keyboard-focus.png"
+      ],
+      "initial": {
+        "generation": "—",
+        "alive": "0 / 512",
+        "lap": "—",
+        "lapLabel": "No completed lap yet",
+        "fitness": "Fitness history: no completed generations yet",
+        "fitnessPath": "",
+        "racing": {
+          "source": "Waiting for a recorded attempt",
+          "note": "No timed lap yet. Partial attempts are labeled as partial.",
+          "d": "",
+          "pathShown": false,
+          "emptyShown": true,
+          "exampleShown": false,
+          "historyLabel": "No history yet",
+          "historyD": ""
+        },
+        "panelHidden": true,
+        "run": "Paused"
+      },
+      "textSizes": {
+        "16.0": 2,
+        "21.0": 3,
+        "11.0": 20,
+        "9.0": 22,
+        "33.0": 1,
+        "10.0": 43,
+        "19.0": 3,
+        "12.0": 8,
+        "35.0": 8,
+        "13.0": 4,
+        "13.5": 1,
+        "23.0": 2
+      },
+      "controls": {
+        "play": {
+          "intent": {
+            "action": "running",
+            "value": true
+          },
+          "pressed": "true",
+          "text": "ⅡPause",
+          "label": "Running",
+          "focusKept": true
+        },
+        "pause": {
+          "intent": {
+            "action": "running",
+            "value": false
+          },
+          "pressed": "false",
+          "text": "▶Play"
+        },
+        "rate4": {
+          "intent": {
+            "action": "rate",
+            "value": 4
+          },
+          "pressed": "false,true,false",
+          "note": "Four simulated seconds per second",
+          "focusKept": true
+        },
+        "ratefast": {
+          "intent": {
+            "action": "rate",
+            "value": "fast"
+          },
+          "pressed": "false,false,true",
+          "note": "Headless · throughput mode",
+          "focusKept": true
+        },
+        "rate1": {
+          "intent": {
+            "action": "rate",
+            "value": 1
+          },
+          "pressed": "true,false,false",
+          "note": "Real-time simulation",
+          "focusKept": true
+        },
+        "population": {
+          "intent": {
+            "action": "population",
+            "value": 1000
+          },
+          "value": "1000",
+          "alive": "0 / 1000",
+          "focusKept": true,
+          "options": [
+            "128",
+            "256",
+            "512",
+            "1000"
+          ]
+        },
+        "preset": {
+          "intent": {
+            "action": "preset",
+            "value": "bend"
+          },
+          "value": ""
+        },
+        "drawOn": {
+          "intent": {
+            "action": "drawing",
+            "value": true
+          },
+          "pressed": "true",
+          "text": "Stop drawing",
+          "editorPE": "none",
+          "editorHidden": "false",
+          "hint": "Draw one closed loop on the field.",
+          "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+          "focusKept": true,
+          "heroReceivesClickWhileDrawingOverlayDisabled": true
+        },
+        "clear": {
+          "action": "clear drawing"
+        },
+        "drawOff": {
+          "intent": {
+            "action": "drawing",
+            "value": false
+          },
+          "pressed": "false",
+          "text": "Draw a circuit ↗"
+        },
+        "reset": {
+          "intent": {
+            "action": "reset"
+          },
+          "generation": "—"
+        },
+        "stableInspectionRoot": true,
+        "intentCount": 11
+      },
+      "delayed": {
+        "rapidPlay": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "beforeAck": "false",
+        "afterAck": "true",
+        "popPending": {
+          "valueDuringPending": "1000",
+          "was": "1000"
+        },
+        "popAccepted": "256",
+        "rateFinal": "false,true,false",
+        "finalRunning": true
+      },
+      "networkIllustration": {
+        "a": {
+          "steer": "+0.15",
+          "throttle": "52%",
+          "node3": "0.6779999780654907",
+          "edge74": "1.05"
+        },
+        "b": {
+          "steer": "-0.95",
+          "throttle": "52%",
+          "node3": "0.6779999780654907",
+          "edge74": "2.7"
+        },
+        "d": {
+          "steer": "-0.97",
+          "throttle": "51%",
+          "node3": "0.08",
+          "edge74": "2.7"
+        },
+        "expect": {
+          "steer": "-0.97",
+          "throttle": "51%"
+        },
+        "source": "Illustration · 8 → 8 → 2"
+      },
+      "sensorTouch": {
+        "before": {
+          "r": [
+            "0.68",
+            "0.75",
+            "0.89",
+            "1.00",
+            "0.89",
+            "0.75",
+            "0.68"
+          ],
+          "pos": "328"
+        },
+        "afterDrag": {
+          "r": [
+            "1.00",
+            "1.00",
+            "1.00",
+            "0.90",
+            "0.50",
+            "0.30",
+            "0.26"
+          ],
+          "pos": "420",
+          "scrollY": 1054
+        },
+        "afterCancel": "330",
+        "afterStray": "330",
+        "scrollBefore": 1054
+      },
+      "touchScroll": {
+        "onText": 121,
+        "onNetwork": 119
+      },
+      "sensorKeyboard": {
+        "p0": "330",
+        "p1": "320",
+        "heading": "20",
+        "transform": "translate(320 260) rotate(20)",
+        "readings": [
+          "0.69",
+          "0.82",
+          "1.00",
+          "1.00",
+          "0.84",
+          "0.73",
+          "1.00"
+        ],
+        "focusOutline": "solid rgb(25, 91, 181)"
+      },
+      "sensorGeometry": {
+        "lines": [
+          [
+            328,
+            260,
+            178,
+            260
+          ],
+          [
+            328,
+            260,
+            178,
+            173.39745962155607
+          ],
+          [
+            328,
+            260,
+            225.48998807421583,
+            82.44745106005018
+          ],
+          [
+            328,
+            260,
+            328,
+            40
+          ],
+          [
+            328,
+            260,
+            430.51001192578417,
+            82.44745106005018
+          ],
+          [
+            328,
+            260,
+            478,
+            173.39745962155615
+          ],
+          [
+            328,
+            260,
+            478,
+            260
+          ]
+        ],
+        "readings": [
+          "0.68",
+          "0.79",
+          "0.93",
+          "1.00",
+          "0.93",
+          "0.79",
+          "0.68"
+        ],
+        "carY": "translate(328 260) rotate(0)"
+      },
+      "genetics": {
+        "initialChild": "AAAAAABBBBBB",
+        "split0": "M331 28V146M331 196V258",
+        "child3": "AAABBBBBBBBB",
+        "split3": "M202 28V146M202 196V258",
+        "parentAChangesRowAandChildLeft": true,
+        "after20": {
+          "count": "12 mutations",
+          "ochre": 12,
+          "disabled": true,
+          "note": "Ochre marks small weight changes. Useful variations can survive selection."
+        },
+        "after3": {
+          "count": "3 mutations",
+          "ochre": 3,
+          "parentsOnlyUnmutated": true,
+          "titles": 3
+        },
+        "reset": {
+          "count": "0 mutations",
+          "a": "0",
+          "crossover": "6",
+          "child": "AAAAAABBBBBB"
+        },
+        "caption": "Illustration · 12 weights, no actual lineage"
+      },
+      "selection": {
+        "detachedLengths": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "network": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.23",
+          "throttle": "9%",
+          "expectSteer": "-0.23",
+          "expectThrottle": "9%"
+        },
+        "sensor": {
+          "readings": [
+            "0.15",
+            "0.26",
+            "0.37",
+            "0.48",
+            "0.59",
+            "0.70",
+            "0.81"
+          ],
+          "expected": [
+            "0.15",
+            "0.26",
+            "0.37",
+            "0.48",
+            "0.59",
+            "0.70",
+            "0.81"
+          ],
+          "source": "Selected car · live distances",
+          "wallsHidden": true,
+          "slidersDisabled": true,
+          "followEnabled": true,
+          "rayLen0": 33.000001311302185
+        },
+        "panel": {
+          "hidden": false,
+          "heading": "Car 008 · generation 4",
+          "rootChildren": 1
+        },
+        "racingHistory": {
+          "label": "5 completed · best / mean fitness",
+          "points": 5
+        },
+        "heroSparkPoints": 5,
+        "heroHistoryLabel": "5 gen · best / mean"
+      },
+      "inspectionPlacement": {
+        "panelTop": 882,
+        "panelBottom": 1075,
+        "canvasBottom": 560,
+        "vh": 844,
+        "panelHeadingVisible": false
+      },
+      "stale": {
+        "staleGeneration": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "staleRun": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "outOfRange": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "nullSnapshot": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "staleBest": {
+          "source": "Waiting for a recorded attempt",
+          "note": "No timed lap yet. Partial attempts are labeled as partial.",
+          "d": "",
+          "pathShown": false,
+          "emptyShown": true,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "partial": {
+          "source": "Recorded best · partial attempt",
+          "note": "Generation 3, car 3. This car has not completed a timed lap.",
+          "d": "M528.71,165.00L526.00,185.96L517.95,206.37L504.76,225.72L486.78,243.49L464.47,259.23L438.41,272.53L409.28,283.04L377.82,290.50L344.86,294.70L311.24,295.55L277.85,293.01L245.53,287.16L215.14,278.15L187.45,266.20L163.19,251.64L142.98,234.83L127.34,216.21L116.69,196.27L111.29,175.51L111.29,154.49L116.69,133.73L127.34,113.79L142.98,95.17L163.19,78.36L187.45,63.80L215.14,51.85L245.53,42.84L277.85,36.99L311.24,34.45L344.86,35.30L377.82,39.50L409.28,46.96L438.41,57.47L464.47,70.77L486.78,86.51L504.76,104.28L517.95,123.63L526.00,144.04L528.71,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "partialPoints": 40,
+        "lap": {
+          "source": "Recorded best · 41.24 s lap",
+          "note": "Generation 6, car 12. A complete timed lap, recorded from the simulation.",
+          "d": "M528.81,165.00L527.63,178.88L524.09,192.61L518.24,206.02L510.14,218.96L499.88,231.30L487.58,242.88L473.39,253.59L457.45,263.28L439.96,271.87L421.10,279.24L401.10,285.32L380.18,290.04L358.57,293.34L336.52,295.18L314.29,295.55L292.12,294.44L270.26,291.87L248.97,287.85L228.47,282.45L209.02,275.71L190.82,267.72L174.08,258.57L158.99,248.35L145.72,237.19L134.43,225.22L125.24,212.56L118.26,199.36L113.55,185.77L111.19,171.95L111.19,158.05L113.55,144.23L118.26,130.64L125.24,117.44L134.43,104.78L145.72,92.81L158.99,81.65L174.08,71.43L190.82,62.28L209.02,54.29L228.47,47.55L248.97,42.15L270.26,38.13L292.12,35.56L314.29,34.45L336.52,34.82L358.57,36.66L380.18,39.96L401.10,44.68L421.10,50.76L439.96,58.13L457.45,66.72L473.39,76.41L487.58,87.12L499.88,98.70L510.14,111.04L518.24,123.98L524.09,137.39L527.63,151.12L528.81,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "lapPoints": 60,
+        "deferred": {
+          "source": "Recorded best · 39.50 s lap",
+          "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "deferredPoints": 24,
+        "explore": {
+          "source": "Illustration · corner geometry",
+          "note": "Explore wider and tighter arcs. This is geometry, not a measured racing result.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": false,
+          "emptyShown": false,
+          "exampleShown": true,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00",
+          "slider": true
+        },
+        "cornerChanges": true,
+        "afterRapidToggle": {
+          "pressed": "false",
+          "source": "Recorded best · 39.50 s lap",
+          "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        }
+      },
+      "sparkline": {
+        "empty": {
+          "best": "",
+          "dot": "hidden",
+          "label": "Fitness history: no completed generations yet"
+        },
+        "one": {
+          "best": "M100.00,5.00",
+          "dot": "visible",
+          "label": "Fitness over generations 1 to 1. Latest best 14.00, mean 6.00. Green is best; gray is mean."
+        },
+        "three": {
+          "best": "M4.00,39.77L100.00,5.00L196.00,37.74",
+          "dot": "visible",
+          "label": "Fitness over generations 1 to 3. Latest best 19.00, mean 8.00. Green is best; gray is mean."
+        },
+        "windowed": {
+          "best": "M4.00,42.61L4.75,42.41L5.51,42.36L6.26,42.16L7.01,41.97L7.76,41.92L8.52,41.72L9.27,41.53L10.02,41.48L10.78,41.28L11.53,41.08L12.28,41.03L13.04,40.84L13.79,40.64L14.54,40.59L15.29,40.39L16.05,40.20L16.80,40.15L17.55,39.95L18.31,39.76L19.06,39.71L19.81,39.51L20.56,39.31L21.32,39.26L22.07,39.07L22.82,38.87L23.58,38.82L24.33,38.62L25.08,38.43L25.84,38.38L26.59,38.18L27.34,37.99L28.09,37.94L28.85,37.74L29.60,37.54L30.35,37.49L31.11,37.30L31.86,37.10L32.61,37.05L33.36,36.86L34.12,36.66L34.87,36.61L35.62,36.41L36.38,36.22L37.13,36.17L37.88,35.97L38.64,35.77L39.39,35.72L40.14,35.53L40.89,35.33L41.65,35.28L42.40,35.09L43.15,34.89L43.91,34.84L44.66,34.64L45.41,34.45L46.16,34.40L46.92,34.20L47.67,34.00L48.42,33.95L49.18,33.76L49.93,33.56L50.68,33.51L51.44,33.32L52.19,33.12L52.94,33.07L53.69,32.87L54.45,32.68L55.20,32.63L55.95,32.43L56.71,32.23L57.46,32.18L58.21,31.99L58.96,31.79L59.72,31.74L60.47,31.55L61.22,31.35L61.98,31.30L62.73,31.10L63.48,30.91L64.24,30.86L64.99,30.66L65.74,30.46L66.49,30.42L67.25,30.22L68.00,30.02L68.75,29.97L69.51,29.78L70.26,29.58L71.01,29.53L71.76,29.33L72.52,29.14L73.27,29.09L74.02,28.89L74.78,28.69L75.53,28.65L76.28,28.45L77.04,28.25L77.79,28.20L78.54,28.01L79.29,27.81L80.05,27.76L80.80,27.56L81.55,27.37L82.31,27.32L83.06,27.12L83.81,26.92L84.56,26.88L85.32,26.68L86.07,26.48L86.82,26.43L87.58,26.24L88.33,26.04L89.08,25.99L89.84,25.79L90.59,25.60L91.34,25.55L92.09,25.35L92.85,25.16L93.60,25.11L94.35,24.91L95.11,24.71L95.86,24.66L96.61,24.47L97.36,24.27L98.12,24.22L98.87,24.02L99.62,23.83L100.38,23.78L101.13,23.58L101.88,23.39L102.64,23.34L103.39,23.14L104.14,22.94L104.89,22.89L105.65,22.70L106.40,22.50L107.15,22.45L107.91,22.25L108.66,22.06L109.41,22.01L110.16,21.81L110.92,21.62L111.67,21.57L112.42,21.37L113.18,21.17L113.93,21.12L114.68,20.93L115.44,20.73L116.19,20.68L116.94,20.49L117.69,20.29L118.45,20.24L119.20,20.04L119.95,19.85L120.71,19.80L121.46,19.60L122.21,19.40L122.96,19.35L123.72,19.16L124.47,18.96L125.22,18.91L125.98,18.72L126.73,18.52L127.48,18.47L128.24,18.27L128.99,18.08L129.74,18.03L130.49,17.83L131.25,17.63L132.00,17.58L132.75,17.39L133.51,17.19L134.26,17.14L135.01,16.95L135.76,16.75L136.52,16.70L137.27,16.50L138.02,16.31L138.78,16.26L139.53,16.06L140.28,15.86L141.04,15.82L141.79,15.62L142.54,15.42L143.29,15.37L144.05,15.18L144.80,14.98L145.55,14.93L146.31,14.73L147.06,14.54L147.81,14.49L148.56,14.29L149.32,14.09L150.07,14.05L150.82,13.85L151.58,13.65L152.33,13.60L153.08,13.41L153.84,13.21L154.59,13.16L155.34,12.96L156.09,12.77L156.85,12.72L157.60,12.52L158.35,12.32L159.11,12.28L159.86,12.08L160.61,11.88L161.36,11.83L162.12,11.64L162.87,11.44L163.62,11.39L164.38,11.19L165.13,11.00L165.88,10.95L166.64,10.75L167.39,10.55L168.14,10.51L168.89,10.31L169.65,10.11L170.40,10.06L171.15,9.87L171.91,9.67L172.66,9.62L173.41,9.42L174.16,9.23L174.92,9.18L175.67,8.98L176.42,8.79L177.18,8.74L177.93,8.54L178.68,8.34L179.44,8.29L180.19,8.10L180.94,7.90L181.69,7.85L182.45,7.65L183.20,7.46L183.95,7.41L184.71,7.21L185.46,7.02L186.21,6.97L186.96,6.77L187.72,6.57L188.47,6.52L189.22,6.33L189.98,6.13L190.73,6.08L191.48,5.88L192.24,5.69L192.99,5.64L193.74,5.44L194.49,5.25L195.25,5.20L196.00,5.00",
+          "dot": "visible",
+          "label": "Fitness over generations 45 to 300. Latest best 779.00, mean 261.00. Green is best; gray is mean.",
+          "heroLabel": "300 gen · best / mean"
+        }
+      },
+      "closeSelection": {
+        "focusedBefore": true,
+        "intent": {
+          "action": "clear selection"
+        },
+        "hidden": true,
+        "active": "body",
+        "rootStill": true
+      },
+      "tabOrder": [
+        "INPUT:Illustrative car h:solid/2px",
+        "INPUT:Illustrative front:solid/2px",
+        "INPUT:Illustrative steer:solid/2px",
+        "SELECT:Illustrative paren:solid/2px",
+        "SELECT:Illustrative paren:solid/2px",
+        "INPUT:Illustrative cross:solid/2px"
+      ],
+      "lifecycle": {
+        "steerBefore": "+0.15",
+        "hiddenSteer": "+0.15",
+        "hiddenRan": 0,
+        "visibleCompare": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.88",
+          "throttle": "16%",
+          "expectSteer": "-0.88",
+          "expectThrottle": "16%"
+        },
+        "docHiddenRequests": 0,
+        "restoredCompare": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.61",
+          "throttle": "57%",
+          "expectSteer": "-0.61",
+          "expectThrottle": "57%"
+        },
+        "offscreenRequests": 0,
+        "demosInViewAtTop": 0
+      },
+      "resize": [
+        {
+          "vw": 844,
+          "scrollWidth": 844,
+          "equal": true,
+          "backing": [
+            952,
+            460,
+            952,
+            460
+          ],
+          "svgWidths": [
+            458,
+            458,
+            458,
+            458
+          ]
+        },
+        {
+          "vw": 390,
+          "scrollWidth": 390,
+          "equal": true,
+          "backing": [
+            700,
+            538,
+            700,
+            538
+          ],
+          "svgWidths": [
+            350,
+            350,
+            350,
+            350
+          ]
+        }
+      ],
+      "destroy": {
+        "removed": true,
+        "rafAfterDestroy": 0,
+        "postDestroySafe": true,
+        "mount0": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "mount1": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "mount2": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "calls": [
+          [
+            "onRunningChange",
+            false
+          ],
+          [
+            "onRunningChange",
+            false
+          ],
+          [
+            "onRunningChange",
+            false
+          ]
+        ],
+        "hostEmpty": true
+      }
+    },
+    "landscape-844x390": {
+      "name": "landscape-844x390",
+      "checks": [
+        {
+          "name": "initial empty states: no fabricated generation/lap/history",
+          "ok": true,
+          "detail": {
+            "generation": "—",
+            "alive": "0 / 512",
+            "lap": "—",
+            "lapLabel": "No completed lap yet",
+            "fitness": "Fitness history: no completed generations yet",
+            "fitnessPath": "",
+            "racing": {
+              "source": "Waiting for a recorded attempt",
+              "note": "No timed lap yet. Partial attempts are labeled as partial.",
+              "d": "",
+              "pathShown": false,
+              "emptyShown": true,
+              "exampleShown": false,
+              "historyLabel": "No history yet",
+              "historyD": ""
+            },
+            "panelHidden": true,
+            "run": "Paused"
+          }
+        },
+        {
+          "name": "no horizontal page overflow",
+          "ok": true,
+          "detail": {
+            "scrollWidth": 844,
+            "overflow": []
+          }
+        },
+        {
+          "name": "no clipped control/heading text",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "visible interactive targets >= 44x44",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "h1 visible in first viewport",
+          "ok": true,
+          "detail": {
+            "top": 80,
+            "bottom": 110.4375
+          }
+        },
+        {
+          "name": "hero canvas fully in first viewport",
+          "ok": false,
+          "detail": {
+            "hero": {
+              "top": 163.4375,
+              "bottom": 393.4375,
+              "width": 476,
+              "height": 230
+            },
+            "fraction": 0.99
+          }
+        },
+        {
+          "name": "Play control in first viewport",
+          "ok": true,
+          "detail": {
+            "top": 130.4375,
+            "bottom": 174.4375
+          }
+        },
+        {
+          "name": "hero/editor canvases identical CSS boxes",
+          "ok": true,
+          "detail": {
+            "top": 163.4375,
+            "bottom": 393.4375,
+            "width": 476,
+            "height": 230
+          }
+        },
+        {
+          "name": "disabled editor overlay passes center hit to hero canvas",
+          "ok": true,
+          "detail": {
+            "pe": "none",
+            "hit": "hero-canvas"
+          }
+        },
+        {
+          "name": "mono font token applied to indices and telemetry",
+          "ok": true,
+          "detail": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace"
+        },
+        {
+          "name": "touch-action/user-select restricted to interactive surfaces",
+          "ok": true,
+          "detail": {
+            "heroCanvas": "none",
+            "sensorSvg": "none",
+            "networkSvg": "auto",
+            "lessonText": "auto"
+          }
+        },
+        {
+          "name": "text contrast >= 4.5:1 on sampled text",
+          "ok": false,
+          "detail": {
+            "eyebrow": 5.7,
+            "lessonIndex": 5.7,
+            "controlNote": 5.7,
+            "trackHint": 5.7,
+            "stageCorner": 4.27,
+            "diagramNote": 5.7,
+            "lessonCopy": 5.7,
+            "lessonAside": 6.06,
+            "feedback": 5.7,
+            "caption": 5.7,
+            "fieldLabel": 5.7,
+            "footerNote": 5.7,
+            "svgNote": 5.7,
+            "ratePressedOnSoft": 5.5
+          }
+        },
+        {
+          "name": "semantics: one h1, one main, labeled controls",
+          "ok": true,
+          "detail": {
+            "h1": 1,
+            "main": 1,
+            "h2": [
+              "Selected car",
+              "A little sight. Enough to start.",
+              "A small brain. A moving car.",
+              "Keep what works. Try a small change.",
+              "The line is the consequence."
+            ],
+            "unlabeledControls": 0
+          }
+        },
+        {
+          "name": "rendered text nodes under 10px (informational, flagged if any)",
+          "ok": false,
+          "detail": {
+            "sizes": {
+              "16.0": 4,
+              "23.0": 3,
+              "10.0": 26,
+              "12.0": 13,
+              "29.0": 1,
+              "9.0": 14,
+              "11.0": 23,
+              "30.0": 8,
+              "14.0": 4,
+              "8.5": 17,
+              "7.0": 3,
+              "18.0": 1,
+              "26.0": 2
+            },
+            "tiny": [
+              "9px small.: No history yet",
+              "9px span.stage-corner: FIELD / 01",
+              "9px span.: Illustration",
+              "8.6px text.svg-note: 7 rays.",
+              "8.6px text.svg-note: One local view.",
+              "9px small.: 1",
+              "9px small.: 2",
+              "9px small.: 3",
+              "9px small.: 4",
+              "9px small.: 5",
+              "9px small.: 6",
+              "9px small.: 7",
+              "9px span.: Illustrative network",
+              "7.2px text.svg-heading: SENSE",
+              "7.2px text.svg-heading: COMBINE",
+              "7.2px text.svg-heading: ACT",
+              "8.6px text.svg-note: ray 1",
+              "8.6px text.svg-note: ray 2",
+              "8.6px text.svg-note: ray 3",
+              "8.6px text.svg-note: ray 4",
+              "8.6px text.svg-note: ray 5",
+              "8.6px text.svg-note: ray 6",
+              "8.6px text.svg-note: ray 7",
+              "8.6px text.svg-note: speed",
+              "8.6px text.svg-note: Steer",
+              "8.6px text.svg-note: Throttle",
+              "9px span.: Illustration · 12 weights, n",
+              "9px span.: 0 mutations",
+              "8.6px text.svg-note: A",
+              "8.6px text.svg-note: B",
+              "8.6px text.svg-note: Child",
+              "8.6px text.svg-note: Select → combine → vary",
+              "9px span.: Waiting for a recorded attem",
+              "8.6px text.svg-note: Your best recorded attempt w"
+            ]
+          }
+        },
+        {
+          "name": "no idle animation frames over 1s",
+          "ok": true,
+          "detail": {
+            "rafRequests": 0
+          }
+        },
+        {
+          "name": "play/pause emit intents and reflect update",
+          "ok": true,
+          "detail": {
+            "play": {
+              "intent": {
+                "action": "running",
+                "value": true
+              },
+              "pressed": "true",
+              "text": "ⅡPause",
+              "label": "Running",
+              "focusKept": true
+            },
+            "pause": {
+              "intent": {
+                "action": "running",
+                "value": false
+              },
+              "pressed": "false",
+              "text": "▶Play"
+            }
+          }
+        },
+        {
+          "name": "rate 4x/fast/1x explicit intents + pressed state",
+          "ok": true,
+          "detail": [
+            {
+              "intent": {
+                "action": "rate",
+                "value": 4
+              },
+              "pressed": "false,true,false",
+              "note": "Four simulated seconds per second",
+              "focusKept": true
+            },
+            {
+              "intent": {
+                "action": "rate",
+                "value": "fast"
+              },
+              "pressed": "false,false,true",
+              "note": "Headless · throughput mode",
+              "focusKept": true
+            },
+            {
+              "intent": {
+                "action": "rate",
+                "value": 1
+              },
+              "pressed": "true,false,false",
+              "note": "Real-time simulation",
+              "focusKept": true
+            }
+          ]
+        },
+        {
+          "name": "population 1000 intent and accepted value",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "population",
+              "value": 1000
+            },
+            "value": "1000",
+            "alive": "0 / 1000",
+            "focusKept": true,
+            "options": [
+              "128",
+              "256",
+              "512",
+              "1000"
+            ]
+          }
+        },
+        {
+          "name": "preset intent and picker returns to placeholder",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "preset",
+              "value": "bend"
+            },
+            "value": ""
+          }
+        },
+        {
+          "name": "draw/clear/stop/reset intents",
+          "ok": true,
+          "detail": {
+            "drawOn": {
+              "intent": {
+                "action": "drawing",
+                "value": true
+              },
+              "pressed": "true",
+              "text": "Stop drawing",
+              "editorPE": "none",
+              "editorHidden": "false",
+              "hint": "Draw one closed loop on the field.",
+              "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+              "focusKept": true,
+              "heroReceivesClickWhileDrawingOverlayDisabled": true
+            },
+            "clear": {
+              "action": "clear drawing"
+            },
+            "drawOff": {
+              "intent": {
+                "action": "drawing",
+                "value": false
+              },
+              "pressed": "false",
+              "text": "Draw a circuit ↗"
+            },
+            "reset": {
+              "intent": {
+                "action": "reset"
+              },
+              "generation": "—"
+            }
+          }
+        },
+        {
+          "name": "page update never enables editor overlay; hero still receives clicks",
+          "ok": true,
+          "detail": {
+            "intent": {
+              "action": "drawing",
+              "value": true
+            },
+            "pressed": "true",
+            "text": "Stop drawing",
+            "editorPE": "none",
+            "editorHidden": "false",
+            "hint": "Draw one closed loop on the field.",
+            "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+            "focusKept": true,
+            "heroReceivesClickWhileDrawingOverlayDisabled": true
+          }
+        },
+        {
+          "name": "keyboard focus kept on controls across updates",
+          "ok": true,
+          "detail": {
+            "play": true,
+            "rate": true,
+            "pop": true,
+            "draw": true
+          }
+        },
+        {
+          "name": "inspection root and children stable across updates",
+          "ok": true
+        },
+        {
+          "name": "rapid Play before ack repeats same intent; reflects only on ack",
+          "ok": true,
+          "detail": {
+            "rapidPlay": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "beforeAck": "false",
+            "afterAck": "true",
+            "popPending": {
+              "valueDuringPending": "1000",
+              "was": "1000"
+            },
+            "popAccepted": "256",
+            "rateFinal": "false,true,false",
+            "finalRunning": true
+          }
+        },
+        {
+          "name": "population select restores accepted value while pending, then shows ack",
+          "ok": true,
+          "detail": {
+            "rapidPlay": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "beforeAck": "false",
+            "afterAck": "true",
+            "popPending": {
+              "valueDuringPending": "1000",
+              "was": "1000"
+            },
+            "popAccepted": "256",
+            "rateFinal": "false,true,false",
+            "finalRunning": true
+          }
+        },
+        {
+          "name": "rapid rate clicks settle to last acknowledged value",
+          "ok": true,
+          "detail": "false,true,false"
+        },
+        {
+          "name": "network illustration: weight/input sliders change outputs; independent recompute matches",
+          "ok": true,
+          "detail": {
+            "a": {
+              "steer": "+0.15",
+              "throttle": "52%",
+              "node3": "0.6779999780654907",
+              "edge74": "1.05"
+            },
+            "b": {
+              "steer": "-0.95",
+              "throttle": "52%",
+              "node3": "0.6779999780654907",
+              "edge74": "2.7"
+            },
+            "d": {
+              "steer": "-0.97",
+              "throttle": "51%",
+              "node3": "0.08",
+              "edge74": "2.7"
+            },
+            "expect": {
+              "steer": "-0.97",
+              "throttle": "51%"
+            },
+            "source": "Illustration · 8 → 8 → 2"
+          }
+        },
+        {
+          "name": "touch drag moves sensor car and readings; page does not scroll during drag",
+          "ok": true,
+          "detail": {
+            "before": {
+              "r": [
+                "0.68",
+                "0.75",
+                "0.89",
+                "1.00",
+                "0.89",
+                "0.75",
+                "0.68"
+              ],
+              "pos": "328"
+            },
+            "afterDrag": {
+              "r": [
+                "1.00",
+                "1.00",
+                "1.00",
+                "0.90",
+                "0.50",
+                "0.30",
+                "0.26"
+              ],
+              "pos": "420",
+              "scrollY": 659
+            },
+            "afterCancel": "330",
+            "afterStray": "330",
+            "scrollBefore": 659
+          }
+        },
+        {
+          "name": "touchcancel ends drag (no movement afterwards)",
+          "ok": true,
+          "detail": {
+            "afterCancel": "330",
+            "afterStray": "330"
+          }
+        },
+        {
+          "name": "touch scroll works over article text and non-draggable diagrams",
+          "ok": true,
+          "detail": {
+            "onText": 121,
+            "onNetwork": 121
+          }
+        },
+        {
+          "name": "keyboard sliders move/rotate sensor car with visible focus",
+          "ok": true,
+          "detail": {
+            "p0": "330",
+            "p1": "320",
+            "heading": "20",
+            "transform": "translate(320 259.9999948353937) rotate(20)",
+            "readings": [
+              "0.69",
+              "0.82",
+              "1.00",
+              "1.00",
+              "0.84",
+              "0.73",
+              "1.00"
+            ],
+            "focusOutline": "solid rgb(25, 91, 181)"
+          }
+        },
+        {
+          "name": "illustrative ray-wall intersection geometrically correct (side rays hit x=178/478)",
+          "ok": true,
+          "detail": {
+            "leftRay": [
+              328,
+              259.9999948353937,
+              178,
+              259.9999948353937
+            ],
+            "rightRay": [
+              328,
+              259.9999948353937,
+              478,
+              259.9999948353937
+            ],
+            "readings": [
+              "0.68",
+              "0.79",
+              "0.93",
+              "1.00",
+              "0.93",
+              "0.79",
+              "0.68"
+            ]
+          }
+        },
+        {
+          "name": "genetics: crossover moves split and child inheritance",
+          "ok": true,
+          "detail": {
+            "initialChild": "AAAAAABBBBBB",
+            "split0": "M331 28V146M331 196V258",
+            "child3": "AAABBBBBBBBB",
+            "split3": "M202 28V146M202 196V258",
+            "parentAChangesRowAandChildLeft": true,
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            },
+            "caption": "Illustration · 12 weights, no actual lineage"
+          }
+        },
+        {
+          "name": "genetics: parent change affects A-side of child only",
+          "ok": true,
+          "detail": {
+            "initialChild": "AAAAAABBBBBB",
+            "split0": "M331 28V146M331 196V258",
+            "child3": "AAABBBBBBBBB",
+            "split3": "M202 28V146M202 196V258",
+            "parentAChangesRowAandChildLeft": true,
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            },
+            "caption": "Illustration · 12 weights, no actual lineage"
+          }
+        },
+        {
+          "name": "genetics: mutate caps at 12 and disables; 3 mutations = 3 ochre child genes; reset restores",
+          "ok": true,
+          "detail": {
+            "after20": {
+              "count": "12 mutations",
+              "ochre": 12,
+              "disabled": true,
+              "note": "Ochre marks small weight changes. Useful variations can survive selection."
+            },
+            "after3": {
+              "count": "3 mutations",
+              "ochre": 3,
+              "parentsOnlyUnmutated": true,
+              "titles": 3
+            },
+            "reset": {
+              "count": "0 mutations",
+              "a": "0",
+              "crossover": "6",
+              "child": "AAAAAABBBBBB"
+            }
+          }
+        },
+        {
+          "name": "genetics labeled illustrative, no actual lineage",
+          "ok": true,
+          "detail": "Illustration · 12 weights, no actual lineage"
+        },
+        {
+          "name": "network live mode maps 90 weights/18 activations exactly (destination-major), throttle mapping",
+          "ok": true,
+          "detail": {
+            "edgeCount": 80,
+            "nodeCount": 18,
+            "mismatches": 0,
+            "steer": "-0.23",
+            "throttle": "9%",
+            "expectSteer": "-0.23",
+            "expectThrottle": "9%"
+          }
+        },
+        {
+          "name": "sensor live mode shows supplied normalized distances; walls hidden; illustration controls disabled",
+          "ok": true,
+          "detail": {
+            "readings": [
+              "0.15",
+              "0.26",
+              "0.37",
+              "0.48",
+              "0.59",
+              "0.70",
+              "0.81"
+            ],
+            "expected": [
+              "0.15",
+              "0.26",
+              "0.37",
+              "0.48",
+              "0.59",
+              "0.70",
+              "0.81"
+            ],
+            "source": "Selected car · live distances",
+            "wallsHidden": true,
+            "slidersDisabled": true,
+            "followEnabled": true,
+            "rayLen0": 33.000001311302185
+          }
+        },
+        {
+          "name": "detached/mutated buffers after update: deferred redraw uses owned copies",
+          "ok": true,
+          "detail": {
+            "detached": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "racingHistory": {
+              "label": "5 completed · best / mean fitness",
+              "points": 5
+            },
+            "heroSparkPoints": 5
+          }
+        },
+        {
+          "name": "inspection shell shows selected car and keeps root child",
+          "ok": true,
+          "detail": {
+            "hidden": false,
+            "heading": "Car 008 · generation 4",
+            "rootChildren": 1
+          }
+        },
+        {
+          "name": "inspection heading visible without scrolling after selecting from hero",
+          "ok": false,
+          "detail": {
+            "panelTop": 461,
+            "panelBottom": 628,
+            "canvasBottom": 393,
+            "vh": 390,
+            "panelHeadingVisible": false
+          }
+        },
+        {
+          "name": "unchecking Follow returns sensors to illustration",
+          "ok": true,
+          "detail": {
+            "source": "Illustration · local perception",
+            "walls": ""
+          }
+        },
+        {
+          "name": "stale generation/run/out-of-range/null selection fall back to illustration",
+          "ok": true,
+          "detail": {
+            "g": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "r": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "o": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ],
+            "n": [
+              "Illustration · local perception",
+              "Illustration · 8 → 8 → 2"
+            ]
+          }
+        },
+        {
+          "name": "stale-run best ignored (empty state)",
+          "ok": true,
+          "detail": {
+            "source": "Waiting for a recorded attempt",
+            "note": "No timed lap yet. Partial attempts are labeled as partial.",
+            "d": "",
+            "pathShown": false,
+            "emptyShown": true,
+            "exampleShown": false,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+          }
+        },
+        {
+          "name": "partial attempt labeled partial, all samples drawn, copy survives mutation+detach",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · partial attempt",
+            "note": "Generation 3, car 3. This car has not completed a timed lap.",
+            "points": 40
+          }
+        },
+        {
+          "name": "complete lap labeled with supplied time and only supplied samples",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · 41.24 s lap",
+            "note": "Generation 6, car 12. A complete timed lap, recorded from the simulation.",
+            "points": 60
+          }
+        },
+        {
+          "name": "offscreen update + detach: deferred racing redraw accurate",
+          "ok": true,
+          "detail": {
+            "source": "Recorded best · 39.50 s lap",
+            "points": 24
+          }
+        },
+        {
+          "name": "explore corner labeled illustrative, slider changes arc, actual history retained",
+          "ok": true,
+          "detail": {
+            "source": "Illustration · corner geometry",
+            "note": "Explore wider and tighter arcs. This is geometry, not a measured racing result.",
+            "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+            "pathShown": false,
+            "emptyShown": false,
+            "exampleShown": true,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00",
+            "slider": true
+          }
+        },
+        {
+          "name": "rapid corner-mode toggling ends in consistent state",
+          "ok": true,
+          "detail": {
+            "pressed": "false",
+            "source": "Recorded best · 39.50 s lap",
+            "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+            "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+            "pathShown": true,
+            "emptyShown": false,
+            "exampleShown": false,
+            "historyLabel": "6 completed · best / mean fitness",
+            "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+          }
+        },
+        {
+          "name": "sparkline: empty→hidden, one entry→single point, N entries→N points, peak follows data",
+          "ok": true,
+          "detail": {
+            "empty": {
+              "best": "",
+              "dot": "hidden",
+              "label": "Fitness history: no completed generations yet"
+            },
+            "one": {
+              "best": "M100.00,5.00",
+              "dot": "visible",
+              "label": "Fitness over generations 1 to 1. Latest best 14.00, mean 6.00. Green is best; gray is mean."
+            },
+            "three": {
+              "best": "M4.00,39.77L100.00,5.00L196.00,37.74",
+              "dot": "visible",
+              "label": "Fitness over generations 1 to 3. Latest best 19.00, mean 8.00. Green is best; gray is mean."
+            },
+            "windowed": {
+              "best": "M4.00,42.61L4.75,42.41L5.51,42.36L6.26,42.16L7.01,41.97L7.76,41.92L8.52,41.72L9.27,41.53L10.02,41.48L10.78,41.28L11.53,41.08L12.28,41.03L13.04,40.84L13.79,40.64L14.54,40.59L15.29,40.39L16.05,40.20L16.80,40.15L17.55,39.95L18.31,39.76L19.06,39.71L19.81,39.51L20.56,39.31L21.32,39.26L22.07,39.07L22.82,38.87L23.58,38.82L24.33,38.62L25.08,38.43L25.84,38.38L26.59,38.18L27.34,37.99L28.09,37.94L28.85,37.74L29.60,37.54L30.35,37.49L31.11,37.30L31.86,37.10L32.61,37.05L33.36,36.86L34.12,36.66L34.87,36.61L35.62,36.41L36.38,36.22L37.13,36.17L37.88,35.97L38.64,35.77L39.39,35.72L40.14,35.53L40.89,35.33L41.65,35.28L42.40,35.09L43.15,34.89L43.91,34.84L44.66,34.64L45.41,34.45L46.16,34.40L46.92,34.20L47.67,34.00L48.42,33.95L49.18,33.76L49.93,33.56L50.68,33.51L51.44,33.32L52.19,33.12L52.94,33.07L53.69,32.87L54.45,32.68L55.20,32.63L55.95,32.43L56.71,32.23L57.46,32.18L58.21,31.99L58.96,31.79L59.72,31.74L60.47,31.55L61.22,31.35L61.98,31.30L62.73,31.10L63.48,30.91L64.24,30.86L64.99,30.66L65.74,30.46L66.49,30.42L67.25,30.22L68.00,30.02L68.75,29.97L69.51,29.78L70.26,29.58L71.01,29.53L71.76,29.33L72.52,29.14L73.27,29.09L74.02,28.89L74.78,28.69L75.53,28.65L76.28,28.45L77.04,28.25L77.79,28.20L78.54,28.01L79.29,27.81L80.05,27.76L80.80,27.56L81.55,27.37L82.31,27.32L83.06,27.12L83.81,26.92L84.56,26.88L85.32,26.68L86.07,26.48L86.82,26.43L87.58,26.24L88.33,26.04L89.08,25.99L89.84,25.79L90.59,25.60L91.34,25.55L92.09,25.35L92.85,25.16L93.60,25.11L94.35,24.91L95.11,24.71L95.86,24.66L96.61,24.47L97.36,24.27L98.12,24.22L98.87,24.02L99.62,23.83L100.38,23.78L101.13,23.58L101.88,23.39L102.64,23.34L103.39,23.14L104.14,22.94L104.89,22.89L105.65,22.70L106.40,22.50L107.15,22.45L107.91,22.25L108.66,22.06L109.41,22.01L110.16,21.81L110.92,21.62L111.67,21.57L112.42,21.37L113.18,21.17L113.93,21.12L114.68,20.93L115.44,20.73L116.19,20.68L116.94,20.49L117.69,20.29L118.45,20.24L119.20,20.04L119.95,19.85L120.71,19.80L121.46,19.60L122.21,19.40L122.96,19.35L123.72,19.16L124.47,18.96L125.22,18.91L125.98,18.72L126.73,18.52L127.48,18.47L128.24,18.27L128.99,18.08L129.74,18.03L130.49,17.83L131.25,17.63L132.00,17.58L132.75,17.39L133.51,17.19L134.26,17.14L135.01,16.95L135.76,16.75L136.52,16.70L137.27,16.50L138.02,16.31L138.78,16.26L139.53,16.06L140.28,15.86L141.04,15.82L141.79,15.62L142.54,15.42L143.29,15.37L144.05,15.18L144.80,14.98L145.55,14.93L146.31,14.73L147.06,14.54L147.81,14.49L148.56,14.29L149.32,14.09L150.07,14.05L150.82,13.85L151.58,13.65L152.33,13.60L153.08,13.41L153.84,13.21L154.59,13.16L155.34,12.96L156.09,12.77L156.85,12.72L157.60,12.52L158.35,12.32L159.11,12.28L159.86,12.08L160.61,11.88L161.36,11.83L162.12,11.64L162.87,11.44L163.62,11.39L164.38,11.19L165.13,11.00L165.88,10.95L166.64,10.75L167.39,10.55L168.14,10.51L168.89,10.31L169.65,10.11L170.40,10.06L171.15,9.87L171.91,9.67L172.66,9.62L173.41,9.42L174.16,9.23L174.92,9.18L175.67,8.98L176.42,8.79L177.18,8.74L177.93,8.54L178.68,8.34L179.44,8.29L180.19,8.10L180.94,7.90L181.69,7.85L182.45,7.65L183.20,7.46L183.95,7.41L184.71,7.21L185.46,7.02L186.21,6.97L186.96,6.77L187.72,6.57L188.47,6.52L189.22,6.33L189.98,6.13L190.73,6.08L191.48,5.88L192.24,5.69L192.99,5.64L193.74,5.44L194.49,5.25L195.25,5.20L196.00,5.00",
+              "dot": "visible",
+              "label": "Fitness over generations 45 to 300. Latest best 779.00, mean 261.00. Green is best; gray is mean.",
+              "heroLabel": "300 gen · best / mean"
+            }
+          }
+        },
+        {
+          "name": "Close inspection emits onSelectionClear and hides panel; root kept",
+          "ok": true,
+          "detail": {
+            "focusedBefore": true,
+            "intent": {
+              "action": "clear selection"
+            },
+            "hidden": true,
+            "active": "body",
+            "rootStill": true
+          }
+        },
+        {
+          "name": "keyboard focus not lost to <body> after closing inspection",
+          "ok": false,
+          "detail": {
+            "focusedBefore": true,
+            "intent": {
+              "action": "clear selection"
+            },
+            "hidden": true,
+            "active": "body",
+            "rootStill": true
+          }
+        },
+        {
+          "name": "showTrackIssues shows polite atomic feedback and clears",
+          "ok": true,
+          "detail": {
+            "a": {
+              "text": "This loop crosses itself. Draw a wider loop without crossings; your current circuit is unchanged.",
+              "cls": "track-feedback has-issues",
+              "live": "polite",
+              "role": "status"
+            },
+            "cleared": "Choose a circuit, or draw a closed loop.",
+            "cls": "track-feedback"
+          }
+        },
+        {
+          "name": "Tab order reaches controls with visible 2px focus ring",
+          "ok": true,
+          "detail": [
+            "INPUT:Illustrative car h:solid/2px",
+            "INPUT:Illustrative front:solid/2px",
+            "INPUT:Illustrative steer:solid/2px",
+            "SELECT:Illustrative paren:solid/2px",
+            "SELECT:Illustrative paren:solid/2px",
+            "INPUT:Illustrative cross:solid/2px"
+          ]
+        },
+        {
+          "name": "setVisible(false) suspends painting; setVisible(true) paints owned copy",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 0,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "document hidden: no frames; restore paints latest owned data",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 0,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "offscreen demos request no frames on update",
+          "ok": true,
+          "detail": {
+            "steerBefore": "+0.15",
+            "hiddenSteer": "+0.15",
+            "hiddenRan": 0,
+            "visibleCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.88",
+              "throttle": "16%",
+              "expectSteer": "-0.88",
+              "expectThrottle": "16%"
+            },
+            "docHiddenRequests": 0,
+            "restoredCompare": {
+              "edgeCount": 80,
+              "nodeCount": 18,
+              "mismatches": 0,
+              "steer": "-0.61",
+              "throttle": "57%",
+              "expectSteer": "-0.61",
+              "expectThrottle": "57%"
+            },
+            "offscreenRequests": 0,
+            "demosInViewAtTop": 0
+          }
+        },
+        {
+          "name": "rotate/resize: no overflow, canvases equal, diagrams fit",
+          "ok": true,
+          "detail": [
+            {
+              "vw": 390,
+              "scrollWidth": 390,
+              "equal": true,
+              "backing": [
+                700,
+                538,
+                700,
+                538
+              ],
+              "svgWidths": [
+                350,
+                350,
+                350,
+                350
+              ]
+            },
+            {
+              "vw": 844,
+              "scrollWidth": 844,
+              "equal": true,
+              "backing": [
+                952,
+                460,
+                952,
+                460
+              ],
+              "svgWidths": [
+                458,
+                458,
+                458,
+                458
+              ]
+            }
+          ]
+        },
+        {
+          "name": "destroy removes page, stops frames, post-destroy calls safe",
+          "ok": true,
+          "detail": {
+            "removed": true,
+            "rafAfterDestroy": 0,
+            "postDestroySafe": true,
+            "mount0": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount1": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount2": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "calls": [
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ]
+            ],
+            "hostEmpty": true
+          }
+        },
+        {
+          "name": "recreate x3: fresh pages mount/emit/destroy cleanly with unique ids",
+          "ok": true,
+          "detail": {
+            "removed": true,
+            "rafAfterDestroy": 0,
+            "postDestroySafe": true,
+            "mount0": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount1": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "mount2": {
+              "demos": 4,
+              "lap": "12.35 s",
+              "ids": true
+            },
+            "calls": [
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ],
+              [
+                "onRunningChange",
+                false
+              ]
+            ],
+            "hostEmpty": true
+          }
+        },
+        {
+          "name": "no console errors/warnings, page errors, or failed requests",
+          "ok": true,
+          "detail": {
+            "console": [],
+            "pageErrors": [],
+            "failed": []
+          }
+        }
+      ],
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "audit": {
+        "vw": 844,
+        "vh": 390,
+        "scrollWidth": 844,
+        "overflow": [],
+        "clipped": [],
+        "small": [],
+        "sizes": {
+          "16.0": 4,
+          "23.0": 3,
+          "10.0": 26,
+          "12.0": 13,
+          "29.0": 1,
+          "9.0": 14,
+          "11.0": 23,
+          "30.0": 8,
+          "14.0": 4,
+          "8.5": 17,
+          "7.0": 3,
+          "18.0": 1,
+          "26.0": 2
+        },
+        "tinyList": [
+          "9px small.: No history yet",
+          "9px span.stage-corner: FIELD / 01",
+          "9px span.: Illustration",
+          "8.6px text.svg-note: 7 rays.",
+          "8.6px text.svg-note: One local view.",
+          "9px small.: 1",
+          "9px small.: 2",
+          "9px small.: 3",
+          "9px small.: 4",
+          "9px small.: 5",
+          "9px small.: 6",
+          "9px small.: 7",
+          "9px span.: Illustrative network",
+          "7.2px text.svg-heading: SENSE",
+          "7.2px text.svg-heading: COMBINE",
+          "7.2px text.svg-heading: ACT",
+          "8.6px text.svg-note: ray 1",
+          "8.6px text.svg-note: ray 2",
+          "8.6px text.svg-note: ray 3",
+          "8.6px text.svg-note: ray 4",
+          "8.6px text.svg-note: ray 5",
+          "8.6px text.svg-note: ray 6",
+          "8.6px text.svg-note: ray 7",
+          "8.6px text.svg-note: speed",
+          "8.6px text.svg-note: Steer",
+          "8.6px text.svg-note: Throttle",
+          "9px span.: Illustration · 12 weights, n",
+          "9px span.: 0 mutations",
+          "8.6px text.svg-note: A",
+          "8.6px text.svg-note: B",
+          "8.6px text.svg-note: Child",
+          "8.6px text.svg-note: Select → combine → vary",
+          "9px span.: Waiting for a recorded attem",
+          "8.6px text.svg-note: Your best recorded attempt w"
+        ],
+        "hero": {
+          "top": 163.4375,
+          "bottom": 393.4375,
+          "width": 476,
+          "height": 230
+        },
+        "editorEqual": true,
+        "editorPointerEvents": "none",
+        "centerHit": "hero-canvas",
+        "h1": {
+          "top": 80,
+          "bottom": 110.4375
+        },
+        "run": {
+          "top": 130.4375,
+          "bottom": 174.4375
+        },
+        "telemetry": {
+          "top": 121.4375,
+          "bottom": 163.4375
+        },
+        "heroCanvasFullyVisible": false,
+        "heroVisibleFraction": 0.9850543478260869,
+        "runVisible": true,
+        "mono": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "telemFont": "ui-monospace, \"SF Mono\", Menlo, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "touchAction": {
+          "heroCanvas": "none",
+          "sensorSvg": "none",
+          "networkSvg": "auto",
+          "lessonText": "auto"
+        },
+        "userSelect": {
+          "lessonText": "auto",
+          "heroCanvas": "none",
+          "sensorSvg": "none"
+        },
+        "contrast": {
+          "eyebrow": 5.7,
+          "lessonIndex": 5.7,
+          "controlNote": 5.7,
+          "trackHint": 5.7,
+          "stageCorner": 4.27,
+          "diagramNote": 5.7,
+          "lessonCopy": 5.7,
+          "lessonAside": 6.06,
+          "feedback": 5.7,
+          "caption": 5.7,
+          "fieldLabel": 5.7,
+          "footerNote": 5.7,
+          "svgNote": 5.7,
+          "ratePressedOnSoft": 5.5
+        },
+        "semantics": {
+          "h1": 1,
+          "main": 1,
+          "h2": [
+            "Selected car",
+            "A little sight. Enough to start.",
+            "A small brain. A moving car.",
+            "Keep what works. Try a small change.",
+            "The line is the consequence."
+          ],
+          "unlabeledControls": 0
+        }
+      },
+      "screenshots": [
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-hero.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-sensors.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-network.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-genetics.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-racing-line.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-full.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-sensors-live.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-network-live.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-hero-selected.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-racing-line-lap.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-racing-line-corner.png",
+        "/Users/krrishai/.t3/worktrees/gridborn/t3-adadbb65-081373c4c81d91a5/artifacts/qa/t3/round-1/landscape-844x390-keyboard-focus.png"
+      ],
+      "initial": {
+        "generation": "—",
+        "alive": "0 / 512",
+        "lap": "—",
+        "lapLabel": "No completed lap yet",
+        "fitness": "Fitness history: no completed generations yet",
+        "fitnessPath": "",
+        "racing": {
+          "source": "Waiting for a recorded attempt",
+          "note": "No timed lap yet. Partial attempts are labeled as partial.",
+          "d": "",
+          "pathShown": false,
+          "emptyShown": true,
+          "exampleShown": false,
+          "historyLabel": "No history yet",
+          "historyD": ""
+        },
+        "panelHidden": true,
+        "run": "Paused"
+      },
+      "textSizes": {
+        "16.0": 4,
+        "23.0": 3,
+        "10.0": 26,
+        "12.0": 13,
+        "29.0": 1,
+        "9.0": 14,
+        "11.0": 23,
+        "30.0": 8,
+        "14.0": 4,
+        "8.5": 17,
+        "7.0": 3,
+        "18.0": 1,
+        "26.0": 2
+      },
+      "controls": {
+        "play": {
+          "intent": {
+            "action": "running",
+            "value": true
+          },
+          "pressed": "true",
+          "text": "ⅡPause",
+          "label": "Running",
+          "focusKept": true
+        },
+        "pause": {
+          "intent": {
+            "action": "running",
+            "value": false
+          },
+          "pressed": "false",
+          "text": "▶Play"
+        },
+        "rate4": {
+          "intent": {
+            "action": "rate",
+            "value": 4
+          },
+          "pressed": "false,true,false",
+          "note": "Four simulated seconds per second",
+          "focusKept": true
+        },
+        "ratefast": {
+          "intent": {
+            "action": "rate",
+            "value": "fast"
+          },
+          "pressed": "false,false,true",
+          "note": "Headless · throughput mode",
+          "focusKept": true
+        },
+        "rate1": {
+          "intent": {
+            "action": "rate",
+            "value": 1
+          },
+          "pressed": "true,false,false",
+          "note": "Real-time simulation",
+          "focusKept": true
+        },
+        "population": {
+          "intent": {
+            "action": "population",
+            "value": 1000
+          },
+          "value": "1000",
+          "alive": "0 / 1000",
+          "focusKept": true,
+          "options": [
+            "128",
+            "256",
+            "512",
+            "1000"
+          ]
+        },
+        "preset": {
+          "intent": {
+            "action": "preset",
+            "value": "bend"
+          },
+          "value": ""
+        },
+        "drawOn": {
+          "intent": {
+            "action": "drawing",
+            "value": true
+          },
+          "pressed": "true",
+          "text": "Stop drawing",
+          "editorPE": "none",
+          "editorHidden": "false",
+          "hint": "Draw one closed loop on the field.",
+          "feedback": "Draw a closed loop. The current circuit stays until a valid drawing is ready.",
+          "focusKept": true,
+          "heroReceivesClickWhileDrawingOverlayDisabled": true
+        },
+        "clear": {
+          "action": "clear drawing"
+        },
+        "drawOff": {
+          "intent": {
+            "action": "drawing",
+            "value": false
+          },
+          "pressed": "false",
+          "text": "Draw a circuit ↗"
+        },
+        "reset": {
+          "intent": {
+            "action": "reset"
+          },
+          "generation": "—"
+        },
+        "stableInspectionRoot": true,
+        "intentCount": 11
+      },
+      "delayed": {
+        "rapidPlay": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "beforeAck": "false",
+        "afterAck": "true",
+        "popPending": {
+          "valueDuringPending": "1000",
+          "was": "1000"
+        },
+        "popAccepted": "256",
+        "rateFinal": "false,true,false",
+        "finalRunning": true
+      },
+      "networkIllustration": {
+        "a": {
+          "steer": "+0.15",
+          "throttle": "52%",
+          "node3": "0.6779999780654907",
+          "edge74": "1.05"
+        },
+        "b": {
+          "steer": "-0.95",
+          "throttle": "52%",
+          "node3": "0.6779999780654907",
+          "edge74": "2.7"
+        },
+        "d": {
+          "steer": "-0.97",
+          "throttle": "51%",
+          "node3": "0.08",
+          "edge74": "2.7"
+        },
+        "expect": {
+          "steer": "-0.97",
+          "throttle": "51%"
+        },
+        "source": "Illustration · 8 → 8 → 2"
+      },
+      "sensorTouch": {
+        "before": {
+          "r": [
+            "0.68",
+            "0.75",
+            "0.89",
+            "1.00",
+            "0.89",
+            "0.75",
+            "0.68"
+          ],
+          "pos": "328"
+        },
+        "afterDrag": {
+          "r": [
+            "1.00",
+            "1.00",
+            "1.00",
+            "0.90",
+            "0.50",
+            "0.30",
+            "0.26"
+          ],
+          "pos": "420",
+          "scrollY": 659
+        },
+        "afterCancel": "330",
+        "afterStray": "330",
+        "scrollBefore": 659
+      },
+      "touchScroll": {
+        "onText": 121,
+        "onNetwork": 121
+      },
+      "sensorKeyboard": {
+        "p0": "330",
+        "p1": "320",
+        "heading": "20",
+        "transform": "translate(320 259.9999948353937) rotate(20)",
+        "readings": [
+          "0.69",
+          "0.82",
+          "1.00",
+          "1.00",
+          "0.84",
+          "0.73",
+          "1.00"
+        ],
+        "focusOutline": "solid rgb(25, 91, 181)"
+      },
+      "sensorGeometry": {
+        "lines": [
+          [
+            328,
+            259.9999948353937,
+            178,
+            259.9999948353937
+          ],
+          [
+            328,
+            259.9999948353937,
+            178,
+            173.39745445694976
+          ],
+          [
+            328,
+            259.9999948353937,
+            225.489989501784,
+            82.4474483680645
+          ],
+          [
+            328,
+            259.9999948353937,
+            328,
+            39.99999483539369
+          ],
+          [
+            328,
+            259.9999948353937,
+            430.51001049821605,
+            82.4474483680645
+          ],
+          [
+            328,
+            259.9999948353937,
+            478,
+            173.39745445694984
+          ],
+          [
+            328,
+            259.9999948353937,
+            478,
+            259.9999948353937
+          ]
+        ],
+        "readings": [
+          "0.68",
+          "0.79",
+          "0.93",
+          "1.00",
+          "0.93",
+          "0.79",
+          "0.68"
+        ],
+        "carY": "translate(328 259.9999948353937) rotate(0)"
+      },
+      "genetics": {
+        "initialChild": "AAAAAABBBBBB",
+        "split0": "M331 28V146M331 196V258",
+        "child3": "AAABBBBBBBBB",
+        "split3": "M202 28V146M202 196V258",
+        "parentAChangesRowAandChildLeft": true,
+        "after20": {
+          "count": "12 mutations",
+          "ochre": 12,
+          "disabled": true,
+          "note": "Ochre marks small weight changes. Useful variations can survive selection."
+        },
+        "after3": {
+          "count": "3 mutations",
+          "ochre": 3,
+          "parentsOnlyUnmutated": true,
+          "titles": 3
+        },
+        "reset": {
+          "count": "0 mutations",
+          "a": "0",
+          "crossover": "6",
+          "child": "AAAAAABBBBBB"
+        },
+        "caption": "Illustration · 12 weights, no actual lineage"
+      },
+      "selection": {
+        "detachedLengths": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "network": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.23",
+          "throttle": "9%",
+          "expectSteer": "-0.23",
+          "expectThrottle": "9%"
+        },
+        "sensor": {
+          "readings": [
+            "0.15",
+            "0.26",
+            "0.37",
+            "0.48",
+            "0.59",
+            "0.70",
+            "0.81"
+          ],
+          "expected": [
+            "0.15",
+            "0.26",
+            "0.37",
+            "0.48",
+            "0.59",
+            "0.70",
+            "0.81"
+          ],
+          "source": "Selected car · live distances",
+          "wallsHidden": true,
+          "slidersDisabled": true,
+          "followEnabled": true,
+          "rayLen0": 33.000001311302185
+        },
+        "panel": {
+          "hidden": false,
+          "heading": "Car 008 · generation 4",
+          "rootChildren": 1
+        },
+        "racingHistory": {
+          "label": "5 completed · best / mean fitness",
+          "points": 5
+        },
+        "heroSparkPoints": 5,
+        "heroHistoryLabel": "5 gen · best / mean"
+      },
+      "inspectionPlacement": {
+        "panelTop": 461,
+        "panelBottom": 628,
+        "canvasBottom": 393,
+        "vh": 390,
+        "panelHeadingVisible": false
+      },
+      "stale": {
+        "staleGeneration": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "staleRun": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "outOfRange": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "nullSnapshot": [
+          "Illustration · local perception",
+          "Illustration · 8 → 8 → 2"
+        ],
+        "staleBest": {
+          "source": "Waiting for a recorded attempt",
+          "note": "No timed lap yet. Partial attempts are labeled as partial.",
+          "d": "",
+          "pathShown": false,
+          "emptyShown": true,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "partial": {
+          "source": "Recorded best · partial attempt",
+          "note": "Generation 3, car 3. This car has not completed a timed lap.",
+          "d": "M528.71,165.00L526.00,185.96L517.95,206.37L504.76,225.72L486.78,243.49L464.47,259.23L438.41,272.53L409.28,283.04L377.82,290.50L344.86,294.70L311.24,295.55L277.85,293.01L245.53,287.16L215.14,278.15L187.45,266.20L163.19,251.64L142.98,234.83L127.34,216.21L116.69,196.27L111.29,175.51L111.29,154.49L116.69,133.73L127.34,113.79L142.98,95.17L163.19,78.36L187.45,63.80L215.14,51.85L245.53,42.84L277.85,36.99L311.24,34.45L344.86,35.30L377.82,39.50L409.28,46.96L438.41,57.47L464.47,70.77L486.78,86.51L504.76,104.28L517.95,123.63L526.00,144.04L528.71,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "partialPoints": 40,
+        "lap": {
+          "source": "Recorded best · 41.24 s lap",
+          "note": "Generation 6, car 12. A complete timed lap, recorded from the simulation.",
+          "d": "M528.81,165.00L527.63,178.88L524.09,192.61L518.24,206.02L510.14,218.96L499.88,231.30L487.58,242.88L473.39,253.59L457.45,263.28L439.96,271.87L421.10,279.24L401.10,285.32L380.18,290.04L358.57,293.34L336.52,295.18L314.29,295.55L292.12,294.44L270.26,291.87L248.97,287.85L228.47,282.45L209.02,275.71L190.82,267.72L174.08,258.57L158.99,248.35L145.72,237.19L134.43,225.22L125.24,212.56L118.26,199.36L113.55,185.77L111.19,171.95L111.19,158.05L113.55,144.23L118.26,130.64L125.24,117.44L134.43,104.78L145.72,92.81L158.99,81.65L174.08,71.43L190.82,62.28L209.02,54.29L228.47,47.55L248.97,42.15L270.26,38.13L292.12,35.56L314.29,34.45L336.52,34.82L358.57,36.66L380.18,39.96L401.10,44.68L421.10,50.76L439.96,58.13L457.45,66.72L473.39,76.41L487.58,87.12L499.88,98.70L510.14,111.04L518.24,123.98L524.09,137.39L527.63,151.12L528.81,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "lapPoints": 60,
+        "deferred": {
+          "source": "Recorded best · 39.50 s lap",
+          "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        },
+        "deferredPoints": 24,
+        "explore": {
+          "source": "Illustration · corner geometry",
+          "note": "Explore wider and tighter arcs. This is geometry, not a measured racing result.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": false,
+          "emptyShown": false,
+          "exampleShown": true,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00",
+          "slider": true
+        },
+        "cornerChanges": true,
+        "afterRapidToggle": {
+          "pressed": "false",
+          "source": "Recorded best · 39.50 s lap",
+          "note": "Generation 7, car 4. A complete timed lap, recorded from the simulation.",
+          "d": "M528.37,165.00L520.60,200.30L497.89,232.98L461.91,260.62L415.34,281.17L361.62,293.10L304.74,295.53L248.92,288.28L198.30,271.89L156.64,247.57L127.02,217.13L111.63,182.82L111.63,147.18L127.02,112.87L156.64,82.43L198.30,58.11L248.92,41.72L304.74,34.47L361.62,36.90L415.34,48.83L461.91,69.38L497.89,97.02L520.60,129.70L528.37,165.00",
+          "pathShown": true,
+          "emptyShown": false,
+          "exampleShown": false,
+          "historyLabel": "6 completed · best / mean fitness",
+          "historyD": "M4.00,29.18L42.40,22.27L80.80,20.55L119.20,13.64L157.60,6.73L196.00,5.00"
+        }
+      },
+      "sparkline": {
+        "empty": {
+          "best": "",
+          "dot": "hidden",
+          "label": "Fitness history: no completed generations yet"
+        },
+        "one": {
+          "best": "M100.00,5.00",
+          "dot": "visible",
+          "label": "Fitness over generations 1 to 1. Latest best 14.00, mean 6.00. Green is best; gray is mean."
+        },
+        "three": {
+          "best": "M4.00,39.77L100.00,5.00L196.00,37.74",
+          "dot": "visible",
+          "label": "Fitness over generations 1 to 3. Latest best 19.00, mean 8.00. Green is best; gray is mean."
+        },
+        "windowed": {
+          "best": "M4.00,42.61L4.75,42.41L5.51,42.36L6.26,42.16L7.01,41.97L7.76,41.92L8.52,41.72L9.27,41.53L10.02,41.48L10.78,41.28L11.53,41.08L12.28,41.03L13.04,40.84L13.79,40.64L14.54,40.59L15.29,40.39L16.05,40.20L16.80,40.15L17.55,39.95L18.31,39.76L19.06,39.71L19.81,39.51L20.56,39.31L21.32,39.26L22.07,39.07L22.82,38.87L23.58,38.82L24.33,38.62L25.08,38.43L25.84,38.38L26.59,38.18L27.34,37.99L28.09,37.94L28.85,37.74L29.60,37.54L30.35,37.49L31.11,37.30L31.86,37.10L32.61,37.05L33.36,36.86L34.12,36.66L34.87,36.61L35.62,36.41L36.38,36.22L37.13,36.17L37.88,35.97L38.64,35.77L39.39,35.72L40.14,35.53L40.89,35.33L41.65,35.28L42.40,35.09L43.15,34.89L43.91,34.84L44.66,34.64L45.41,34.45L46.16,34.40L46.92,34.20L47.67,34.00L48.42,33.95L49.18,33.76L49.93,33.56L50.68,33.51L51.44,33.32L52.19,33.12L52.94,33.07L53.69,32.87L54.45,32.68L55.20,32.63L55.95,32.43L56.71,32.23L57.46,32.18L58.21,31.99L58.96,31.79L59.72,31.74L60.47,31.55L61.22,31.35L61.98,31.30L62.73,31.10L63.48,30.91L64.24,30.86L64.99,30.66L65.74,30.46L66.49,30.42L67.25,30.22L68.00,30.02L68.75,29.97L69.51,29.78L70.26,29.58L71.01,29.53L71.76,29.33L72.52,29.14L73.27,29.09L74.02,28.89L74.78,28.69L75.53,28.65L76.28,28.45L77.04,28.25L77.79,28.20L78.54,28.01L79.29,27.81L80.05,27.76L80.80,27.56L81.55,27.37L82.31,27.32L83.06,27.12L83.81,26.92L84.56,26.88L85.32,26.68L86.07,26.48L86.82,26.43L87.58,26.24L88.33,26.04L89.08,25.99L89.84,25.79L90.59,25.60L91.34,25.55L92.09,25.35L92.85,25.16L93.60,25.11L94.35,24.91L95.11,24.71L95.86,24.66L96.61,24.47L97.36,24.27L98.12,24.22L98.87,24.02L99.62,23.83L100.38,23.78L101.13,23.58L101.88,23.39L102.64,23.34L103.39,23.14L104.14,22.94L104.89,22.89L105.65,22.70L106.40,22.50L107.15,22.45L107.91,22.25L108.66,22.06L109.41,22.01L110.16,21.81L110.92,21.62L111.67,21.57L112.42,21.37L113.18,21.17L113.93,21.12L114.68,20.93L115.44,20.73L116.19,20.68L116.94,20.49L117.69,20.29L118.45,20.24L119.20,20.04L119.95,19.85L120.71,19.80L121.46,19.60L122.21,19.40L122.96,19.35L123.72,19.16L124.47,18.96L125.22,18.91L125.98,18.72L126.73,18.52L127.48,18.47L128.24,18.27L128.99,18.08L129.74,18.03L130.49,17.83L131.25,17.63L132.00,17.58L132.75,17.39L133.51,17.19L134.26,17.14L135.01,16.95L135.76,16.75L136.52,16.70L137.27,16.50L138.02,16.31L138.78,16.26L139.53,16.06L140.28,15.86L141.04,15.82L141.79,15.62L142.54,15.42L143.29,15.37L144.05,15.18L144.80,14.98L145.55,14.93L146.31,14.73L147.06,14.54L147.81,14.49L148.56,14.29L149.32,14.09L150.07,14.05L150.82,13.85L151.58,13.65L152.33,13.60L153.08,13.41L153.84,13.21L154.59,13.16L155.34,12.96L156.09,12.77L156.85,12.72L157.60,12.52L158.35,12.32L159.11,12.28L159.86,12.08L160.61,11.88L161.36,11.83L162.12,11.64L162.87,11.44L163.62,11.39L164.38,11.19L165.13,11.00L165.88,10.95L166.64,10.75L167.39,10.55L168.14,10.51L168.89,10.31L169.65,10.11L170.40,10.06L171.15,9.87L171.91,9.67L172.66,9.62L173.41,9.42L174.16,9.23L174.92,9.18L175.67,8.98L176.42,8.79L177.18,8.74L177.93,8.54L178.68,8.34L179.44,8.29L180.19,8.10L180.94,7.90L181.69,7.85L182.45,7.65L183.20,7.46L183.95,7.41L184.71,7.21L185.46,7.02L186.21,6.97L186.96,6.77L187.72,6.57L188.47,6.52L189.22,6.33L189.98,6.13L190.73,6.08L191.48,5.88L192.24,5.69L192.99,5.64L193.74,5.44L194.49,5.25L195.25,5.20L196.00,5.00",
+          "dot": "visible",
+          "label": "Fitness over generations 45 to 300. Latest best 779.00, mean 261.00. Green is best; gray is mean.",
+          "heroLabel": "300 gen · best / mean"
+        }
+      },
+      "closeSelection": {
+        "focusedBefore": true,
+        "intent": {
+          "action": "clear selection"
+        },
+        "hidden": true,
+        "active": "body",
+        "rootStill": true
+      },
+      "tabOrder": [
+        "INPUT:Illustrative car h:solid/2px",
+        "INPUT:Illustrative front:solid/2px",
+        "INPUT:Illustrative steer:solid/2px",
+        "SELECT:Illustrative paren:solid/2px",
+        "SELECT:Illustrative paren:solid/2px",
+        "INPUT:Illustrative cross:solid/2px"
+      ],
+      "lifecycle": {
+        "steerBefore": "+0.15",
+        "hiddenSteer": "+0.15",
+        "hiddenRan": 0,
+        "visibleCompare": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.88",
+          "throttle": "16%",
+          "expectSteer": "-0.88",
+          "expectThrottle": "16%"
+        },
+        "docHiddenRequests": 0,
+        "restoredCompare": {
+          "edgeCount": 80,
+          "nodeCount": 18,
+          "mismatches": 0,
+          "steer": "-0.61",
+          "throttle": "57%",
+          "expectSteer": "-0.61",
+          "expectThrottle": "57%"
+        },
+        "offscreenRequests": 0,
+        "demosInViewAtTop": 0
+      },
+      "resize": [
+        {
+          "vw": 390,
+          "scrollWidth": 390,
+          "equal": true,
+          "backing": [
+            700,
+            538,
+            700,
+            538
+          ],
+          "svgWidths": [
+            350,
+            350,
+            350,
+            350
+          ]
+        },
+        {
+          "vw": 844,
+          "scrollWidth": 844,
+          "equal": true,
+          "backing": [
+            952,
+            460,
+            952,
+            460
+          ],
+          "svgWidths": [
+            458,
+            458,
+            458,
+            458
+          ]
+        }
+      ],
+      "destroy": {
+        "removed": true,
+        "rafAfterDestroy": 0,
+        "postDestroySafe": true,
+        "mount0": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "mount1": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "mount2": {
+          "demos": 4,
+          "lap": "12.35 s",
+          "ids": true
+        },
+        "calls": [
+          [
+            "onRunningChange",
+            false
+          ],
+          [
+            "onRunningChange",
+            false
+          ],
+          [
+            "onRunningChange",
+            false
+          ]
+        ],
+        "hostEmpty": true
+      }
+    },
+    "reduced-motion-390x844": {
+      "name": "reduced-motion-390x844",
+      "checks": [
+        {
+          "name": "reduced motion: no smooth scrolling, diagrams still render, no idle frames",
+          "ok": true,
+          "detail": {
+            "scrollBehavior": "auto",
+            "readings": [
+              "0.68",
+              "0.75",
+              "0.89",
+              "1.00",
+              "0.89",
+              "0.75",
+              "0.68"
+            ],
+            "idle": 0
+          }
+        },
+        {
+          "name": "no console/page errors",
+          "ok": true,
+          "detail": {
+            "console": [],
+            "pageErrors": []
+          }
+        }
+      ],
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "screenshots": [],
+      "result": {
+        "scrollBehavior": "auto",
+        "readings": [
+          "0.68",
+          "0.75",
+          "0.89",
+          "1.00",
+          "0.89",
+          "0.75",
+          "0.68"
+        ],
+        "idle": 0
+      }
+    }
+  },
+  "extra": {},
+  "summary": {
+    "pass": 171,
+    "fail": 13,
+    "finishedAt": "2026-11-15T11:12:43.413Z"
+  }
+}

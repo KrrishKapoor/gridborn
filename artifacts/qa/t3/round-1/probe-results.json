@@ -1,0 +1,164 @@
+{
+  "desktop-1440x900": {
+    "vh": 900,
+    "fitness": {
+      "top": 238,
+      "bottom": 276,
+      "left": 823,
+      "right": 1129
+    },
+    "fitnessSvg": {
+      "top": 238,
+      "bottom": 276,
+      "left": 897,
+      "right": 1129
+    },
+    "hint": {
+      "top": 829,
+      "bottom": 867,
+      "left": 65,
+      "right": 1129
+    },
+    "feedback": {
+      "top": 867,
+      "bottom": 905,
+      "left": 65,
+      "right": 1375
+    },
+    "canvas": {
+      "top": 289,
+      "bottom": 829,
+      "left": 65,
+      "right": 1129
+    },
+    "rail": {
+      "top": 225,
+      "bottom": 867,
+      "left": 1161,
+      "right": 1375
+    },
+    "resetBottom": 705,
+    "railEmptyBelowReset": 162,
+    "harnessBanner": {
+      "top": 0,
+      "bottom": 27,
+      "left": 0,
+      "right": 1440
+    },
+    "labBottom": 867,
+    "liveDrawLabel": "Draw a circuit ↗",
+    "drawingButtonAfterUpdate": {
+      "text": "Draw a circuit ↗",
+      "hasHiddenSpan": true,
+      "lapSmall": false
+    }
+  },
+  "portrait-390x844": {
+    "vh": 844,
+    "fitness": {
+      "top": 263,
+      "bottom": 289,
+      "left": 20,
+      "right": 370
+    },
+    "fitnessSvg": {
+      "top": 263,
+      "bottom": 289,
+      "left": 144,
+      "right": 370
+    },
+    "hint": {
+      "top": 560,
+      "bottom": 598,
+      "left": 20,
+      "right": 370
+    },
+    "feedback": {
+      "top": 838,
+      "bottom": 882,
+      "left": 20,
+      "right": 370
+    },
+    "canvas": {
+      "top": 290,
+      "bottom": 560,
+      "left": 20,
+      "right": 370
+    },
+    "rail": {
+      "top": 598,
+      "bottom": 838,
+      "left": 20,
+      "right": 370
+    },
+    "resetBottom": 838,
+    "railEmptyBelowReset": 0,
+    "harnessBanner": {
+      "top": 0,
+      "bottom": 41,
+      "left": 0,
+      "right": 390
+    },
+    "labBottom": 838,
+    "liveDrawLabel": "Draw a circuit ↗",
+    "drawingButtonAfterUpdate": {
+      "text": "Draw a circuit ↗",
+      "hasHiddenSpan": true,
+      "lapSmall": false
+    }
+  },
+  "landscape-844x390": {
+    "vh": 390,
+    "fitness": {
+      "top": 393,
+      "bottom": 421,
+      "left": 534,
+      "right": 820
+    },
+    "fitnessSvg": {
+      "top": 393,
+      "bottom": 421,
+      "left": 610,
+      "right": 820
+    },
+    "hint": {
+      "top": 393,
+      "bottom": 423,
+      "left": 24,
+      "right": 500
+    },
+    "feedback": {
+      "top": 423,
+      "bottom": 461,
+      "left": 24,
+      "right": 820
+    },
+    "canvas": {
+      "top": 163,
+      "bottom": 393,
+      "left": 24,
+      "right": 500
+    },
+    "rail": {
+      "top": 121,
+      "bottom": 423,
+      "left": 520,
+      "right": 820
+    },
+    "resetBottom": 344,
+    "railEmptyBelowReset": 79,
+    "harnessBanner": {
+      "top": 0,
+      "bottom": 27,
+      "left": 0,
+      "right": 844
+    },
+    "labBottom": 423,
+    "liveDrawLabel": "Draw a circuit ↗",
+    "drawingButtonAfterUpdate": {
+      "text": "Draw a circuit ↗",
+      "hasHiddenSpan": true,
+      "lapSmall": false
+    }
+  }
+}

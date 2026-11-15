@@ -2,6 +2,13 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T3 conditional acceptance and T2 review (Codex PM)
+
+- Accepted and merged T3 under the requested no-high-severity threshold, explicitly taking the reviewer's handoff option for all three medium issues. Inspector visibility, focus restoration/Escape, and readable diagram text are mandatory T4 scope and must be independently re-reviewed before final acceptance. The 13 failed browser assertions remain recorded; no all-checks-pass claim is made.
+- T4 may adjust presentation/shared demo interfaces narrowly to provide actual track context, pending/reset feedback, and current circuit naming. These are concrete integration needs identified by QA, not speculative abstractions. Fix the other low polish findings while integrating their affected surfaces.
+- Keep an intentionally unchecked “Follow selected car” unchecked across selections: it is the visitor's chosen illustrative mode. Make the current mode explicit; the actual hero inspector always shows the selected live car.
+- T2 initialization uses small randomized steering outputs and positive throttle bias, with no track-specific controller. This is acceptable if independent QA verifies every driving decision comes from sensor NN outputs. Real seeded fixture improvement is promising but not yet accepted, and fixture performance does not establish final app or phone performance.
+
 ## 2026-11-15 — T3 presentation handoff (Codex PM; implementation by T3 Astra worker)
 
 - Teaching diagrams redraw on input or supplied live data, rather than idle timers. This meets interactive/live teaching goals while reducing offscreen work and respecting reduced motion. Selected-car arrays are copied before recycling; illustrative modes are labeled. Independent QA is checking behavior and data ownership.
@@ -43,4 +50,4 @@ Newest decisions first. All product and quality requirements in `pm/brief.md` re
 
 ## Known gaps
 
-T0 has no high-severity defects. Its low findings L1–L7 and the production implementation of clarified M1/L5 remain tracked for T3/T4 verification above. The full product, evolution learnability, performance, and physical iOS behavior are not yet verified.
+T0 has no high-severity defects. Its low findings L1–L7 and the production implementation of clarified M1/L5 remain tracked for T3/T4 verification above. T3 adds three medium presentation findings and low polish issues assigned to T4 above. The full product, independently verified evolution/performance, and physical iOS behavior remain unverified.

@@ -6,6 +6,12 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T3 QA and T2 handoff (Codex PM)
+
+- T3 has no high-severity defect, but three medium issues need production fixes: assign them explicitly to T4's integrated inspector/layout work and fresh re-QA; do not call the product complete yet.
+- Preserve the user's unchecked illustrative-mode preference across car selections; keep mode labels clear and the hero inspector live.
+- Small random steering weights and positive throttle bias are acceptable initialization, provided there is no embedded driving policy or track knowledge. Fresh T2 QA will independently check that and lap improvement.
+
 ## Resolved — 2026-11-15 T3 handoff (Codex PM)
 
 - “Live” teaching demos respond to input and actual supplied simulation data; they need no decorative continuous motion. Illustrative genetics and corner exploration remain explicitly labeled.
