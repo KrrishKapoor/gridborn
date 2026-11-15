@@ -83,13 +83,15 @@ export class WorkerRuntime {
       this.lastTime = this.host.now(); this.lastDelivery = -Infinity; this.dirty = false; this.errors = 0; this.lastError = '';
       this.host.send({ type: 'ready', runId: command.runId });
       this.deliver(true);
-    } catch (error) { this.error(command.runId, error instanceof Error ? error.message : 'Reset failed.'); }
+    } catch (error) { this.error(command.runId, error instanceof Error ? error.message : 'Reset failed.', true); }
   }
 
-  private error(runId: number, message: string): void {
+  private error(runId: number, message: string, acknowledgement = false): void {
     const key = `${runId}:${message}`;
-    if (this.errors >= 8 || this.lastError === key) return;
-    this.errors++; this.lastError = key;
+    if (!acknowledgement) {
+      if (this.errors >= 8 || this.lastError === key) return;
+      this.errors++; this.lastError = key;
+    }
     this.host.send({ type: 'error', runId, message: message.slice(0, 240) });
   }
   private clearSchedule(): void {
@@ -115,7 +117,9 @@ export class WorkerRuntime {
     }
     const end = this.host.now();
     this.computeMs += Math.max(0, end - start); this.steps += count;
-    if (!this.running || end - this.lastDelivery >= (this.rate === 'fast' ? 100 : 1000 / 60)) this.deliver(false);
+    // Gate normal delivery by simulated steps, not a second wall clock. Timer
+    // rounding must not discard alternating 1x frames. 4x groups four steps.
+    if (!this.running || (count > 0 && (this.rate === 'fast' ? end - this.lastDelivery >= 100 : this.steps >= this.rate))) this.deliver(false);
     if (this.running) this.schedule(this.rate === 'fast' ? 0 : Math.max(0, (FIXED_DT - this.accumulator) * 1000 / this.rate));
   };
 
