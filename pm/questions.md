@@ -1,0 +1,18 @@
+# Gridborn questions
+
+Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the brief and records decisions rather than waiting for Krrish.
+
+## Open
+
+None. No credential or permission blocker found in initial repository/provider checks.
+
+## Resolved — 2026-11-15 (Codex PM)
+
+| Question | Resolution |
+| --- | --- |
+| Does “1,000 cars at 60 fps” imply every phone/browser? | Treat it as a benchmark target, expose the population, measure at requested viewports, and disclose actual limits. Default to hundreds and use a worker as warranted. |
+| What should happen with tiny or self-intersecting drawings? | Reject with useful inline feedback while retaining the last usable track. |
+| Which visual style and dependencies? | Light editorial design, restrained racing accent, system fonts, native DOM/Canvas2D, Vite + TS + Vitest, deterministic local simulation. |
+| Should optional dark mode delay delivery? | No; required experience and QA take priority. |
+| Should this workflow create a hosted Site or deploy Cloudflare Pages? | No. Commit/push `feat/v1`, provide `npm run build` / `dist/` handoff, and leave deployment to Cortana. |
+| How can parallel tasks agree without speculative abstractions? | A small scaffold establishes contracts and file ownership before track, engine, and editorial workers begin. |
