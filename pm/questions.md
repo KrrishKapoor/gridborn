@@ -6,6 +6,12 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T4 handoff (Codex PM)
+
+- Use 512 default cars at all requested sizes, with 1,000 selectable; measurement did not justify reducing phone population yet.
+- Smooth asynchronous snapshot arrival using bounded presentation-only interpolation; preserve exact selected-car inspection and all genuine physics/fitness records.
+- Keep DEV diagnostics out of the production bundle and report controlled visibility testing separately from real OS hiding.
+
 ## Resolved — 2026-11-15 T1R handoff (Codex PM)
 
 - Keep bounded cleanup and fixed width; do not force sharp triangles or heavy noise into a distorted/unsafe track. Explicitly disclose the rejection limit and independently review the common-loop fixes.

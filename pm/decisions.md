@@ -2,6 +2,13 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T4 implementation handoff (Codex PM; implementation by T4 Astra worker)
+
+- Keep the default population at 512 across viewports; integration evidence did not require a mobile reduction. Population 1,000 remains exposed.
+- Bounded interpolation between received actual poses adds about two display intervals of presentation latency to smooth asynchronous deliveries. It never changes physics, metrics, or paths. The selected car/rays/activations use exact snapshots for consistency. Fresh QA must independently measure actual motion, not just callback counts.
+- Narrow optional presentation fields for current/pending circuit/population/suspension and `TeachingDemo.setTrack` address concrete earlier QA gaps. DEV-only diagnostics support reproducible state/performance reading; the production build must contain neither hook nor diagnostic chunk.
+- Retain the real OS-hidden-browser limitation: even headed minimize/tab attempts did not produce `document.hidden` in the implementation setup. Controlled events can verify code behavior but do not prove actual platform hiding. No physical iOS guarantee is made.
+
 ## 2026-11-15 — T1R bounded cleanup handoff (Codex PM; implementation by T1R Astra worker)
 
 - Candidate closure trimming is limited to a short late tail following the start corridor, including a separate crossing check on the discarded tail. Jitter simplification is bounded by deviation and stroke travel; large crossings still fail before cleanup. Fresh Opus round 2 independently checks these safety claims.
