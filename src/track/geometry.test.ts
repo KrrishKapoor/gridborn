@@ -119,6 +119,7 @@ describe('safe rejection', () => {
   it('rejects nonfinite points, invalid width and invalid identifiers', () => {
     expectIssue([{ x: NaN, y: 5 }], 'invalid-input');
     expectIssue([{ x: 5, y: Infinity }], 'invalid-input');
+    expectIssue(new Array<Point>(3), 'invalid-input');
     for (const width of [0, -1, NaN, Infinity, 801]) expectIssue(oval(), 'invalid-input', width);
     expect(buildTrack(oval(), { id: '', width: 92 }).ok).toBe(false);
   });
@@ -142,5 +143,7 @@ describe('safe rejection', () => {
       [1080, 400], [980, 660], [770, 660], [660, 435], [540, 435], [430, 660], [220, 660], [120, 400],
     ].map(([x, y]) => ({ x: x!, y: y! }));
     expectIssue(neck, 'too-tight');
+    const result = buildTrack(neck, options);
+    if (!result.ok) expect(result.issues[0]?.message).toContain('overlaps');
   });
 });

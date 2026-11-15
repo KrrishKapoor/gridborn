@@ -93,9 +93,13 @@ function invalid(code: TrackIssueCode, message: string): TrackValidation {
 export function buildTrack(points: readonly Point[], options: TrackBuildOptions): TrackValidation {
   if (!options || typeof options.id !== 'string' || !options.id.trim()
     || !Number.isFinite(options.width) || options.width <= 0 || options.width > WORLD_HEIGHT
-    || !Array.isArray(points) || points.length > 20000
-    || points.some(p => !p || !Number.isFinite(p.x) || !Number.isFinite(p.y))) {
+    || !Array.isArray(points) || points.length > 20000) {
     return invalid('invalid-input', 'Use a finite road width and draw one simple loop.');
+  }
+  for (const p of points) {
+    if (!p || !Number.isFinite(p.x) || !Number.isFinite(p.y)) {
+      return invalid('invalid-input', 'Use finite points to draw one simple loop.');
+    }
   }
   if (points.some(p => p.x < 0 || p.x > WORLD_WIDTH || p.y < 0 || p.y > WORLD_HEIGHT)) {
     return invalid('out-of-bounds', 'Keep the whole loop inside the drawing area, with room for the road.');
