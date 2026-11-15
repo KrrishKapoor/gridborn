@@ -1,0 +1,221 @@
+{
+  "task": "T0 scaffold/contracts",
+  "round": 1,
+  "reviewer": "fresh independent QA (claude-opus-5-5, effort high)",
+  "date": "2026-11-15",
+  "worktree": "/Users/krrishai/.t3/worktrees/gridborn/t3-150b05a4-79e5d2376bda99d9",
+  "branch": "t3/scaffold-simulation-contracts",
+  "reviewedSha": "a327136b0579b8fca9e5827be967a66bb3e85781",
+  "trackedTreeClean": true,
+  "rootCheckout": {
+    "path": "/Users/krrishai/Documents/Grok/gridborn",
+    "branch": "main",
+    "clean": true
+  },
+  "verdict": "PASS (T0 scope) — no high-severity findings; 1 medium, 7 low",
+  "environment": {
+    "node": "v26.13.1",
+    "npm": "11.20.0",
+    "browser": "Playwright 1.65.1 Chromium headless shell 159.0.8154.6 (isolated scratchpad install)",
+    "devServer": "npm run dev -- --port 5291 (stopped)"
+  },
+  "commands": [
+    {
+      "cmd": "npm ci",
+      "exit": 0,
+      "result": "installed from lockfile, 0 vulnerabilities; npm warns fsevents install script not approved (documented in README)",
+      "log": "npm-ci.log"
+    },
+    {
+      "cmd": "npm test",
+      "exit": 0,
+      "result": "2 files, 12 tests passed (vitest 5.1.0)",
+      "log": "npm-test.log"
+    },
+    {
+      "cmd": "npm run build",
+      "exit": 0,
+      "result": "tsc --noEmit clean; vite 8.3.8 built dist/index.html 0.59kB, CSS 3.74kB, JS 5.81kB",
+      "log": "npm-build.log"
+    },
+    {
+      "cmd": "node qa.mjs (Playwright)",
+      "exit": 0,
+      "result": "75/79 checks passed",
+      "log": "browser-run.log",
+      "detail": "browser-results.json"
+    }
+  ],
+  "previewTools": {
+    "preview_status": "available:false initially; preview_open succeeded",
+    "preview_snapshot": "failed twice: Preview automation snapshot timed out after 15000ms",
+    "fallback": "isolated Playwright Chromium; preview tab closed"
+  },
+  "viewportCoverage": [
+    {
+      "name": "desktop-1440x900",
+      "viewport": "1440x900",
+      "dpr": 2,
+      "touch": false,
+      "passed": 22,
+      "total": 23,
+      "failed": [
+        "DPR change resizes backing store (cap 2) without resetting world"
+      ],
+      "consoleOrPageErrors": [],
+      "screenshots": [
+        "desktop-1440x900-initial.png",
+        "desktop-1440x900-full.png",
+        "desktop-1440x900-canvas-in-view.png",
+        "desktop-1440x900-after-drag.png",
+        "desktop-1440x900-keyboard-focus.png",
+        "desktop-1440x900-final.png"
+      ]
+    },
+    {
+      "name": "portrait-390x844",
+      "viewport": "390x844",
+      "dpr": 3,
+      "touch": true,
+      "passed": 27,
+      "total": 28,
+      "failed": [
+        "DPR change resizes backing store (cap 2) without resetting world"
+      ],
+      "consoleOrPageErrors": [],
+      "screenshots": [
+        "portrait-390x844-initial.png",
+        "portrait-390x844-full.png",
+        "portrait-390x844-canvas-in-view.png",
+        "portrait-390x844-after-drag.png",
+        "portrait-390x844-keyboard-focus.png",
+        "portrait-390x844-final.png"
+      ]
+    },
+    {
+      "name": "landscape-844x390",
+      "viewport": "844x390",
+      "dpr": 3,
+      "touch": true,
+      "passed": 26,
+      "total": 28,
+      "failed": [
+        "canvas fully visible in first viewport",
+        "DPR change resizes backing store (cap 2) without resetting world"
+      ],
+      "consoleOrPageErrors": [],
+      "screenshots": [
+        "landscape-844x390-initial.png",
+        "landscape-844x390-full.png",
+        "landscape-844x390-canvas-in-view.png",
+        "landscape-844x390-after-drag.png",
+        "landscape-844x390-keyboard-focus.png",
+        "landscape-844x390-final.png"
+      ]
+    }
+  ],
+  "failedChecksInterpretation": {
+    "DPR change resizes backing store (all viewports)": "real, finding L2",
+    "landscape canvas fully visible in first viewport": "real, finding L3"
+  },
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "medium",
+      "area": "contract",
+      "title": "Editor overlay vs hero hit-testing / pointer-events ownership unspecified",
+      "where": "docs/architecture.md (T1 editor, T3 page, T4 hit testing); src/shared/presentation.ts GridbornPage.editorCanvas",
+      "repro": "Per contract editorCanvas is a transparent overlay at the same size above heroCanvas; T4 owns car hit-testing/inspection; T1 editor attaches listeners to editorCanvas and setEnabled toggles it. Nothing states who sets pointer-events/touch-action on the overlay when drawing is disabled, or which canvas T4 listens on.",
+      "impact": "Likely integration bug: car clicks/taps captured by the overlay (inspection dead) or drawing and selection firing together. Specify: disabled editor sets overlay pointer-events:none (or T4 hit-tests on the overlay when not drawing)."
+    },
+    {
+      "id": "L1",
+      "severity": "low",
+      "area": "scaffold UX",
+      "title": "Pointer/touch interaction shows the keyboard focus ring",
+      "where": "src/scaffold/preview.ts:139 canvas.focus({preventScroll:true}) in pointerdown",
+      "repro": "Click or tap the canvas: canvas matches :focus-visible and draws 3px blue outline (focus-font-probe.json; *-after-drag.png). Control tabindex div clicked normally does not.",
+      "impact": "Visual noise on every mouse/touch use; pattern should not be copied into T1/T4 surfaces (rely on native focus or focus({focusVisible:false}))."
+    },
+    {
+      "id": "L2",
+      "severity": "low",
+      "area": "scaffold/contract",
+      "title": "DPR-only changes are not detected",
+      "where": "src/scaffold/preview.ts:169-171 (window resize + ResizeObserver only)",
+      "repro": "CDP Emulation.setDeviceMetricsOverride changing deviceScaleFactor 1/1.5/2/3 with same CSS size: no resize event, canvas.width stays at old value (e.g. 2144 at DPR 1). Next genuine resize corrects it. World position preserved.",
+      "impact": "Blurry or oversized backing store after moving a window between displays until a resize. Contract says backing store follows DPR but does not name a detection mechanism (matchMedia resolution listener or devicePixelContentBoxSize).",
+      "limit": "Headless emulation also did not fire a matchMedia change; real monitor-move behaviour not verified."
+    },
+    {
+      "id": "L3",
+      "severity": "low",
+      "area": "scaffold layout",
+      "title": "Landscape 844x390: canvas starts below the fold and is mostly letterbox",
+      "where": "src/scaffold/preview.css:33-36",
+      "repro": "Canvas top=388px in a 390px viewport (landscape-844x390-initial.png); after scrolling, 760x240 canvas uses ~288px width for the world (canvas-in-view.png).",
+      "impact": "Disposable shell only, but the final hero must plan landscape phones explicitly (T3/T4)."
+    },
+    {
+      "id": "L4",
+      "severity": "low",
+      "area": "tokens",
+      "title": "--font-mono falls back to Courier in Chromium on macOS",
+      "where": "src/styles/tokens.css:13",
+      "repro": "CSS.getPlatformFontsForNode on <output> reports Courier; screenshots show serif mono readout and eyebrow.",
+      "impact": "Persisting token; looks unpolished in Chrome. Add ui-monospace, \"SF Mono\", Menlo before Consolas."
+    },
+    {
+      "id": "L5",
+      "severity": "low",
+      "area": "contract",
+      "title": "Failed reset leaves runId ownership ambiguous",
+      "where": "docs/architecture.md T2 run semantics 1-2; SimulationEvent error",
+      "repro": "Main sends reset runId N+1; worker validates, rejects, keeps run N and emits error(runId N+1). Main ignores stale (runId N) events, so the hero stalls unless the contract says main reverts to N or worker halts run N.",
+      "impact": "Edge case (validated geometry should not fail) but should be one sentence in the contract."
+    },
+    {
+      "id": "L6",
+      "severity": "low",
+      "area": "scaffold robustness",
+      "title": "Canvas <= 48 CSS px throws uncaught RangeError in rAF",
+      "where": "src/scaffold/preview.ts:73 + :83",
+      "repro": "Viewport width 80px -> canvas 40px -> pageerror View bounds and available CSS size must be finite and positive. (narrow-probe.json). 120px viewport fine.",
+      "impact": "Unrealistic size; draw() should share the place() guard. Pattern note for T4."
+    },
+    {
+      "id": "L7",
+      "severity": "low",
+      "area": "a11y",
+      "title": "Focusable interactive canvas uses role=img",
+      "where": "src/scaffold/preview.ts:25-27",
+      "repro": "canvas tabindex=0 role=img with arrow-key handling.",
+      "impact": "Screen readers present a static image; acceptable for a disposable check, revisit for editor/inspection surfaces (e.g. role=application or a labelled group with live output)."
+    }
+  ],
+  "notes": [
+    "Contract internal consistency verified: WEIGHT_COUNT 90 = 9*8+9*2, ACTIVATION_COUNT 18, inputs = 7 rays + speed; snapshot pool/transfer/recycle semantics coherent; CarId run/generation scoping, stale-runId filtering, HISTORY_LIMIT, BestTrajectory null-lap semantics consistent with brief.",
+    "Info: drawn-track width/id policy is not in TrackEditorOptions (editor presumably uses the 92-unit default); protocol carries no GA lineage data, so the genetics demo must be labelled illustrative; dark mode deferred per decisions.md.",
+    "Token contrast (contrast.json): accent #246b32 6.06:1 on paper, 6.51:1 on white; muted 5.70:1; focus 6.10:1."
+  ],
+  "deferredNotDefects": [
+    "racing engine/physics/rays/NN/GA and worker (T2)",
+    "track editor, presets, validation (T1)",
+    "final article, controls, four teaching demos (T3)",
+    "integration, rendering, car inspection, hidden-tab pausing, FPS/1000-car performance (T4/T5)",
+    "final full-product QA gate (draw track, evolution, best lap improving, inspection, FPS) — not satisfied by this review"
+  ],
+  "verificationLimits": [
+    "Chromium only (no WebKit/iOS Safari): -webkit-touch-callout verified only as computed CSS; iOS callout/selection behaviour not exercised",
+    "Touch via CDP Input.dispatchTouchEvent in emulated mobile Chromium, not a physical device",
+    "Hidden-tab tested by foregrounding a second page; headless visibilityState stayed visible, so true hidden-tab rAF suspension not exercised (scaffold has no animation loop)",
+    "DPR changes via CDP emulation only",
+    "QA pixel sampling emits a willReadFrequently console warning; filtered and recorded as harnessNotes, no app console errors observed"
+  ],
+  "teardown": {
+    "devServer": "stopped (port 5291 free)",
+    "browsers": "all Playwright contexts/browsers closed",
+    "previewTab": "closed",
+    "gitTrackedChanges": "none"
+  }
+}

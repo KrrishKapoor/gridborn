@@ -2,6 +2,15 @@
 
 Newest decisions first. All product and quality requirements in `pm/brief.md` remain fixed.
 
+## 2026-11-15 — T0 scoped acceptance and finding disposition (Codex PM)
+
+- Accepted the fresh independent T0 PASS under the requested “stop when no high-severity findings remain” rule. The 75/79 browser assertion count is retained verbatim; it is not represented as a complete all-checks pass. Production behavior is still unbuilt.
+- Resolved medium M1 by assigning disabled overlay `pointer-events: none` to T1, initial overlay CSS to T3, and hero-only car hit testing to T4. Drawing blocks selection.
+- Resolved contract ambiguity L5 by retaining an accepted run ID until a pending reset receives `ready`; an error for the pending request retains the old accepted simulation and shows feedback.
+- Documented T4's DPR and tiny-canvas responsibilities. DPR is checked during frames and on focus/visibility return; invalid available drawing size skips rendering, never throws.
+- The temporary scaffold will be deleted by T4, so cosmetic/edge-case defects in it are carried to the replacing feature work rather than extending throwaway code. T3 handles phone landscape layout and the mono-font fallback; T4 handles focus behavior, accessible canvas semantics, DPR-only changes, and tiny/hidden sizes. Fresh task and final QA will recheck these.
+- Independent QA evidence is committed selectively from this repository's worker artifacts (reports/scripts/results/screenshots/logs; no dependencies or build output). Chromium touch emulation is evidence, not a claim of physical iOS testing. True hidden-page behavior still needs final verification.
+
 ## 2026-11-15 — Scaffold handoff and review (Codex PM; contracts by T0 Astra worker)
 
 - Accepted the proposed 1200 × 800 logical world, 7 rays plus speed, and 8 → 8 → 2 topology as concrete shared interfaces, pending independent QA. Positive run IDs and generation-scoped selections prevent stale inspection after reset. Bounded transferable pools avoid per-step serialization allocations.
@@ -22,4 +31,4 @@ Newest decisions first. All product and quality requirements in `pm/brief.md` re
 
 ## Known gaps
 
-None assessed yet. The product has not been implemented or QA-reviewed. Performance and learnability are risks to verify, not claimed successes.
+T0 has no high-severity defects. Its low findings L1–L7 and the production implementation of clarified M1/L5 remain tracked for T3/T4 verification above. The full product, evolution learnability, performance, and physical iOS behavior are not yet verified.

@@ -1,0 +1,1276 @@
+{
+  "base": "http://127.0.0.1:5291/",
+  "browser": "159.0.8154.6",
+  "viewports": [
+    {
+      "name": "desktop-1440x900",
+      "viewport": "1440x900",
+      "dpr": 2,
+      "touch": false,
+      "checks": [
+        {
+          "name": "no horizontal overflow",
+          "pass": true,
+          "detail": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "offenders": []
+          }
+        },
+        {
+          "name": "backing store = round(css * min(dpr,2))",
+          "pass": true,
+          "detail": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "scrollHeight": 1064,
+            "offenders": [],
+            "canvasCss": {
+              "w": 1072,
+              "h": 416,
+              "top": 469.515625,
+              "bottom": 885.515625
+            },
+            "backing": {
+              "w": 2144,
+              "h": 832
+            },
+            "dpr": 2,
+            "touchAction": "none",
+            "userSelect": "none",
+            "webkitUserSelect": "none",
+            "callout": "",
+            "textUserSelect": "auto",
+            "button": {
+              "w": 137.671875,
+              "h": 46
+            },
+            "canvasBorder": "0px",
+            "canvasPadding": "0px",
+            "title": "Gridborn — development preview",
+            "h1": "A starting point."
+          }
+        },
+        {
+          "name": "canvas touch-action/user-select/callout none",
+          "pass": true,
+          "detail": {
+            "touchAction": "none",
+            "userSelect": "none",
+            "callout": ""
+          }
+        },
+        {
+          "name": "page text remains selectable",
+          "pass": true,
+          "detail": "auto"
+        },
+        {
+          "name": "reset button >= 44px tall",
+          "pass": true,
+          "detail": {
+            "w": 137.671875,
+            "h": 46
+          }
+        },
+        {
+          "name": "canvas fully visible in first viewport",
+          "pass": true,
+          "detail": {
+            "w": 1072,
+            "h": 416,
+            "top": 469.515625,
+            "bottom": 885.515625
+          }
+        },
+        {
+          "name": "initial marker drawn at world centre (accent #246b32)",
+          "pass": true,
+          "detail": {
+            "readout": {
+              "x": 600,
+              "y": 400,
+              "text": "x 0600 / y 0400"
+            },
+            "pixel": [
+              36,
+              107,
+              50,
+              255
+            ]
+          }
+        },
+        {
+          "name": "mouse drag places marker at mapped world coords",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 17,
+              "y": 219
+            },
+            "actual": "x 0017 / y 0219"
+          }
+        },
+        {
+          "name": "marker pixel drawn at mapped (clamped) world position",
+          "pass": true,
+          "detail": [
+            36,
+            107,
+            50,
+            255
+          ]
+        },
+        {
+          "name": "drag on canvas does not scroll page",
+          "pass": true,
+          "detail": {
+            "scrollBefore": 164,
+            "scrollAfter": 164
+          }
+        },
+        {
+          "name": "drag outside canvas is captured and clamped to world",
+          "pass": true,
+          "detail": "x 0000 / y 0000"
+        },
+        {
+          "name": "rapid clicks (25) end on the last position",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 0,
+              "y": 689,
+              "s": 0.46,
+              "ox": 260,
+              "oy": 24
+            },
+            "actual": "x 0000 / y 0689"
+          }
+        },
+        {
+          "name": "Tab order: skip link -> canvas -> Center button",
+          "pass": true,
+          "detail": {
+            "first": "skip-link",
+            "second": "CANVAS",
+            "third": "reset-button"
+          }
+        },
+        {
+          "name": "Home centres; arrows step 10, Shift 50",
+          "pass": true,
+          "detail": {
+            "home": "x 0600 / y 0400",
+            "keyed": "x 0570 / y 0360"
+          }
+        },
+        {
+          "name": "arrow keys on canvas do not scroll page",
+          "pass": true,
+          "detail": {
+            "sBefore": 164,
+            "sAfter": 164
+          }
+        },
+        {
+          "name": "status announcement reflects position",
+          "pass": true,
+          "detail": "Marker at 570, 360 world units."
+        },
+        {
+          "name": "visible keyboard focus ring on canvas",
+          "pass": true,
+          "detail": {
+            "outline": "solid",
+            "width": "3px",
+            "color": "rgb(25, 91, 181)",
+            "focusVisible": true
+          }
+        },
+        {
+          "name": "keyboard clamps at world edge",
+          "pass": true,
+          "detail": "x 1200 / y 0360"
+        },
+        {
+          "name": "Center button resets via keyboard (Enter)",
+          "pass": true,
+          "detail": "x 0600 / y 0400"
+        },
+        {
+          "name": "resize keeps world position, redraws marker, no overflow",
+          "pass": true,
+          "detail": [
+            {
+              "w": 1024,
+              "h": 768,
+              "cw": 921.625,
+              "ch": 409.59375,
+              "bw": 1843,
+              "bh": 819,
+              "sw": 1024,
+              "vw": 1024,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            },
+            {
+              "w": 1920,
+              "h": 1080,
+              "cw": 1072,
+              "ch": 416,
+              "bw": 2144,
+              "bh": 832,
+              "sw": 1920,
+              "vw": 1920,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            },
+            {
+              "w": 1440,
+              "h": 900,
+              "cw": 1072,
+              "ch": 416,
+              "bw": 2144,
+              "bh": 832,
+              "sw": 1440,
+              "vw": 1440,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DPR change resizes backing store (cap 2) without resetting world",
+          "pass": false,
+          "detail": [
+            {
+              "requested": 1,
+              "dpr": 1,
+              "cw": 1072,
+              "bw": 2144,
+              "bh": 832,
+              "ch": 416,
+              "expectedBw": 1072,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 1.5,
+              "dpr": 1.5,
+              "cw": 1072,
+              "bw": 2144,
+              "bh": 832,
+              "ch": 416,
+              "expectedBw": 1608,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 2,
+              "dpr": 2,
+              "cw": 1072,
+              "bw": 2144,
+              "bh": 832,
+              "ch": 416,
+              "expectedBw": 2144,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 3,
+              "dpr": 3,
+              "cw": 1072,
+              "bw": 2144,
+              "bh": 832,
+              "ch": 416,
+              "expectedBw": 2144,
+              "readout": "x 0590 / y 0400"
+            }
+          ]
+        },
+        {
+          "name": "after background/foreground the canvas still responds",
+          "pass": true,
+          "detail": {
+            "hiddenState": "visible",
+            "visibleState": "visible",
+            "actual": "x 0833 / y 0310",
+            "expected": {
+              "x": 833,
+              "y": 310,
+              "s": 0.46,
+              "ox": 260,
+              "oy": 24
+            }
+          }
+        },
+        {
+          "name": "no console errors/warnings, page errors or failed requests",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-1440x900-initial.png",
+        "desktop-1440x900-full.png",
+        "desktop-1440x900-canvas-in-view.png",
+        "desktop-1440x900-after-drag.png",
+        "desktop-1440x900-keyboard-focus.png",
+        "desktop-1440x900-final.png"
+      ],
+      "errors": [],
+      "harnessNotes": [
+        "QA getImageData readback warning (caused by QA pixel sampling, not app)",
+        "QA getImageData readback warning (caused by QA pixel sampling, not app)"
+      ],
+      "layout": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 1064,
+        "offenders": [],
+        "canvasCss": {
+          "w": 1072,
+          "h": 416,
+          "top": 469.515625,
+          "bottom": 885.515625
+        },
+        "backing": {
+          "w": 2144,
+          "h": 832
+        },
+        "dpr": 2,
+        "touchAction": "none",
+        "userSelect": "none",
+        "webkitUserSelect": "none",
+        "callout": "",
+        "textUserSelect": "auto",
+        "button": {
+          "w": 137.671875,
+          "h": 46
+        },
+        "canvasBorder": "0px",
+        "canvasPadding": "0px",
+        "title": "Gridborn — development preview",
+        "h1": "A starting point."
+      },
+      "scrollForPointerTests": 164
+    },
+    {
+      "name": "portrait-390x844",
+      "viewport": "390x844",
+      "dpr": 3,
+      "touch": true,
+      "checks": [
+        {
+          "name": "no horizontal overflow",
+          "pass": true,
+          "detail": {
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "offenders": []
+          }
+        },
+        {
+          "name": "backing store = round(css * min(dpr,2))",
+          "pass": true,
+          "detail": {
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "scrollHeight": 883,
+            "offenders": [],
+            "canvasCss": {
+              "w": 350,
+              "h": 240,
+              "top": 389.59375,
+              "bottom": 629.59375
+            },
+            "backing": {
+              "w": 700,
+              "h": 480
+            },
+            "dpr": 3,
+            "touchAction": "none",
+            "userSelect": "none",
+            "webkitUserSelect": "none",
+            "callout": "",
+            "textUserSelect": "auto",
+            "button": {
+              "w": 137.671875,
+              "h": 46
+            },
+            "canvasBorder": "0px",
+            "canvasPadding": "0px",
+            "title": "Gridborn — development preview",
+            "h1": "A starting point."
+          }
+        },
+        {
+          "name": "canvas touch-action/user-select/callout none",
+          "pass": true,
+          "detail": {
+            "touchAction": "none",
+            "userSelect": "none",
+            "callout": ""
+          }
+        },
+        {
+          "name": "page text remains selectable",
+          "pass": true,
+          "detail": "auto"
+        },
+        {
+          "name": "reset button >= 44px tall",
+          "pass": true,
+          "detail": {
+            "w": 137.671875,
+            "h": 46
+          }
+        },
+        {
+          "name": "canvas fully visible in first viewport",
+          "pass": true,
+          "detail": {
+            "w": 350,
+            "h": 240,
+            "top": 389.59375,
+            "bottom": 629.59375
+          }
+        },
+        {
+          "name": "initial marker drawn at world centre (accent #246b32)",
+          "pass": true,
+          "detail": {
+            "readout": {
+              "x": 600,
+              "y": 400,
+              "text": "x 0600 / y 0400"
+            },
+            "pixel": [
+              36,
+              107,
+              50,
+              255
+            ]
+          }
+        },
+        {
+          "name": "touch drag places marker at mapped world coords",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 235,
+              "y": 200
+            },
+            "actual": "x 0235 / y 0200"
+          }
+        },
+        {
+          "name": "marker pixel drawn at mapped (clamped) world position",
+          "pass": true,
+          "detail": [
+            36,
+            107,
+            50,
+            255
+          ]
+        },
+        {
+          "name": "drag on canvas does not scroll page",
+          "pass": true,
+          "detail": {
+            "scrollBefore": 39,
+            "scrollAfter": 39
+          }
+        },
+        {
+          "name": "events were genuine touch pointers",
+          "pass": true,
+          "detail": [
+            {
+              "t": "pointerdown",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            },
+            {
+              "t": "pointermove",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            },
+            {
+              "t": "pointermove",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            },
+            {
+              "t": "pointermove",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            }
+          ]
+        },
+        {
+          "name": "drag outside canvas is captured and clamped to world",
+          "pass": true,
+          "detail": "x 0000 / y 0000"
+        },
+        {
+          "name": "touchcancel fires pointercancel and leaves state usable",
+          "pass": true,
+          "detail": {
+            "cancelPtrs": [
+              "pointerdown",
+              "pointermove",
+              "pointercancel",
+              "lostpointercapture"
+            ],
+            "afterCancel": "x 0965 / y 0650",
+            "afterTap": "x 0454 / y 0500",
+            "expected": {
+              "x": 454,
+              "y": 500,
+              "s": 0.24,
+              "ox": 31,
+              "oy": 24
+            }
+          }
+        },
+        {
+          "name": "second finger ignored (primary pointer only)",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 308,
+              "y": 400,
+              "s": 0.24,
+              "ox": 31,
+              "oy": 24
+            },
+            "actual": "x 0308 / y 0400"
+          }
+        },
+        {
+          "name": "long-press on canvas creates no text selection",
+          "pass": true,
+          "detail": {
+            "sel": "",
+            "ctx": 0
+          }
+        },
+        {
+          "name": "touch-scroll on text area scrolls the page normally",
+          "pass": true,
+          "detail": {
+            "scrollY": 39,
+            "startY": 200
+          }
+        },
+        {
+          "name": "rapid taps (25) end on the last position",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 133,
+              "y": 720,
+              "s": 0.24,
+              "ox": 31,
+              "oy": 24
+            },
+            "actual": "x 0133 / y 0720"
+          }
+        },
+        {
+          "name": "Tab order: skip link -> canvas -> Center button",
+          "pass": true,
+          "detail": {
+            "first": "skip-link",
+            "second": "CANVAS",
+            "third": "reset-button"
+          }
+        },
+        {
+          "name": "Home centres; arrows step 10, Shift 50",
+          "pass": true,
+          "detail": {
+            "home": "x 0600 / y 0400",
+            "keyed": "x 0570 / y 0360"
+          }
+        },
+        {
+          "name": "arrow keys on canvas do not scroll page",
+          "pass": true,
+          "detail": {
+            "sBefore": 0,
+            "sAfter": 0
+          }
+        },
+        {
+          "name": "status announcement reflects position",
+          "pass": true,
+          "detail": "Marker at 570, 360 world units."
+        },
+        {
+          "name": "visible keyboard focus ring on canvas",
+          "pass": true,
+          "detail": {
+            "outline": "solid",
+            "width": "3px",
+            "color": "rgb(25, 91, 181)",
+            "focusVisible": true
+          }
+        },
+        {
+          "name": "keyboard clamps at world edge",
+          "pass": true,
+          "detail": "x 1200 / y 0360"
+        },
+        {
+          "name": "Center button resets via keyboard (Enter)",
+          "pass": true,
+          "detail": "x 0600 / y 0400"
+        },
+        {
+          "name": "resize keeps world position, redraws marker, no overflow",
+          "pass": true,
+          "detail": [
+            {
+              "w": 360,
+              "h": 740,
+              "cw": 320,
+              "ch": 240,
+              "bw": 640,
+              "bh": 480,
+              "sw": 360,
+              "vw": 360,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            },
+            {
+              "w": 430,
+              "h": 932,
+              "cw": 387,
+              "ch": 240,
+              "bw": 774,
+              "bh": 480,
+              "sw": 430,
+              "vw": 430,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            },
+            {
+              "w": 390,
+              "h": 844,
+              "cw": 350,
+              "ch": 240,
+              "bw": 700,
+              "bh": 480,
+              "sw": 390,
+              "vw": 390,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DPR change resizes backing store (cap 2) without resetting world",
+          "pass": false,
+          "detail": [
+            {
+              "requested": 1,
+              "dpr": 1,
+              "cw": 350,
+              "bw": 700,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 350,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 1.5,
+              "dpr": 1.5,
+              "cw": 350,
+              "bw": 700,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 525,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 2,
+              "dpr": 2,
+              "cw": 350,
+              "bw": 700,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 700,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 3,
+              "dpr": 3,
+              "cw": 350,
+              "bw": 700,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 700,
+              "readout": "x 0590 / y 0400"
+            }
+          ]
+        },
+        {
+          "name": "after background/foreground the canvas still responds",
+          "pass": true,
+          "detail": {
+            "hiddenState": "visible",
+            "visibleState": "visible",
+            "actual": "x 0746 / y 0300",
+            "expected": {
+              "x": 746,
+              "y": 300,
+              "s": 0.24,
+              "ox": 31,
+              "oy": 24
+            }
+          }
+        },
+        {
+          "name": "no console errors/warnings, page errors or failed requests",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "portrait-390x844-initial.png",
+        "portrait-390x844-full.png",
+        "portrait-390x844-canvas-in-view.png",
+        "portrait-390x844-after-drag.png",
+        "portrait-390x844-keyboard-focus.png",
+        "portrait-390x844-final.png"
+      ],
+      "errors": [],
+      "harnessNotes": [
+        "QA getImageData readback warning (caused by QA pixel sampling, not app)",
+        "QA getImageData readback warning (caused by QA pixel sampling, not app)"
+      ],
+      "layout": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 883,
+        "offenders": [],
+        "canvasCss": {
+          "w": 350,
+          "h": 240,
+          "top": 389.59375,
+          "bottom": 629.59375
+        },
+        "backing": {
+          "w": 700,
+          "h": 480
+        },
+        "dpr": 3,
+        "touchAction": "none",
+        "userSelect": "none",
+        "webkitUserSelect": "none",
+        "callout": "",
+        "textUserSelect": "auto",
+        "button": {
+          "w": 137.671875,
+          "h": 46
+        },
+        "canvasBorder": "0px",
+        "canvasPadding": "0px",
+        "title": "Gridborn — development preview",
+        "h1": "A starting point."
+      },
+      "scrollForPointerTests": 39
+    },
+    {
+      "name": "landscape-844x390",
+      "viewport": "844x390",
+      "dpr": 3,
+      "touch": true,
+      "checks": [
+        {
+          "name": "no horizontal overflow",
+          "pass": true,
+          "detail": {
+            "scrollWidth": 844,
+            "clientWidth": 844,
+            "offenders": []
+          }
+        },
+        {
+          "name": "backing store = round(css * min(dpr,2))",
+          "pass": true,
+          "detail": {
+            "scrollWidth": 844,
+            "clientWidth": 844,
+            "scrollHeight": 807,
+            "offenders": [],
+            "canvasCss": {
+              "w": 759.625,
+              "h": 240,
+              "top": 388.0625,
+              "bottom": 628.0625
+            },
+            "backing": {
+              "w": 1519,
+              "h": 480
+            },
+            "dpr": 3,
+            "touchAction": "none",
+            "userSelect": "none",
+            "webkitUserSelect": "none",
+            "callout": "",
+            "textUserSelect": "auto",
+            "button": {
+              "w": 137.671875,
+              "h": 46
+            },
+            "canvasBorder": "0px",
+            "canvasPadding": "0px",
+            "title": "Gridborn — development preview",
+            "h1": "A starting point."
+          }
+        },
+        {
+          "name": "canvas touch-action/user-select/callout none",
+          "pass": true,
+          "detail": {
+            "touchAction": "none",
+            "userSelect": "none",
+            "callout": ""
+          }
+        },
+        {
+          "name": "page text remains selectable",
+          "pass": true,
+          "detail": "auto"
+        },
+        {
+          "name": "reset button >= 44px tall",
+          "pass": true,
+          "detail": {
+            "w": 137.671875,
+            "h": 46
+          }
+        },
+        {
+          "name": "canvas fully visible in first viewport",
+          "pass": false,
+          "detail": {
+            "w": 759.625,
+            "h": 240,
+            "top": 388.0625,
+            "bottom": 628.0625
+          }
+        },
+        {
+          "name": "initial marker drawn at world centre (accent #246b32)",
+          "pass": true,
+          "detail": {
+            "readout": {
+              "x": 600,
+              "y": 400,
+              "text": "x 0600 / y 0400"
+            },
+            "pixel": [
+              36,
+              107,
+              50,
+              255
+            ]
+          }
+        },
+        {
+          "name": "touch drag places marker at mapped world coords",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 0,
+              "y": 200
+            },
+            "actual": "x 0000 / y 0200"
+          }
+        },
+        {
+          "name": "marker pixel drawn at mapped (clamped) world position",
+          "pass": true,
+          "detail": [
+            36,
+            107,
+            50,
+            255
+          ]
+        },
+        {
+          "name": "drag on canvas does not scroll page",
+          "pass": true,
+          "detail": {
+            "scrollBefore": 313,
+            "scrollAfter": 313
+          }
+        },
+        {
+          "name": "events were genuine touch pointers",
+          "pass": true,
+          "detail": [
+            {
+              "t": "pointerdown",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            },
+            {
+              "t": "pointermove",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            },
+            {
+              "t": "pointermove",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            },
+            {
+              "t": "pointermove",
+              "type": "touch",
+              "id": 2,
+              "primary": true
+            }
+          ]
+        },
+        {
+          "name": "drag outside canvas is captured and clamped to world",
+          "pass": true,
+          "detail": "x 0000 / y 0000"
+        },
+        {
+          "name": "touchcancel fires pointercancel and leaves state usable",
+          "pass": true,
+          "detail": {
+            "cancelPtrs": [
+              "pointerdown",
+              "pointermove",
+              "pointercancel",
+              "lostpointercapture"
+            ],
+            "afterCancel": "x 1200 / y 0650",
+            "afterTap": "x 0283 / y 0500",
+            "expected": {
+              "x": 283,
+              "y": 500,
+              "s": 0.24,
+              "ox": 235.8125,
+              "oy": 24
+            }
+          }
+        },
+        {
+          "name": "second finger ignored (primary pointer only)",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 0,
+              "y": 400,
+              "s": 0.24,
+              "ox": 235.8125,
+              "oy": 24
+            },
+            "actual": "x 0000 / y 0400"
+          }
+        },
+        {
+          "name": "long-press on canvas creates no text selection",
+          "pass": true,
+          "detail": {
+            "sel": "",
+            "ctx": 0
+          }
+        },
+        {
+          "name": "touch-scroll on text area scrolls the page normally",
+          "pass": true,
+          "detail": {
+            "scrollY": 126,
+            "startY": 200
+          }
+        },
+        {
+          "name": "rapid taps (25) end on the last position",
+          "pass": true,
+          "detail": {
+            "expected": {
+              "x": 0,
+              "y": 720,
+              "s": 0.24,
+              "ox": 235.8125,
+              "oy": 24
+            },
+            "actual": "x 0000 / y 0720"
+          }
+        },
+        {
+          "name": "Tab order: skip link -> canvas -> Center button",
+          "pass": true,
+          "detail": {
+            "first": "skip-link",
+            "second": "CANVAS",
+            "third": "reset-button"
+          }
+        },
+        {
+          "name": "Home centres; arrows step 10, Shift 50",
+          "pass": true,
+          "detail": {
+            "home": "x 0600 / y 0400",
+            "keyed": "x 0570 / y 0360"
+          }
+        },
+        {
+          "name": "arrow keys on canvas do not scroll page",
+          "pass": true,
+          "detail": {
+            "sBefore": 388,
+            "sAfter": 388
+          }
+        },
+        {
+          "name": "status announcement reflects position",
+          "pass": true,
+          "detail": "Marker at 570, 360 world units."
+        },
+        {
+          "name": "visible keyboard focus ring on canvas",
+          "pass": true,
+          "detail": {
+            "outline": "solid",
+            "width": "3px",
+            "color": "rgb(25, 91, 181)",
+            "focusVisible": true
+          }
+        },
+        {
+          "name": "keyboard clamps at world edge",
+          "pass": true,
+          "detail": "x 1200 / y 0360"
+        },
+        {
+          "name": "Center button resets via keyboard (Enter)",
+          "pass": true,
+          "detail": "x 0600 / y 0400"
+        },
+        {
+          "name": "resize keeps world position, redraws marker, no overflow",
+          "pass": true,
+          "detail": [
+            {
+              "w": 740,
+              "h": 360,
+              "cw": 666,
+              "ch": 240,
+              "bw": 1332,
+              "bh": 480,
+              "sw": 740,
+              "vw": 740,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            },
+            {
+              "w": 932,
+              "h": 430,
+              "cw": 838.8125,
+              "ch": 240,
+              "bw": 1678,
+              "bh": 480,
+              "sw": 932,
+              "vw": 932,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            },
+            {
+              "w": 844,
+              "h": 390,
+              "cw": 759.625,
+              "ch": 240,
+              "bw": 1519,
+              "bh": 480,
+              "sw": 844,
+              "vw": 844,
+              "readout": "x 0590 / y 0400",
+              "markerPixel": [
+                36,
+                107,
+                50,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DPR change resizes backing store (cap 2) without resetting world",
+          "pass": false,
+          "detail": [
+            {
+              "requested": 1,
+              "dpr": 1,
+              "cw": 759.625,
+              "bw": 1519,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 760,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 1.5,
+              "dpr": 1.5,
+              "cw": 759.625,
+              "bw": 1519,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 1139,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 2,
+              "dpr": 2,
+              "cw": 759.625,
+              "bw": 1519,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 1519,
+              "readout": "x 0590 / y 0400"
+            },
+            {
+              "requested": 3,
+              "dpr": 3,
+              "cw": 759.625,
+              "bw": 1519,
+              "bh": 480,
+              "ch": 240,
+              "expectedBw": 1519,
+              "readout": "x 0590 / y 0400"
+            }
+          ]
+        },
+        {
+          "name": "after background/foreground the canvas still responds",
+          "pass": true,
+          "detail": {
+            "hiddenState": "visible",
+            "visibleState": "visible",
+            "actual": "x 0917 / y 0300",
+            "expected": {
+              "x": 917,
+              "y": 300,
+              "s": 0.24,
+              "ox": 235.8125,
+              "oy": 24
+            }
+          }
+        },
+        {
+          "name": "no console errors/warnings, page errors or failed requests",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "landscape-844x390-initial.png",
+        "landscape-844x390-full.png",
+        "landscape-844x390-canvas-in-view.png",
+        "landscape-844x390-after-drag.png",
+        "landscape-844x390-keyboard-focus.png",
+        "landscape-844x390-final.png"
+      ],
+      "errors": [],
+      "harnessNotes": [
+        "QA getImageData readback warning (caused by QA pixel sampling, not app)",
+        "QA getImageData readback warning (caused by QA pixel sampling, not app)"
+      ],
+      "layout": {
+        "scrollWidth": 844,
+        "clientWidth": 844,
+        "scrollHeight": 807,
+        "offenders": [],
+        "canvasCss": {
+          "w": 759.625,
+          "h": 240,
+          "top": 388.0625,
+          "bottom": 628.0625
+        },
+        "backing": {
+          "w": 1519,
+          "h": 480
+        },
+        "dpr": 3,
+        "touchAction": "none",
+        "userSelect": "none",
+        "webkitUserSelect": "none",
+        "callout": "",
+        "textUserSelect": "auto",
+        "button": {
+          "w": 137.671875,
+          "h": 46
+        },
+        "canvasBorder": "0px",
+        "canvasPadding": "0px",
+        "title": "Gridborn — development preview",
+        "h1": "A starting point."
+      },
+      "scrollForPointerTests": 313
+    }
+  ],
+  "summary": {
+    "total": 79,
+    "passed": 75,
+    "failed": [
+      "desktop-1440x900: DPR change resizes backing store (cap 2) without resetting world",
+      "portrait-390x844: DPR change resizes backing store (cap 2) without resetting world",
+      "landscape-844x390: canvas fully visible in first viewport",
+      "landscape-844x390: DPR change resizes backing store (cap 2) without resetting world"
+    ]
+  }
+}

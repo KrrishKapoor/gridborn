@@ -1,0 +1,89 @@
+{
+  "total": 79,
+  "passed": 75,
+  "failed": [
+    "desktop-1440x900: DPR change resizes backing store (cap 2) without resetting world",
+    "portrait-390x844: DPR change resizes backing store (cap 2) without resetting world",
+    "landscape-844x390: canvas fully visible in first viewport",
+    "landscape-844x390: DPR change resizes backing store (cap 2) without resetting world"
+  ]
+}
+PASS [desktop-1440x900] no horizontal overflow
+PASS [desktop-1440x900] backing store = round(css * min(dpr,2))
+PASS [desktop-1440x900] canvas touch-action/user-select/callout none
+PASS [desktop-1440x900] page text remains selectable
+PASS [desktop-1440x900] reset button >= 44px tall
+PASS [desktop-1440x900] canvas fully visible in first viewport
+PASS [desktop-1440x900] initial marker drawn at world centre (accent #246b32)
+PASS [desktop-1440x900] mouse drag places marker at mapped world coords
+PASS [desktop-1440x900] marker pixel drawn at mapped (clamped) world position
+PASS [desktop-1440x900] drag on canvas does not scroll page
+PASS [desktop-1440x900] drag outside canvas is captured and clamped to world
+PASS [desktop-1440x900] rapid clicks (25) end on the last position
+PASS [desktop-1440x900] Tab order: skip link -> canvas -> Center button
+PASS [desktop-1440x900] Home centres; arrows step 10, Shift 50
+PASS [desktop-1440x900] arrow keys on canvas do not scroll page
+PASS [desktop-1440x900] status announcement reflects position
+PASS [desktop-1440x900] visible keyboard focus ring on canvas
+PASS [desktop-1440x900] keyboard clamps at world edge
+PASS [desktop-1440x900] Center button resets via keyboard (Enter)
+PASS [desktop-1440x900] resize keeps world position, redraws marker, no overflow
+FAIL [desktop-1440x900] DPR change resizes backing store (cap 2) without resetting world :: [{"requested":1,"dpr":1,"cw":1072,"bw":2144,"bh":832,"ch":416,"expectedBw":1072,"readout":"x 0590 / y 0400"},{"requested":1.5,"dpr":1.5,"cw":1072,"bw":2144,"bh":832,"ch":416,"expectedBw":1608,"readout":"x 0590 / y 0400"},{"requested":2,"dpr":2,"cw":1072,"bw":2144,"bh":832,"ch":416,"expectedBw":2144,"readout":"x 0590 / y 0400"},{"requested":3,"dpr":3,"cw":1072,"bw":2144,"bh":832,"ch":416,"expectedB
+PASS [desktop-1440x900] after background/foreground the canvas still responds
+PASS [desktop-1440x900] no console errors/warnings, page errors or failed requests
+PASS [portrait-390x844] no horizontal overflow
+PASS [portrait-390x844] backing store = round(css * min(dpr,2))
+PASS [portrait-390x844] canvas touch-action/user-select/callout none
+PASS [portrait-390x844] page text remains selectable
+PASS [portrait-390x844] reset button >= 44px tall
+PASS [portrait-390x844] canvas fully visible in first viewport
+PASS [portrait-390x844] initial marker drawn at world centre (accent #246b32)
+PASS [portrait-390x844] touch drag places marker at mapped world coords
+PASS [portrait-390x844] marker pixel drawn at mapped (clamped) world position
+PASS [portrait-390x844] drag on canvas does not scroll page
+PASS [portrait-390x844] events were genuine touch pointers
+PASS [portrait-390x844] drag outside canvas is captured and clamped to world
+PASS [portrait-390x844] touchcancel fires pointercancel and leaves state usable
+PASS [portrait-390x844] second finger ignored (primary pointer only)
+PASS [portrait-390x844] long-press on canvas creates no text selection
+PASS [portrait-390x844] touch-scroll on text area scrolls the page normally
+PASS [portrait-390x844] rapid taps (25) end on the last position
+PASS [portrait-390x844] Tab order: skip link -> canvas -> Center button
+PASS [portrait-390x844] Home centres; arrows step 10, Shift 50
+PASS [portrait-390x844] arrow keys on canvas do not scroll page
+PASS [portrait-390x844] status announcement reflects position
+PASS [portrait-390x844] visible keyboard focus ring on canvas
+PASS [portrait-390x844] keyboard clamps at world edge
+PASS [portrait-390x844] Center button resets via keyboard (Enter)
+PASS [portrait-390x844] resize keeps world position, redraws marker, no overflow
+FAIL [portrait-390x844] DPR change resizes backing store (cap 2) without resetting world :: [{"requested":1,"dpr":1,"cw":350,"bw":700,"bh":480,"ch":240,"expectedBw":350,"readout":"x 0590 / y 0400"},{"requested":1.5,"dpr":1.5,"cw":350,"bw":700,"bh":480,"ch":240,"expectedBw":525,"readout":"x 0590 / y 0400"},{"requested":2,"dpr":2,"cw":350,"bw":700,"bh":480,"ch":240,"expectedBw":700,"readout":"x 0590 / y 0400"},{"requested":3,"dpr":3,"cw":350,"bw":700,"bh":480,"ch":240,"expectedBw":700,"rea
+PASS [portrait-390x844] after background/foreground the canvas still responds
+PASS [portrait-390x844] no console errors/warnings, page errors or failed requests
+PASS [landscape-844x390] no horizontal overflow
+PASS [landscape-844x390] backing store = round(css * min(dpr,2))
+PASS [landscape-844x390] canvas touch-action/user-select/callout none
+PASS [landscape-844x390] page text remains selectable
+PASS [landscape-844x390] reset button >= 44px tall
+FAIL [landscape-844x390] canvas fully visible in first viewport :: {"w":759.625,"h":240,"top":388.0625,"bottom":628.0625}
+PASS [landscape-844x390] initial marker drawn at world centre (accent #246b32)
+PASS [landscape-844x390] touch drag places marker at mapped world coords
+PASS [landscape-844x390] marker pixel drawn at mapped (clamped) world position
+PASS [landscape-844x390] drag on canvas does not scroll page
+PASS [landscape-844x390] events were genuine touch pointers
+PASS [landscape-844x390] drag outside canvas is captured and clamped to world
+PASS [landscape-844x390] touchcancel fires pointercancel and leaves state usable
+PASS [landscape-844x390] second finger ignored (primary pointer only)
+PASS [landscape-844x390] long-press on canvas creates no text selection
+PASS [landscape-844x390] touch-scroll on text area scrolls the page normally
+PASS [landscape-844x390] rapid taps (25) end on the last position
+PASS [landscape-844x390] Tab order: skip link -> canvas -> Center button
+PASS [landscape-844x390] Home centres; arrows step 10, Shift 50
+PASS [landscape-844x390] arrow keys on canvas do not scroll page
+PASS [landscape-844x390] status announcement reflects position
+PASS [landscape-844x390] visible keyboard focus ring on canvas
+PASS [landscape-844x390] keyboard clamps at world edge
+PASS [landscape-844x390] Center button resets via keyboard (Enter)
+PASS [landscape-844x390] resize keeps world position, redraws marker, no overflow
+FAIL [landscape-844x390] DPR change resizes backing store (cap 2) without resetting world :: [{"requested":1,"dpr":1,"cw":759.625,"bw":1519,"bh":480,"ch":240,"expectedBw":760,"readout":"x 0590 / y 0400"},{"requested":1.5,"dpr":1.5,"cw":759.625,"bw":1519,"bh":480,"ch":240,"expectedBw":1139,"readout":"x 0590 / y 0400"},{"requested":2,"dpr":2,"cw":759.625,"bw":1519,"bh":480,"ch":240,"expectedBw":1519,"readout":"x 0590 / y 0400"},{"requested":3,"dpr":3,"cw":759.625,"bw":1519,"bh":480,"ch":240
+PASS [landscape-844x390] after background/foreground the canvas still responds
+PASS [landscape-844x390] no console errors/warnings, page errors or failed requests

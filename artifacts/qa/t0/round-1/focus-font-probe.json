@@ -1,0 +1,41 @@
+{
+ "mouse": {
+  "focused": true,
+  "focusVisible": true,
+  "outline": "solid"
+ },
+ "mouse_control": {
+  "focusVisible": false,
+  "tag": "DIV"
+ },
+ "fonts": {
+  "family": "SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+  "sfmono": true,
+  "menlo": true
+ },
+ "platformFonts": [
+  {
+   "familyName": "Courier",
+   "postScriptName": "Courier",
+   "isCustomFont": false,
+   "glyphCount": 15
+  }
+ ],
+ "h1Fonts": [
+  {
+   "familyName": ".SF NS",
+   "postScriptName": ".SFNS-Regular_wdth_opsz580000_GRAD_wght2260000",
+   "isCustomFont": false,
+   "glyphCount": 17
+  }
+ ],
+ "touch": {
+  "focused": true,
+  "focusVisible": true,
+  "outline": "solid"
+ },
+ "touch_control": {
+  "focusVisible": false,
+  "tag": "DIV"
+ }
+}

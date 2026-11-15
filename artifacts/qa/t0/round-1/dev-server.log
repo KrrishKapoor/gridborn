@@ -1,0 +1,28 @@
+
+> gridborn@0.0.0 dev
+> vite --host 127.0.0.1 --strictPort --port 5291
+
+
+  VITE v8.3.8  ready in 43 ms
+
+  ➜  Local:   http://127.0.0.1:5291/
+5:31:42 AM [vite] (client) [Unhandled error] RangeError: View bounds and available CSS size must be finite and positive.
+ > fitView src/shared/view.ts:9:10
+    7  |    if (![bounds.minX, bounds.minY, bounds.maxX, bounds.maxY, width, height, padding].every(Number.isFinite)
+    8  |      || worldWidth <= 0 || worldHeight <= 0 || padding < 0 || width <= padding * 2 || height <= padding * 2) {
+    9  |      throw new RangeError('View bounds and available CSS size must be finite and positive.');
+       |            ^
+    10 |    }
+    11 |    const scale = Math.min((width - padding * 2) / worldWidth, (height - padding * 2) / worldHeight);
+ > draw src/scaffold/preview.ts:83:11
+
+5:31:42 AM [vite] (client) [Unhandled error] RangeError: View bounds and available CSS size must be finite and positive.
+ > fitView src/shared/view.ts:9:10
+    7  |    if (![bounds.minX, bounds.minY, bounds.maxX, bounds.maxY, width, height, padding].every(Number.isFinite)
+    8  |      || worldWidth <= 0 || worldHeight <= 0 || padding < 0 || width <= padding * 2 || height <= padding * 2) {
+    9  |      throw new RangeError('View bounds and available CSS size must be finite and positive.');
+       |            ^
+    10 |    }
+    11 |    const scale = Math.min((width - padding * 2) / worldWidth, (height - padding * 2) / worldHeight);
+ > draw src/scaffold/preview.ts:83:11
+

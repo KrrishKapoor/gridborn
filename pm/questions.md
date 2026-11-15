@@ -6,6 +6,12 @@ Updated: 2026-11-15. Newest first. Away mode: PM resolves questions using the br
 
 None. No credential or permission blocker found in initial repository/provider checks.
 
+## Resolved — 2026-11-15 T0 QA (Codex PM)
+
+- Who owns overlay hit testing? T1 disables overlay pointer events outside drawing; T3 starts it disabled; T4 selects cars on the underlying hero canvas and suppresses selection while drawing.
+- What if a reset fails? Keep the previous accepted run until a new `ready` acknowledgement; reject the pending run without stalling the old one.
+- Should disposable scaffold findings delay all feature work? No high-severity findings remain, so accept the scoped scaffold and carry every applicable low issue into its production replacement and fresh QA, as recorded in decisions.
+
 ## Resolved — 2026-11-15 scaffold handoff (Codex PM)
 
 - Review location: use the completed worker checkout and exact SHA without changing branches; QA writes only evidence, PM preserves it on acceptance.
